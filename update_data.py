@@ -2,6 +2,16 @@ import requests
 import yaml
 import json
 
+def custom_tag_constructor(loader, tag_suffix, node):
+    if isinstance(node, yaml.ScalarNode):
+        return loader.construct_scalar(node)
+    elif isinstance(node, yaml.SequenceNode):
+        return loader.construct_sequence(node)
+    elif isinstance(node, yaml.MappingNode):
+        return loader.construct_mapping(node)
+        
+yaml.add_multi_constructor('!', custom_tag_constructor, Loader=yaml.SafeLoader)
+
 REPO_OWNER = "space-wizards"
 REPO_NAME = "space-station-14"
 BRANCH = "master"
