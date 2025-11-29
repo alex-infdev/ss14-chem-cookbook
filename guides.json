@@ -7,6 +7,7 @@
         "content": [
           "Dispenser:",
           "15 oxygen, sugar, 60 carbon",
+          " ",
           "Jugmix:",
           "200u carbon -> 50u into 2 jugs",
           "50u oxygen, sugar -> 50u carbon jug -> 150u inap ->",
@@ -20,6 +21,7 @@
         "content": [
           "Dispenser:",
           "15 silicon, carbon, 30 oxygen, phosphorus",
+          " ",
           "Jugmix:",
           "200u carbon -> 100u into Jug",
           "200u silicon -> 100u into 2 100u carbon jugs",
@@ -71,7 +73,7 @@
     ]
   },
   {
-    "category": "Botany",
+    "category": "Botany (on request)",
     "guides": [
       {
         "title": "EZ Nutrient",
@@ -88,7 +90,7 @@
     ]
   },
   {
-    "category": "Janitor",
+    "category": "Janitor (on request)",
     "guides": [
       {
         "title": "Space Cleaner",
@@ -119,6 +121,12 @@
           "50 Bica, Benzene HEAT",
           "Benzene = hydrogen, carbon HEAT",
           "Bica = 15 oxygen, sugar, 60 carbon"
+        ]
+      },
+      {
+        "title": "Bru - Blunt - 10.5u OD - DO NOT MIX PUN/LAC/BICA",
+        "content": [
+          "25 Bica, lithium, sugar (no heat needed)"
         ]
       },
       {
