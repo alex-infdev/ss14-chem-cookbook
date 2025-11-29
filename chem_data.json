@@ -17,7 +17,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       },
       {
         "id": "Iron",
@@ -29,6 +32,9 @@
         "tags": [
           "Medicine",
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       },
       {
@@ -38,7 +44,8 @@
         "color": "white",
         "desc": "Tasty spacey sugar!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "CarbonDioxide",
@@ -49,6 +56,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       },
       {
@@ -58,7 +68,10 @@
         "color": "#FFFFE5",
         "desc": "Found in certain meals, good for bodily health.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Brute"
+        ]
       }
     ],
     "conditions": {
@@ -85,7 +98,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       },
       {
         "id": "Sodium",
@@ -94,7 +110,8 @@
         "color": "#a7b3d6",
         "desc": "A silvery-white alkali metal. Highly reactive in its pure form.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Chlorine",
@@ -105,6 +122,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       },
       {
@@ -116,6 +136,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       },
       {
@@ -125,7 +148,10 @@
         "color": "#FFFFE5",
         "desc": "Found in certain meals, good for bodily health.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Brute"
+        ]
       }
     ],
     "conditions": {
@@ -152,7 +178,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       },
       {
         "id": "Nitrogen",
@@ -163,6 +192,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Cold"
         ]
       }
     ],
@@ -190,7 +222,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       },
       {
         "id": "Sugar",
@@ -199,7 +234,8 @@
         "color": "white",
         "desc": "Tasty spacey sugar!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -226,7 +262,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       },
       {
         "id": "Copper",
@@ -238,6 +277,9 @@
         "tags": [
           "Medicine",
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       },
       {
@@ -247,7 +289,8 @@
         "color": "white",
         "desc": "Tasty spacey sugar!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "CarbonDioxide",
@@ -258,6 +301,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       },
       {
@@ -267,7 +313,10 @@
         "color": "#FFFFE5",
         "desc": "Found in certain meals, good for bodily health.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Brute"
+        ]
       }
     ],
     "conditions": {
@@ -294,7 +343,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       },
       {
         "id": "Nitrogen",
@@ -305,6 +357,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Cold"
         ]
       },
       {
@@ -316,6 +371,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       },
       {
@@ -325,7 +383,10 @@
         "color": "#FFFFE5",
         "desc": "Found in certain meals, good for bodily health.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Brute"
+        ]
       }
     ],
     "conditions": {
@@ -354,6 +415,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       },
       {
@@ -363,7 +427,10 @@
         "color": "#FFFFE5",
         "desc": "Found in certain meals, good for bodily health.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Brute"
+        ]
       },
       {
         "id": "Toxin",
@@ -374,6 +441,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -413,7 +483,8 @@
         "color": "#664330",
         "desc": "Give your plants some of those EZ nutrients! Dionas find this delicious.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -449,6 +520,14 @@
         "tags": [
           "Medicine",
           "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Slash",
+          "Asphyxiation",
+          "Piercing",
+          "Blunt",
+          "Heat"
         ]
       }
     ],
@@ -488,7 +567,8 @@
         "color": "#3CB371",
         "desc": "A modified version of diethylamine that can restore seeds on plants at the cost of potency.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -523,6 +603,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -558,6 +641,12 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison",
+          "Blunt",
+          "Piercing",
+          "Slash"
         ]
       }
     ],
@@ -593,6 +682,13 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Bloodloss",
+          "Burn",
+          "Brute",
+          "Caustic"
         ]
       }
     ],
@@ -620,7 +716,8 @@
         "color": "white",
         "desc": "Tasty spacey sugar!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Carbon",
@@ -629,7 +726,8 @@
         "color": "#22282b",
         "desc": "A black, crystalline solid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -664,6 +762,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Caustic"
         ]
       }
     ],
@@ -699,6 +800,10 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Caustic"
         ]
       }
     ],
@@ -738,7 +843,8 @@
         "color": "#AF14B7",
         "desc": "A slick, slightly carcinogenic liquid. Has a multitude of mundane uses in everyday life.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -771,7 +877,8 @@
         "color": "#215263",
         "desc": "Makes foam such as that's required in metal foam grenades.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -812,6 +919,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Caustic"
         ]
       }
     ],
@@ -853,6 +963,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Caustic"
         ]
       }
     ],
@@ -900,6 +1013,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Caustic"
         ]
       }
     ],
@@ -1124,7 +1240,8 @@
         "color": "#cfd1d0",
         "desc": "Commonly known as salt, Sodium Chloride is often used to season food or kill borers instantly.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1153,6 +1270,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       },
       {
@@ -1162,7 +1282,8 @@
         "color": "#a7b3d6",
         "desc": "A silvery-white alkali metal. Highly reactive in its pure form.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1203,6 +1324,10 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Heat"
         ]
       }
     ],
@@ -1244,6 +1369,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Radiation"
         ]
       }
     ],
@@ -1283,7 +1411,8 @@
         "color": "#b67823",
         "desc": "Used by chefs to cook.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1322,7 +1451,8 @@
         "color": "#9e6b38",
         "desc": "A perfluoronated sulfonic acid that forms a foam when mixed with water.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1368,9 +1498,13 @@
         "desc": "A more effective ephedrine, with more active downsides. Requires less doses to cure narcolepsy.",
         "overdose": null,
         "tags": [
+          "Narcotic",
           "Medicine",
-          "Toxin",
-          "Narcotic"
+          "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Asphyxiation"
         ]
       }
     ],
@@ -1411,8 +1545,13 @@
         "desc": "A chemical cocktail developed by Donk Co. that allows agents to recover from stuns faster, move more quickly, and grants a small heal when you're more dead than alive. Due to the complex nature of the chemical, it is much harder for the body to purge naturally.",
         "overdose": null,
         "tags": [
-          "Medicine",
-          "Narcotic"
+          "Narcotic",
+          "Medicine"
+        ],
+        "damage": [
+          "Brute",
+          "Poison",
+          "Burn"
         ]
       }
     ],
@@ -1459,8 +1598,12 @@
         "desc": "A caffeinated adrenaline stimulator chemical that makes you faster and harder to knock down. Also helps combat narcolepsy at dosages over thirty, at the cost of severe nerval stress.",
         "overdose": null,
         "tags": [
-          "Medicine",
-          "Narcotic"
+          "Narcotic",
+          "Medicine"
+        ],
+        "damage": [
+          "Poison",
+          "Asphyxiation"
         ]
       }
     ],
@@ -1502,7 +1645,8 @@
         "overdose": null,
         "tags": [
           "Narcotic"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1543,6 +1687,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -1584,7 +1731,8 @@
         "overdose": null,
         "tags": [
           "Toxin"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1619,6 +1767,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -1654,7 +1805,8 @@
         "overdose": null,
         "tags": [
           "Narcotic"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1689,7 +1841,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1730,7 +1883,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1775,7 +1929,8 @@
         "color": "white",
         "desc": "A white, odorless, water-soluble salt that yields an alkaline solution in water.  Also known as soda ash.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1810,6 +1965,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Cellular"
         ]
       }
     ],
@@ -1843,7 +2001,8 @@
         "color": "white",
         "desc": "A strong alkaline chemical, forming a base for many organic compounds.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1879,6 +2038,9 @@
         "tags": [
           "Medicine",
           "Toxin"
+        ],
+        "damage": [
+          "Heat"
         ]
       }
     ],
@@ -1912,7 +2074,8 @@
         "color": "#434b4d",
         "desc": "An intermetallic compound with unusual magnetic properties at low temperatures.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1953,7 +2116,8 @@
         "overdose": null,
         "tags": [
           "Toxin"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -1988,7 +2152,8 @@
         "overdose": null,
         "tags": [
           "Narcotic"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2023,7 +2188,8 @@
         "overdose": null,
         "tags": [
           "Toxin"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2056,7 +2222,8 @@
         "color": "#827394",
         "desc": "Mixture of glue and artifexium. It can restore durability of nodes in artifact on touch.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2091,6 +2258,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Caustic"
         ]
       }
     ],
@@ -2132,6 +2302,10 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Caustic"
         ]
       }
     ],
@@ -2161,6 +2335,13 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Bloodloss",
+          "Burn",
+          "Brute",
+          "Caustic"
         ]
       }
     ],
@@ -2194,7 +2375,8 @@
         "color": "#c8ff69",
         "desc": "This is able to clean almost all surfaces of almost anything that may dirty them. The janitor is likely to appreciate refills.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2233,7 +2415,8 @@
         "color": "#77b58e",
         "desc": "Space Lube is a high performance lubricant intended for maintenance of extremely complex mechanical equipment (and certainly not used to make people slip).",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2266,7 +2449,8 @@
         "color": "#365000",
         "desc": "A drink for the daring, can be deadly if incorrectly prepared!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2305,7 +2489,8 @@
         "color": "#FFFDD0",
         "desc": "You might want to get that checked out at Med.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2338,7 +2523,8 @@
         "color": "#00664d",
         "desc": "A drink made from your allies, not as sweet as when made from your enemies.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2377,7 +2563,8 @@
         "color": "#124da7",
         "desc": "Official drink of the Gun Club!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2416,7 +2603,8 @@
         "color": "#665700",
         "desc": "A nice, strangely named drink.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2455,7 +2643,8 @@
         "color": "#ff7d63",
         "desc": "Ultimate refreshment.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2488,7 +2677,8 @@
         "color": "#d8cc5d",
         "desc": "Now watch this drive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2521,7 +2711,8 @@
         "color": "#666300",
         "desc": "Nuclear proliferation never tasted so good.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2560,7 +2751,8 @@
         "color": "#664300",
         "desc": "Coffee, irish cream, and cognac. You will get bombed.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2593,7 +2785,8 @@
         "color": "#dede73",
         "desc": "A tider's preferred drink.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2638,7 +2831,8 @@
         "color": "#47687b",
         "desc": "Aloha! Does that mean hello or goodbye?",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2677,7 +2871,8 @@
         "color": "#B5A642",
         "desc": "Not even Ratvar's Four Generals could withstand this! Qevax Jryy!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2734,7 +2929,8 @@
         "color": "#FF7F3B",
         "desc": "Tropical cocktail.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2773,7 +2969,8 @@
         "color": "#ff66cc",
         "desc": "A cassis milkshake, made from cream, fruit juice, and vermouth wine.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2812,7 +3009,8 @@
         "color": "#ffff91",
         "desc": "A drink from Clown Heaven.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2851,7 +3049,8 @@
         "color": "#664300",
         "desc": "Deny drinking this and prepare for THE LAW.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2884,7 +3083,8 @@
         "color": "#360000",
         "desc": "For the lactose-intolerant. Still as classy as a White Russian.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2923,7 +3123,8 @@
         "color": "#df6a50",
         "desc": "A strange yet pleasurable mixture made of vodka, tomato, and lime juice.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -2968,7 +3169,8 @@
         "color": "#99ff00",
         "desc": "Ewww...",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3001,7 +3203,8 @@
         "color": "#664300",
         "desc": "It's just as effective as Dutch-Courage!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3040,7 +3243,8 @@
         "color": "#d68829",
         "desc": "The orange-flavoured cousin of the Manhattan and Martini.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3073,7 +3277,8 @@
         "color": "#664300",
         "desc": "A nice, strong and tasty beverage while you are reading.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3106,7 +3311,8 @@
         "color": "#cccbc8",
         "desc": "Rum with coconut for that tropical feel.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3145,7 +3351,8 @@
         "color": "#f73030",
         "desc": "Even in the worst situations, nothing beats a fresh cosmopolitan.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3184,7 +3391,8 @@
         "color": "#FFEABF",
         "desc": "Sweet, syrupy version of coconut cream with added sugar.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3217,7 +3425,8 @@
         "color": "#0a0a33",
         "desc": "A stygian drink, harkening back to the abyssopelagic. Dark and Cold, it serves as a reminder that the most ancient emotion is fear, and the strongest type of fear is that of the unknown.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3250,7 +3459,8 @@
         "color": "#3E1B00",
         "desc": "Rum, mixed with cola. Viva la revolucion.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3283,7 +3493,8 @@
         "color": "#cf7f17",
         "desc": "You can almost hear the thunder.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3328,7 +3539,8 @@
         "color": "#a70000",
         "desc": "AHHHH!!!!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3367,7 +3579,8 @@
         "color": "#ff0033",
         "desc": "Creepy time!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3418,7 +3631,13 @@
         "color": "#FF8CFF",
         "desc": "A gulp a day keeps the MediBot away. That's probably for the best.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Brute",
+          "Airloss",
+          "Toxin",
+          "Burn"
+        ]
       }
     ],
     "conditions": {
@@ -3451,7 +3670,8 @@
         "color": "#2E6671",
         "desc": "Only for the experienced. You think you see sand floating in the glass.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3490,7 +3710,8 @@
         "color": "#e6d6bc",
         "desc": "Not enough egg.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3529,7 +3750,8 @@
         "color": "#3097cf",
         "desc": "Fun Shark fact: Selachians make up 20% of Space Station 16\u2019s Engineering staff!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3580,7 +3802,8 @@
         "color": "#67bc50",
         "desc": "The surprise is, it's green!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3607,7 +3830,8 @@
         "color": "#cccccc",
         "desc": "A light, flammable gas.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Carbon",
@@ -3616,7 +3840,8 @@
         "color": "#22282b",
         "desc": "A black, crystalline solid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Oxygen",
@@ -3627,6 +3852,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -3668,6 +3896,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -3719,7 +3950,8 @@
         "color": "#9cc8b4",
         "desc": "Whoah, this stuff looks volatile!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3758,7 +3990,8 @@
         "color": "#664300",
         "desc": "Refreshingly lemony, deliciously dry.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3791,7 +4024,8 @@
         "color": "#004166",
         "desc": "An all time classic, mild cocktail.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3824,7 +4058,8 @@
         "color": "#FFFF91",
         "desc": "100 proof cinnamon schnapps, made for alcoholic teen girls on spring break.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3863,7 +4098,8 @@
         "color": "#e3e77b",
         "desc": "Watered-down rum, pirate approved!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3896,7 +4132,8 @@
         "color": "#6eaa0c",
         "desc": "You just don't get it maaaan.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3935,7 +4172,8 @@
         "color": "#664e00",
         "desc": "Either someone's failure at cocktail making or attempt in alchohol production. In any case, do you really want to drink that?",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -3968,7 +4206,8 @@
         "color": "#664300",
         "desc": "Smells like the holidays!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4007,7 +4246,8 @@
         "color": "#fffbd6",
         "desc": "It was either this or the microwave, and nobody wants ice cream soup!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4040,7 +4280,8 @@
         "color": "#664300",
         "desc": "A beer which is so cold the air around it freezes.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4073,7 +4314,8 @@
         "color": "#664300",
         "desc": "A beer which is so cold the air around it freezes.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4106,7 +4348,8 @@
         "color": "#102838",
         "desc": "Coffee and ice, refreshing and cool.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4139,7 +4382,8 @@
         "color": "#5B821B",
         "desc": "Cold green tea.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4172,7 +4416,8 @@
         "color": "#6C3916",
         "desc": "No relation to a certain rap artist/actor.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4205,7 +4450,8 @@
         "color": "#71672e99",
         "desc": "Like a bool in a Ireland shop.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4238,7 +4484,8 @@
         "color": "#2E6671",
         "desc": "What's black and white and red all over?",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4271,7 +4518,8 @@
         "color": "#664300",
         "desc": "Coffee served with irish cream. Regular cream just isn't the same!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4304,7 +4552,8 @@
         "color": "#664300",
         "desc": "Whiskey-imbued cream. What else could you expect from the Irish.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4349,7 +4598,8 @@
         "color": "#f53b3b",
         "desc": "Excessively Red.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4394,7 +4644,8 @@
         "color": "#f27c3d",
         "desc": "Despite the name, it\u2019s not exceptionally popular among Voxes.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4427,7 +4678,8 @@
         "color": "#360606",
         "desc": "A high-class Cuba Libre, for the discerning alcoholic.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4466,7 +4718,8 @@
         "color": "#CCCC99",
         "desc": "The soda should be orange! No, it should be lemon-lime!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4505,7 +4758,8 @@
         "color": "#FFFF00",
         "desc": "Drink using lemon juice, water, and a sweetener such as cane sugar or honey.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4544,7 +4798,8 @@
         "color": "#878F00",
         "desc": "Tangy lime and lemon soda.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4589,7 +4844,8 @@
         "color": "#664300",
         "desc": "The liquor cabinet, brought together in a delicious mix. Intended for middle-aged alcoholic women only.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4622,7 +4878,8 @@
         "color": "#664300",
         "desc": "The Detective's undercover drink of choice. He never could stomach gin...",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4655,7 +4912,8 @@
         "color": "#664300",
         "desc": "A scientist's drink of choice, for pondering ways to blow up the ship.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4688,7 +4946,8 @@
         "color": "#664300",
         "desc": "Beer and Ale, brought together in a delicious mix. Intended for stout dwarves only.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4721,7 +4980,8 @@
         "color": "#8CFF8C",
         "desc": "On the rocks with salt on the rim. Arriba~!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4754,7 +5014,8 @@
         "color": "#664300",
         "desc": "Vermouth with Gin. Not quite how 007 enjoyed it, but still delicious.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4787,7 +5048,8 @@
         "color": "#664300",
         "desc": "A Viking's drink, though a cheap one.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4832,7 +5094,8 @@
         "color": "#3ea99888",
         "desc": "If it's good enough for Spesscuba, it's good enough for you.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4877,7 +5140,8 @@
         "color": "#d6b929",
         "desc": "You\u2019ve got to wonder how the monkeys feel about this drink.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4916,7 +5180,8 @@
         "color": "#d1d7d155",
         "desc": "Artisanal homemade liquor. What could go wrong?",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -4951,6 +5216,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -4980,7 +5248,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       },
       {
         "id": "Water",
@@ -4989,7 +5258,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       },
       {
         "id": "Sugar",
@@ -4998,7 +5270,8 @@
         "color": "white",
         "desc": "Tasty spacey sugar!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Uranium",
@@ -5009,6 +5282,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Radiation"
         ]
       }
     ],
@@ -5042,7 +5318,8 @@
         "color": "#585840",
         "desc": "Tequila with silver in it, a favorite of alcoholic women in the club scene.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5087,7 +5364,8 @@
         "color": "#e6cb47",
         "desc": "A cure for what ails you.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5132,7 +5410,8 @@
         "color": "#e8dba4",
         "desc": "For getting lost in the rain.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5171,7 +5450,8 @@
         "color": "#B3B599",
         "desc": "Poor warriors' drink from a forgotten era.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5204,7 +5484,8 @@
         "color": "#edff2b",
         "desc": "A simple but staple classic, straight out of Space-Germany.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5237,7 +5518,8 @@
         "color": "#bc5550",
         "desc": "The true Viking's drink! Even though it has a strange red color.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5270,7 +5552,8 @@
         "color": "#485000",
         "desc": "The secret of the sanctuary of the Librarian...",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5303,7 +5586,8 @@
         "color": "#4f361f",
         "desc": "Root beer, but now with ice cream on top. It truly is the magnum opus of Canadian summertime drinks.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5336,7 +5620,8 @@
         "color": "#262019",
         "desc": "Solid proof that there IS something known as too sweet.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5375,7 +5660,8 @@
         "color": "#f0d74a",
         "desc": "A popular drink amongst those adhering to an all synthetic diet.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5408,7 +5694,8 @@
         "color": "#004166",
         "desc": "A spicy Vodka! Might be a little hot for the little guys!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5441,7 +5728,8 @@
         "color": "#A68310",
         "desc": "Vodka, mixed with plain ol' orange juice. The result is surprisingly delicious.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5474,7 +5762,8 @@
         "color": "#af2221",
         "desc": "A favorite amongst younger members of the crew.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5513,7 +5802,8 @@
         "color": "#878787",
         "desc": "A drink from Mime Heaven.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5546,7 +5836,8 @@
         "color": "#FFFFFF",
         "desc": "A cold refreshment.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5579,7 +5870,8 @@
         "color": "#619494",
         "desc": "A container of club soda. Why not make a scotch and soda?",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5612,7 +5904,8 @@
         "color": "#664300",
         "desc": "A coffee drink made with espresso and steamed soy milk.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5645,7 +5938,8 @@
         "color": "#9F3400",
         "desc": "A sweet, orange flavored soft drink.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5684,7 +5978,8 @@
         "color": "#00A86B",
         "desc": "'Comprised of: White soda, blue Cura\u00e7ao, melon liquor.'",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5717,7 +6012,8 @@
         "color": "#e3e77b",
         "desc": "Somebody set us up the bomb!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5750,7 +6046,8 @@
         "color": "#8a5a3a",
         "desc": "A drink made by boiling leaves of the tea tree, Camellia sinensis.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5783,7 +6080,8 @@
         "color": "#FFE48C",
         "desc": "Tequila and orange juice. Much like a Screwdriver, only Mexican.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5816,7 +6114,8 @@
         "color": "#666340",
         "desc": "\"Made for a woman, strong enough for a man.\"",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5849,7 +6148,8 @@
         "color": "#1c8c40",
         "desc": "Perfect for pirates who\u2019ve been selected as the designated driver. Yarr!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5888,7 +6188,8 @@
         "color": "#665c00",
         "desc": "This thing is ON FIRE! CALL THE DAMN SHUTTLE!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5933,7 +6234,8 @@
         "color": "#b51b1b",
         "desc": "Popular in Mexico and Transylvania.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5966,7 +6268,8 @@
         "color": "#004666",
         "desc": "Vodka instead of Gin. Not quite how 007 enjoyed it, but still delicious.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -5999,7 +6302,8 @@
         "color": "#c4c27655",
         "desc": "Because heart failure and liver failure go hand in hand.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6032,7 +6336,8 @@
         "color": "#0064C8",
         "desc": "For when a gin and tonic isn't russian enough.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6065,7 +6370,8 @@
         "color": "#3E1B00",
         "desc": "Whiskey, mixed with cola. Surprisingly refreshing.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6104,7 +6410,8 @@
         "color": "#d49dca",
         "desc": "If you want to be awake, this will do it... Also sweet.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6137,7 +6444,8 @@
         "color": "#A68340",
         "desc": "That's just, like, your opinion, man...",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6170,7 +6478,8 @@
         "color": "#533600",
         "desc": "For the more refined griffon.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6203,7 +6512,8 @@
         "color": "#4d6600",
         "desc": "The perfect drink before an expedition.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6236,7 +6546,8 @@
         "color": "#664300",
         "desc": "Hot noodles.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6269,7 +6580,8 @@
         "color": "#e7c69f",
         "desc": "A sickening mixture of milk and cola.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6314,7 +6626,8 @@
         "color": "#75b1f0",
         "desc": "The edgerunner legend. Remembered by a drink, forgotten by a drunk.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6347,7 +6660,8 @@
         "color": "#d1d1d155",
         "desc": "Clear distilled alcoholic beverage that originates from Poland and Russia.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6374,7 +6688,8 @@
         "color": "#cccccc",
         "desc": "A light, flammable gas.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Oxygen",
@@ -6385,6 +6700,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -6418,7 +6736,8 @@
         "color": "#e5d27e",
         "desc": "A sickening mixture of milk and beer. Makes you feel like you're made of wood.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6463,7 +6782,8 @@
         "color": "#6c2828",
         "desc": "A sweet, carbonated soft drink.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6508,7 +6828,8 @@
         "color": "#E6EE9C",
         "desc": "The S\u00e3o Paulo special, straight from old Brazil.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6547,7 +6868,8 @@
         "color": "#DAC865",
         "desc": "A classic rum cocktail which remains popular even in the cold reaches of space.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6580,7 +6902,8 @@
         "color": "#57A87D",
         "desc": "\"Pour one jigger absinthe into a Champagne glass. Add iced Champagne until it attains the proper opalescent milkiness. Drink three to five of these slowly.\" - Ernest Hemingway",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6625,7 +6948,8 @@
         "color": "#900296",
         "desc": "A more refined take on the mimosa. Just the thing Marie Antoinette might've sipped on before the revolution.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6658,7 +6982,8 @@
         "color": "#170a0c",
         "desc": "To wake you up and wind you down. Garnished with coffee beans and icy-cold.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6691,7 +7016,10 @@
         "color": "#6FBE44",
         "desc": "An affront to god and man. Do not drink it.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Poison"
+        ]
       }
     ],
     "conditions": {
@@ -6724,7 +7052,8 @@
         "color": "#939393",
         "desc": "It has an orange tang so sour you just can't describe it.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6757,7 +7086,8 @@
         "color": "#FFCA48",
         "desc": "Perfect for a lively brunch out with the girls.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6796,7 +7126,8 @@
         "color": "#CECBAD",
         "desc": "A surpsingly strong and refreshing mixed drink, served in an iconic copper mug.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6829,7 +7160,8 @@
         "color": "#DCE2DE",
         "desc": "A strong cocktail mixed into a murky blend. A secret favorite of tortured authors.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6874,7 +7206,8 @@
         "color": "#8B7941",
         "desc": "What's the secret ingredient? Eggs. It's eggs.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6913,7 +7246,8 @@
         "color": "#d17844",
         "desc": "It gets in your head. Your he-eyeh-ead.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -6958,7 +7292,10 @@
         "color": "#331303",
         "desc": "You didn't think it was possible for a liquid to be so utterly revolting. Are you sure about this...?",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Poison"
+        ]
       }
     ],
     "conditions": {
@@ -7338,7 +7675,8 @@
         "color": "red",
         "desc": "Made from pureed tomatoes and flavored with spices.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7377,7 +7715,8 @@
         "color": "#f9f5e5",
         "desc": "Creamy sauce, made from oil, egg, and some (edible) acid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7416,7 +7755,8 @@
         "color": "#f9f5e5",
         "desc": "Creamy sauce, made from oil, egg, and some (edible) acid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7449,7 +7789,8 @@
         "color": "#ffdb58",
         "desc": "Basic yellow mustard, made from the seeds of the mustard plant.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7482,7 +7823,8 @@
         "color": "#fba399",
         "desc": "So-called Russian dressing, popular among Space Americans.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7521,7 +7863,8 @@
         "color": "darkred",
         "desc": "Hand wipes not included.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7560,7 +7903,8 @@
         "color": "red",
         "desc": "Burns so good.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7599,7 +7943,8 @@
         "color": "skyblue",
         "desc": "Leaves the tongue numb in its passage.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7632,7 +7977,8 @@
         "color": "tan",
         "desc": "Often used to flavor food.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7665,7 +8011,8 @@
         "color": "saddlebrown",
         "desc": "A salty soy-based flavoring.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7704,7 +8051,8 @@
         "color": "#efdaae",
         "desc": "A basic salad dressing made with oil, vinegar and seasoning.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7731,7 +8079,8 @@
         "color": "white",
         "desc": "Tasty spacey sugar!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Potassium",
@@ -7740,7 +8089,8 @@
         "color": "#c6c8cc",
         "desc": "A soft, shiny grey metal. Even more reactive than lithium.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7767,7 +8117,8 @@
         "color": "#d8d8b0",
         "desc": "No matter how it was obtained, its application is important.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Water",
@@ -7776,7 +8127,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       },
       {
         "id": "Protein",
@@ -7785,7 +8139,10 @@
         "color": "#FFFFE5",
         "desc": "Found in certain meals, good for bodily health.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Brute"
+        ]
       }
     ],
     "conditions": {
@@ -7814,6 +8171,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Caustic"
         ]
       },
       {
@@ -7823,7 +8183,8 @@
         "color": "#22282b",
         "desc": "A black, crystalline solid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Water",
@@ -7832,7 +8193,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       }
     ],
     "conditions": {
@@ -7859,7 +8223,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       },
       {
         "id": "Carbon",
@@ -7868,7 +8235,8 @@
         "color": "#22282b",
         "desc": "A black, crystalline solid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Sugar",
@@ -7877,7 +8245,8 @@
         "color": "white",
         "desc": "Tasty spacey sugar!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -7904,7 +8273,8 @@
         "color": "#22282b",
         "desc": "A black, crystalline solid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Hydrogen",
@@ -7913,7 +8283,8 @@
         "color": "#cccccc",
         "desc": "A light, flammable gas.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Oxygen",
@@ -7924,6 +8295,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -7951,7 +8325,8 @@
         "color": "#22282b",
         "desc": "A black, crystalline solid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Hydrogen",
@@ -7960,7 +8335,8 @@
         "color": "#cccccc",
         "desc": "A light, flammable gas.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Phosphorus",
@@ -7969,7 +8345,8 @@
         "color": "#f5da9a",
         "desc": "A reactive metal used in pyrotechnics and weapons.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Oxygen",
@@ -7980,6 +8357,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -8007,7 +8387,8 @@
         "color": "#22282b",
         "desc": "A black, crystalline solid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Hydrogen",
@@ -8016,7 +8397,8 @@
         "color": "#cccccc",
         "desc": "A light, flammable gas.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Phosphorus",
@@ -8025,7 +8407,8 @@
         "color": "#f5da9a",
         "desc": "A reactive metal used in pyrotechnics and weapons.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Oxygen",
@@ -8036,6 +8419,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -8063,7 +8449,8 @@
         "color": "#22282b",
         "desc": "A black, crystalline solid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Water",
@@ -8072,7 +8459,10 @@
         "color": "#75b1f0",
         "desc": "A colorless liquid that humans need in order to survive.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Heat"
+        ]
       },
       {
         "id": "Nitrogen",
@@ -8083,6 +8473,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Cold"
         ]
       }
     ],
@@ -8110,7 +8503,8 @@
         "color": "#DFD7AF",
         "desc": "The fatty, still liquid part of milk. Why don't you mix this with sum scotch, eh?",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -8145,7 +8539,8 @@
         "overdose": null,
         "tags": [
           "Toxin"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -8198,6 +8593,10 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Piercing"
         ]
       }
     ],
@@ -8268,7 +8667,8 @@
         "overdose": null,
         "tags": [
           "Narcotic"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -8303,7 +8703,8 @@
         "overdose": null,
         "tags": [
           "Toxin"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -8365,7 +8766,8 @@
         "color": "#bed8e6",
         "desc": "Frozen water.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -8424,6 +8826,10 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Cold",
+          "Heat"
         ]
       }
     ],
@@ -8457,7 +8863,8 @@
         "color": "#22282b",
         "desc": "A black, crystalline solid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Sugar",
@@ -8466,7 +8873,8 @@
         "color": "white",
         "desc": "Tasty spacey sugar!",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -8501,7 +8909,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -8669,6 +9078,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Cellular"
         ]
       }
     ],
@@ -8716,6 +9128,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Radiation"
         ]
       }
     ],
@@ -8763,6 +9178,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Radiation"
         ]
       }
     ],
@@ -8798,6 +9216,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Slash"
         ]
       }
     ],
@@ -8825,7 +9246,8 @@
         "color": "#22282b",
         "desc": "A black, crystalline solid.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Oxygen",
@@ -8836,6 +9258,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -8865,6 +9290,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Cold"
         ]
       },
       {
@@ -8876,6 +9304,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -8917,6 +9348,10 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison",
+          "Brute"
         ]
       }
     ],
@@ -8958,6 +9393,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -8999,7 +9437,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -9034,6 +9473,10 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Radiation",
+          "Brute"
         ]
       }
     ],
@@ -9069,6 +9512,10 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison",
+          "Asphyxiation"
         ]
       }
     ],
@@ -9110,6 +9557,12 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Burn",
+          "Airloss",
+          "Toxin",
+          "Brute"
         ]
       }
     ],
@@ -9145,6 +9598,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Cellular"
         ]
       }
     ],
@@ -9192,6 +9648,12 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Burn",
+          "Poison",
+          "Asphyxiation",
+          "Brute"
         ]
       }
     ],
@@ -9233,6 +9695,13 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Cold",
+          "Asphyxiation",
+          "Brute",
+          "Heat",
+          "Shock"
         ]
       }
     ],
@@ -9268,6 +9737,11 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Bloodloss",
+          "Cold",
+          "Asphyxiation"
         ]
       }
     ],
@@ -9309,6 +9783,11 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Bloodloss",
+          "Cold",
+          "Asphyxiation"
         ]
       }
     ],
@@ -9344,6 +9823,10 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Radiation",
+          "Heat"
         ]
       }
     ],
@@ -9385,6 +9868,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Asphyxiation"
         ]
       }
     ],
@@ -9426,7 +9912,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -9467,6 +9954,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Bloodloss"
         ]
       }
     ],
@@ -9502,6 +9992,11 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Heat",
+          "Shock",
+          "Cold"
         ]
       }
     ],
@@ -9543,6 +10038,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Cold"
         ]
       }
     ],
@@ -9584,6 +10082,11 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Cellular",
+          "Caustic",
+          "Radiation"
         ]
       }
     ],
@@ -9625,7 +10128,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -9660,7 +10164,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -9701,6 +10206,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -9736,6 +10244,13 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison",
+          "Cold",
+          "Brute",
+          "Heat",
+          "Shock"
         ]
       }
     ],
@@ -9771,6 +10286,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Asphyxiation"
         ]
       }
     ],
@@ -9812,6 +10330,9 @@
         "overdose": null,
         "tags": [
           "Narcotic"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -9853,6 +10374,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Airloss"
         ]
       }
     ],
@@ -9894,7 +10418,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -9935,7 +10460,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -9976,7 +10502,8 @@
         "overdose": null,
         "tags": [
           "Toxin"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -10017,7 +10544,8 @@
         "overdose": null,
         "tags": [
           "Narcotic"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -10052,6 +10580,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Brute"
         ]
       }
     ],
@@ -10093,7 +10624,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -10128,6 +10660,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Caustic"
         ]
       }
     ],
@@ -10169,7 +10704,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -10222,6 +10758,10 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Caustic",
+          "Heat"
         ]
       }
     ],
@@ -10255,7 +10795,8 @@
         "color": "#0064C8",
         "desc": "A mixture of salt and water. Commonly used to treat dehydration or low fluid presence in blood.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -10290,6 +10831,11 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Heat",
+          "Slash",
+          "Cold"
         ]
       }
     ],
@@ -10325,6 +10871,11 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Radiation",
+          "Blunt",
+          "Piercing"
         ]
       }
     ],
@@ -10366,6 +10917,10 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison",
+          "Blunt"
         ]
       }
     ],
@@ -10401,6 +10956,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Slash"
         ]
       }
     ],
@@ -10436,6 +10994,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Slash"
         ]
       }
     ],
@@ -10471,6 +11032,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Slash"
         ]
       }
     ],
@@ -10506,6 +11070,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Slash"
         ]
       }
     ],
@@ -10541,6 +11108,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Slash"
         ]
       }
     ],
@@ -10576,6 +11146,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Slash"
         ]
       }
     ],
@@ -10629,6 +11202,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -10670,6 +11246,11 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Heat",
+          "Slash",
+          "Piercing"
         ]
       }
     ],
@@ -10711,6 +11292,10 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Cold",
+          "Shock"
         ]
       }
     ],
@@ -10752,7 +11337,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -10793,6 +11379,11 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Burn",
+          "Poison",
+          "Brute"
         ]
       }
     ],
@@ -10834,6 +11425,12 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Caustic",
+          "Cold",
+          "Shock",
+          "Heat"
         ]
       }
     ],
@@ -10875,6 +11472,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -10916,6 +11516,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -10963,7 +11566,8 @@
         "overdose": null,
         "tags": [
           "Narcotic"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -10998,6 +11602,9 @@
         "overdose": null,
         "tags": [
           "Medicine"
+        ],
+        "damage": [
+          "Poison"
         ]
       }
     ],
@@ -11051,7 +11658,8 @@
         "overdose": null,
         "tags": [
           "Medicine"
-        ]
+        ],
+        "damage": []
       }
     ],
     "conditions": {
@@ -11092,6 +11700,11 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Heat",
+          "Caustic"
         ]
       }
     ],
@@ -11133,6 +11746,10 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Heat"
         ]
       }
     ],
@@ -11168,6 +11785,11 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Poison",
+          "Heat",
+          "Caustic"
         ]
       }
     ],
@@ -11195,7 +11817,8 @@
         "color": "white",
         "desc": "A light grey powdery residue",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -11222,7 +11845,11 @@
         "color": "#b05b3c",
         "desc": "A simple alcohol, makes you drunk if consumed, flammable.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Poison",
+          "Brute"
+        ]
       },
       {
         "id": "Hydrogen",
@@ -11231,7 +11858,8 @@
         "color": "#cccccc",
         "desc": "A light, flammable gas.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       },
       {
         "id": "Sulfur",
@@ -11242,6 +11870,9 @@
         "overdose": null,
         "tags": [
           "Toxin"
+        ],
+        "damage": [
+          "Caustic"
         ]
       }
     ],
@@ -11269,7 +11900,10 @@
         "color": "#FFFFE5",
         "desc": "Found in certain meals, good for bodily health.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Brute"
+        ]
       }
     ],
     "conditions": {
@@ -11296,7 +11930,8 @@
         "color": "white",
         "desc": "Cooked chicken embryo, delicious.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -11323,7 +11958,8 @@
         "color": "#fb7125",
         "desc": "Delicious syrup made from tree sap, somehow stickier than glue.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -11350,7 +11986,8 @@
         "color": "#7E4043",
         "desc": "A premium alcoholic beverage made from distilled grape juice.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": []
       }
     ],
     "conditions": {
@@ -11377,7 +12014,14 @@
         "color": "#91C3F7",
         "desc": "The cleanest and purest of waters straight from the hands of god, is known to magically heal wounds.",
         "overdose": null,
-        "tags": []
+        "tags": [],
+        "damage": [
+          "Poison",
+          "Cold",
+          "Blunt",
+          "Heat",
+          "Shock"
+        ]
       }
     ],
     "conditions": {
