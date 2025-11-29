@@ -41,8 +41,8 @@ def clean_name(text, loc_db):
     if text in loc_db: 
         return loc_db[text]
     if text.startswith("reagent-name-") or text.startswith("reagent-desc-"):
-        text = text.replace("reagent-name-", "").replace("reagent-desc-", "").replace("-", " ")
-    return text
+        text = text.replace("reagent-name-", "").replace("reagent-desc-", "")
+    return text.title()
 
 def main():
     tree = fetch_file_list()
