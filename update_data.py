@@ -2,6 +2,11 @@ import requests
 import yaml
 import json
 
+def clean_name(text):
+    if text.startswith("reagent-name-"):
+        return text.replace("reagent-name-", "").replace("-", " ").title()
+    return text.title()
+
 def custom_tag_constructor(loader, tag_suffix, node):
     if isinstance(node, yaml.ScalarNode):
         return loader.construct_scalar(node)
@@ -9,7 +14,7 @@ def custom_tag_constructor(loader, tag_suffix, node):
         return loader.construct_sequence(node)
     elif isinstance(node, yaml.MappingNode):
         return loader.construct_mapping(node)
-        
+
 yaml.add_multi_constructor('!', custom_tag_constructor, Loader=yaml.SafeLoader)
 
 REPO_OWNER = "space-wizards"
@@ -60,7 +65,7 @@ def main():
             if entry.get("type") == "reagent" and "id" in entry:
                 r_id = entry["id"]
                 reagents_db[r_id] = {
-                    "name": entry.get("name", r_id),
+                    "name": clean_name(entry.get("name", r_id)),
                     "desc": entry.get("desc", ""),
                     "color": entry.get("color", "#CCCCCC")
                 }
@@ -78,7 +83,7 @@ def main():
                 meta = reagents_db.get(r_id, {"name": r_id, "color": "#FFF"})
                 ingredients.append({
                     "id": r_id,
-                    "name": meta["name"],
+                    "name": clean_name(meta["name"]),
                     "amount": amount,
                     "color": meta["color"]
                 })
@@ -88,7 +93,7 @@ def main():
                 meta = reagents_db.get(p_id, {"name": p_id, "color": "#FFF"})
                 products.append({
                     "id": p_id,
-                    "name": meta["name"],
+                    "name": clean_name(meta["name"]),
                     "amount": p_amount,
                     "color": meta["color"]
                 })
