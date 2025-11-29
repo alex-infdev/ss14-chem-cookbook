@@ -29,7 +29,7 @@ def main():
         item["path"] for item in tree
         if item["type"] == "blob"
         and (item["path"].endswith(".yml") or item["path"].endswith(".yaml"))
-        and any(item["path"]).startswith(prefix) for prefix in TARGET_PATHS
+        and any(item["path"].startswith(prefix) for prefix in TARGET_PATHS)
     ]
 
     print(f"Found {len(target_files)} relevant YAML files. Downloading...")
