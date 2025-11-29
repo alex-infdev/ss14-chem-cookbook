@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SS14 Chem</title>
+    <link rel="icon" type="image/png" href="content/webicon.png">
     <style>
         :root {
             --desktop: #008080;
@@ -12,6 +13,7 @@
             --heat: #d32f2f;
             --cold: #1976d2;
             --heal: #006400;
+            --link: #0000FF;
         }
 
         body {
@@ -21,6 +23,7 @@
             margin: 0;
             padding: 20px;
             font-size: 14px;
+            overflow-x: hidden;
         }
 
         .win-out {
@@ -33,10 +36,10 @@
             background: #fff;
             border-top: 2px solid #000; border-left: 2px solid #000;
             border-right: 2px solid #fff; border-bottom: 2px solid #fff;
-            box-shadow: 1px 1px 0px #dfdfdf inset, -1px -1px 0px #808080 inset;
+            box-shadow: 1px 1px 0px #dfdfdf inset, -1px -1px 0px #dfdfdf inset;
         }
 
-        .main-window { max-width: 1000px; margin: 0 auto; padding: 2px; }
+        .main-window { max-width: 1000px; margin: 0 auto; padding: 2px; position: relative; z-index: 1; }
         .title-bar {
             background: linear-gradient(90deg, #000080, #1084d0);
             padding: 4px 8px; color: white; font-weight: bold;
@@ -93,6 +96,16 @@
         .guide-title { font-weight: bold; margin-bottom: 10px; font-size: 16px; text-decoration: underline; }
         .guide-step { margin-bottom: 4px; padding-left: 10px; }
 
+        .chem-link {
+            color: var(--link);
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .chem-link:hover {
+            background-color: #ADD8E6;
+        }
+
         .card { display: flex; flex-direction: column; padding: 2px; }
         .card-inner { padding: 10px; display: flex; flex-direction: column; height: 100%; box-sizing: border-box; }
         .card-header { font-weight: bold; font-size: 14px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px dotted #808080; padding-bottom: 5px; }
@@ -111,19 +124,27 @@
         .section-label { font-size: 11px; color: #808080; margin-bottom: 4px; text-decoration: underline; }
         .condition-badge { font-size: 10px; border: 1px solid #808080; background: #fff; text-align: center; margin-top: 2px; }
         .name-text { text-transform: capitalize; }
+
+        .clown-img {
+            position: fixed;
+            width: 150px;
+            height: auto;
+            z-index: 9999;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
 
     <div class="main-window win-out">
         <div class="title-bar">
-            <span>SS14 Chemistry database</span>
-            <div style="background:#c0c0c0; color:black; width:16px; height:16px; text-align:center; line-height:14px; border:1px solid #fff; border-bottom-color:#000; border-right-color:#000; font-size:12px; cursor:pointer;">X</div>
+            <span>SS14 Chemistry Database</span>
+            <div onclick="spawnClown()" style="background:#c0c0c0; color:black; width:16px; height:16px; text-align:center; line-height:14px; border:1px solid #fff; border-bottom-color:#000; border-right-color:#000; font-size:12px; cursor:pointer;">X</div>
         </div>
 
         <div class="tab-bar">
             <button class="tab-btn active" onclick="switchTab('recipes')">All Recipes</button>
-            <button class="tab-btn" onclick="switchTab('guides')">Chemist Shift Guidebook</button>
+            <button class="tab-btn" onclick="switchTab('guides')">Shift Guidebook</button>
         </div>
 
         <div style="padding: 15px;">
@@ -136,7 +157,7 @@
             </div>
             
             <audio id="bgm" loop>
-                <source src="music.mp3" type="audio/mpeg">
+                <source src="content/music.mp3" type="audio/mpeg">
             </audio>
 
             <div id="recipe-view" class="view-content active">
@@ -161,7 +182,7 @@
 
         </div>
         
-        <div class="win-in" style="margin: 15px; padding: 4px; font-size: 11px; color: #666;">v1.9 - Credit for the guidebook adaptation: https://docs.google.com/spreadsheets/d/1ZGJHUXplasA6p3NY3gSVUlpMFSgD66i-OSYH8hpXtsg/edit?usp=sharing</div>
+        <div class="win-in" style="margin: 15px; padding: 4px; font-size: 11px; color: #666;">v2.1 - Honk Edition (credit for the <a href="https://docs.google.com/spreadsheets/d/1ZGJHUXplasA6p3NY3gSVUlpMFSgD66i-OSYH8hpXtsg/edit?usp=sharing" target="_blank" style="color: #666;">guidebook text</a>)</div>
     </div>
 
     <script>
@@ -169,6 +190,56 @@
         let guides = [];
         const audio = document.getElementById('bgm');
         const screen = document.getElementById('track-name');
+
+        const chemicalAliases = {
+            "Bic": "Bicaridine",
+            "Derma": "Dermaline",
+            "Dylo": "Dylovene",
+            "Tri": "Tricordrazine",
+            "Inap": "Inaprovaline",
+            "Dex P": "Dexalin Plus",
+            "Dex": "Dexalin",
+            "Pha": "Phalanximine",
+            "Ari": "Arithrazine",
+            "Sal": "Saline",
+            "Pun": "Puncturase",
+            "Lac": "Lacerinol",
+            "Bru": "Bruizine",
+            "Lepo": "Leporazine",
+            "Pyr": "Pyrotium",
+            "Ins": "Insuzine",
+            "Fersi": "Fersilicite",
+            "Dip": "Diphenhydramine",
+            "Sig": "Sigynate",
+            "Ocu": "Oculine",
+            "Epi": "Epinephrine",
+            "Eth": "Ethylredoxrazine",
+            "Nec": "Necrosol",
+            "Alox": "Aloxadone",
+            "Opp": "Opporozidone",
+            "Sid": "Siderlac",
+            "Cryo": "Cryoxadone",
+            "Dox": "Clonexadone",
+            "Kelo": "Kelotane",
+            "Trico": "Tricordrazine"
+        };
+
+        function spawnClown() {
+            const img = document.createElement('img');
+            img.src = 'content/clown.webp';
+            img.className = 'clown-img';
+
+            const maxWidth = window.innerWidth - 150;
+            const maxHeight = window.innerHeight - 150;
+
+            const randomX = Math.floor(Math.random() * maxWidth);
+            const randomY = Math.floor(Math.random() * maxHeight);
+
+            img.style.left = randomX + 'px';
+            img.style.top = randomY + 'px';
+
+            document.body.appendChild(img);
+        }
 
         function playMusic() { audio.play(); screen.innerText = "PLAYING: SPACE ASSHOLE"; }
         function pauseMusic() { audio.pause(); screen.innerText = "PAUSED"; }
@@ -185,6 +256,41 @@
                 document.getElementById('guide-view').classList.add('active');
                 document.querySelector('button[onclick="switchTab(\'guides\')"]').classList.add('active');
             }
+        }
+
+        function goToRecipe(chemName) {
+            switchTab('recipes');
+            const searchBox = document.getElementById('search');
+            searchBox.value = chemName;
+            render();
+            searchBox.focus();
+        }
+
+        function linkify(text) {
+            const keys = Object.keys(chemicalAliases).sort((a, b) => b.length - a.length);
+            
+            let linkedText = text;
+
+            keys.forEach(alias => {
+                const fullName = chemicalAliases[alias];
+                const regex = new RegExp(`\\b${alias}\\b`, 'g');
+                
+                linkedText = linkedText.replace(regex, `<span class="chem-link" onclick="goToRecipe('${fullName}')">${alias}</span>`);
+            });
+
+            recipes.slice(0, 50).forEach(r => {
+                if(r.products && r.products[0]) {
+                    const name = r.products[0].name;
+                    if (name.length > 3) {
+                        const regex = new RegExp(`\\b${name}\\b`, 'gi');
+                        if (!linkedText.includes(`>${name}<`)) {
+                             linkedText = linkedText.replace(regex, (match) => `<span class="chem-link" onclick="goToRecipe('${name}')">${match}</span>`);
+                        }
+                    }
+                }
+            });
+
+            return linkedText;
         }
 
         async function init() {
@@ -237,8 +343,8 @@
                     <div class="guide-cat-title">${cat.category}</div>
                     ${cat.guides.map(g => `
                         <div class="guide-entry">
-                            <div class="guide-title">${g.title}</div>
-                            ${g.content.map(step => `<div class="guide-step">${step}</div>`).join('')}
+                            <div class="guide-title">${linkify(g.title)}</div>
+                            ${g.content.map(step => `<div class="guide-step">${linkify(step)}</div>`).join('')}
                         </div>
                     `).join('')}
                 </div>
