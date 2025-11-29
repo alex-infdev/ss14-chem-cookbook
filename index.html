@@ -3,23 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SS14 Chemistry</title>
+    <title>SS14 Chem</title>
     <style>
         :root {
             --desktop: #008080;
             --surface: #c0c0c0;
             --text: #000000;
-            --highlight: #ffffff;
-            --shadow-light: #dfdfdf;
-            --shadow-dark: #808080;
-            --shadow-black: #000000;
-            --title-blue: #000080;
-            --title-gradient: #1084d0;
-            
-
             --heat: #d32f2f;
             --cold: #1976d2;
-            --overdose: #ff0000;
+            --heal: #006400;
         }
 
         body {
@@ -33,169 +25,68 @@
 
         .win-out {
             background: var(--surface);
-            border-top: 2px solid var(--highlight);
-            border-left: 2px solid var(--highlight);
-            border-right: 2px solid var(--shadow-black);
-            border-bottom: 2px solid var(--shadow-black);
-            box-shadow: 1px 1px 0px var(--shadow-dark) inset, -1px -1px 0px var(--shadow-light) inset;
+            border-top: 2px solid #fff; border-left: 2px solid #fff;
+            border-right: 2px solid #000; border-bottom: 2px solid #000;
+            box-shadow: 1px 1px 0px #808080 inset, -1px -1px 0px #dfdfdf inset;
         }
-
         .win-in {
             background: #fff;
-            border-top: 2px solid var(--shadow-black);
-            border-left: 2px solid var(--shadow-black);
-            border-right: 2px solid var(--highlight);
-            border-bottom: 2px solid var(--highlight);
-            box-shadow: 1px 1px 0px var(--shadow-light) inset, -1px -1px 0px var(--shadow-dark) inset;
+            border-top: 2px solid #000; border-left: 2px solid #000;
+            border-right: 2px solid #fff; border-bottom: 2px solid #fff;
+            box-shadow: 1px 1px 0px #dfdfdf inset, -1px -1px 0px #808080 inset;
         }
 
-        .main-window {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2px;
-        }
-
+        .main-window { max-width: 1000px; margin: 0 auto; padding: 2px; }
         .title-bar {
-            background: linear-gradient(90deg, var(--title-blue), var(--title-gradient));
-            padding: 4px 8px;
-            color: white;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            letter-spacing: 0.5px;
+            background: linear-gradient(90deg, #000080, #1084d0);
+            padding: 4px 8px; color: white; font-weight: bold;
+            display: flex; justify-content: space-between; align-items: center;
         }
 
-        .window-body {
-            padding: 15px;
-        }
+        input#search { width: 100%; padding: 8px; font-family: 'Tahoma'; font-size: 16px; outline: none; box-sizing: border-box; }
 
-        #search-container {
-            margin-bottom: 20px;
-        }
+        #app { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px; }
 
-        input#search {
-            width: 100%;
-            padding: 8px;
-            font-family: 'Tahoma', sans-serif;
-            font-size: 16px;
-            outline: none;
-            box-sizing: border-box;
-        }
-
-        #app {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
-        }
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            padding: 2px;
-        }
-
-        .card-inner {
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            box-sizing: border-box;
-        }
-
+        .card { display: flex; flex-direction: column; padding: 2px; }
+        .card-inner { padding: 10px; display: flex; flex-direction: column; height: 100%; box-sizing: border-box; }
+        
         .card-header {
-            font-weight: bold;
-            font-size: 14px;
-            margin-bottom: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            border-bottom: 1px dotted #808080;
-            padding-bottom: 5px;
+            font-weight: bold; font-size: 14px; margin-bottom: 8px;
+            display: flex; justify-content: space-between; align-items: flex-start;
+            border-bottom: 1px dotted #808080; padding-bottom: 5px;
         }
 
-        .card-body {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .column { flex: 1; }
-        .arrow-column { flex: 0 0 20px; text-align: center; color: var(--shadow-dark); font-weight: bold; }
-
-        .reagent-list { list-style: none; padding: 0; margin: 0; font-size: 13px; }
-        .reagent-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 4px;
-        }
-
-        .beaker-dot {
-            width: 10px;
-            height: 10px;
-            border: 1px solid #000;
-            margin-right: 6px;
-            flex-shrink: 0;
-            display: inline-block;
-        }
-
-        .section-label {
-            font-size: 11px;
-            color: var(--shadow-dark);
-            margin-bottom: 4px;
-            display: block;
-            text-decoration: underline;
+        .meta-tag { background: #e0e0e0; border: 1px solid #808080; padding: 0 4px; font-size: 11px; margin-left: 5px; }
+        
+        .overdose-warning {
+            color: white; background: red; font-weight: bold; padding: 1px 4px; font-size: 11px;
+            border: 1px solid #800000;
         }
 
         .recipe-desc {
-            font-style: italic;
-            font-size: 12px;
-            color: #444;
-            margin-bottom: 8px;
-            padding: 4px;
-            background: #efefef;
-            border: 1px dotted #999;
+            font-style: italic; font-size: 12px; color: #444; margin-bottom: 8px;
+            padding: 4px; background: #efefef; border: 1px dotted #999;
         }
 
-        .meta-tag {
-            background: #e0e0e0;
-            border: 1px solid #808080;
-            padding: 0 4px;
-            font-size: 11px;
-            margin-left: 5px;
-            border-radius: 0;
-        }
-
-        .overdose-warning {
-            color: white;
-            background: red;
-            font-weight: bold;
-            padding: 1px 4px;
-            font-size: 11px;
-        }
-
-        .damage-section {
-            font-size: 11px;
-            margin-bottom: 8px;
-            color: #d32f2f;
-        }
-        .dmg-badge {
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .condition-badge {
-            display: block;
+        .effect-section { font-size: 11px; margin-bottom: 4px; display: flex; gap: 5px; align-items: center; }
+        
+        .dmg-label { color: #d32f2f; font-weight: bold; width: 40px; }
+        .heal-label { color: #006400; font-weight: bold; width: 40px; }
+        
+        .effect-badge { 
+            border: 1px solid #999; padding: 0 3px; background: #eee; 
             font-size: 10px;
-            padding: 1px;
-            margin-top: 2px;
-            border: 1px solid #808080;
-            background: #fff;
-            text-align: center;
         }
 
-        .status-msg { padding: 20px; text-align: center; font-style: italic; }
+        .reagent-list { list-style: none; padding: 0; margin: 0; font-size: 13px; }
+        .reagent-item { display: flex; align-items: center; margin-bottom: 4px; }
+        .beaker-dot { width: 10px; height: 10px; border: 1px solid #000; margin-right: 6px; display: inline-block; }
+
+        .column { flex: 1; }
+        .arrow-column { flex: 0 0 20px; text-align: center; color: #808080; font-weight: bold; }
+        .section-label { font-size: 11px; color: #808080; margin-bottom: 4px; text-decoration: underline; }
+
+        .condition-badge { font-size: 10px; border: 1px solid #808080; background: #fff; text-align: center; margin-top: 2px; }
     </style>
 </head>
 <body>
@@ -206,21 +97,16 @@
             <div style="background:#c0c0c0; color:black; width:16px; height:16px; text-align:center; line-height:14px; border:1px solid #fff; border-bottom-color:#000; border-right-color:#000; font-size:12px; cursor:pointer;">X</div>
         </div>
 
-        <div class="window-body">
-            
-            <div id="search-container">
-                <label for="search" style="display:block; margin-bottom:4px;">Filter chemicals:</label>
+        <div style="padding: 15px;">
+            <div style="margin-bottom: 20px;">
+                <label for="search" style="display:block; margin-bottom:4px;">Filter Chemicals:</label>
                 <input type="text" id="search" class="win-in" placeholder="Type to search..." onkeyup="render()" autofocus>
             </div>
-
-            <div id="app" class="status-msg">
-                Scanning disk for recipes...
-            </div>
+            
+            <div id="app" style="text-align: center; font-style: italic;">Loading database...</div>
         </div>
         
-        <div class="win-in" style="margin: 15px; padding: 4px; font-size: 11px; color: #666;">
-            Ready.
-        </div>
+        <div class="win-in" style="margin: 15px; padding: 4px; font-size: 11px; color: #666;">v1.6</div>
     </div>
 
     <script>
@@ -243,14 +129,11 @@
             
             const filtered = recipes.filter(r => 
                 r.products && r.products.length > 0 && 
-                (
-                    r.id.toLowerCase().includes(query) || 
-                    r.products.some(p => p.name && p.name.toLowerCase().includes(query))
-                )
+                (r.id.toLowerCase().includes(query) || r.products.some(p => p.name && p.name.toLowerCase().includes(query)))
             );
 
             if (filtered.length === 0) {
-                container.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 20px;">No matching records found.</div>`;
+                container.innerHTML = `<div style="grid-column: 1/-1; text-align:center;">No matching records found.</div>`;
                 return;
             }
 
@@ -267,7 +150,14 @@
 
                 let damageHtml = '';
                 if (mainP.damage && mainP.damage.length > 0) {
-                    damageHtml = `<div class="damage-section">Damage: <b>${mainP.damage.join(', ')}</b></div>`;
+                    damageHtml = `<div class="effect-section"><span class="dmg-label">HARM:</span> ` + 
+                        mainP.damage.map(d => `<span class="effect-badge">${d}</span>`).join(' ') + `</div>`;
+                }
+
+                let healHtml = '';
+                if (mainP.heals && mainP.heals.length > 0) {
+                    healHtml = `<div class="effect-section"><span class="heal-label">HEAL:</span> ` + 
+                        mainP.heals.map(h => `<span class="effect-badge">${h}</span>`).join(' ') + `</div>`;
                 }
 
                 let descHtml = mainP.desc ? `<div class="recipe-desc">${mainP.desc}</div>` : '';
@@ -276,13 +166,17 @@
                 <div class="card win-out">
                     <div class="card-inner">
                         <div class="card-header">
-                            <span>${mainP.name}</span>
+                            <span class="name-text">${mainP.name}</span>
                             <div>${overdoseHtml}</div>
                         </div>
                         
                         <div style="margin-bottom:5px;">${tagsHtml}</div>
                         ${descHtml}
-                        ${damageHtml}
+                        
+                        <div style="margin-bottom: 8px;">
+                            ${damageHtml}
+                            ${healHtml}
+                        </div>
 
                         <div class="card-body">
                             <div class="column">
@@ -297,10 +191,7 @@
                                 </ul>
                             </div>
 
-                            <div class="arrow-column">
-                                &#8594;
-                                ${conditionsHtml}
-                            </div>
+                            <div class="arrow-column">&#8594; ${conditionsHtml}</div>
 
                             <div class="column">
                                 <span class="section-label">Result</span>
