@@ -143,7 +143,7 @@
     <header>
         <h1>SS14 Chemistry Cookbook</h1>
         <div id="search-container">
-            <input type="text" id="search" placeholder="Search for chemicals (e.g. 'Styptic', 'Chlorine')..." onkeyup="render()">
+            <input type="text" id="search" placeholder="Search for chemicals (e.g. 'Bicaridine', 'Diphenhydramine')..." onkeyup="render()">
         </div>
     </header>
 
@@ -168,8 +168,11 @@
             const container = document.getElementById('app');
             
             const filtered = recipes.filter(r => 
-                r.id.toLowerCase().includes(query) || 
-                r.products.some(p => p.name.toLowerCase().includes(query))
+                r.products && r.products.length > 0 && 
+                (
+                    r.id.toLowerCase().includes(query) || 
+                    r.products.some(p => p.name && p.name.toLowerCase().includes(query))
+                )
             );
 
             if (filtered.length === 0) {
