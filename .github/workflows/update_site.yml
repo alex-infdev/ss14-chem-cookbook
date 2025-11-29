@@ -22,21 +22,26 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          pip install requests pyyaml
 
       - name: Run parser script
         run: |
           python update_data.py
 
-      - name: Commit and push Data
+      - name: Commit and push data
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git add chem_data.json
-          # Only commit if data changed
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update chemistry data" && git push)
+          if [ -f chem_data.json ]; then
+            git add chem_data.json
+            git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update chemistry data" && git push)
+          else
+            echo "chem_data.json was not generated!"
+            exit 1
+          fi
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GH pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
