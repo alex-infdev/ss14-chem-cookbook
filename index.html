@@ -3,85 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SS14 Chemistry</title>
+    <title>SS14 Chem Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-color: #1e1e24;
-            --card-bg: #2b2b36;
-            --border: #3f3f4e;
-            --text-main: #e0e0e0;
-            --text-muted: #a0a0b0;
+            --bg-color: #111111;
+            --card-bg: #222222;
+            --border-light: #555555;
+            --border-dark: #000000;
+            --text-main: #eeeeee;
+            --text-green: #44ff44;
+            --text-dim: #888888;
             --accent: #5e81ac;
-            --heat: #bf616a;
-            --cold: #88c0d0;
+            --heat: #d95763;
+            --cold: #99c0cf;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'VT323', monospace;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
             padding: 20px;
+            font-size: 18px;
+            background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
         }
 
         header {
             max-width: 1200px;
             margin: 0 auto 30px;
             text-align: center;
+            border-bottom: 2px solid var(--text-green);
+            padding-bottom: 10px;
         }
 
-        h1 { margin-bottom: 10px; font-weight: 300; letter-spacing: 1px; }
+        h1 { 
+            margin-bottom: 5px; 
+            font-weight: 400; 
+            text-transform: uppercase; 
+            color: var(--text-green);
+            text-shadow: 2px 2px 0px #000;
+            font-size: 40px;
+        }
 
         #search-container {
             position: sticky;
             top: 20px;
             z-index: 100;
-            background: var(--bg-color);
             padding: 10px 0;
-            box-shadow: 0 10px 20px -10px rgba(0,0,0,0.5);
         }
 
         input#search {
             width: 100%;
             max-width: 600px;
-            padding: 15px;
-            font-size: 16px;
-            background: var(--card-bg);
-            border: 2px solid var(--border);
-            color: white;
-            border-radius: 8px;
+            padding: 10px;
+            font-size: 24px;
+            font-family: 'VT323', monospace;
+            background: #000;
+            border: 2px solid var(--border-light);
+            color: var(--text-green);
             outline: none;
-            transition: border-color 0.2s;
+            box-shadow: 4px 4px 0px #000;
         }
-        input#search:focus { border-color: var(--accent); }
+        input#search::placeholder { color: #335533; }
+        input#search:focus { border-color: var(--text-green); }
 
         #app {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .card {
             background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow: hidden;
+            border: 2px solid var(--border-light);
+            border-top-color: #666;
+            border-left-color: #666;
+            border-bottom-color: #000;
+            border-right-color: #000;
+            
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--text-green);
         }
 
         .card-header {
-            background: rgba(0,0,0,0.2);
-            padding: 12px 15px;
-            font-size: 18px;
-            font-weight: bold;
-            border-bottom: 1px solid var(--border);
+            background: #000;
+            padding: 8px 12px;
+            font-size: 24px;
+            color: #fff;
+            border-bottom: 2px solid var(--border-light);
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            gap: 5px;
         }
 
         .card-body {
@@ -93,86 +117,98 @@
         }
 
         .column { flex: 1; }
-        .arrow-column { flex: 0 0 30px; text-align: center; color: var(--text-muted); font-size: 20px; }
+        .arrow-column { flex: 0 0 30px; text-align: center; color: var(--text-dim); font-size: 24px; }
 
-        .reagent-list { list-style: none; padding: 0; margin: 0; font-size: 14px; }
+        .reagent-list { list-style: none; padding: 0; margin: 0; font-size: 20px; }
         .reagent-item {
             display: flex;
             align-items: center;
             margin-bottom: 6px;
-            background: rgba(255,255,255,0.03);
-            padding: 4px 8px;
-            border-radius: 4px;
+            padding: 2px 0;
+            border-bottom: 1px dashed #333;
         }
 
         .beaker-dot {
             width: 12px;
             height: 12px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.3);
-            margin-right: 8px;
+            border: 1px solid #fff;
+            margin-right: 10px;
             flex-shrink: 0;
-            box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+            background-color: var(--bg-color);
+            image-rendering: pixelated;
         }
 
         .section-label {
-            font-size: 11px;
+            font-size: 16px;
             text-transform: uppercase;
-            color: var(--text-muted);
+            color: var(--text-dim);
             margin-bottom: 5px;
             display: block;
-            letter-spacing: 0.5px;
-        }
-
-        .condition-badge {
+            border-bottom: 2px solid var(--text-dim);
             display: inline-block;
-            font-size: 11px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-top: 4px;
-            font-weight: bold;
         }
-        .cond-heat { background: rgba(191, 97, 106, 0.2); color: #bf616a; border: 1px solid #bf616a; }
-        .cond-cold { background: rgba(136, 192, 208, 0.2); color: #88c0d0; border: 1px solid #88c0d0; }
-
-        .error-box { grid-column: 1 / -1; text-align: center; padding: 40px; color: #bf616a; border: 1px dashed #bf616a; }
 
         .recipe-desc {
-            padding: 10px 15px 0;
-            font-size: 13px;
-            color: var(--text-muted);
-            font-style: italic;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 10px;
+            padding: 10px 15px;
+            font-size: 18px;
+            color: #bbb;
+            background: #1a1a1a;
+            border-bottom: 1px solid #333;
+            line-height: 1.2;
         }
 
         .meta-tag {
             display: inline-block;
-            background: rgba(255,255,255,0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-left: 5px;
-            font-size: 10px;
+            background: #000;
+            color: var(--text-green);
+            padding: 0px 6px;
+            border: 1px solid var(--text-green);
+            margin-left: 8px;
+            font-size: 16px;
+            text-transform: uppercase;
         }
 
         .overdose-warning {
-            color: #bf616a;
-            font-weight: bold;
-            font-size: 11px;
-            letter-spacing: 0.5px;
+            color: var(--heat);
+            background: #200;
+            padding: 0 4px;
+            border: 1px solid var(--heat);
+            display: inline-block;
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        .condition-badge {
+            display: inline-block;
+            font-size: 16px;
+            padding: 2px 4px;
+            margin-top: 4px;
+            border: 1px solid;
+            background: #000;
+        }
+        .cond-heat { color: var(--heat); border-color: var(--heat); }
+        .cond-cold { color: var(--cold); border-color: var(--cold); }
+
+        .error-box { 
+            grid-column: 1 / -1; 
+            text-align: center; 
+            padding: 40px; 
+            color: var(--heat); 
+            border: 2px dashed var(--heat); 
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>SS14 Chemistry Cookbook</h1>
+        <h1>SS14 CHEM DATABASE</h1>
         <div id="search-container">
-            <input type="text" id="search" placeholder="Search for chemicals (e.g. 'Bicaridine', 'Diphenhydramine')..." onkeyup="render()">
+            <input type="text" id="search" placeholder="> SEARCH DATABASE..." onkeyup="render()" autofocus>
         </div>
     </header>
 
-    <div id="app">Loading database...</div>
+    <div id="app" style="text-align: center; color: #666;">INITIALIZING DATAPAD...</div>
 
     <script>
         let recipes = [];
@@ -184,7 +220,7 @@
                 recipes = await response.json();
                 render();
             } catch (e) {
-                document.getElementById('app').innerHTML = `<div class="error-box">Could not load recipes.<br>${e.message}</div>`;
+                document.getElementById('app').innerHTML = `<div class="error-box">CONNECTION FAILURE.<br>${e.message}</div>`;
             }
         }
 
@@ -192,7 +228,6 @@
             const query = document.getElementById('search').value.toLowerCase();
             const container = document.getElementById('app');
             
-            // Safety Check Filter
             const filtered = recipes.filter(r => 
                 r.products && r.products.length > 0 && 
                 (
@@ -202,7 +237,7 @@
             );
 
             if (filtered.length === 0) {
-                container.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#666;">No matches found.</div>`;
+                container.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#555; font-size: 24px;">> NO ENTRIES FOUND</div>`;
                 return;
             }
 
@@ -210,34 +245,34 @@
                 const mainP = r.products[0];
                 
                 let conditionsHtml = '';
-                if (r.conditions.minTemp) conditionsHtml += `<div class="condition-badge cond-heat">Min: ${Math.round(r.conditions.minTemp)}K</div>`;
-                if (r.conditions.maxTemp) conditionsHtml += `<div class="condition-badge cond-cold">Max: ${Math.round(r.conditions.maxTemp)}K</div>`;
+                if (r.conditions.minTemp) conditionsHtml += `<div class="condition-badge cond-heat">MIN: ${Math.round(r.conditions.minTemp)}K</div>`;
+                if (r.conditions.maxTemp) conditionsHtml += `<div class="condition-badge cond-cold">MAX: ${Math.round(r.conditions.maxTemp)}K</div>`;
 
                 let tagsHtml = mainP.tags.map(t => `<span class="meta-tag">${t}</span>`).join('');
                 
-                let overdoseHtml = mainP.overdose ? `<span class="overdose-warning">OD: ${mainP.overdose}u</span>` : '';
+                let overdoseHtml = mainP.overdose ? `<span class="overdose-warning">! OD: ${mainP.overdose}u</span>` : '';
 
                 let descHtml = mainP.desc ? `<div class="recipe-desc">${mainP.desc}</div>` : '';
 
                 return `
                 <div class="card">
                     <div class="card-header">
-                        <div style="display:flex; flex-direction:column; gap:4px;">
-                            <div style="display:flex; justify-content:space-between; width:100%;">
-                                <span>${mainP.name}</span>
-                                <div style="font-size:12px;">${tagsHtml}</div>
-                            </div>
-                            <div style="font-size:12px; font-weight:normal; opacity:0.8;">${overdoseHtml}</div>
+                        <div style="display:flex; justify-content:space-between; align-items: center; width:100%;">
+                            <span>${mainP.name.toUpperCase()}</span>
+                            ${overdoseHtml}
                         </div>
+                        <div style="font-size:16px; margin-top: 4px;">${tagsHtml}</div>
                     </div>
                     
-                    ${descHtml} <div class="card-body">
+                    ${descHtml}
+
+                    <div class="card-body">
                         <div class="column">
-                            <span class="section-label">Mix</span>
+                            <span class="section-label">INPUT</span>
                             <ul class="reagent-list">
                                 ${r.reactants.map(i => `
                                     <li class="reagent-item">
-                                        <span class="beaker-dot" style="background-color: ${i.color}"></span>
+                                        <div class="beaker-dot" style="background-color: ${i.color}"></div>
                                         ${i.amount}u ${i.name}
                                     </li>
                                 `).join('')}
@@ -245,16 +280,16 @@
                         </div>
 
                         <div class="arrow-column">
-                            ➔
+                            >>>
                             ${conditionsHtml}
                         </div>
 
                         <div class="column">
-                            <span class="section-label">Result</span>
+                            <span class="section-label">OUTPUT</span>
                             <ul class="reagent-list">
                                 ${r.products.map(p => `
                                     <li class="reagent-item">
-                                        <span class="beaker-dot" style="background-color: ${p.color}"></span>
+                                        <div class="beaker-dot" style="background-color: ${p.color}"></div>
                                         ${p.amount}u ${p.name}
                                     </li>
                                 `).join('')}
