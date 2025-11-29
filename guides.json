@@ -101,12 +101,8 @@
     ]
   },
   {
-    "category": "Advanced medicine",
+    "category": "Advanced medicine - Brute",
     "guides": [
-      {
-        "title": "Pun/Lac/Bru - Specialized brute medicines",
-        "content": []
-      },
       {
         "title": "Pun - Piercing - 11u OD - DO NOT MIX LAC/BRU/BICA",
         "content": [
@@ -135,12 +131,24 @@
       },
       {
         "title": "Lepo - Cold/Bad temperature - SAFE",
-        "content": []
+        "content": [
+            "Fersi = 50 iron, silicon HEAT",
+            "Lepo = 45 copper, 45 Fersi 1u PLASMA"
+        ]
       },
       {
-        "title": "Fersi = 50 iron, silicon HEAT",
+        "title": "Pyr - Heat - 20u OD",
         "content": [
-          "Lepo = 45 copper, 45 Fersi 1u PLASMA"
+          "Derma = 15 silicon, carbon,30 oxygen, phosphorus",
+          "Pyr = 25 Lepo, 25 Derma, 25 carbon HEAT"
+        ]
+      },
+      {
+        "title": "Ins - Shock - 12u OD (Least Important)",
+        "content": [
+          "Kelo = 50 carbon, silicon",
+          "Benzene = 50 carbon, hydrogen HEAT",
+          "Ins = Lepo (50 iron, silicon HEAT then 45 copper 1u PLASMA) , Kelo, silicon HEAT"
         ]
       }
     ]
