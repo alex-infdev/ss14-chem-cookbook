@@ -82,6 +82,12 @@
         ]
       },
       {
+        "title": "Robust Harvest",
+        "content": [
+          "EZ Nutrient, Sulfuric acid (30u oxy, 15u hydrogen, sulfer)"
+        ]
+      },
+      {
         "title": "Unstable Mutagen",
         "content": [
           "30u radium, phosporus, chlorine"
@@ -101,7 +107,7 @@
     ]
   },
   {
-    "category": "Advanced medicine - Brute",
+    "category": "Advanced medicine - Brute (Pun/Lac/Bru)",
     "guides": [
       {
         "title": "Pun - Piercing - 11u OD - DO NOT MIX LAC/BRU/BICA",
@@ -124,16 +130,17 @@
         "content": [
           "25 Bica, lithium, sugar (no heat needed)"
         ]
-      },
-      {
-        "title": "Lepo/Pyr/Ins - Specialized Burn Medicines",
-        "content": []
-      },
+      }
+    ]
+  },
+{
+    "category": "Advanced medicine - Burn (Lepo, Pyr, Ins)",
+    "guides": [
       {
         "title": "Lepo - Cold/Bad temperature - SAFE",
         "content": [
-            "Fersi = 50 iron, silicon HEAT",
-            "Lepo = 45 copper, 45 Fersi 1u PLASMA"
+          "Fersi = 50 iron, silicon HEAT",
+          "Lepo = 45 copper, 45 Fersi 1u PLASMA"
         ]
       },
       {
@@ -148,42 +155,36 @@
         "content": [
           "Kelo = 50 carbon, silicon",
           "Benzene = 50 carbon, hydrogen HEAT",
-          "Ins = Lepo (50 iron, silicon HEAT then 45 copper 1u PLASMA) , Kelo, silicon HEAT"
+          "Ins = Lepo (50 iron, silicon HEAT then 45 copper 1u PLASMA), Kelo, silicon HEAT"
         ]
       }
     ]
-  },
+  },  
   {
-    "category": "Advanced poison",
+    "category": "Advanced medicine - Poison (Dip)",
     "guides": [
       {
         "title": "Dip - Poison - SAFE",
-        "content": []
-      },
-      {
-        "title": "Ammonia = 75 hydrogen, 25 nitrogen",
         "content": [
+          "Ammonia = 75 hydrogen, 25 nitrogen",
           "Diethylamine = 50 ethanol, 50 ammonia",
           "Oil = welding fuel, carbon, hydrogen",
-          "Table Salt = 50 chlorine, 50 sodium HEAT",
+          "Table Salt = 50 chlorine, 50 sodium HEAT", 
           "Dip = Diethhylamine, Oil, Table Salt, carbon, ethanol HEAT"
         ]
       }
     ]
-  },
+  },  
   {
-    "category": "Advanced caustic",
+    "category": "Advanced medicine - Caustic (Sig)",
     "guides": [
       {
         "title": "Sig - Caustic - 16u OD",
-        "content": []
-      },
-      {
-        "title": "Table Salt = 50 chlorine, sodium",
         "content": [
+          "Table Salt = 50 chlorine, sodium",
           "Ammonia = 75 hydrogen, nitrogen",
           "Sodium Carbonate = 25 Ammonia, Table Salt, oxygen, carbon",
-          "Hydroxide = oxygen, hydrogen HEAT",
+          "Hydroxide = oxygen, hydrogen HEAT", 
           "Sodium Hydroxide = Sodium, Hydroxide",
           "Kelo = 50 silicon, carbon",
           "Sig = 20 Sodium Carbonate, Sodium Hydroxide, Kelo, water, sugar HEAT"
@@ -196,22 +197,16 @@
     "guides": [
       {
         "title": "Ocu - 5u Blindness - SAFE",
-        "content": []
-      },
-      {
-        "title": "Hydroxide = 50 hydrogen, oxygen",
         "content": [
+          "Hydroxide = 50 hydrogen, oxygen",
           "Table Salt = 50 chlorine, sodium",
           "Oculine = 1x Hydroxide, Table Salt, 2x blood"
         ]
       },
       {
         "title": "Epi - Critical - 20u OD",
-        "content": []
-      },
-      {
-        "title": "Oil = 30 welding fuel, carbon, hydrogen",
         "content": [
+          "Oil = 30 welding fuel, carbon, hydrogen",
           "Acetone = 30 Oil, welding fuel, oxygen",
           "Benzene = 50 carbon, hydrogen HEAT",
           "Hydroxide = 50 oxygen, hydrogen HEAT",
@@ -221,11 +216,8 @@
       },
       {
         "title": "Charcoal - Chem removal(Good and bad)",
-        "content": []
-      },
-      {
-        "title": "Oil = 25 welding fuel, carbon, hydrogen",
         "content": [
+          "Oil = 25 welding fuel, carbon, hydrogen",
           "Ash = Oil, HEAT",
           "Charcoal = 50 Ash, carbon"
         ]
@@ -241,7 +233,16 @@
         "content": [
           "1 ointment, cloth, aloe",
           "20 Derma, Sig",
-          "10 seconds in microwave"
+          "10 seconds in microwave",
+          " ",
+          "Kelo = 50 silicon, carbon",
+          "Derma = 50 Kelo, 25 oxygen, phosphorus",
+          "Table Salt = 50 chlorine, sodium",
+          "Ammonia = 75 hydrogen, nitrogen",
+          "Sodium Carbonate = 25 Ammonia, Table Salt, oxygen, carbon",
+          "Hydroxide = oxygen, hydrogen HEAT",
+          "Sodium Hydroxide = Sodium, Hydroxide",
+          "Sig = 20 Sodium Carbonate, Sodium Hydroxide, Kelo, water, sugar HEAT"
         ]
       },
       {
@@ -249,23 +250,28 @@
         "content": [
           "1 bruise pack, cloth, poppy",
           "20 Tranexamic Acid, Cryptobiolin",
-          "10 seconds in microwave"
+          "10 seconds in microwave",
+          " ",
+          "Inap = 25 oxygen, carbon, sugar",
+          "Sulfuric Acid = 25 hydrogen, sulfur, 50 oxygen",
+          "Tranexamic Acid = 25 Inap, Sulfuric Acid, sugar",
+          "Cryptobiolin = 25 hydrogen, sugar, oxygen"
         ]
       },
       {
         "title": "Amb & Amb+ - Zombie cure&vaccine",
-        "content": []
-      },
-      {
-        "title": "Ambuzol 10u - basic zombie cure",
         "content": [
-          "25 Dylo ( 15u silicon, carbon,30u oxygen phosperus), ammonia 50 zombie blood"
-        ]
-      },
-      {
-        "title": "Ambuzol+ 5u - cure and vaccine",
-        "content": [
-          "Ambuzol, omnizine"
+          "Ammonia = 75 nitrogen 25 hydrogen",
+          "",
+          "Ambuzol 10u - basic zombie cure",
+          " ",
+          "25 Dylo ( 15u silicon, carbon,30u oxygen phosperus), ammonia 50 zombie blood",
+          " ",
+          "Ambuzol+ 5u - cure and vaccine", 
+          "Ambuzol, omnizine",
+          " ",
+          "Omnizine = Ambrosia Deus Grinded = 3 omnizine",
+          "Ambrosia Vulgaris + Unstable Mutation until it makes Ambrosia Dues"
         ]
       }
     ]
@@ -275,59 +281,64 @@
     "guides": [
       {
         "title": "Cryo - All but genetic - Cryopod(-60C)",
-        "content": []
-      },
-      {
-        "title": "Dexalin = oxygen PLASMA",
         "content": [
+          "Dexalin = oxygen PLASMA",
           "Cryo = 25 water, oxygen, dexalin",
+          " ", 
           "50u beaker(if patient is cold enough) = 400 brute, 400 toxin, 600 burn, 600 airloss"
         ]
       },
       {
-        "title": "Nec - dead burns/brute/poison - Cryopod(-60C)",
-        "content": []
-      },
-      {
-        "title": "Dex = oxygen PLASMA",
-        "content": [
-          "Cryo = water, oxygen, Dex",
-          "Nec = x3 blood, x2 Cryo, x1 omnizine",
-          "50u beaker = 400 brute, 500 burns, 200 poison"
-        ]
-      },
-      {
         "title": "Dox - Genetic - Cryopod(-60C)",
-        "content": []
-      },
-      {
-        "title": "Dexalin = oxygen PLASMA",
         "content": [
+          "Dexalin = oxygen PLASMA",
           "Cryo = 25 water, oxygen, dexalin",
           "Unstable mutagen = radium, phosphorus, chlorine",
           "Dox = 50 Cryo, Unstable Mutagen",
+          " ",
           "50u beaker = 200 genetic"
         ]
       },
       {
-        "title": "Alox - dead heat/shock/caustic - Cryopod(-60C)",
-        "content": []
-      },
-      {
         "title": "Dox+Cryo - Everything - Cryopod(-60C)",
-        "content": []
+        "content": [
+          "Because cryopod injects 1u from beaker per second you might want to make 50/50 mix of Dox and Cryo"
+        ]
       },
       {
-        "title": "Because cryopod injects 1u from beaker per second you might want to make 50/50 mix of Dox and Cryo",
-        "content": []
+        "title": "Nec - dead burns/brute/poison - Cryopod(-60C)",
+        "content": [
+          "Dex = oxygen PLASMA",
+          "Cryo = water, oxygen, Dex",
+          "Nec = x3 blood, x2 Cryo, x1 omnizine",
+          " ",
+          "50u beaker = 400 brute, 500 burns, 200 poison",
+          " ",
+          "Omnizine = Ambrosia Deus Grinded = 3 omnizine",
+          "Ambrosia Vulgaris + Unstable Mutation until it makes Ambrosia Dues"
+        ]
+      },
+      {
+        "title": "Alox - dead heat/shock/caustic - Cryopod(-60C)",
+        "content": [
+          "Dex = oxygen PLASMA",
+          "Cryo = water, oxygen, Dex",
+          "Table Salt = 50 chlorine, sodium",
+          "Ammonia = 75 hydrogen, nitrogen",
+          "Sodium Carbonate = 25 Ammonia, Table Salt, oxygen, carbon",
+          "Hydroxide = oxygen, hydrogesdn HEAT",
+          "Sodium Hydroxide = Sodium, Hydroxide",
+          "Kelo = 50 silicon, carbon",
+          "Sig = 20 Sodium Carbonate, Sodium Hydroxide, Kelo, water, sugar HEAT", 
+          "Alox = 40 aloe, 40 Sig, 20 Cryo",
+          " ",
+          "50u beaker = 300 shock, heat, 100 caustic"
+        ]
       },
       {
         "title": "Opp - Antirot - Cryopod(-123C)",
-        "content": []
-      },
-      {
-        "title": "Sid = Aloe, Stelibinin (from galaxythistle)",
         "content": [
+          "Sid = Aloe, Stelibinin (from galaxythistle)",
           "Cryo = oxygen, Dexalin, water",
           "Unstable Mutagen = chlorine, phosphorus, radium",
           "Dox = Cryo, Unstable Mutagen",
@@ -335,6 +346,7 @@
           "Acetone = Oil, welding fuel, oxygen",
           "Cognizine = carpotoxin (grinded space carp), Sid, Acetone",
           "Opp = 25 Cognizine, Dox, 50 plasma HEAT",
+          " ",
           "50u beaker = 2000s of rot timer reversed(rot starts past 600s)"
         ]
       }
@@ -345,37 +357,41 @@
     "guides": [
       {
         "title": "Metal Foam",
-        "content": []
-      },
-      {
-        "title": "Beaker 1: 2 Aluminum - 1 Lithium - 1 Hydrogen",
-        "content": []
-      },
-      {
-        "title": "Beaker 2: 2 Oxygen - 1 Sulfur - 1 Hydrogen - 1 Hydrogen - 1 Potassium - 1 Fluorine",
         "content": [
+          "Beaker 1: 2 Aluminum - 1 Lithium - 1 Hydrogen",
+          "Beaker 2: 2 Oxygen - 1 Sulfur - 1 Hydrogen - 1 Hydrogen - 1 Potassium - 1 Fluorine",
           "Mix to Activate"
         ]
       },
       {
         "title": "Desoxyephedrine (Meth)",
-        "content": []
-      },
-      {
-        "title": "Oil = 10u welding fuel, carbon, hydrogen",
         "content": [
+          "Oil = 10u welding fuel, carbon, hydrogen",
           "Ammonia= 15u hydrogen, 5u nitrogen",
           "Diethylamine = ammonia, 20u ethanol",
           "Ephedrine = 25u oil, diethylamine, hydrogen, sugar",
-          "Desoxyephedrine = 25u Ephedrine, Carbon, Iodine, Phospherus HEAT"
-        ]
+          "Desoxyephedrine = 25u Ephedrine, Carbon, Iodine, Phospherus HEAT",
+          " ",
+          "Cut into pill",
+          "dylo = 30u nitrogen, potassium, silicon",
+          " ",
+          "90u dylo + 90u Desoxyephedrine",
+          "Pill Canister = 9 Pills @ 20u"]
       },
       {
         "title": "Space Cleaner Foam",
         "content": [
           "Beaker 1: 90u Water 10u Space cleaner",
           "Beaker 2: 90u Flurosurfactant 10u space cleaner",
-          "Mix to Activate"
+          "Mix to Activate",
+          " ",
+          "Space cleaner",
+          "50u ammonia (30u hydrogen, 10u nitrogen), Water",
+          " ",
+          "Flurosurfactant",
+          "20u Carbon, Fluorine 10 u sulfuric acid",
+          " ",
+          "Sulfuric acid = 2oxy,1 hydrogen, 1 sulfur = 3 sulfuric"
         ]
       },
       {
@@ -388,16 +404,15 @@
       },
       {
         "title": "TDD - ALL but genetic - Safe (Homemade Omnizine)",
-        "content": []
-      },
-      {
-        "title": "Dylo = 25 silicon, potassium, nitrogen",
         "content": [
+          "Dylo = 25 silicon, potassium, nitrogen",
           "Inap = 25 oxygen, carbon, sugar",
           "Tri = 75 Dylo, Inap",
           "TDD = 2x cream, 1x lime, orange, tomato juice, Tri STIRRING(you need a spoon to do it on a jug, booze-mats have those).",
+          " ",
           "15u injection = 30brute, burns, toxic, airloss",
-          "you have access to 250u of cream and 150u of all of 3 juices which is enough for 750u of TDD."
+          " ",
+          "Usually in maintenance tunnels you can find Booze-o-mats, screwdriver their panel open, cut access wire and voila, you have access to 250u of cream and 150u of all of 3 juices which is enough for 750u of TDD. If you find a drink dispenser you can also take 150u cream from there if you want to add 150u of TDD. You could ask bartender in official bar too of course, making a deal for few jugs of TDD"
         ]
       }
     ]
