@@ -14,31 +14,51 @@
         "id": "Water",
         "name": "Water",
         "amount": 11,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Iron",
         "name": "Iron",
         "amount": 0.5,
-        "color": "#434b4d"
+        "color": "#434b4d",
+        "desc": "reagent-desc-iron",
+        "overdose": null,
+        "tags": [
+          "Toxin",
+          "Medicine"
+        ]
       },
       {
         "id": "Sugar",
         "name": "Sugar",
         "amount": 2,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-sugar",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "CarbonDioxide",
         "name": "Carbon Dioxide",
         "amount": 3,
-        "color": "#66ff33"
+        "color": "#66ff33",
+        "desc": "reagent-desc-carbon-dioxide",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       },
       {
         "id": "Protein",
         "name": "Protein",
         "amount": 4,
-        "color": "#FFFFE5"
+        "color": "#FFFFE5",
+        "desc": "reagent-desc-protein",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -62,31 +82,50 @@
         "id": "Water",
         "name": "Water",
         "amount": 14,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Sodium",
         "name": "Sodium",
         "amount": 3,
-        "color": "#a7b3d6"
+        "color": "#a7b3d6",
+        "desc": "reagent-desc-sodium",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Chlorine",
         "name": "Chlorine",
         "amount": 1.5,
-        "color": "#a2ff00"
+        "color": "#a2ff00",
+        "desc": "reagent-desc-chlorine",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       },
       {
         "id": "CarbonDioxide",
         "name": "Carbon Dioxide",
         "amount": 5.5,
-        "color": "#66ff33"
+        "color": "#66ff33",
+        "desc": "reagent-desc-carbon-dioxide",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       },
       {
         "id": "Protein",
         "name": "Protein",
         "amount": 6,
-        "color": "#FFFFE5"
+        "color": "#FFFFE5",
+        "desc": "reagent-desc-protein",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -110,13 +149,21 @@
         "id": "Water",
         "name": "Water",
         "amount": 4,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Nitrogen",
         "name": "Nitrogen",
         "amount": 1,
-        "color": "#a1e1ff"
+        "color": "#a1e1ff",
+        "desc": "reagent-desc-nitrogen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -140,13 +187,19 @@
         "id": "Water",
         "name": "Water",
         "amount": 9,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Sugar",
         "name": "Sugar",
         "amount": 1,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-sugar",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -170,31 +223,51 @@
         "id": "Water",
         "name": "Water",
         "amount": 11,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Copper",
         "name": "Copper",
         "amount": 0.5,
-        "color": "#b05b3c"
+        "color": "#b05b3c",
+        "desc": "reagent-desc-copper",
+        "overdose": null,
+        "tags": [
+          "Toxin",
+          "Medicine"
+        ]
       },
       {
         "id": "Sugar",
         "name": "Sugar",
         "amount": 2,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-sugar",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "CarbonDioxide",
         "name": "Carbon Dioxide",
         "amount": 3,
-        "color": "#66ff33"
+        "color": "#66ff33",
+        "desc": "reagent-desc-carbon-dioxide",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       },
       {
         "id": "Protein",
         "name": "Protein",
         "amount": 4,
-        "color": "#FFFFE5"
+        "color": "#FFFFE5",
+        "desc": "reagent-desc-protein",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -218,25 +291,41 @@
         "id": "Water",
         "name": "Water",
         "amount": 17,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Nitrogen",
         "name": "Nitrogen",
         "amount": 4.5,
-        "color": "#a1e1ff"
+        "color": "#a1e1ff",
+        "desc": "reagent-desc-nitrogen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       },
       {
         "id": "Chlorine",
         "name": "Chlorine",
         "amount": 2.5,
-        "color": "#a2ff00"
+        "color": "#a2ff00",
+        "desc": "reagent-desc-chlorine",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       },
       {
         "id": "Protein",
         "name": "Protein",
         "amount": 6,
-        "color": "#FFFFE5"
+        "color": "#FFFFE5",
+        "desc": "reagent-desc-protein",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -260,19 +349,32 @@
         "id": "Mold",
         "name": "Mold",
         "amount": 2,
-        "color": "#8a9a5b"
+        "color": "#8a9a5b",
+        "desc": "reagent-desc-mold",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       },
       {
         "id": "Protein",
         "name": "Protein",
         "amount": 1,
-        "color": "#FFFFE5"
+        "color": "#FFFFE5",
+        "desc": "reagent-desc-protein",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Toxin",
         "name": "Toxin",
         "amount": 1,
-        "color": "#cf3600"
+        "color": "#cf3600",
+        "desc": "reagent-desc-toxin",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -308,7 +410,10 @@
         "id": "EZNutrient",
         "name": "E Z Nutrient",
         "amount": 3,
-        "color": "#664330"
+        "color": "#664330",
+        "desc": "reagent-desc-e-z-nutrient",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -338,7 +443,13 @@
         "id": "RobustHarvest",
         "name": "Robust Harvest",
         "amount": 1,
-        "color": "#3e901c"
+        "color": "#3e901c",
+        "desc": "reagent-desc-robust-harvest",
+        "overdose": null,
+        "tags": [
+          "Toxin",
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -374,7 +485,10 @@
         "id": "Sedin",
         "name": "Sedin",
         "amount": 1,
-        "color": "#3CB371"
+        "color": "#3CB371",
+        "desc": "reagent-desc-sedin",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -404,7 +518,12 @@
         "id": "Left4Zed",
         "name": "Left4 Zed",
         "amount": 1,
-        "color": "#5b406c"
+        "color": "#5b406c",
+        "desc": "reagent-desc-left4-zed",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -434,7 +553,12 @@
         "id": "PlantBGone",
         "name": "Plant B Gone",
         "amount": 5,
-        "color": "#49002E"
+        "color": "#49002E",
+        "desc": "reagent-desc-plant-b-gone",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -464,7 +588,12 @@
         "id": "Ammonia",
         "name": "Ammonia",
         "amount": 4,
-        "color": "#77b58e"
+        "color": "#77b58e",
+        "desc": "reagent-desc-ammonia",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -488,13 +617,19 @@
         "id": "Sugar",
         "name": "Sugar",
         "amount": 2,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-sugar",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Carbon",
         "name": "Carbon",
         "amount": 1,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-carbon",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -524,7 +659,12 @@
         "id": "Diethylamine",
         "name": "Diethylamine",
         "amount": 2,
-        "color": "#a1000b"
+        "color": "#a1000b",
+        "desc": "reagent-desc-diethylamine",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -554,7 +694,12 @@
         "id": "Phenol",
         "name": "Phenol",
         "amount": 2,
-        "color": "#E7EA91"
+        "color": "#E7EA91",
+        "desc": "reagent-desc-phenol",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -590,7 +735,10 @@
         "id": "Acetone",
         "name": "Acetone",
         "amount": 2,
-        "color": "#AF14B7"
+        "color": "#AF14B7",
+        "desc": "reagent-desc-acetone",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -620,7 +768,10 @@
         "id": "FoamingAgent",
         "name": "Foaming Agent",
         "amount": 2,
-        "color": "#215263"
+        "color": "#215263",
+        "desc": "reagent-desc-foaming-agent",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -656,7 +807,12 @@
         "id": "PolytrinicAcid",
         "name": "Polytrinic Acid",
         "amount": 3,
-        "color": "#a1000b"
+        "color": "#a1000b",
+        "desc": "reagent-desc-polytrinic-acid",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -692,7 +848,12 @@
         "id": "SulfuricAcid",
         "name": "Sulfuric Acid",
         "amount": 3,
-        "color": "#BF8C00"
+        "color": "#BF8C00",
+        "desc": "reagent-desc-sulfuric-acid",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -734,7 +895,12 @@
         "id": "FluorosulfuricAcid",
         "name": "Fluorosulfuric Acid",
         "amount": 4,
-        "color": "#5050ff"
+        "color": "#5050ff",
+        "desc": "reagent-desc-fluorosulfuric-acid",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -955,7 +1121,10 @@
         "id": "TableSalt",
         "name": "Table Salt",
         "amount": 2,
-        "color": "#cfd1d0"
+        "color": "#cfd1d0",
+        "desc": "reagent-desc-table-salt",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -979,13 +1148,21 @@
         "id": "Chlorine",
         "name": "Chlorine",
         "amount": 1,
-        "color": "#a2ff00"
+        "color": "#a2ff00",
+        "desc": "reagent-desc-chlorine",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       },
       {
         "id": "Sodium",
         "name": "Sodium",
         "amount": 1,
-        "color": "#a7b3d6"
+        "color": "#a7b3d6",
+        "desc": "reagent-desc-sodium",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -1021,7 +1198,12 @@
         "id": "Thermite",
         "name": "Thermite",
         "amount": 3,
-        "color": "#757245"
+        "color": "#757245",
+        "desc": "reagent-desc-thermite",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -1057,7 +1239,12 @@
         "id": "UnstableMutagen",
         "name": "Unstable Mutagen",
         "amount": 3,
-        "color": "#00ff5f"
+        "color": "#00ff5f",
+        "desc": "reagent-desc-unstable-mutagen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -1093,7 +1280,10 @@
         "id": "Oil",
         "name": "Oil",
         "amount": 3,
-        "color": "#b67823"
+        "color": "#b67823",
+        "desc": "reagent-desc-oil",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -1129,7 +1319,10 @@
         "id": "Fluorosurfactant",
         "name": "Fluorosurfactant",
         "amount": 5,
-        "color": "#9e6b38"
+        "color": "#9e6b38",
+        "desc": "reagent-desc-fluorosurfactant",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -1171,7 +1364,14 @@
         "id": "Desoxyephedrine",
         "name": "Desoxyephedrine",
         "amount": 4,
-        "color": "#FAFAFA"
+        "color": "#FAFAFA",
+        "desc": "reagent-desc-desoxyephedrine",
+        "overdose": null,
+        "tags": [
+          "Toxin",
+          "Medicine",
+          "Narcotic"
+        ]
       }
     ],
     "conditions": {
@@ -1207,7 +1407,13 @@
         "id": "Stimulants",
         "name": "Stimulants",
         "amount": 2,
-        "color": "#9A040E"
+        "color": "#9A040E",
+        "desc": "reagent-desc-stimulants",
+        "overdose": null,
+        "tags": [
+          "Medicine",
+          "Narcotic"
+        ]
       }
     ],
     "conditions": {
@@ -1249,7 +1455,13 @@
         "id": "Ephedrine",
         "name": "Ephedrine",
         "amount": 4,
-        "color": "#D2FFFA"
+        "color": "#D2FFFA",
+        "desc": "reagent-desc-ephedrine",
+        "overdose": null,
+        "tags": [
+          "Medicine",
+          "Narcotic"
+        ]
       }
     ],
     "conditions": {
@@ -1285,7 +1497,12 @@
         "id": "MuteToxin",
         "name": "Mute Toxin",
         "amount": 2,
-        "color": "#000000"
+        "color": "#000000",
+        "desc": "reagent-desc-mute-toxin",
+        "overdose": null,
+        "tags": [
+          "Narcotic"
+        ]
       }
     ],
     "conditions": {
@@ -1321,7 +1538,12 @@
         "id": "ChloralHydrate",
         "name": "Chloral Hydrate",
         "amount": 1,
-        "color": "#000067"
+        "color": "#000067",
+        "desc": "reagent-desc-chloral-hydrate",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -1357,7 +1579,12 @@
         "id": "Pax",
         "name": "Pax",
         "amount": 3,
-        "color": "#AAAAAA"
+        "color": "#AAAAAA",
+        "desc": "reagent-desc-pax",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -1387,7 +1614,12 @@
         "id": "Charcoal",
         "name": "Charcoal",
         "amount": 1,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-charcoal",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -1417,7 +1649,12 @@
         "id": "NorepinephricAcid",
         "name": "Norepinephric Acid",
         "amount": 2,
-        "color": "#96a8b5"
+        "color": "#96a8b5",
+        "desc": "reagent-desc-norepinephric-acid",
+        "overdose": null,
+        "tags": [
+          "Narcotic"
+        ]
       }
     ],
     "conditions": {
@@ -1447,7 +1684,12 @@
         "id": "Ethyloxyephedrine",
         "name": "Ethyloxyephedrine",
         "amount": 2,
-        "color": "#d5d5e4"
+        "color": "#d5d5e4",
+        "desc": "reagent-desc-ethyloxyephedrine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -1483,7 +1725,12 @@
         "id": "Diphenylmethylamine",
         "name": "Diphenylmethylamine",
         "amount": 3,
-        "color": "#b0abaa"
+        "color": "#b0abaa",
+        "desc": "reagent-desc-diphenylmethylamine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -1525,7 +1772,10 @@
         "id": "SodiumCarbonate",
         "name": "Sodium Carbonate",
         "amount": 4,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-sodium-carbonate",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -1555,7 +1805,12 @@
         "id": "Benzene",
         "name": "Benzene",
         "amount": 1,
-        "color": "#E7EA91"
+        "color": "#E7EA91",
+        "desc": "reagent-desc-benzene",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -1585,7 +1840,10 @@
         "id": "Hydroxide",
         "name": "Hydroxide",
         "amount": 2,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-hydroxide",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -1615,7 +1873,13 @@
         "id": "SodiumHydroxide",
         "name": "Sodium Hydroxide",
         "amount": 2,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-sodium-hydroxide",
+        "overdose": null,
+        "tags": [
+          "Toxin",
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -1645,7 +1909,10 @@
         "id": "Fersilicite",
         "name": "Fersilicite",
         "amount": 2,
-        "color": "#434b4d"
+        "color": "#434b4d",
+        "desc": "reagent-desc-fersilicite",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -1681,7 +1948,12 @@
         "id": "SodiumPolyacrylate",
         "name": "Sodium Polyacrylate",
         "amount": 4,
-        "color": "#F0F0F0"
+        "color": "#F0F0F0",
+        "desc": "reagent-desc-sodium-polyacrylate",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -1711,7 +1983,12 @@
         "id": "Nocturine",
         "name": "Nocturine",
         "amount": 1,
-        "color": "#128e80"
+        "color": "#128e80",
+        "desc": "reagent-desc-nocturine",
+        "overdose": null,
+        "tags": [
+          "Narcotic"
+        ]
       }
     ],
     "conditions": {
@@ -1741,7 +2018,12 @@
         "id": "Tazinide",
         "name": "Tazinide",
         "amount": 1,
-        "color": "#FDD023"
+        "color": "#FDD023",
+        "desc": "reagent-desc-tazinide",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -1771,7 +2053,10 @@
         "id": "ArtifactGlue",
         "name": "Artifact Glue",
         "amount": 2,
-        "color": "#827394"
+        "color": "#827394",
+        "desc": "reagent-desc-artifact-glue",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -1801,7 +2086,12 @@
         "id": "Lye",
         "name": "Lye",
         "amount": 2,
-        "color": "#e5420b"
+        "color": "#e5420b",
+        "desc": "reagent-desc-lye",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -1837,7 +2127,12 @@
         "id": "Bleach",
         "name": "Bleach",
         "amount": 5,
-        "color": "#a1000b"
+        "color": "#a1000b",
+        "desc": "reagent-desc-bleach",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -1861,7 +2156,12 @@
         "id": "Ammonia",
         "name": "Ammonia",
         "amount": 1,
-        "color": "#77b58e"
+        "color": "#77b58e",
+        "desc": "reagent-desc-ammonia",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -1891,7 +2191,10 @@
         "id": "SpaceCleaner",
         "name": "Space Cleaner",
         "amount": 2,
-        "color": "#c8ff69"
+        "color": "#c8ff69",
+        "desc": "reagent-desc-space-cleaner",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -1927,7 +2230,10 @@
         "id": "SpaceLube",
         "name": "Space Lube",
         "amount": 5,
-        "color": "#77b58e"
+        "color": "#77b58e",
+        "desc": "reagent-desc-space-lube",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -1957,7 +2263,10 @@
         "id": "AcidSpit",
         "name": "Acid Spit",
         "amount": 3,
-        "color": "#365000"
+        "color": "#365000",
+        "desc": "reagent-desc-acid-spit",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -1993,7 +2302,10 @@
         "id": "AlienBrainHemorrhage",
         "name": "Alien Brain Hemorrhage",
         "amount": 3,
-        "color": "#FFFDD0"
+        "color": "#FFFDD0",
+        "desc": "reagent-desc-alien-brain-hemorrhage",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2023,7 +2335,10 @@
         "id": "AlliesCocktail",
         "name": "Allies Cocktail",
         "amount": 3,
-        "color": "#00664d"
+        "color": "#00664d",
+        "desc": "reagent-desc-allies-cocktail",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2059,7 +2374,10 @@
         "id": "Amasec",
         "name": "Amasec",
         "amount": 5,
-        "color": "#124da7"
+        "color": "#124da7",
+        "desc": "reagent-desc-amasec",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2095,7 +2413,10 @@
         "id": "Andalusia",
         "name": "Andalusia",
         "amount": 3,
-        "color": "#665700"
+        "color": "#665700",
+        "desc": "reagent-desc-andalusia",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2131,7 +2452,10 @@
         "id": "Antifreeze",
         "name": "Antifreeze",
         "amount": 4,
-        "color": "#ff7d63"
+        "color": "#ff7d63",
+        "desc": "reagent-desc-antifreeze",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2161,7 +2485,10 @@
         "id": "ArnoldPalmer",
         "name": "Arnold Palmer",
         "amount": 2,
-        "color": "#d8cc5d"
+        "color": "#d8cc5d",
+        "desc": "reagent-desc-arnold-palmer",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2191,7 +2518,10 @@
         "id": "AtomicBomb",
         "name": "Atomic Bomb",
         "amount": 10,
-        "color": "#666300"
+        "color": "#666300",
+        "desc": "reagent-desc-atomic-bomb",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2227,7 +2557,10 @@
         "id": "B52",
         "name": "B52",
         "amount": 3,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-b52",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2257,7 +2590,10 @@
         "id": "BudgetInsulsDrink",
         "name": "Budget Insuls",
         "amount": 4,
-        "color": "#dede73"
+        "color": "#dede73",
+        "desc": "reagent-desc-budget-insuls",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2299,7 +2635,10 @@
         "id": "BlueHawaiian",
         "name": "Blue Hawaiian",
         "amount": 5,
-        "color": "#47687b"
+        "color": "#47687b",
+        "desc": "reagent-desc-blue-hawaiian",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2335,7 +2674,10 @@
         "id": "CogChamp",
         "name": "Cogchamp",
         "amount": 3,
-        "color": "#B5A642"
+        "color": "#B5A642",
+        "desc": "reagent-desc-cogchamp",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2389,7 +2731,10 @@
         "id": "BahamaMama",
         "name": "Bahama Mama",
         "amount": 6,
-        "color": "#FF7F3B"
+        "color": "#FF7F3B",
+        "desc": "reagent-desc-bahama-mama",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2425,7 +2770,10 @@
         "id": "Barefoot",
         "name": "Barefoot",
         "amount": 3,
-        "color": "#ff66cc"
+        "color": "#ff66cc",
+        "desc": "reagent-desc-barefoot",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2461,7 +2809,10 @@
         "id": "BananaHonk",
         "name": "Banana Honk",
         "amount": 3,
-        "color": "#ffff91"
+        "color": "#ffff91",
+        "desc": "reagent-desc-banana-honk",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2497,7 +2848,10 @@
         "id": "BeepskySmash",
         "name": "Beepsky Smash",
         "amount": 2,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-beepsky-smash",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2527,7 +2881,10 @@
         "id": "BlackRussian",
         "name": "Black Russian",
         "amount": 3,
-        "color": "#360000"
+        "color": "#360000",
+        "desc": "reagent-desc-black-russian",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2563,7 +2920,10 @@
         "id": "BloodyMary",
         "name": "Bloody Mary",
         "amount": 6,
-        "color": "#df6a50"
+        "color": "#df6a50",
+        "desc": "reagent-desc-bloody-mary",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2605,7 +2965,10 @@
         "id": "Booger",
         "name": "Booger",
         "amount": 5,
-        "color": "#99ff00"
+        "color": "#99ff00",
+        "desc": "reagent-desc-booger",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2635,7 +2998,10 @@
         "id": "BraveBull",
         "name": "Brave Bull",
         "amount": 3,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-brave-bull",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2671,7 +3037,10 @@
         "id": "Bronx",
         "name": "Bronx",
         "amount": 3,
-        "color": "#d68829"
+        "color": "#d68829",
+        "desc": "reagent-desc-bronx",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2701,7 +3070,10 @@
         "id": "CafeLatte",
         "name": "Cafe Latte",
         "amount": 2,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-cafe-latte",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2731,7 +3103,10 @@
         "id": "CoconutRum",
         "name": "Coconut Rum",
         "amount": 3,
-        "color": "#cccbc8"
+        "color": "#cccbc8",
+        "desc": "reagent-desc-coconut-rum",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2767,7 +3142,10 @@
         "id": "Cosmopolitan",
         "name": "Cosmopolitan",
         "amount": 3,
-        "color": "#f73030"
+        "color": "#f73030",
+        "desc": "reagent-desc-cosmopolitan",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2803,7 +3181,10 @@
         "id": "CreamOfCoconut",
         "name": "Cream Of Coconut",
         "amount": 3,
-        "color": "#FFEABF"
+        "color": "#FFEABF",
+        "desc": "reagent-desc-cream-of-coconut",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2833,7 +3214,10 @@
         "id": "CrushDepth",
         "name": "Crush Depth",
         "amount": 2,
-        "color": "#0a0a33"
+        "color": "#0a0a33",
+        "desc": "reagent-desc-crush-depth",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2863,7 +3247,10 @@
         "id": "CubaLibre",
         "name": "Cuba Libre",
         "amount": 3,
-        "color": "#3E1B00"
+        "color": "#3E1B00",
+        "desc": "reagent-desc-cuba-libre",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2893,7 +3280,10 @@
         "id": "DarkandStormy",
         "name": "Dark And Stormy",
         "amount": 2,
-        "color": "#cf7f17"
+        "color": "#cf7f17",
+        "desc": "reagent-desc-dark-and-stormy",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2935,7 +3325,10 @@
         "id": "DemonsBlood",
         "name": "Demons Blood",
         "amount": 4,
-        "color": "#a70000"
+        "color": "#a70000",
+        "desc": "reagent-desc-demons-blood",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -2971,7 +3364,10 @@
         "id": "DevilsKiss",
         "name": "Devils Kiss",
         "amount": 3,
-        "color": "#ff0033"
+        "color": "#ff0033",
+        "desc": "reagent-desc-devils-kiss",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3019,7 +3415,10 @@
         "id": "DoctorsDelight",
         "name": "Doctors Delight",
         "amount": 6,
-        "color": "#FF8CFF"
+        "color": "#FF8CFF",
+        "desc": "reagent-desc-doctors-delight",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3049,7 +3448,10 @@
         "id": "DriestMartini",
         "name": "Driest Martini",
         "amount": 2,
-        "color": "#2E6671"
+        "color": "#2E6671",
+        "desc": "reagent-desc-driest-martini",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3085,7 +3487,10 @@
         "id": "Eggnog",
         "name": "Eggnog",
         "amount": 10,
-        "color": "#e6d6bc"
+        "color": "#e6d6bc",
+        "desc": "reagent-desc-eggnog",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3121,7 +3526,10 @@
         "id": "ElectricShark",
         "name": "Electric Shark",
         "amount": 6,
-        "color": "#3097cf"
+        "color": "#3097cf",
+        "desc": "reagent-desc-electric-shark",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3169,7 +3577,10 @@
         "id": "ErikaSurprise",
         "name": "Erika Surprise",
         "amount": 6,
-        "color": "#67bc50"
+        "color": "#67bc50",
+        "desc": "reagent-desc-erika-surprise",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3193,19 +3604,30 @@
         "id": "Hydrogen",
         "name": "Hydrogen",
         "amount": 6,
-        "color": "#cccccc"
+        "color": "#cccccc",
+        "desc": "reagent-desc-hydrogen",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Carbon",
         "name": "Carbon",
         "amount": 2,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-carbon",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Oxygen",
         "name": "Oxygen",
         "amount": 1,
-        "color": "#c4f5ff"
+        "color": "#c4f5ff",
+        "desc": "reagent-desc-oxygen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -3241,7 +3663,12 @@
         "id": "FourteenLoko",
         "name": "Fourteen Loko",
         "amount": 3,
-        "color": "#deb928"
+        "color": "#deb928",
+        "desc": "reagent-desc-fourteen-loko",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -3289,7 +3716,10 @@
         "id": "GargleBlaster",
         "name": "Gargle Blaster",
         "amount": 5,
-        "color": "#9cc8b4"
+        "color": "#9cc8b4",
+        "desc": "reagent-desc-gargle-blaster",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3325,7 +3755,10 @@
         "id": "GinFizz",
         "name": "Gin Fizz",
         "amount": 3,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-gin-fizz",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3355,7 +3788,10 @@
         "id": "GinTonic",
         "name": "Gin Tonic",
         "amount": 3,
-        "color": "#004166"
+        "color": "#004166",
+        "desc": "reagent-desc-gin-tonic",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3385,7 +3821,10 @@
         "id": "Gildlager",
         "name": "Gildlager",
         "amount": 10,
-        "color": "#FFFF91"
+        "color": "#FFFF91",
+        "desc": "reagent-desc-gildlager",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3421,7 +3860,10 @@
         "id": "Grog",
         "name": "Grog",
         "amount": 4,
-        "color": "#e3e77b"
+        "color": "#e3e77b",
+        "desc": "reagent-desc-grog",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3451,7 +3893,10 @@
         "id": "HippiesDelight",
         "name": "Hippies Delight",
         "amount": 2,
-        "color": "#6eaa0c"
+        "color": "#6eaa0c",
+        "desc": "reagent-desc-hippies-delight",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3487,7 +3932,10 @@
         "id": "Hooch",
         "name": "Hooch",
         "amount": 3,
-        "color": "#664e00"
+        "color": "#664e00",
+        "desc": "reagent-desc-hooch",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3517,7 +3965,10 @@
         "id": "HotCocoa",
         "name": "Hot Cocoa",
         "amount": 2,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-hot-cocoa",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3553,7 +4004,10 @@
         "id": "IceCream",
         "name": "Ice Cream",
         "amount": 3,
-        "color": "#fffbd6"
+        "color": "#fffbd6",
+        "desc": "reagent-desc-ice-cream",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3583,7 +4037,10 @@
         "id": "IcedBeer",
         "name": "Iced Beer",
         "amount": 5,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-iced-beer",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3613,7 +4070,10 @@
         "id": "IcedBeer",
         "name": "Iced Beer",
         "amount": 10,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-iced-beer",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3643,7 +4103,10 @@
         "id": "IcedCoffee",
         "name": "Iced Coffee",
         "amount": 3,
-        "color": "#102838"
+        "color": "#102838",
+        "desc": "reagent-desc-iced-coffee",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3673,7 +4136,10 @@
         "id": "IcedGreenTea",
         "name": "Iced Green Tea",
         "amount": 3,
-        "color": "#5B821B"
+        "color": "#5B821B",
+        "desc": "reagent-desc-iced-green-tea",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3703,7 +4169,10 @@
         "id": "IcedTea",
         "name": "Iced Tea",
         "amount": 3,
-        "color": "#6C3916"
+        "color": "#6C3916",
+        "desc": "reagent-desc-iced-tea",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3733,7 +4202,10 @@
         "id": "IrishBool",
         "name": "Irish Bool",
         "amount": 2,
-        "color": "#71672e99"
+        "color": "#71672e99",
+        "desc": "reagent-desc-irish-bool",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3763,7 +4235,10 @@
         "id": "IrishSlammer",
         "name": "Irish Slammer",
         "amount": 2,
-        "color": "#2E6671"
+        "color": "#2E6671",
+        "desc": "reagent-desc-irish-slammer",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3793,7 +4268,10 @@
         "id": "IrishCoffee",
         "name": "Irish Coffee",
         "amount": 2,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-irish-coffee",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3823,7 +4301,10 @@
         "id": "IrishCream",
         "name": "Irish Cream",
         "amount": 3,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-irish-cream",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3865,7 +4346,10 @@
         "id": "JackRose",
         "name": "Jack Rose",
         "amount": 4,
-        "color": "#f53b3b"
+        "color": "#f53b3b",
+        "desc": "reagent-desc-jack-rose",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3907,7 +4391,10 @@
         "id": "JungleBird",
         "name": "Jungle Bird",
         "amount": 6,
-        "color": "#f27c3d"
+        "color": "#f27c3d",
+        "desc": "reagent-desc-jungle-bird",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3937,7 +4424,10 @@
         "id": "Kalimotxo",
         "name": "Kalimotxo",
         "amount": 2,
-        "color": "#360606"
+        "color": "#360606",
+        "desc": "reagent-desc-kalimotxo",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -3973,7 +4463,10 @@
         "id": "OrangeLimeSoda",
         "name": "Orange Lime Soda",
         "amount": 3,
-        "color": "#CCCC99"
+        "color": "#CCCC99",
+        "desc": "reagent-desc-orange-lime-soda",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4009,7 +4502,10 @@
         "id": "Lemonade",
         "name": "Lemonade",
         "amount": 3,
-        "color": "#FFFF00"
+        "color": "#FFFF00",
+        "desc": "reagent-desc-lemonade",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4045,7 +4541,10 @@
         "id": "LemonLime",
         "name": "Lemon Lime",
         "amount": 3,
-        "color": "#878F00"
+        "color": "#878F00",
+        "desc": "reagent-desc-lemon-lime",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4087,7 +4586,10 @@
         "id": "LongIslandIcedTea",
         "name": "Long Island Iced Tea",
         "amount": 6,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-long-island-iced-tea",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4117,7 +4619,10 @@
         "id": "Manhattan",
         "name": "Manhattan",
         "amount": 3,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-manhattan",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4147,7 +4652,10 @@
         "id": "ManhattanProject",
         "name": "Manhattan Project",
         "amount": 10,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-manhattan-project",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4177,7 +4685,10 @@
         "id": "ManlyDorf",
         "name": "Manly Dorf",
         "amount": 3,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-manly-dorf",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4207,7 +4718,10 @@
         "id": "Margarita",
         "name": "Margarita",
         "amount": 3,
-        "color": "#8CFF8C"
+        "color": "#8CFF8C",
+        "desc": "reagent-desc-margarita",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4237,7 +4751,10 @@
         "id": "Martini",
         "name": "Martini",
         "amount": 3,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-martini",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4267,7 +4784,10 @@
         "id": "Mead",
         "name": "Mead",
         "amount": 2,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-mead",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4309,7 +4829,10 @@
         "id": "Mojito",
         "name": "Mojito",
         "amount": 4,
-        "color": "#3ea99888"
+        "color": "#3ea99888",
+        "desc": "reagent-desc-mojito",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4351,7 +4874,10 @@
         "id": "MonkeyBusiness",
         "name": "Monkey Business",
         "amount": 4,
-        "color": "#d6b929"
+        "color": "#d6b929",
+        "desc": "reagent-desc-monkey-business",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4387,7 +4913,10 @@
         "id": "Moonshine",
         "name": "Moonshine",
         "amount": 3,
-        "color": "#d1d7d155"
+        "color": "#d1d7d155",
+        "desc": "reagent-desc-moonshine",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4417,7 +4946,12 @@
         "id": "NuclearCola",
         "name": "Nuclear Cola",
         "amount": 5,
-        "color": "#100800"
+        "color": "#100800",
+        "desc": "reagent-desc-nuclear-cola",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -4441,25 +4975,41 @@
         "id": "Ipecac",
         "name": "Ipecac",
         "amount": 2,
-        "color": "#422912"
+        "color": "#422912",
+        "desc": "reagent-desc-ipecac",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       },
       {
         "id": "Water",
         "name": "Water",
         "amount": 2,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Sugar",
         "name": "Sugar",
         "amount": 2,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-sugar",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Uranium",
         "name": "Uranium",
         "amount": 1,
-        "color": "#8fa191"
+        "color": "#8fa191",
+        "desc": "reagent-desc-uranium",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -4489,7 +5039,10 @@
         "id": "Patron",
         "name": "Patron",
         "amount": 10,
-        "color": "#585840"
+        "color": "#585840",
+        "desc": "reagent-desc-patron",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4531,7 +5084,10 @@
         "id": "Painkiller",
         "name": "Painkiller",
         "amount": 6,
-        "color": "#e6cb47"
+        "color": "#e6cb47",
+        "desc": "reagent-desc-painkiller",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4573,7 +5129,10 @@
         "id": "PinaColada",
         "name": "Pina Colada",
         "amount": 6,
-        "color": "#e8dba4"
+        "color": "#e8dba4",
+        "desc": "reagent-desc-pina-colada",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4609,7 +5168,10 @@
         "id": "Posca",
         "name": "Posca",
         "amount": 3,
-        "color": "#B3B599"
+        "color": "#B3B599",
+        "desc": "reagent-desc-posca",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4639,7 +5201,10 @@
         "id": "Radler",
         "name": "Radler",
         "amount": 2,
-        "color": "#edff2b"
+        "color": "#edff2b",
+        "desc": "reagent-desc-radler",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4669,7 +5234,10 @@
         "id": "RedMead",
         "name": "Red Mead",
         "amount": 2,
-        "color": "#bc5550"
+        "color": "#bc5550",
+        "desc": "reagent-desc-red-mead",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4699,7 +5267,10 @@
         "id": "Rewriter",
         "name": "Rewriter",
         "amount": 2,
-        "color": "#485000"
+        "color": "#485000",
+        "desc": "reagent-desc-rewriter",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4729,7 +5300,10 @@
         "id": "RootBeerFloat",
         "name": "Root Beer Float",
         "amount": 3,
-        "color": "#4f361f"
+        "color": "#4f361f",
+        "desc": "reagent-desc-root-beer-float",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4759,7 +5333,10 @@
         "id": "RoyRogers",
         "name": "Roy Rogers",
         "amount": 3,
-        "color": "#262019"
+        "color": "#262019",
+        "desc": "reagent-desc-roy-rogers",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4795,7 +5372,10 @@
         "id": "Rubberneck",
         "name": "Rubberneck",
         "amount": 4,
-        "color": "#f0d74a"
+        "color": "#f0d74a",
+        "desc": "reagent-desc-rubberneck",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4825,7 +5405,10 @@
         "id": "Sbiten",
         "name": "Sbiten",
         "amount": 2,
-        "color": "#004166"
+        "color": "#004166",
+        "desc": "reagent-desc-sbiten",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4855,7 +5438,10 @@
         "id": "ScrewdriverCocktail",
         "name": "Screwdriver Cocktail",
         "amount": 3,
-        "color": "#A68310"
+        "color": "#A68310",
+        "desc": "reagent-desc-screwdriver-cocktail",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4885,7 +5471,10 @@
         "id": "ShirleyTemple",
         "name": "Shirley Temple",
         "amount": 3,
-        "color": "#af2221"
+        "color": "#af2221",
+        "desc": "reagent-desc-shirley-temple",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4921,7 +5510,10 @@
         "id": "Silencer",
         "name": "Silencer",
         "amount": 3,
-        "color": "#878787"
+        "color": "#878787",
+        "desc": "reagent-desc-silencer",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4951,7 +5543,10 @@
         "id": "SnowWhite",
         "name": "Snow White",
         "amount": 2,
-        "color": "#FFFFFF"
+        "color": "#FFFFFF",
+        "desc": "reagent-desc-snow-white",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -4981,7 +5576,10 @@
         "id": "SodaWater",
         "name": "Soda Water",
         "amount": 6,
-        "color": "#619494"
+        "color": "#619494",
+        "desc": "reagent-desc-soda-water",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5011,7 +5609,10 @@
         "id": "SoyLatte",
         "name": "Soy Latte",
         "amount": 2,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-soy-latte",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5041,7 +5642,10 @@
         "id": "Starkist",
         "name": "Starkist",
         "amount": 3,
-        "color": "#9F3400"
+        "color": "#9F3400",
+        "desc": "reagent-desc-starkist",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5077,7 +5681,10 @@
         "id": "SuiDream",
         "name": "Sui Dream",
         "amount": 3,
-        "color": "#00A86B"
+        "color": "#00A86B",
+        "desc": "reagent-desc-sui-dream",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5107,7 +5714,10 @@
         "id": "SyndicateBomb",
         "name": "Syndicate Bomb",
         "amount": 2,
-        "color": "#e3e77b"
+        "color": "#e3e77b",
+        "desc": "reagent-desc-syndicate-bomb",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5137,7 +5747,10 @@
         "id": "Tea",
         "name": "Tea",
         "amount": 6,
-        "color": "#8a5a3a"
+        "color": "#8a5a3a",
+        "desc": "reagent-desc-tea",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5167,7 +5780,10 @@
         "id": "TequilaSunrise",
         "name": "Tequila Sunrise",
         "amount": 3,
-        "color": "#FFE48C"
+        "color": "#FFE48C",
+        "desc": "reagent-desc-tequila-sunrise",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5197,7 +5813,10 @@
         "id": "ThreeMileIsland",
         "name": "Three Mile Island",
         "amount": 10,
-        "color": "#666340"
+        "color": "#666340",
+        "desc": "reagent-desc-three-mile-island",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5227,7 +5846,10 @@
         "id": "Tortuga",
         "name": "Tortuga",
         "amount": 2,
-        "color": "#1c8c40"
+        "color": "#1c8c40",
+        "desc": "reagent-desc-tortuga",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5263,7 +5885,10 @@
         "id": "ToxinsSpecial",
         "name": "Toxins Special",
         "amount": 5,
-        "color": "#665c00"
+        "color": "#665c00",
+        "desc": "reagent-desc-toxins-special",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5305,7 +5930,10 @@
         "id": "Vampiro",
         "name": "Vampiro",
         "amount": 6,
-        "color": "#b51b1b"
+        "color": "#b51b1b",
+        "desc": "reagent-desc-vampiro",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5335,7 +5963,10 @@
         "id": "VodkaMartini",
         "name": "Vodka Martini",
         "amount": 3,
-        "color": "#004666"
+        "color": "#004666",
+        "desc": "reagent-desc-vodka-martini",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5365,7 +5996,10 @@
         "id": "VodkaRedBool",
         "name": "Vodka Red Bool",
         "amount": 3,
-        "color": "#c4c27655"
+        "color": "#c4c27655",
+        "desc": "reagent-desc-vodka-red-bool",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5395,7 +6029,10 @@
         "id": "VodkaTonic",
         "name": "Vodka Tonic",
         "amount": 3,
-        "color": "#0064C8"
+        "color": "#0064C8",
+        "desc": "reagent-desc-vodka-tonic",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5425,7 +6062,10 @@
         "id": "WhiskeyCola",
         "name": "Whiskey Cola",
         "amount": 3,
-        "color": "#3E1B00"
+        "color": "#3E1B00",
+        "desc": "reagent-desc-whiskey-cola",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5461,7 +6101,10 @@
         "id": "WatermelonWakeup",
         "name": "Watermelon Wakeup",
         "amount": 3,
-        "color": "#d49dca"
+        "color": "#d49dca",
+        "desc": "reagent-desc-watermelon-wakeup",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5491,7 +6134,10 @@
         "id": "WhiteRussian",
         "name": "White Russian",
         "amount": 2,
-        "color": "#A68340"
+        "color": "#A68340",
+        "desc": "reagent-desc-white-russian",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5521,7 +6167,10 @@
         "id": "WhiskeySoda",
         "name": "Whiskey Soda",
         "amount": 3,
-        "color": "#533600"
+        "color": "#533600",
+        "desc": "reagent-desc-whiskey-soda",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5551,7 +6200,10 @@
         "id": "XenoBasher",
         "name": "Xeno Basher",
         "amount": 3,
-        "color": "#4d6600"
+        "color": "#4d6600",
+        "desc": "reagent-desc-xeno-basher",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5581,7 +6233,10 @@
         "id": "HotRamen",
         "name": "Hot Ramen",
         "amount": 6,
-        "color": "#664300"
+        "color": "#664300",
+        "desc": "reagent-desc-hot-ramen",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5611,7 +6266,10 @@
         "id": "Pilk",
         "name": "Pilk",
         "amount": 2,
-        "color": "#e7c69f"
+        "color": "#e7c69f",
+        "desc": "reagent-desc-pilk",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5653,7 +6311,10 @@
         "id": "TheMartinez",
         "name": "The Martinez",
         "amount": 6,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-the-martinez",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5683,7 +6344,10 @@
         "id": "Vodka",
         "name": "Vodka",
         "amount": 2,
-        "color": "#d1d1d155"
+        "color": "#d1d1d155",
+        "desc": "reagent-desc-vodka",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5707,13 +6371,21 @@
         "id": "Hydrogen",
         "name": "Hydrogen",
         "amount": 2,
-        "color": "#cccccc"
+        "color": "#cccccc",
+        "desc": "reagent-desc-hydrogen",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Oxygen",
         "name": "Oxygen",
         "amount": 1,
-        "color": "#c4f5ff"
+        "color": "#c4f5ff",
+        "desc": "reagent-desc-oxygen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -5743,7 +6415,10 @@
         "id": "WhiteGilgamesh",
         "name": "White Gilgamesh",
         "amount": 3,
-        "color": "#e5d27e"
+        "color": "#e5d27e",
+        "desc": "reagent-desc-white-gilgamesh",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5785,7 +6460,10 @@
         "id": "Cola",
         "name": "Cola",
         "amount": 4,
-        "color": "#6c2828"
+        "color": "#6c2828",
+        "desc": "reagent-desc-cola",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5827,7 +6505,10 @@
         "id": "Caipirinha",
         "name": "Caipirinha",
         "amount": 4,
-        "color": "#E6EE9C"
+        "color": "#E6EE9C",
+        "desc": "reagent-desc-caipirinha",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5863,7 +6544,10 @@
         "id": "Daiquiri",
         "name": "Daiquiri",
         "amount": 6,
-        "color": "#DAC865"
+        "color": "#DAC865",
+        "desc": "reagent-desc-daiquiri",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5893,7 +6577,10 @@
         "id": "DeathInTheAfternoon",
         "name": "Death In The Afternoon",
         "amount": 3,
-        "color": "#57A87D"
+        "color": "#57A87D",
+        "desc": "reagent-desc-death-in-the-afternoon",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5935,7 +6622,10 @@
         "id": "Empress75",
         "name": "Empress 75",
         "amount": 6,
-        "color": "#900296"
+        "color": "#900296",
+        "desc": "reagent-desc-empress-75",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5965,7 +6655,10 @@
         "id": "EspressoMartini",
         "name": "Espresso Martini",
         "amount": 2,
-        "color": "#170a0c"
+        "color": "#170a0c",
+        "desc": "reagent-desc-espresso-martini",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -5995,7 +6688,10 @@
         "id": "Mayojito",
         "name": "Mayojito",
         "amount": 2,
-        "color": "#6FBE44"
+        "color": "#6FBE44",
+        "desc": "reagent-desc-mayojito",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6025,7 +6721,10 @@
         "id": "Mimeosa",
         "name": "Mimeosa",
         "amount": 3,
-        "color": "#939393"
+        "color": "#939393",
+        "desc": "reagent-desc-mimeosa",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6055,7 +6754,10 @@
         "id": "Mimosa",
         "name": "Mimosa",
         "amount": 3,
-        "color": "#FFCA48"
+        "color": "#FFCA48",
+        "desc": "reagent-desc-mimosa",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6091,7 +6793,10 @@
         "id": "MoscowMule",
         "name": "Moscow Mule",
         "amount": 6,
-        "color": "#CECBAD"
+        "color": "#CECBAD",
+        "desc": "reagent-desc-moscow-mule",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6121,7 +6826,10 @@
         "id": "TheSunAlsoRises",
         "name": "The Sun Also Rises",
         "amount": 6,
-        "color": "#DCE2DE"
+        "color": "#DCE2DE",
+        "desc": "reagent-desc-the-sun-also-rises",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6163,7 +6871,10 @@
         "id": "WhiskeySour",
         "name": "Whiskey Sour",
         "amount": 6,
-        "color": "#8B7941"
+        "color": "#8B7941",
+        "desc": "reagent-desc-whiskey-sour",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6199,7 +6910,10 @@
         "id": "ZombieCocktail",
         "name": "Zombiecocktail",
         "amount": 4,
-        "color": "#d17844"
+        "color": "#d17844",
+        "desc": "reagent-desc-zombiecocktail",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6241,7 +6955,10 @@
         "id": "BacchusBlessing",
         "name": "Bacchus Blessing",
         "amount": 4,
-        "color": "#331303"
+        "color": "#331303",
+        "desc": "reagent-desc-bacchus-blessing",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6618,7 +7335,10 @@
         "id": "Ketchup",
         "name": "Ketchup",
         "amount": 3,
-        "color": "red"
+        "color": "red",
+        "desc": "reagent-desc-ketchup",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6654,7 +7374,10 @@
         "id": "Mayo",
         "name": "Mayo",
         "amount": 15,
-        "color": "#f9f5e5"
+        "color": "#f9f5e5",
+        "desc": "reagent-desc-mayo",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6690,7 +7413,10 @@
         "id": "Mayo",
         "name": "Mayo",
         "amount": 15,
-        "color": "#f9f5e5"
+        "color": "#f9f5e5",
+        "desc": "reagent-desc-mayo",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6720,7 +7446,10 @@
         "id": "Mustard",
         "name": "Mustard",
         "amount": 2,
-        "color": "#ffdb58"
+        "color": "#ffdb58",
+        "desc": "reagent-desc-mustard",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6750,7 +7479,10 @@
         "id": "Ketchunaise",
         "name": "Ketchunaise",
         "amount": 2,
-        "color": "#fba399"
+        "color": "#fba399",
+        "desc": "reagent-desc-ketchunaise",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6786,7 +7518,10 @@
         "id": "BbqSauce",
         "name": "Bbq Sauce",
         "amount": 3,
-        "color": "darkred"
+        "color": "darkred",
+        "desc": "reagent-desc-bbq-sauce",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6822,7 +7557,10 @@
         "id": "Hotsauce",
         "name": "Hotsauce",
         "amount": 3,
-        "color": "red"
+        "color": "red",
+        "desc": "reagent-desc-hotsauce",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6858,7 +7596,10 @@
         "id": "Coldsauce",
         "name": "Coldsauce",
         "amount": 3,
-        "color": "skyblue"
+        "color": "skyblue",
+        "desc": "reagent-desc-coldsauce",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6888,7 +7629,10 @@
         "id": "Vinegar",
         "name": "Vinegar",
         "amount": 2,
-        "color": "tan"
+        "color": "tan",
+        "desc": "reagent-desc-vinegar",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6918,7 +7662,10 @@
         "id": "Soysauce",
         "name": "Soysauce",
         "amount": 3,
-        "color": "saddlebrown"
+        "color": "saddlebrown",
+        "desc": "reagent-desc-soysauce",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6954,7 +7701,10 @@
         "id": "Vinaigrette",
         "name": "Vinaigrette",
         "amount": 3,
-        "color": "#efdaae"
+        "color": "#efdaae",
+        "desc": "reagent-desc-vinaigrette",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -6978,13 +7728,19 @@
         "id": "Sugar",
         "name": "Sugar",
         "amount": 5,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-sugar",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Potassium",
         "name": "Potassium",
         "amount": 5,
-        "color": "#c6c8cc"
+        "color": "#c6c8cc",
+        "desc": "reagent-desc-potassium",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -7008,19 +7764,28 @@
         "id": "Fat",
         "name": "Fat",
         "amount": 6,
-        "color": "#d8d8b0"
+        "color": "#d8d8b0",
+        "desc": "reagent-desc-fat",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Water",
         "name": "Water",
         "amount": 3,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Protein",
         "name": "Protein",
         "amount": 1,
-        "color": "#FFFFE5"
+        "color": "#FFFFE5",
+        "desc": "reagent-desc-protein",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -7044,19 +7809,30 @@
         "id": "Sulfur",
         "name": "Sulfur",
         "amount": 2,
-        "color": "#fff385"
+        "color": "#fff385",
+        "desc": "reagent-desc-sulfur",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       },
       {
         "id": "Carbon",
         "name": "Carbon",
         "amount": 1,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-carbon",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Water",
         "name": "Water",
         "amount": 1,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -7080,19 +7856,28 @@
         "id": "Water",
         "name": "Water",
         "amount": 2,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Carbon",
         "name": "Carbon",
         "amount": 2,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-carbon",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Sugar",
         "name": "Sugar",
         "amount": 1,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-sugar",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -7116,19 +7901,30 @@
         "id": "Carbon",
         "name": "Carbon",
         "amount": 5,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-carbon",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Hydrogen",
         "name": "Hydrogen",
         "amount": 10,
-        "color": "#cccccc"
+        "color": "#cccccc",
+        "desc": "reagent-desc-hydrogen",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Oxygen",
         "name": "Oxygen",
         "amount": 1,
-        "color": "#c4f5ff"
+        "color": "#c4f5ff",
+        "desc": "reagent-desc-oxygen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7152,25 +7948,39 @@
         "id": "Carbon",
         "name": "Carbon",
         "amount": 2,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-carbon",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Hydrogen",
         "name": "Hydrogen",
         "amount": 4,
-        "color": "#cccccc"
+        "color": "#cccccc",
+        "desc": "reagent-desc-hydrogen",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Phosphorus",
         "name": "Phosphorus",
         "amount": 3,
-        "color": "#f5da9a"
+        "color": "#f5da9a",
+        "desc": "reagent-desc-phosphorus",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Oxygen",
         "name": "Oxygen",
         "amount": 1,
-        "color": "#c4f5ff"
+        "color": "#c4f5ff",
+        "desc": "reagent-desc-oxygen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7194,25 +8004,39 @@
         "id": "Carbon",
         "name": "Carbon",
         "amount": 2,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-carbon",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Hydrogen",
         "name": "Hydrogen",
         "amount": 4,
-        "color": "#cccccc"
+        "color": "#cccccc",
+        "desc": "reagent-desc-hydrogen",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Phosphorus",
         "name": "Phosphorus",
         "amount": 3,
-        "color": "#f5da9a"
+        "color": "#f5da9a",
+        "desc": "reagent-desc-phosphorus",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Oxygen",
         "name": "Oxygen",
         "amount": 1,
-        "color": "#c4f5ff"
+        "color": "#c4f5ff",
+        "desc": "reagent-desc-oxygen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7236,19 +8060,30 @@
         "id": "Carbon",
         "name": "Carbon",
         "amount": 1,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-carbon",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Water",
         "name": "Water",
         "amount": 1,
-        "color": "#75b1f0"
+        "color": "#75b1f0",
+        "desc": "reagent-desc-water",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Nitrogen",
         "name": "Nitrogen",
         "amount": 2,
-        "color": "#a1e1ff"
+        "color": "#a1e1ff",
+        "desc": "reagent-desc-nitrogen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7272,7 +8107,10 @@
         "id": "Cream",
         "name": "Cream",
         "amount": 1,
-        "color": "#DFD7AF"
+        "color": "#DFD7AF",
+        "desc": "reagent-desc-cream",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -7302,7 +8140,12 @@
         "id": "Carpetium",
         "name": "Carpetium",
         "amount": 3,
-        "color": "#800000"
+        "color": "#800000",
+        "desc": "reagent-desc-carpetium",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7350,7 +8193,12 @@
         "id": "BuzzochloricBees",
         "name": "Buzzochloric Bees",
         "amount": 3,
-        "color": "#FFD35D"
+        "color": "#FFD35D",
+        "desc": "reagent-desc-buzzochloric-bees",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7415,7 +8263,12 @@
         "id": "SpaceGlue",
         "name": "Space Glue",
         "amount": 2,
-        "color": "#ffffff"
+        "color": "#ffffff",
+        "desc": "reagent-desc-space-glue",
+        "overdose": null,
+        "tags": [
+          "Narcotic"
+        ]
       }
     ],
     "conditions": {
@@ -7445,7 +8298,12 @@
         "id": "Licoxide",
         "name": "Licoxide",
         "amount": 1,
-        "color": "#FDD023"
+        "color": "#FDD023",
+        "desc": "reagent-desc-licoxide",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7504,7 +8362,10 @@
         "id": "Ice",
         "name": "Ice",
         "amount": 5,
-        "color": "#bed8e6"
+        "color": "#bed8e6",
+        "desc": "reagent-desc-ice",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -7558,7 +8419,12 @@
         "id": "Fresium",
         "name": "Fresium",
         "amount": 5,
-        "color": "#b3f1ff"
+        "color": "#b3f1ff",
+        "desc": "reagent-desc-fresium",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7588,13 +8454,19 @@
         "id": "Carbon",
         "name": "Carbon",
         "amount": 3,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-carbon",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Sugar",
         "name": "Sugar",
         "amount": 2,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-sugar",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -7624,7 +8496,12 @@
         "id": "Laughter",
         "name": "Laughter",
         "amount": 2,
-        "color": "#FF4DD2"
+        "color": "#FF4DD2",
+        "desc": "reagent-desc-laughter",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -7787,7 +8664,12 @@
         "id": "CorgiJuice",
         "name": "Corgiessence",
         "amount": 2,
-        "color": "#ed9715"
+        "color": "#ed9715",
+        "desc": "reagent-desc-corgiessence",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7829,7 +8711,12 @@
         "id": "Felinase",
         "name": "Catessence",
         "amount": 2,
-        "color": "#d8bed8"
+        "color": "#d8bed8",
+        "desc": "reagent-desc-catessence",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7871,7 +8758,12 @@
         "id": "Caninase",
         "name": "Canidessence",
         "amount": 2,
-        "color": "#b87333"
+        "color": "#b87333",
+        "desc": "reagent-desc-canidessence",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7901,7 +8793,12 @@
         "id": "Razorium",
         "name": "Razorium",
         "amount": 2,
-        "color": "#e3fffb"
+        "color": "#e3fffb",
+        "desc": "reagent-desc-razorium",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7925,13 +8822,21 @@
         "id": "Carbon",
         "name": "Carbon",
         "amount": 1,
-        "color": "#22282b"
+        "color": "#22282b",
+        "desc": "reagent-desc-carbon",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Oxygen",
         "name": "Oxygen",
         "amount": 2,
-        "color": "#c4f5ff"
+        "color": "#c4f5ff",
+        "desc": "reagent-desc-oxygen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7955,13 +8860,23 @@
         "id": "Nitrogen",
         "name": "Nitrogen",
         "amount": 2,
-        "color": "#a1e1ff"
+        "color": "#a1e1ff",
+        "desc": "reagent-desc-nitrogen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       },
       {
         "id": "Oxygen",
         "name": "Oxygen",
         "amount": 1,
-        "color": "#c4f5ff"
+        "color": "#c4f5ff",
+        "desc": "reagent-desc-oxygen",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -7997,7 +8912,12 @@
         "id": "Dylovene",
         "name": "Dylovene",
         "amount": 3,
-        "color": "#3a1d8a"
+        "color": "#3a1d8a",
+        "desc": "reagent-desc-dylovene",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8033,7 +8953,12 @@
         "id": "Ethylredoxrazine",
         "name": "Ethylredoxrazine",
         "amount": 3,
-        "color": "#2d5708"
+        "color": "#2d5708",
+        "desc": "reagent-desc-ethylredoxrazine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8069,7 +8994,12 @@
         "id": "Cryptobiolin",
         "name": "Cryptobiolin",
         "amount": 3,
-        "color": "#081a80"
+        "color": "#081a80",
+        "desc": "reagent-desc-cryptobiolin",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8099,7 +9029,12 @@
         "id": "Arithrazine",
         "name": "Arithrazine",
         "amount": 2,
-        "color": "#bd5902"
+        "color": "#bd5902",
+        "desc": "reagent-desc-arithrazine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8129,7 +9064,12 @@
         "id": "Bicaridine",
         "name": "Bicaridine",
         "amount": 2,
-        "color": "#ffaa00"
+        "color": "#ffaa00",
+        "desc": "reagent-desc-bicaridine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8165,7 +9105,12 @@
         "id": "Cryoxadone",
         "name": "Cryoxadone",
         "amount": 3,
-        "color": "#0091ff"
+        "color": "#0091ff",
+        "desc": "reagent-desc-cryoxadone",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8195,7 +9140,12 @@
         "id": "Doxarubixadone",
         "name": "Doxarubixadone",
         "amount": 2,
-        "color": "#32cd32"
+        "color": "#32cd32",
+        "desc": "reagent-desc-doxarubixadone",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8237,7 +9187,12 @@
         "id": "Epinephrine",
         "name": "Epinephrine",
         "amount": 4,
-        "color": "#d2fffa"
+        "color": "#d2fffa",
+        "desc": "reagent-desc-epinephrine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8273,7 +9228,12 @@
         "id": "Dermaline",
         "name": "Dermaline",
         "amount": 3,
-        "color": "#215263"
+        "color": "#215263",
+        "desc": "reagent-desc-dermaline",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8303,7 +9263,12 @@
         "id": "Dexalin",
         "name": "Dexalin",
         "amount": 3,
-        "color": "#0041a8"
+        "color": "#0041a8",
+        "desc": "reagent-desc-dexalin",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8339,7 +9304,12 @@
         "id": "DexalinPlus",
         "name": "Dexalin Plus",
         "amount": 3,
-        "color": "#4da0bd"
+        "color": "#4da0bd",
+        "desc": "reagent-desc-dexalin-plus",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8369,7 +9339,12 @@
         "id": "Hyronalin",
         "name": "Hyronalin",
         "amount": 2,
-        "color": "#4cb580"
+        "color": "#4cb580",
+        "desc": "reagent-desc-hyronalin",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8405,7 +9380,12 @@
         "id": "Inaprovaline",
         "name": "Inaprovaline",
         "amount": 3,
-        "color": "#731024"
+        "color": "#731024",
+        "desc": "reagent-desc-inaprovaline",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8441,7 +9421,12 @@
         "id": "Ipecac",
         "name": "Ipecac",
         "amount": 2,
-        "color": "#422912"
+        "color": "#422912",
+        "desc": "reagent-desc-ipecac",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8477,7 +9462,12 @@
         "id": "TranexamicAcid",
         "name": "Tranexamic Acid",
         "amount": 3,
-        "color": "#ba7d7d"
+        "color": "#ba7d7d",
+        "desc": "reagent-desc-tranexamic-acid",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8507,7 +9497,12 @@
         "id": "Kelotane",
         "name": "Kelotane",
         "amount": 2,
-        "color": "#bf3d19"
+        "color": "#bf3d19",
+        "desc": "reagent-desc-kelotane",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8543,7 +9538,12 @@
         "id": "Leporazine",
         "name": "Leporazine",
         "amount": 2,
-        "color": "#ff7db5"
+        "color": "#ff7db5",
+        "desc": "reagent-desc-leporazine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8579,7 +9579,12 @@
         "id": "Phalanximine",
         "name": "Phalanximine",
         "amount": 3,
-        "color": "#c8ff75"
+        "color": "#c8ff75",
+        "desc": "reagent-desc-phalanximine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8615,7 +9620,12 @@
         "id": "Ambuzol",
         "name": "Ambuzol",
         "amount": 4,
-        "color": "#86caf7"
+        "color": "#86caf7",
+        "desc": "reagent-desc-ambuzol",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8645,7 +9655,12 @@
         "id": "AmbuzolPlus",
         "name": "Ambuzol Plus",
         "amount": 10,
-        "color": "#1274b5"
+        "color": "#1274b5",
+        "desc": "reagent-desc-ambuzol-plus",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8681,7 +9696,12 @@
         "id": "Synaptizine",
         "name": "Synaptizine",
         "amount": 3,
-        "color": "#d49a2f"
+        "color": "#d49a2f",
+        "desc": "reagent-desc-synaptizine",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -8711,7 +9731,12 @@
         "id": "Tricordrazine",
         "name": "Tricordrazine",
         "amount": 2,
-        "color": "#00e5ff"
+        "color": "#00e5ff",
+        "desc": "reagent-desc-tricordrazine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8741,7 +9766,12 @@
         "id": "HeartbreakerToxin",
         "name": "Heartbreaker Toxin",
         "amount": 2,
-        "color": "#5f959c"
+        "color": "#5f959c",
+        "desc": "reagent-desc-heartbreaker-toxin",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -8777,7 +9807,12 @@
         "id": "Impedrezene",
         "name": "Impedrezene",
         "amount": 1,
-        "color": "#215263"
+        "color": "#215263",
+        "desc": "reagent-desc-impedrezene",
+        "overdose": null,
+        "tags": [
+          "Narcotic"
+        ]
       }
     ],
     "conditions": {
@@ -8813,7 +9848,12 @@
         "id": "Lexorin",
         "name": "Lexorin",
         "amount": 2,
-        "color": "#6b0007"
+        "color": "#6b0007",
+        "desc": "reagent-desc-lexorin",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -8849,7 +9889,12 @@
         "id": "Lipozine",
         "name": "Lipozine",
         "amount": 3,
-        "color": "#2690b5"
+        "color": "#2690b5",
+        "desc": "reagent-desc-lipozine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8885,7 +9930,12 @@
         "id": "Mannitol",
         "name": "Mannitol",
         "amount": 3,
-        "color": "#A0A0A0"
+        "color": "#A0A0A0",
+        "desc": "reagent-desc-mannitol",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -8921,7 +9971,12 @@
         "id": "MindbreakerToxin",
         "name": "Mindbreaker Toxin",
         "amount": 3,
-        "color": "#77b58e"
+        "color": "#77b58e",
+        "desc": "reagent-desc-mindbreaker-toxin",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -8957,7 +10012,12 @@
         "id": "SpaceDrugs",
         "name": "Space Drugs",
         "amount": 3,
-        "color": "#63806e"
+        "color": "#63806e",
+        "desc": "reagent-desc-space-drugs",
+        "overdose": null,
+        "tags": [
+          "Narcotic"
+        ]
       }
     ],
     "conditions": {
@@ -8987,7 +10047,12 @@
         "id": "Ultravasculine",
         "name": "Ultravasculine",
         "amount": 2,
-        "color": "#520e30"
+        "color": "#520e30",
+        "desc": "reagent-desc-ultravasculine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9023,7 +10088,12 @@
         "id": "Oculine",
         "name": "Oculine",
         "amount": 4,
-        "color": "#404040"
+        "color": "#404040",
+        "desc": "reagent-desc-oculine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9053,7 +10123,12 @@
         "id": "Siderlac",
         "name": "Siderlac",
         "amount": 2,
-        "color": "#f4dab8"
+        "color": "#f4dab8",
+        "desc": "reagent-desc-siderlac",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9089,7 +10164,12 @@
         "id": "Cognizine",
         "name": "Cognizine",
         "amount": 1,
-        "color": "#b50ee8"
+        "color": "#b50ee8",
+        "desc": "reagent-desc-cognizine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9137,7 +10217,12 @@
         "id": "Sigynate",
         "name": "Sigynate",
         "amount": 4,
-        "color": "#e0a5b9"
+        "color": "#e0a5b9",
+        "desc": "reagent-desc-sigynate",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9167,7 +10252,10 @@
         "id": "Saline",
         "name": "Saline",
         "amount": 5,
-        "color": "#0064C8"
+        "color": "#0064C8",
+        "desc": "reagent-desc-saline",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -9197,7 +10285,12 @@
         "id": "Lacerinol",
         "name": "Lacerinol",
         "amount": 2,
-        "color": "#283332"
+        "color": "#283332",
+        "desc": "reagent-desc-lacerinol",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9227,7 +10320,12 @@
         "id": "Puncturase",
         "name": "Puncturase",
         "amount": 2,
-        "color": "#b9bf93"
+        "color": "#b9bf93",
+        "desc": "reagent-desc-puncturase",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9263,7 +10361,12 @@
         "id": "Bruizine",
         "name": "Bruizine",
         "amount": 2,
-        "color": "#ff3636"
+        "color": "#ff3636",
+        "desc": "reagent-desc-bruizine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9293,7 +10396,12 @@
         "id": "Razorium",
         "name": "Razorium",
         "amount": 1,
-        "color": "#e3fffb"
+        "color": "#e3fffb",
+        "desc": "reagent-desc-razorium",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -9323,7 +10431,12 @@
         "id": "Razorium",
         "name": "Razorium",
         "amount": 1,
-        "color": "#e3fffb"
+        "color": "#e3fffb",
+        "desc": "reagent-desc-razorium",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -9353,7 +10466,12 @@
         "id": "Razorium",
         "name": "Razorium",
         "amount": 1,
-        "color": "#e3fffb"
+        "color": "#e3fffb",
+        "desc": "reagent-desc-razorium",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -9383,7 +10501,12 @@
         "id": "Razorium",
         "name": "Razorium",
         "amount": 1,
-        "color": "#e3fffb"
+        "color": "#e3fffb",
+        "desc": "reagent-desc-razorium",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -9413,7 +10536,12 @@
         "id": "Razorium",
         "name": "Razorium",
         "amount": 1,
-        "color": "#e3fffb"
+        "color": "#e3fffb",
+        "desc": "reagent-desc-razorium",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -9443,7 +10571,12 @@
         "id": "Razorium",
         "name": "Razorium",
         "amount": 1,
-        "color": "#e3fffb"
+        "color": "#e3fffb",
+        "desc": "reagent-desc-razorium",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -9491,7 +10624,12 @@
         "id": "Diphenhydramine",
         "name": "Diphenhydramine",
         "amount": 3,
-        "color": "#64ffe6"
+        "color": "#64ffe6",
+        "desc": "reagent-desc-diphenhydramine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9527,7 +10665,12 @@
         "id": "Pyrazine",
         "name": "Pyrazine",
         "amount": 3,
-        "color": "#aa4308"
+        "color": "#aa4308",
+        "desc": "reagent-desc-pyrazine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9563,7 +10706,12 @@
         "id": "Insuzine",
         "name": "Insuzine",
         "amount": 3,
-        "color": "#8147ff"
+        "color": "#8147ff",
+        "desc": "reagent-desc-insuzine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9599,7 +10747,12 @@
         "id": "Opporozidone",
         "name": "Opporozidone",
         "amount": 3,
-        "color": "#b5e36d"
+        "color": "#b5e36d",
+        "desc": "reagent-desc-opporozidone",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9635,7 +10788,12 @@
         "id": "Necrosol",
         "name": "Necrosol",
         "amount": 2,
-        "color": "#86a5bd"
+        "color": "#86a5bd",
+        "desc": "reagent-desc-necrosol",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9671,7 +10829,12 @@
         "id": "Aloxadone",
         "name": "Aloxadone",
         "amount": 4,
-        "color": "#89f77f"
+        "color": "#89f77f",
+        "desc": "reagent-desc-aloxadone",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9707,7 +10870,12 @@
         "id": "Psicodine",
         "name": "Psicodine",
         "amount": 4,
-        "color": "#07E79E"
+        "color": "#07E79E",
+        "desc": "reagent-desc-psicodine",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9743,7 +10911,12 @@
         "id": "Lipolicide",
         "name": "Lipolicide",
         "amount": 3,
-        "color": "#F0FFF0"
+        "color": "#F0FFF0",
+        "desc": "reagent-desc-lipolicide",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -9785,7 +10958,12 @@
         "id": "Happiness",
         "name": "Happiness",
         "amount": 4,
-        "color": "#EE35FF"
+        "color": "#EE35FF",
+        "desc": "reagent-desc-happiness",
+        "overdose": null,
+        "tags": [
+          "Narcotic"
+        ]
       }
     ],
     "conditions": {
@@ -9815,7 +10993,12 @@
         "id": "PotassiumIodide",
         "name": "Potassium Iodide",
         "amount": 2,
-        "color": "#baa15d"
+        "color": "#baa15d",
+        "desc": "reagent-desc-potassium-iodide",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9863,7 +11046,12 @@
         "id": "Haloperidol",
         "name": "Haloperidol",
         "amount": 5,
-        "color": "#27870a"
+        "color": "#27870a",
+        "desc": "reagent-desc-haloperidol",
+        "overdose": null,
+        "tags": [
+          "Medicine"
+        ]
       }
     ],
     "conditions": {
@@ -9899,7 +11087,12 @@
         "id": "Napalm",
         "name": "Napalm",
         "amount": 3,
-        "color": "#FA00AF"
+        "color": "#FA00AF",
+        "desc": "reagent-desc-napalm",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -9935,7 +11128,12 @@
         "id": "Phlogiston",
         "name": "Phlogiston",
         "amount": 3,
-        "color": "#D4872A"
+        "color": "#D4872A",
+        "desc": "reagent-desc-phlogiston",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -9965,7 +11163,12 @@
         "id": "ChlorineTrifluoride",
         "name": "Chlorine Trifluoride",
         "amount": 4,
-        "color": "#FFC8C8"
+        "color": "#FFC8C8",
+        "desc": "reagent-desc-chlorine-trifluoride",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -9989,7 +11192,10 @@
         "id": "Ash",
         "name": "Ash",
         "amount": 1,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-ash",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -10013,19 +11219,30 @@
         "id": "Ethanol",
         "name": "Ethanol",
         "amount": 5,
-        "color": "#b05b3c"
+        "color": "#b05b3c",
+        "desc": "reagent-desc-ethanol",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Hydrogen",
         "name": "Hydrogen",
         "amount": 3,
-        "color": "#cccccc"
+        "color": "#cccccc",
+        "desc": "reagent-desc-hydrogen",
+        "overdose": null,
+        "tags": []
       },
       {
         "id": "Sulfur",
         "name": "Sulfur",
         "amount": 2,
-        "color": "#fff385"
+        "color": "#fff385",
+        "desc": "reagent-desc-sulfur",
+        "overdose": null,
+        "tags": [
+          "Toxin"
+        ]
       }
     ],
     "conditions": {
@@ -10049,7 +11266,10 @@
         "id": "Protein",
         "name": "Protein",
         "amount": 0.5,
-        "color": "#FFFFE5"
+        "color": "#FFFFE5",
+        "desc": "reagent-desc-protein",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -10073,7 +11293,10 @@
         "id": "EggCooked",
         "name": "Egg",
         "amount": 0.5,
-        "color": "white"
+        "color": "white",
+        "desc": "reagent-desc-egg",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -10097,7 +11320,10 @@
         "id": "Syrup",
         "name": "Syrup",
         "amount": 0.5,
-        "color": "#fb7125"
+        "color": "#fb7125",
+        "desc": "reagent-desc-syrup",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -10121,7 +11347,10 @@
         "id": "Wine",
         "name": "Wine",
         "amount": 1,
-        "color": "#7E4043"
+        "color": "#7E4043",
+        "desc": "reagent-desc-wine",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
@@ -10145,7 +11374,10 @@
         "id": "Holywater",
         "name": "Holywater",
         "amount": 1,
-        "color": "#91C3F7"
+        "color": "#91C3F7",
+        "desc": "reagent-desc-holywater",
+        "overdose": null,
+        "tags": []
       }
     ],
     "conditions": {
