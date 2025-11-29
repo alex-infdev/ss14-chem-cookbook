@@ -43,6 +43,15 @@
             display: flex; justify-content: space-between; align-items: center;
         }
 
+        #player-section { margin-bottom: 20px; padding: 4px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+        .player-screen { background: black; color: #0f0; font-family: monospace; padding: 4px 8px; flex-grow: 1; border: 2px solid #808080; border-right-color: #fff; border-bottom-color: #fff; }
+        .player-btn { 
+            width: 30px; height: 25px; background: var(--surface); border: 1px solid #000; 
+            border-top-color: #fff; border-left-color: #fff; cursor: pointer; font-weight: bold;
+            font-size: 10px; padding: 0;
+        }
+        .player-btn:active { border: 1px solid #fff; border-top-color: #000; border-left-color: #000; }
+
         input#search { width: 100%; padding: 8px; font-family: 'Tahoma'; font-size: 16px; outline: none; box-sizing: border-box; }
 
         #app { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px; }
@@ -87,6 +96,8 @@
         .section-label { font-size: 11px; color: #808080; margin-bottom: 4px; text-decoration: underline; }
 
         .condition-badge { font-size: 10px; border: 1px solid #808080; background: #fff; text-align: center; margin-top: 2px; }
+        
+        .name-text { text-transform: capitalize; }
     </style>
 </head>
 <body>
@@ -98,19 +109,47 @@
         </div>
 
         <div style="padding: 15px;">
+            
+            <div class="win-out" id="player-section">
+                <div class="player-screen" id="track-name">READY</div>
+                <button class="player-btn" onclick="playMusic()">|&gt;</button>
+                <button class="player-btn" onclick="pauseMusic()">||</button>
+                <button class="player-btn" onclick="stopMusic()">[]</button>
+            </div>
+            
+            <audio id="bgm" loop>
+                <source src="music.mp3" type="audio/mpeg">
+            </audio>
+
             <div style="margin-bottom: 20px;">
-                <label for="search" style="display:block; margin-bottom:4px;">Filter Chemicals:</label>
+                <label for="search" style="display:block; margin-bottom:4px;">Filter chemicals:</label>
                 <input type="text" id="search" class="win-in" placeholder="Type to search..." onkeyup="render()" autofocus>
             </div>
             
             <div id="app" style="text-align: center; font-style: italic;">Loading database...</div>
         </div>
         
-        <div class="win-in" style="margin: 15px; padding: 4px; font-size: 11px; color: #666;">v1.6</div>
+        <div class="win-in" style="margin: 15px; padding: 4px; font-size: 11px; color: #666;">v1.7</div>
     </div>
 
     <script>
         let recipes = [];
+        const audio = document.getElementById('bgm');
+        const screen = document.getElementById('track-name');
+
+        function playMusic() {
+            audio.play();
+            screen.innerText = "PLAYING: SPACE ASSHOLE";
+        }
+        function pauseMusic() {
+            audio.pause();
+            screen.innerText = "PAUSED";
+        }
+        function stopMusic() {
+            audio.pause();
+            audio.currentTime = 0;
+            screen.innerText = "STOPPED";
+        }
 
         async function init() {
             try {
