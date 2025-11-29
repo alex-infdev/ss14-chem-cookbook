@@ -3,212 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SS14 Chem Database</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    
+    <title>SS14 Chemistry</title>
     <style>
         :root {
-            --bg-color: #111111;
-            --card-bg: #222222;
-            --border-light: #555555;
-            --border-dark: #000000;
-            --text-main: #eeeeee;
-            --text-green: #44ff44;
-            --text-dim: #888888;
-            --accent: #5e81ac;
-            --heat: #d95763;
-            --cold: #99c0cf;
+            --desktop: #008080;
+            --surface: #c0c0c0;
+            --text: #000000;
+            --highlight: #ffffff;
+            --shadow-light: #dfdfdf;
+            --shadow-dark: #808080;
+            --shadow-black: #000000;
+            --title-blue: #000080;
+            --title-gradient: #1084d0;
+            
+
+            --heat: #d32f2f;
+            --cold: #1976d2;
+            --overdose: #ff0000;
         }
 
         body {
-            font-family: 'VT323', monospace;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: var(--desktop);
+            font-family: 'Tahoma', 'Verdana', sans-serif;
+            color: var(--text);
             margin: 0;
             padding: 20px;
-            font-size: 18px;
-            background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-            background-size: 100% 2px, 3px 100%;
+            font-size: 14px;
         }
 
-        header {
-            max-width: 1200px;
-            margin: 0 auto 30px;
-            text-align: center;
-            border-bottom: 2px solid var(--text-green);
-            padding-bottom: 10px;
+        .win-out {
+            background: var(--surface);
+            border-top: 2px solid var(--highlight);
+            border-left: 2px solid var(--highlight);
+            border-right: 2px solid var(--shadow-black);
+            border-bottom: 2px solid var(--shadow-black);
+            box-shadow: 1px 1px 0px var(--shadow-dark) inset, -1px -1px 0px var(--shadow-light) inset;
         }
 
-        h1 { 
-            margin-bottom: 5px; 
-            font-weight: 400; 
-            text-transform: uppercase; 
-            color: var(--text-green);
-            text-shadow: 2px 2px 0px #000;
-            font-size: 40px;
+        .win-in {
+            background: #fff;
+            border-top: 2px solid var(--shadow-black);
+            border-left: 2px solid var(--shadow-black);
+            border-right: 2px solid var(--highlight);
+            border-bottom: 2px solid var(--highlight);
+            box-shadow: 1px 1px 0px var(--shadow-light) inset, -1px -1px 0px var(--shadow-dark) inset;
+        }
+
+        .main-window {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2px;
+        }
+
+        .title-bar {
+            background: linear-gradient(90deg, var(--title-blue), var(--title-gradient));
+            padding: 4px 8px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            letter-spacing: 0.5px;
+        }
+
+        .window-body {
+            padding: 15px;
         }
 
         #search-container {
-            position: sticky;
-            top: 20px;
-            z-index: 100;
-            padding: 10px 0;
+            margin-bottom: 20px;
         }
 
         input#search {
             width: 100%;
-            max-width: 600px;
-            padding: 10px;
-            font-size: 24px;
-            font-family: 'VT323', monospace;
-            background: #000;
-            border: 2px solid var(--border-light);
-            color: var(--text-green);
+            padding: 8px;
+            font-family: 'Tahoma', sans-serif;
+            font-size: 16px;
             outline: none;
-            box-shadow: 4px 4px 0px #000;
+            box-sizing: border-box;
         }
-        input#search::placeholder { color: #335533; }
-        input#search:focus { border-color: var(--text-green); }
 
         #app {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
         }
 
         .card {
-            background: var(--card-bg);
-            border: 2px solid var(--border-light);
-            border-top-color: #666;
-            border-left-color: #666;
-            border-bottom-color: #000;
-            border-right-color: #000;
-            
             display: flex;
             flex-direction: column;
-            position: relative;
+            padding: 2px;
         }
 
-        .card:hover {
-            border-color: var(--text-green);
+        .card-inner {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-sizing: border-box;
         }
 
         .card-header {
-            background: #000;
-            padding: 8px 12px;
-            font-size: 24px;
-            color: #fff;
-            border-bottom: 2px solid var(--border-light);
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
             display: flex;
-            flex-direction: column;
-            gap: 5px;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px dotted #808080;
+            padding-bottom: 5px;
         }
 
         .card-body {
-            padding: 15px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             gap: 10px;
         }
 
         .column { flex: 1; }
-        .arrow-column { flex: 0 0 30px; text-align: center; color: var(--text-dim); font-size: 24px; }
+        .arrow-column { flex: 0 0 20px; text-align: center; color: var(--shadow-dark); font-weight: bold; }
 
-        .reagent-list { list-style: none; padding: 0; margin: 0; font-size: 20px; }
+        .reagent-list { list-style: none; padding: 0; margin: 0; font-size: 13px; }
         .reagent-item {
             display: flex;
             align-items: center;
-            margin-bottom: 6px;
-            padding: 2px 0;
-            border-bottom: 1px dashed #333;
+            margin-bottom: 4px;
         }
 
         .beaker-dot {
-            width: 12px;
-            height: 12px;
-            border: 1px solid #fff;
-            margin-right: 10px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            margin-right: 6px;
             flex-shrink: 0;
-            background-color: var(--bg-color);
-            image-rendering: pixelated;
+            display: inline-block;
         }
 
         .section-label {
-            font-size: 16px;
-            text-transform: uppercase;
-            color: var(--text-dim);
-            margin-bottom: 5px;
+            font-size: 11px;
+            color: var(--shadow-dark);
+            margin-bottom: 4px;
             display: block;
-            border-bottom: 2px solid var(--text-dim);
-            display: inline-block;
+            text-decoration: underline;
         }
 
         .recipe-desc {
-            padding: 10px 15px;
-            font-size: 18px;
-            color: #bbb;
-            background: #1a1a1a;
-            border-bottom: 1px solid #333;
-            line-height: 1.2;
+            font-style: italic;
+            font-size: 12px;
+            color: #444;
+            margin-bottom: 8px;
+            padding: 4px;
+            background: #efefef;
+            border: 1px dotted #999;
         }
 
         .meta-tag {
-            display: inline-block;
-            background: #000;
-            color: var(--text-green);
-            padding: 0px 6px;
-            border: 1px solid var(--text-green);
-            margin-left: 8px;
-            font-size: 16px;
-            text-transform: uppercase;
+            background: #e0e0e0;
+            border: 1px solid #808080;
+            padding: 0 4px;
+            font-size: 11px;
+            margin-left: 5px;
+            border-radius: 0;
         }
 
         .overdose-warning {
-            color: var(--heat);
-            background: #200;
-            padding: 0 4px;
-            border: 1px solid var(--heat);
-            display: inline-block;
-            font-family: monospace;
-            font-size: 16px;
+            color: white;
+            background: red;
+            font-weight: bold;
+            padding: 1px 4px;
+            font-size: 11px;
+        }
+
+        .damage-section {
+            font-size: 11px;
+            margin-bottom: 8px;
+            color: #d32f2f;
+        }
+        .dmg-badge {
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
         .condition-badge {
-            display: inline-block;
-            font-size: 16px;
-            padding: 2px 4px;
-            margin-top: 4px;
-            border: 1px solid;
-            background: #000;
+            display: block;
+            font-size: 10px;
+            padding: 1px;
+            margin-top: 2px;
+            border: 1px solid #808080;
+            background: #fff;
+            text-align: center;
         }
-        .cond-heat { color: var(--heat); border-color: var(--heat); }
-        .cond-cold { color: var(--cold); border-color: var(--cold); }
 
-        .error-box { 
-            grid-column: 1 / -1; 
-            text-align: center; 
-            padding: 40px; 
-            color: var(--heat); 
-            border: 2px dashed var(--heat); 
-            font-size: 24px;
-        }
+        .status-msg { padding: 20px; text-align: center; font-style: italic; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>SS14 CHEM DATABASE</h1>
-        <div id="search-container">
-            <input type="text" id="search" placeholder="> SEARCH DATABASE..." onkeyup="render()" autofocus>
+    <div class="main-window win-out">
+        <div class="title-bar">
+            <span>SS14 Chemistry Database</span>
+            <div style="background:#c0c0c0; color:black; width:16px; height:16px; text-align:center; line-height:14px; border:1px solid #fff; border-bottom-color:#000; border-right-color:#000; font-size:12px; cursor:pointer;">X</div>
         </div>
-    </header>
 
-    <div id="app" style="text-align: center; color: #666;">INITIALIZING DATAPAD...</div>
+        <div class="window-body">
+            
+            <div id="search-container">
+                <label for="search" style="display:block; margin-bottom:4px;">Filter chemicals:</label>
+                <input type="text" id="search" class="win-in" placeholder="Type to search..." onkeyup="render()" autofocus>
+            </div>
+
+            <div id="app" class="status-msg">
+                Scanning disk for recipes...
+            </div>
+        </div>
+        
+        <div class="win-in" style="margin: 15px; padding: 4px; font-size: 11px; color: #666;">
+            Ready.
+        </div>
+    </div>
 
     <script>
         let recipes = [];
@@ -220,7 +233,7 @@
                 recipes = await response.json();
                 render();
             } catch (e) {
-                document.getElementById('app').innerHTML = `<div class="error-box">CONNECTION FAILURE.<br>${e.message}</div>`;
+                document.getElementById('app').innerHTML = `<div style="color:red; font-weight:bold;">Error reading database.<br>${e.message}</div>`;
             }
         }
 
@@ -237,7 +250,7 @@
             );
 
             if (filtered.length === 0) {
-                container.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#555; font-size: 24px;">> NO ENTRIES FOUND</div>`;
+                container.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 20px;">No matching records found.</div>`;
                 return;
             }
 
@@ -245,55 +258,61 @@
                 const mainP = r.products[0];
                 
                 let conditionsHtml = '';
-                if (r.conditions.minTemp) conditionsHtml += `<div class="condition-badge cond-heat">MIN: ${Math.round(r.conditions.minTemp)}K</div>`;
-                if (r.conditions.maxTemp) conditionsHtml += `<div class="condition-badge cond-cold">MAX: ${Math.round(r.conditions.maxTemp)}K</div>`;
+                if (r.conditions.minTemp) conditionsHtml += `<div class="condition-badge">Min: ${Math.round(r.conditions.minTemp)}K</div>`;
+                if (r.conditions.maxTemp) conditionsHtml += `<div class="condition-badge">Max: ${Math.round(r.conditions.maxTemp)}K</div>`;
 
                 let tagsHtml = mainP.tags.map(t => `<span class="meta-tag">${t}</span>`).join('');
                 
-                let overdoseHtml = mainP.overdose ? `<span class="overdose-warning">! OD: ${mainP.overdose}u</span>` : '';
+                let overdoseHtml = mainP.overdose ? `<span class="overdose-warning">OD: ${mainP.overdose}u</span>` : '';
+
+                let damageHtml = '';
+                if (mainP.damage && mainP.damage.length > 0) {
+                    damageHtml = `<div class="damage-section">Damage: <b>${mainP.damage.join(', ')}</b></div>`;
+                }
 
                 let descHtml = mainP.desc ? `<div class="recipe-desc">${mainP.desc}</div>` : '';
 
                 return `
-                <div class="card">
-                    <div class="card-header">
-                        <div style="display:flex; justify-content:space-between; align-items: center; width:100%;">
-                            <span>${mainP.name.toUpperCase()}</span>
-                            ${overdoseHtml}
+                <div class="card win-out">
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <span>${mainP.name}</span>
+                            <div>${overdoseHtml}</div>
                         </div>
-                        <div style="font-size:16px; margin-top: 4px;">${tagsHtml}</div>
-                    </div>
-                    
-                    ${descHtml}
+                        
+                        <div style="margin-bottom:5px;">${tagsHtml}</div>
+                        ${descHtml}
+                        ${damageHtml}
 
-                    <div class="card-body">
-                        <div class="column">
-                            <span class="section-label">INPUT</span>
-                            <ul class="reagent-list">
-                                ${r.reactants.map(i => `
-                                    <li class="reagent-item">
-                                        <div class="beaker-dot" style="background-color: ${i.color}"></div>
-                                        ${i.amount}u ${i.name}
-                                    </li>
-                                `).join('')}
-                            </ul>
-                        </div>
+                        <div class="card-body">
+                            <div class="column">
+                                <span class="section-label">Input</span>
+                                <ul class="reagent-list">
+                                    ${r.reactants.map(i => `
+                                        <li class="reagent-item">
+                                            <div class="beaker-dot" style="background-color: ${i.color}"></div>
+                                            ${i.amount}u ${i.name}
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
 
-                        <div class="arrow-column">
-                            >>>
-                            ${conditionsHtml}
-                        </div>
+                            <div class="arrow-column">
+                                &#8594;
+                                ${conditionsHtml}
+                            </div>
 
-                        <div class="column">
-                            <span class="section-label">OUTPUT</span>
-                            <ul class="reagent-list">
-                                ${r.products.map(p => `
-                                    <li class="reagent-item">
-                                        <div class="beaker-dot" style="background-color: ${p.color}"></div>
-                                        ${p.amount}u ${p.name}
-                                    </li>
-                                `).join('')}
-                            </ul>
+                            <div class="column">
+                                <span class="section-label">Result</span>
+                                <ul class="reagent-list">
+                                    ${r.products.map(p => `
+                                        <li class="reagent-item">
+                                            <div class="beaker-dot" style="background-color: ${p.color}"></div>
+                                            ${p.amount}u ${p.name}
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>`;
