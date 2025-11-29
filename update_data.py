@@ -2,7 +2,7 @@ import requests
 import yaml
 import json
 
-REPO_OWNER_ = "space-wizards"
+REPO_OWNER = "space-wizards"
 REPO_NAME = "space-station-14"
 BRANCH = "master"
 
