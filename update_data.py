@@ -40,9 +40,10 @@ def fetch_raw_yaml(path):
 
 def main():
     tree = fetch_file_list()
+    
     target_files = [
-        item["path"] for item in tree
-        if item["type"] == "blob"
+        item["path"] for item in tree 
+        if item["type"] == "blob" 
         and (item["path"].endswith(".yml") or item["path"].endswith(".yaml"))
         and any(item["path"].startswith(prefix) for prefix in TARGET_PATHS)
     ]
@@ -54,7 +55,7 @@ def main():
 
     for i, file_path in enumerate(target_files):
         print(f"[{i+1}/{len(target_files)}] Processing {file_path}...")
-
+        
         data = fetch_raw_yaml(file_path)
         if not data: continue
 
@@ -62,57 +63,82 @@ def main():
 
         for entry in entries:
             if not isinstance(entry, dict): continue
+            
             if entry.get("type") == "reagent" and "id" in entry:
                 r_id = entry["id"]
+                
+                metabolisms = entry.get("metabolisms", {})
+                overdose_val = None
+                tags = []
+
+                if metabolisms:
+                    for meta_type, meta_data in metabolisms.items():
+                        if "overdose" in meta_data:
+                            val = float(meta_data["overdose"])
+                            if overdose_val is None or val < overdose_val:
+                                overdose_val = val
+                        
+                        if meta_type == "Poison": tags.append("Toxin")
+                        if meta_type == "Medicine": tags.append("Medicine")
+                        if meta_type == "Narcotic": tags.append("Narcotic")
+                        if "PlantMetabolism" in str(meta_data): tags.append("Botany")
+
+                tags = list(set(tags))
+
                 reagents_db[r_id] = {
                     "name": clean_name(entry.get("name", r_id)),
                     "desc": entry.get("desc", ""),
-                    "color": entry.get("color", "#CCCCCC")
+                    "color": entry.get("color", "#CCCCCC"),
+                    "overdose": overdose_val,
+                    "tags": tags
                 }
 
             elif entry.get("type") == "reaction" and "id" in entry:
                 recipes.append(entry)
-        
-        final_recipes = []
-        print("Linking recipes to reagents...")
 
-        for entry in recipes:
-            ingredients = []
-            for r_id, r_data in entry.get("reactants", {}).items():
-                amount = r_data.get("amount") if isinstance(r_data, dict) else r_data
-                meta = reagents_db.get(r_id, {"name": r_id, "color": "#FFF"})
-                ingredients.append({
-                    "id": r_id,
-                    "name": clean_name(meta["name"]),
-                    "amount": amount,
-                    "color": meta["color"]
-                })
+    final_recipes = []
+    print("Linking recipes to reagents...")
 
-            products = []
-            for p_id, p_amount in entry.get("products", {}).items():
-                meta = reagents_db.get(p_id, {"name": p_id, "color": "#FFF"})
-                products.append({
-                    "id": p_id,
-                    "name": clean_name(meta["name"]),
-                    "amount": p_amount,
-                    "color": meta["color"]
-                })
-
-            final_recipes.append({
-                "id": entry["id"],
-                "reactants": ingredients,
-                "products": products,
-                "conditions": {
-                    "minTemp": entry.get("minTemp"),
-                    "maxTemp": entry.get("maxTemp"),
-                    "requiredMixer": entry.get("requiredMixer")
-                }
+    for entry in recipes:
+        ingredients = []
+        for r_id, r_data in entry.get("reactants", {}).items():
+            amount = r_data.get("amount") if isinstance(r_data, dict) else r_data
+            meta = reagents_db.get(r_id, {"name": r_id, "color": "#FFF", "desc": "", "tags": [], "overdose": None})
+            ingredients.append({
+                "id": r_id,
+                "name": meta["name"],
+                "amount": amount,
+                "color": meta["color"]
             })
 
-        with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-            json.dump(final_recipes, f, indent=2)
+        products = []
+        for p_id, p_amount in entry.get("products", {}).items():
+            meta = reagents_db.get(p_id, {"name": p_id, "color": "#FFF", "desc": "", "tags": [], "overdose": None})
+            products.append({
+                "id": p_id,
+                "name": meta["name"],
+                "amount": p_amount,
+                "color": meta["color"],
+                "desc": meta["desc"],
+                "overdose": meta["overdose"],
+                "tags": meta["tags"]
+            })
 
-        print(f"Success! {len(final_recipes)} recipes saved to {OUTPUT_FILE}")
+        final_recipes.append({
+            "id": entry["id"],
+            "reactants": ingredients,
+            "products": products,
+            "conditions": {
+                "minTemp": entry.get("minTemp"),
+                "maxTemp": entry.get("maxTemp"),
+                "requiredMixer": entry.get("requiredMixer")
+            }
+        })
+
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+        json.dump(final_recipes, f, indent=2)
+    
+    print(f"Success! {len(final_recipes)} recipes saved.")
 
 if __name__ == "__main__":
     main()
