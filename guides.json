@@ -1,0 +1,389 @@
+[
+  {
+    "category": "Shift start",
+    "guides": [
+      {
+        "title": "Bic - Brute - 15u OD - DO NOT MIX PUN/LAC/BRU",
+        "content": [
+          "Dispenser:",
+          "15 oxygen, sugar, 60 carbon",
+          "Jugmix:",
+          "200u carbon -> 50u into 2 jugs",
+          "50u oxygen, sugar -> 50u carbon jug -> 150u inap ->",
+          "50u into 50u carbon jug, 100u into 100 carbon jug",
+          "100u Bic for chemmaster to make Bru",
+          "200u Bic split into 100/100 to jugmix Pun and Lac"
+        ]
+      },
+      {
+        "title": "Derma - Burns(except caustic) - 10u OD",
+        "content": [
+          "Dispenser:",
+          "15 silicon, carbon, 30 oxygen, phosphorus",
+          "Jugmix:",
+          "200u carbon -> 100u into Jug",
+          "200u silicon -> 100u into 2 100u carbon jugs",
+          "200u Kelo -> 50u into 3 jugs",
+          "200u oxygen, phosphorus -> 50u each into 4 50u Kelo jugs",
+          "150u Derma -> Top off other 3 jugs"
+        ]
+      },
+      {
+        "title": "Pha - Genetic - Causes radiation",
+        "content": [
+          "Will cause vomiting, use first or last!",
+          "5 silicon, potassium, nitrogen, 25 radium, 10 phosphorus, chlorine, 30 ethanol"
+        ]
+      },
+      {
+        "title": "Dylo - Poison - DO NOT MIX INAP - 20u OD",
+        "content": [
+          "30 silicon, potassium, nitro"
+        ]
+      },
+      {
+        "title": "Tri - Brute/Burns/Poison 50DMG - SAFE",
+        "content": [
+          "15 oxygen carbon sugar",
+          "15 silicon, potassium, nitro"
+        ]
+      },
+      {
+        "title": "Ari - Radiation - Causes minor brute damage",
+        "content": [
+          "5 silicon, potassium, nitrogen",
+          "15 radium 30 hydrogen"
+        ]
+      },
+      {
+        "title": "Dex P - Airloss - 25u OD",
+        "content": [
+          "25 iron, carbon, Dex (oxygen PLASMA)"
+        ]
+      },
+      {
+        "title": "Sal - 20% Blood Level/5u - SAFE",
+        "content": [
+          "20 sodium, chlorine (heat)",
+          "Fill jug with water."
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Botany",
+    "guides": [
+      {
+        "title": "EZ Nutrient",
+        "content": [
+          "15u nitrogen, Phosperus, Potassium"
+        ]
+      },
+      {
+        "title": "Unstable Mutagen",
+        "content": [
+          "30u radium, phosporus, chlorine"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Janitor",
+    "guides": [
+      {
+        "title": "Space Cleaner",
+        "content": [
+          "50u ammonia (30u hydrogen, 10u nitrogen), Water"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Advanced medicine",
+    "guides": [
+      {
+        "title": "Pun/Lac/Bru - Specialized brute medicines",
+        "content": []
+      },
+      {
+        "title": "Pun - Piercing - 11u OD - DO NOT MIX LAC/BRU/BICA",
+        "content": [
+          "50 Bica, Hydroxide, HEAT",
+          "Hydroxide = oxygen, hydrogen HEAT",
+          "Bica = 15 oxygen, sugar, 60 carbon"
+        ]
+      },
+      {
+        "title": "Lac - Slash - 12u OD - DO NOT MIX PUN/BRU/BICA",
+        "content": [
+          "50 Bica, Benzene HEAT",
+          "Benzene = hydrogen, carbon HEAT",
+          "Bica = 15 oxygen, sugar, 60 carbon"
+        ]
+      },
+      {
+        "title": "Lepo/Pyr/Ins - Specialized Burn Medicines",
+        "content": []
+      },
+      {
+        "title": "Lepo - Cold/Bad temperature - SAFE",
+        "content": []
+      },
+      {
+        "title": "Fersi = 50 iron, silicon HEAT",
+        "content": [
+          "Lepo = 45 copper, 45 Fersi 1u PLASMA"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Advanced poison",
+    "guides": [
+      {
+        "title": "Dip - Poison - SAFE",
+        "content": []
+      },
+      {
+        "title": "Ammonia = 75 hydrogen, 25 nitrogen",
+        "content": [
+          "Diethylamine = 50 ethanol, 50 ammonia",
+          "Oil = welding fuel, carbon, hydrogen",
+          "Table Salt = 50 chlorine, 50 sodium HEAT",
+          "Dip = Diethhylamine, Oil, Table Salt, carbon, ethanol HEAT"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Advanced caustic",
+    "guides": [
+      {
+        "title": "Sig - Caustic - 16u OD",
+        "content": []
+      },
+      {
+        "title": "Table Salt = 50 chlorine, sodium",
+        "content": [
+          "Ammonia = 75 hydrogen, nitrogen",
+          "Sodium Carbonate = 25 Ammonia, Table Salt, oxygen, carbon",
+          "Hydroxide = oxygen, hydrogen HEAT",
+          "Sodium Hydroxide = Sodium, Hydroxide",
+          "Kelo = 50 silicon, carbon",
+          "Sig = 20 Sodium Carbonate, Sodium Hydroxide, Kelo, water, sugar HEAT"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Niche Meds",
+    "guides": [
+      {
+        "title": "Ocu - 5u Blindness - SAFE",
+        "content": []
+      },
+      {
+        "title": "Hydroxide = 50 hydrogen, oxygen",
+        "content": [
+          "Table Salt = 50 chlorine, sodium",
+          "Oculine = 1x Hydroxide, Table Salt, 2x blood"
+        ]
+      },
+      {
+        "title": "Epi - Critical - 20u OD",
+        "content": []
+      },
+      {
+        "title": "Oil = 30 welding fuel, carbon, hydrogen",
+        "content": [
+          "Acetone = 30 Oil, welding fuel, oxygen",
+          "Benzene = 50 carbon, hydrogen HEAT",
+          "Hydroxide = 50 oxygen, hydrogen HEAT",
+          "Phenol = 50 Hydroxide, Benzene",
+          "Epi = 25 Phenol, Acetone, chlorine, Hydroxide"
+        ]
+      },
+      {
+        "title": "Charcoal - Chem removal(Good and bad)",
+        "content": []
+      },
+      {
+        "title": "Oil = 25 welding fuel, carbon, hydrogen",
+        "content": [
+          "Ash = Oil, HEAT",
+          "Charcoal = 50 Ash, carbon"
+        ]
+      },
+      {
+        "title": "Eth - Poison/drunkness - SAFE",
+        "content": [
+          "25 oxygen, Dylo, carbon"
+        ]
+      },
+      {
+        "title": "Regenerative Mesh",
+        "content": [
+          "1 ointment, cloth, aloe",
+          "20 Derma, Sig",
+          "10 seconds in microwave"
+        ]
+      },
+      {
+        "title": "Medicated Sutures",
+        "content": [
+          "1 bruise pack, cloth, poppy",
+          "20 Tranexamic Acid, Cryptobiolin",
+          "10 seconds in microwave"
+        ]
+      },
+      {
+        "title": "Amb & Amb+ - Zombie cure&vaccine",
+        "content": []
+      },
+      {
+        "title": "Ambuzol 10u - basic zombie cure",
+        "content": [
+          "25 Dylo ( 15u silicon, carbon,30u oxygen phosperus), ammonia 50 zombie blood"
+        ]
+      },
+      {
+        "title": "Ambuzol+ 5u - cure and vaccine",
+        "content": [
+          "Ambuzol, omnizine"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Cryo meds",
+    "guides": [
+      {
+        "title": "Cryo - All but genetic - Cryopod(-60C)",
+        "content": []
+      },
+      {
+        "title": "Dexalin = oxygen PLASMA",
+        "content": [
+          "Cryo = 25 water, oxygen, dexalin",
+          "50u beaker(if patient is cold enough) = 400 brute, 400 toxin, 600 burn, 600 airloss"
+        ]
+      },
+      {
+        "title": "Nec - dead burns/brute/poison - Cryopod(-60C)",
+        "content": []
+      },
+      {
+        "title": "Dex = oxygen PLASMA",
+        "content": [
+          "Cryo = water, oxygen, Dex",
+          "Nec = x3 blood, x2 Cryo, x1 omnizine",
+          "50u beaker = 400 brute, 500 burns, 200 poison"
+        ]
+      },
+      {
+        "title": "Dox - Genetic - Cryopod(-60C)",
+        "content": []
+      },
+      {
+        "title": "Dexalin = oxygen PLASMA",
+        "content": [
+          "Cryo = 25 water, oxygen, dexalin",
+          "Unstable mutagen = radium, phosphorus, chlorine",
+          "Dox = 50 Cryo, Unstable Mutagen",
+          "50u beaker = 200 genetic"
+        ]
+      },
+      {
+        "title": "Alox - dead heat/shock/caustic - Cryopod(-60C)",
+        "content": []
+      },
+      {
+        "title": "Dox+Cryo - Everything - Cryopod(-60C)",
+        "content": []
+      },
+      {
+        "title": "Because cryopod injects 1u from beaker per second you might want to make 50/50 mix of Dox and Cryo",
+        "content": []
+      },
+      {
+        "title": "Opp - Antirot - Cryopod(-123C)",
+        "content": []
+      },
+      {
+        "title": "Sid = Aloe, Stelibinin (from galaxythistle)",
+        "content": [
+          "Cryo = oxygen, Dexalin, water",
+          "Unstable Mutagen = chlorine, phosphorus, radium",
+          "Dox = Cryo, Unstable Mutagen",
+          "Oil = welding fuel, carbon, hydrogen",
+          "Acetone = Oil, welding fuel, oxygen",
+          "Cognizine = carpotoxin (grinded space carp), Sid, Acetone",
+          "Opp = 25 Cognizine, Dox, 50 plasma HEAT",
+          "50u beaker = 2000s of rot timer reversed(rot starts past 600s)"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Useful tools",
+    "guides": [
+      {
+        "title": "Metal Foam",
+        "content": []
+      },
+      {
+        "title": "Beaker 1: 2 Aluminum - 1 Lithium - 1 Hydrogen",
+        "content": []
+      },
+      {
+        "title": "Beaker 2: 2 Oxygen - 1 Sulfur - 1 Hydrogen - 1 Hydrogen - 1 Potassium - 1 Fluorine",
+        "content": [
+          "Mix to Activate"
+        ]
+      },
+      {
+        "title": "Desoxyephedrine (Meth)",
+        "content": []
+      },
+      {
+        "title": "Oil = 10u welding fuel, carbon, hydrogen",
+        "content": [
+          "Ammonia= 15u hydrogen, 5u nitrogen",
+          "Diethylamine = ammonia, 20u ethanol",
+          "Ephedrine = 25u oil, diethylamine, hydrogen, sugar",
+          "Desoxyephedrine = 25u Ephedrine, Carbon, Iodine, Phospherus HEAT"
+        ]
+      },
+      {
+        "title": "Space Cleaner Foam",
+        "content": [
+          "Beaker 1: 90u Water 10u Space cleaner",
+          "Beaker 2: 90u Flurosurfactant 10u space cleaner",
+          "Mix to Activate"
+        ]
+      },
+      {
+        "title": "Trico Grenade (Healing Grenade)",
+        "content": [
+          "Beaker 1: 50u Trico, Florosurfactant",
+          "Beaker 2: 50u Water, Trico",
+          "Mix to Activate"
+        ]
+      },
+      {
+        "title": "TDD - ALL but genetic - Safe (Homemade Omnizine)",
+        "content": []
+      },
+      {
+        "title": "Dylo = 25 silicon, potassium, nitrogen",
+        "content": [
+          "Inap = 25 oxygen, carbon, sugar",
+          "Tri = 75 Dylo, Inap",
+          "TDD = 2x cream, 1x lime, orange, tomato juice, Tri STIRRING(you need a spoon to do it on a jug, booze-mats have those).",
+          "15u injection = 30brute, burns, toxic, airloss",
+          "you have access to 250u of cream and 150u of all of 3 juices which is enough for 750u of TDD."
+        ]
+      }
+    ]
+  }
+]
