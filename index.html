@@ -136,6 +136,31 @@
         .cond-cold { background: rgba(136, 192, 208, 0.2); color: #88c0d0; border: 1px solid #88c0d0; }
 
         .error-box { grid-column: 1 / -1; text-align: center; padding: 40px; color: #bf616a; border: 1px dashed #bf616a; }
+
+        .recipe-desc {
+            padding: 10px 15px 0;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-style: italic;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 10px;
+        }
+
+        .meta-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+            font-size: 10px;
+        }
+
+        .overdose-warning {
+            color: #bf616a;
+            font-weight: bold;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body>
@@ -167,6 +192,7 @@
             const query = document.getElementById('search').value.toLowerCase();
             const container = document.getElementById('app');
             
+            // Safety Check Filter
             const filtered = recipes.filter(r => 
                 r.products && r.products.length > 0 && 
                 (
@@ -181,18 +207,31 @@
             }
 
             container.innerHTML = filtered.map(r => {
-                const mainProduct = r.products[0].name;
-
+                const mainP = r.products[0];
+                
                 let conditionsHtml = '';
                 if (r.conditions.minTemp) conditionsHtml += `<div class="condition-badge cond-heat">Min: ${Math.round(r.conditions.minTemp)}K</div>`;
                 if (r.conditions.maxTemp) conditionsHtml += `<div class="condition-badge cond-cold">Max: ${Math.round(r.conditions.maxTemp)}K</div>`;
 
+                let tagsHtml = mainP.tags.map(t => `<span class="meta-tag">${t}</span>`).join('');
+                
+                let overdoseHtml = mainP.overdose ? `<span class="overdose-warning">OD: ${mainP.overdose}u</span>` : '';
+
+                let descHtml = mainP.desc ? `<div class="recipe-desc">${mainP.desc}</div>` : '';
+
                 return `
                 <div class="card">
                     <div class="card-header">
-                        <span>${mainProduct}</span>
+                        <div style="display:flex; flex-direction:column; gap:4px;">
+                            <div style="display:flex; justify-content:space-between; width:100%;">
+                                <span>${mainP.name}</span>
+                                <div style="font-size:12px;">${tagsHtml}</div>
+                            </div>
+                            <div style="font-size:12px; font-weight:normal; opacity:0.8;">${overdoseHtml}</div>
+                        </div>
                     </div>
-                    <div class="card-body">
+                    
+                    ${descHtml} <div class="card-body">
                         <div class="column">
                             <span class="section-label">Mix</span>
                             <ul class="reagent-list">
