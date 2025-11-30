@@ -48,7 +48,6 @@
             box-shadow: 1px 1px 0px #dfdfdf inset, -1px -1px 0px var(--dark-shadow) inset;
         }
 
-        /* --- Layout --- */
         .main-window { 
             width: 100%; max-width: 1200px; margin: 0 auto; 
             display: flex; flex-direction: column; height: 100%;
@@ -86,20 +85,23 @@
 
         .split-container {
             display: flex; flex: 1; gap: 10px; overflow: hidden; 
-            margin-top: 10px;
+            margin-top: 10px; min-height: 0;
         }
         
         .list-pane {
             flex: 1; display: flex; flex-direction: column; overflow: hidden;
+            min-height: 0;
         }
         
         .details-sidebar {
             width: 350px; display: flex; flex-direction: column;
             border: 2px solid var(--surface);
+            min-height: 0;
         }
 
         .scroll-area {
             overflow-y: auto; flex: 1; padding-right: 5px;
+            padding-bottom: 40px;
         }
 
         #app { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; padding: 5px; }
@@ -121,10 +123,10 @@
 
         .card-inner { padding: 8px; display: flex; flex-direction: column; }
         .card-header { font-weight: bold; font-size: 13px; margin-bottom: 6px; display: flex; justify-content: space-between; border-bottom: 1px dotted var(--dark-shadow); padding-bottom: 4px; }
- 
-        .sidebar-header { font-weight: bold; margin-bottom: 5px; padding: 2px; background: navy; color: white; text-align: center; }
         
-        .prop-tabs { display: flex; margin-bottom: 2px; padding-left: 2px; }
+        .sidebar-header { font-weight: bold; margin-bottom: 5px; padding: 2px; background: navy; color: white; text-align: center; flex-shrink: 0; }
+        
+        .prop-tabs { display: flex; margin-bottom: 2px; padding-left: 2px; flex-shrink: 0; }
         .prop-tab {
             padding: 3px 8px; margin-right: 2px;
             background: var(--surface); border: 1px solid #fff; 
@@ -158,6 +160,7 @@
         .arrow-column { flex: 0 0 15px; text-align: center; color: var(--dark-shadow); font-weight: bold; }
         .section-label { font-size: 10px; color: var(--dark-shadow); margin-bottom: 2px; text-decoration: underline; }
         .condition-badge { font-size: 10px; border: 1px solid var(--dark-shadow); background: #fff; text-align: center; margin-top: 2px; color: #000; }
+        .name-text { text-transform: capitalize; }
 
         #guidebook { padding: 20px; font-family: 'Courier New', monospace; background: #fff; height: 100%; border: none; }
         .guide-entry { background: #ffffe0; border: 1px solid #000; padding: 10px; margin-bottom: 15px; box-shadow: 2px 2px 0px #aaa; }
@@ -170,17 +173,20 @@
         .view-content.active { display: flex; }
 
         .clown-fall {
-            position: fixed;
-            width: 150px;
-            z-index: 9999;
-            pointer-events: none;
-            top: -200px;
-            animation: fall 4s linear forwards;
+            position: fixed; width: 150px; z-index: 9999; pointer-events: none;
+            top: -200px; animation: fall 4s linear forwards;
         }
         @keyframes fall {
             0% { top: -200px; transform: rotate(0deg); }
             100% { top: 120vh; transform: rotate(360deg); }
         }
+
+        .player-btn { 
+            width: 30px; height: 25px; background: var(--surface); border: 1px solid #000; 
+            border-top-color: #fff; border-left-color: #fff; cursor: pointer; font-weight: bold;
+            font-size: 10px; padding: 0;
+        }
+        .player-btn:active { border: 1px solid #fff; border-top-color: #000; border-left-color: #000; }
     </style>
 </head>
 <body>
@@ -194,7 +200,7 @@
         <div class="window-content">
             <div class="tab-bar">
                 <button class="tab-btn active" onclick="switchTab('recipes')">Database</button>
-                <button class="tab-btn" onclick="switchTab('guides')">Chemist Shift Guidebook</button>
+                <button class="tab-btn" onclick="switchTab('guides')">Guidebook</button>
             </div>
 
             <div class="win-in" style="flex: 1; display: flex; flex-direction: column; padding: 10px; overflow: hidden;">
@@ -203,13 +209,15 @@
                     <input type="text" id="search" class="win-in" placeholder="Search chemicals..." onkeyup="render()" autofocus>
                     
                     <div class="split-container">
-                        <div class="list-pane scroll-area win-in" id="app">
-                            Loading...
+                        <div class="list-pane win-in">
+                            <div class="scroll-area" id="app">
+                                Loading...
+                            </div>
                         </div>
 
                         <div class="details-sidebar win-out">
                             <div class="sidebar-header">Properties</div>
-                            <div class="prop-body" style="padding: 5px; flex: 1; display: flex; flex-direction: column;">
+                            <div class="prop-body" style="padding: 5px; flex: 1; display: flex; flex-direction: column; overflow: hidden;">
                                 <div class="prop-tabs">
                                     <div class="prop-tab active" onclick="switchPropTab('general')">General</div>
                                     <div class="prop-tab" onclick="switchPropTab('reaction')">Mix</div>
@@ -246,7 +254,7 @@
                     <button class="player-btn" onclick="stopMusic()">[]</button>
                     <span id="track-name" style="background:#000; color:#0f0; font-family:monospace; padding:2px 5px; width: 150px; overflow:hidden; white-space:nowrap;">READY</span>
                 </div>
-                <div style="font-size: 11px; color: #444;">v3.0 - Mixed Edition</div>
+                <div style="font-size: 11px; color: #444;">v2.4 - honker honker</div>
             </div>
         </div>
     </div>
@@ -284,13 +292,10 @@
             const img = document.createElement('img');
             img.src = 'content/clown.webp';
             img.className = 'clown-fall';
-
             const maxX = window.innerWidth - 150;
             const randomX = Math.floor(Math.random() * maxX);
             img.style.left = randomX + 'px';
-
             document.body.appendChild(img);
-
             setTimeout(() => { img.remove(); }, 4000);
         }
 
@@ -354,16 +359,28 @@
             let medHtml = ``;
             if (product.overdose) medHtml += `<div class="prop-row"><div class="prop-label" style="color:red; font-weight:bold;">Overdose:</div><div class="prop-val">${product.overdose}u</div></div><hr>`;
             
-            if (product.damage && product.damage.length > 0) {
-                medHtml += `<div><b>Causes Damage:</b></div><ul style="padding-left:20px;">`;
-                product.damage.forEach(d => medHtml += `<li style="color:red">${d}</li>`);
-                medHtml += `</ul>`;
+            if (product.stats && product.stats.length > 0) {
+                product.stats.forEach(stat => {
+                    medHtml += `<div style="margin-bottom:8px;">
+                        <b>${stat.type} (${stat.rate}u/sec):</b>
+                        <ul style="padding-left:20px; margin-top:2px;">
+                            ${stat.effects.map(e => `<li>${e}</li>`).join('')}
+                        </ul>
+                    </div>`;
+                });
+            } else {
+                if (product.damage && product.damage.length > 0) {
+                    medHtml += `<div><b>Causes Damage:</b></div><ul style="padding-left:20px;">`;
+                    product.damage.forEach(d => medHtml += `<li style="color:red">${d}</li>`);
+                    medHtml += `</ul>`;
+                }
+                if (product.heals && product.heals.length > 0) {
+                    medHtml += `<div><b>Heals:</b></div><ul style="padding-left:20px;">`;
+                    product.heals.forEach(h => medHtml += `<li style="color:green">${h}</li>`);
+                    medHtml += `</ul>`;
+                }
             }
-            if (product.heals && product.heals.length > 0) {
-                medHtml += `<div><b>Heals:</b></div><ul style="padding-left:20px;">`;
-                product.heals.forEach(h => medHtml += `<li style="color:green">${h}</li>`);
-                medHtml += `</ul>`;
-            }
+            
             if (!medHtml) medHtml = "No significant medical effects.";
             document.getElementById('tab-medical').innerHTML = medHtml;
         }
@@ -391,10 +408,9 @@
             try {
                 const rRes = await fetch('chem_data.json?t=' + Date.now());
                 if (rRes.ok) { recipes = await rRes.json(); render(); }
-                
                 const gRes = await fetch('guides.json?t=' + Date.now());
                 if (gRes.ok) { guides = await gRes.json(); initGuideFilter(); renderGuides(); }
-            } catch (e) { console.error(e); document.getElementById('app').innerHTML = "Error loading data."; }
+            } catch (e) { document.getElementById('app').innerHTML = "Error loading data."; }
         }
 
         function initGuideFilter() {
@@ -411,7 +427,6 @@
             const filterVal = document.getElementById('guide-filter').value;
             const container = document.getElementById('guidebook');
             const filtered = (filterVal === 'all') ? guides : guides.filter(cat => cat.category === filterVal);
-            
             container.innerHTML = filtered.map(cat => `
                 <div class="guide-category">
                     <div class="guide-cat-title">${cat.category}</div>
@@ -428,26 +443,21 @@
         function render() {
             const query = document.getElementById('search').value.toLowerCase();
             const container = document.getElementById('app');
-            
             const filtered = recipes.filter(r => 
                 r.products && r.products.length > 0 && 
                 (r.id.toLowerCase().includes(query) || r.products.some(p => p.name && p.name.toLowerCase().includes(query)))
             );
-
             if (filtered.length === 0) {
-                container.innerHTML = `<div style="text-align:center; padding:20px;">No matches found.</div>`;
+                container.innerHTML = `<div style="grid-column: 1/-1; text-align:center;">No matches found.</div>`;
                 return;
             }
-
             container.innerHTML = filtered.map(r => {
                 const mainP = r.products[0];
                 const isSelected = (selectedId === mainP.id) ? 'selected' : '';
-                
                 let conditionsHtml = '';
                 if (r.conditions.minTemp) conditionsHtml += `<div class="condition-badge">Min ${Math.round(r.conditions.minTemp)}K</div>`;
                 if (r.conditions.maxTemp) conditionsHtml += `<div class="condition-badge">Max ${Math.round(r.conditions.maxTemp)}K</div>`;
-
-                let tagsHtml = mainP.tags.slice(0,2).map(t => `<span class="meta-tag">${t}</span>`).join(''); // Limit tags to 2 for space
+                let tagsHtml = mainP.tags.slice(0,2).map(t => `<span class="meta-tag">${t}</span>`).join('');
                 
                 return `
                 <div id="card-${mainP.id}" class="card win-out ${isSelected}" onclick="selectRecipe('${mainP.id}')">
