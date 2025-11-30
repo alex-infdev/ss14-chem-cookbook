@@ -2,297 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SS14 Chem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS14 Chem Database</title>
     <link rel="icon" type="image/png" href="content/webicon.png">
-    <style>
-        :root {
-            --desktop: #008080; --surface: #c0c0c0; --text: #000000;
-            --light-highlight: #FFFFFF; --dark-shadow: #808080;
-            --bg-input: #FFFFFF; --bg-card: #c0c0c0;
-            --heat: #d32f2f; --cold: #1976d2; --link: #0000FF;
-        }
-        :root.dark {
-            --desktop: #000000; --surface: #333333; --text: #00ff00;
-            --light-highlight: #555555; --dark-shadow: #000000;
-            --bg-input: #111111; --bg-card: #222222;
-            --heat: #ff5555; --cold: #55ffff; --link: #00ff00;
-        }
-        * { box-sizing: border-box; }
-        body { background-color: var(--desktop); font-family: 'Tahoma', sans-serif; color: var(--text); margin: 0; padding: 10px; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
-        
-        .win-out { background: var(--surface); border-top: 2px solid var(--light-highlight); border-left: 2px solid var(--light-highlight); border-right: 2px solid #000; border-bottom: 2px solid #000; box-shadow: 1px 1px 0px var(--dark-shadow) inset; }
-        .win-in { background: var(--bg-input); border: 2px solid; border-color: #000 var(--light-highlight) var(--light-highlight) #000; }
-        
-        .main-window { width: 100%; max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; height: 100%; position: relative; z-index: 10; }
-        .title-bar { background: linear-gradient(90deg, #000080, #1084d0); padding: 4px 8px; color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
-        
-        .tab-bar { display: flex; padding: 4px 4px 0 4px; gap: 2px; flex-shrink: 0; }
-        .tab-btn { padding: 6px 12px; background: var(--surface); border: 2px solid var(--light-highlight); border-right-color:#000; border-bottom:none; border-radius: 4px 4px 0 0; cursor: pointer; font-weight: bold; margin-bottom: -2px; z-index: 1; color: var(--text); }
-        .tab-btn.active { border-bottom: 2px solid var(--surface); z-index: 10; padding-bottom: 8px; margin-top: -2px; }
-
-        .split-container { display: flex; flex: 1; gap: 10px; overflow: hidden; margin-top: 10px; min-height: 0; }
-        .list-pane { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-height: 0; }
-        .props-pane { width: 320px; display: flex; flex-direction: column; border: 2px solid var(--surface); min-height: 0; transition: transform 0.3s ease; }
-        .pins-pane { width: 280px; display: flex; flex-direction: column; border: 2px solid var(--surface); min-height: 0; }
-        .scroll-area { overflow-y: auto; flex: 1; padding: 5px; padding-bottom: 40px; }
-        
-        .card { cursor: pointer; border: 1px dotted transparent; background: var(--bg-card); margin-bottom: 5px;}
-        .card:hover { border-color: var(--dark-shadow); }
-        .card.selected { background-color: #000080; color: white; }
-        .card-inner { padding: 6px; }
-        .card-header { font-weight: bold; font-size: 12px; margin-bottom: 4px; display: flex; justify-content: space-between; border-bottom: 1px dotted var(--dark-shadow); }
-
-        .prop-tabs { display: flex; margin-bottom: 4px; }
-        .prop-tab { flex: 1; text-align: center; padding: 4px; cursor: pointer; border: 1px solid var(--dark-shadow); background: var(--surface); color: var(--text); font-size: 11px; }
-        .prop-tab.active { background: var(--light-highlight); color: #000; font-weight: bold; border-bottom: none; }
-        .prop-pane { display: none; padding: 10px; background: var(--bg-input); flex: 1; overflow-y: auto; color: var(--text); }
-        .prop-pane.active { display: block; }
-
-        #guidebook { padding: 20px; font-family: 'Courier New', monospace; background: #fff; height: 100%; color: #000; }
-        .guide-entry { background: #ffffe0; border: 1px solid #000; padding: 10px; margin-bottom: 15px; box-shadow: 2px 2px 0px #aaa; color: #000; }
-        
-        .chem-link { color: var(--link); text-decoration: underline; cursor: pointer; font-weight: bold; }
-        .meta-tag { background: #eee; color: #000; border: 1px solid #000; padding: 0 4px; font-size: 10px; }
-        .clown-fall { position: fixed; width: 150px; z-index: 9999; pointer-events: none; top: -200px; animation: fall 4s linear forwards; }
-        @keyframes fall { 0% { top: -200px; transform: rotate(0deg); } 100% { top: 120vh; transform: rotate(360deg); } }
-        
-        .view-content { display: none; flex: 1; flex-direction: column; overflow: hidden; }
-        .view-content.active { display: flex; }
-        .mobile-close-btn { display: none; }
-        
-        @media (max-width: 900px) {
-            .pins-pane { display: none; } 
-            .props-pane { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; transform: translateY(100%); }
-            .props-pane.open { transform: translateY(0); }
-            .mobile-close-btn { display: block !important; padding: 10px; background: #d32f2f; color: white; text-align: center; font-weight: bold; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="main-window win-out">
-        <div class="title-bar">
-            <span>SS14 Chemistry Database</span>
-            <div onclick="spawnClown()" style="background:#c0c0c0; color:black; width:16px; height:16px; text-align:center; line-height:14px; cursor:pointer;">X</div>
-        </div>
-
-        <div class="window-content" style="flex:1; display:flex; flex-direction:column; padding:10px;">
-            <div class="tab-bar">
-                <button class="tab-btn active" onclick="switchTab('recipes')">Database</button>
-                <button class="tab-btn" onclick="switchTab('guides')">Guidebook</button>
+    <div class="app-container">
+        
+        <aside>
+            <div class="sidebar-header">
+                <h2>Pinned</h2>
             </div>
+            <div id="pinned-container" class="scrollable-content win-inset">
+                </div>
+        </aside>
 
-            <div class="win-in" style="flex: 1; display: flex; flex-direction: column; padding: 10px; overflow: hidden;">
-                
-                <div id="recipe-view" class="view-content active">
-                    <input type="text" id="search" class="win-in" placeholder="Search..." onkeyup="render()" style="width:100%; padding:5px; margin-bottom:5px;">
-                    
-                    <div class="split-container">
-                        <div class="list-pane win-in">
-                            <div class="scroll-area" id="app">Loading...</div>
-                        </div>
+        <main class="main-interface">
+            <header class="top-bar">
+                <div class="nav-tabs">
+                    <button id="tab-db" class="win-btn active">Database</button>
+                    <button id="tab-guide" class="win-btn">Shift Guidebook</button>
+                </div>
 
-                        <div id="prop-sidebar" class="props-pane win-out">
-                            <div class="mobile-close-btn" onclick="closeMobileSidebar()">CLOSE DETAILS</div>
-                            <div style="background:navy; color:white; padding:4px; font-weight:bold; text-align:center;">Properties</div>
-                            <div style="padding: 5px; flex: 1; display: flex; flex-direction: column; overflow: hidden;">
-                                <div class="prop-tabs">
-                                    <div class="prop-tab active" onclick="switchPropTab('general')">General</div>
-                                    <div class="prop-tab" onclick="switchPropTab('recipe')">Recipe</div>
-                                    <div class="prop-tab" onclick="switchPropTab('effects')">Effects</div>
-                                </div>
-                                <div class="win-in" style="flex:1; overflow:hidden; display:flex; flex-direction:column;">
-                                    <div id="tab-general" class="prop-pane active" style="text-align: center; padding-top: 50px; color: #666;">Select a chemical.</div>
-                                    <div id="tab-recipe" class="prop-pane"></div>
-                                    <div id="tab-effects" class="prop-pane"></div>
-                                </div>
-                                <button onclick="pinCurrent()" id="pin-btn" style="width:100%; margin-top:5px; cursor:pointer;" disabled>PIN ITEM</button>
-                            </div>
-                        </div>
-
-                        <div class="pins-pane win-out">
-                            <div style="background:navy; color:white; padding:4px; font-weight:bold; text-align:center;">Pinned</div>
-                            <div id="pin-container" class="win-in scroll-area" style="background: #ccc; padding: 10px;">
-                                <div style="color: #666; text-align: center; margin-top: 20px;">No pins.</div>
-                            </div>
-                        </div>
+                <div class="music-player-container bevel-down">
+                    <div class="lcd-display win-inset">
+                        <div id="music-text" class="scrolling-text">STOPPED</div>
+                    </div>
+                    <div class="player-controls">
+                        <button id="btn-play" class="win-btn small-btn">►</button>
+                        <button id="btn-stop" class="win-btn small-btn">■</button>
                     </div>
                 </div>
 
-                <div id="guide-view" class="view-content">
-                    <select id="guide-filter" class="win-in" onchange="renderGuides()" style="width:100%; padding:4px; margin-bottom:10px;">
-                        <option value="all">All Categories</option>
-                    </select>
-                    <div id="guidebook" class="win-in scroll-area">Loading...</div>
+                <div class="controls">
+                    <button id="theme-toggle" class="win-btn">Theme</button>
+                    <button id="fake-exit" class="win-btn" title="Close">X</button>
+                </div>
+            </header>
+
+            <div class="filter-bar">
+                <label for="category-filter">> Filter:</label>
+                <select id="category-filter"></select>
+                <input type="text" id="search-input" placeholder="Search..." style="flex:1;">
+            </div>
+
+            <div id="view-container" class="scrollable-content win-inset"></div>
+        </main>
+
+        <aside>
+            <div class="sidebar-header">
+                <h2>Properties</h2>
+            </div>
+            <div class="details-tabs">
+                <button class="win-btn detail-tab-btn active" data-target="info">General</button>
+                <button class="win-btn detail-tab-btn" data-target="recipe">Recipe</button>
+                <button class="win-btn detail-tab-btn" data-target="effects">Effects</button>
+            </div>
+            <div id="details-content" class="scrollable-content win-inset">
+                <div style="padding:20px; color:#808080; text-align:center;">
+                    Select an item...
                 </div>
             </div>
-            
-            <div style="margin-top: 5px; display: flex; justify-content: space-between;">
-                <button onclick="toggleTheme()" style="cursor:pointer;">Theme</button>
-                <div style="font-size:11px; color:#444;">v6.0 - honki</div>
-            </div>
-        </div>
+        </aside>
+
     </div>
 
-    <audio id="bgm" loop><source src="content/music.mp3"></audio>
+    <audio id="bg-music" loop>
+        <source src="content/music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="honk-sound">
+        <source src="content/sound_items_bikehorn.ogg" type="audio/ogg">
+    </audio>
 
-    <script>
-        let recipes = [];
-        let guides = [];
-        let pinnedItems = [];
-        let selectedId = null;
+    <div id="global-tooltip" class="chem-tooltip"></div>
 
-        const chemicalAliases = {
-            "Bic": "Bicaridine", "Derma": "Dermaline", "Dylo": "Dylovene",
-            "Tri": "Tricordrazine", "Inap": "Inaprovaline", "Dex P": "Dexalin Plus"
-        };
-
-        function toggleTheme() { document.documentElement.classList.toggle('dark'); }
-        function spawnClown() {
-            const h = new Audio('content/sound_items_bikehorn.ogg'); h.play().catch(()=>{});
-            const i = document.createElement('img'); i.src = 'content/clown.webp'; i.className = 'clown-fall';
-            i.style.left = Math.floor(Math.random()*(window.innerWidth-150))+'px';
-            document.body.appendChild(i); setTimeout(()=>i.remove(), 4000);
-        }
-
-        function switchTab(t) {
-            document.querySelectorAll('.view-content').forEach(e=>e.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(e=>e.classList.remove('active'));
-            if(t==='recipes'){ document.getElementById('recipe-view').classList.add('active'); }
-            else { document.getElementById('guide-view').classList.add('active'); }
-        }
-
-        function switchPropTab(t) {
-            document.querySelectorAll('.prop-tab').forEach(e=>e.classList.remove('active'));
-            document.querySelectorAll('.prop-pane').forEach(e=>e.classList.remove('active'));
-            const idx = ['general','recipe','effects'].indexOf(t);
-            document.querySelectorAll('.prop-tab')[idx].classList.add('active');
-            document.getElementById('tab-'+t).classList.add('active');
-        }
-
-        function closeMobileSidebar() { document.getElementById('prop-sidebar').classList.remove('open'); }
-
-        function selectRecipe(id) {
-            selectedId = id;
-            document.getElementById('pin-btn').disabled = false;
-            document.querySelectorAll('.card').forEach(c=>c.classList.remove('selected'));
-            const c = document.getElementById('card-'+id); if(c) c.classList.add('selected');
-            document.getElementById('prop-sidebar').classList.add('open');
-
-            const r = recipes.find(x=>x.id===id);
-            if(!r) return;
-            const p = r.products[0];
-
-            document.getElementById('tab-general').innerHTML = `
-                <b>Name:</b> ${p.name}<br><b>ID:</b> ${p.id}<br>
-                <div style="margin-top:10px; font-style:italic;">${p.desc}</div>
-            `;
-
-            let rh = "";
-            if(r.reactants && r.reactants.length > 0) {
-                rh = "<b>Ingredients:</b><ul>";
-                r.reactants.forEach(x => {
-                    let disp = x.name;
-                    if(recipes.some(z=>z.id===x.id)) disp = `<span class="chem-link" onclick="goToRecipe('${x.id}')">${x.name}</span>`;
-                    rh += `<li>${x.amount}u ${disp}</li>`;
-                });
-                rh += "</ul>";
-            } else { rh = "No known recipe."; }
-            document.getElementById('tab-recipe').innerHTML = rh;
-
-            let eh = "";
-            if(p.overdose) eh += `<div style="color:red; font-weight:bold;">Overdose: ${p.overdose}u</div><hr>`;
-            if(p.stats && p.stats.length > 0) {
-                p.stats.forEach(s => {
-                    eh += `<b>${s.type} (${s.rate}u/s):</b><ul>${s.effects.map(e=>`<li>${e}</li>`).join('')}</ul>`;
-                });
-            } else { if(!p.overdose) eh = "No known effects."; }
-            document.getElementById('tab-effects').innerHTML = eh;
-        }
-
-        function goToRecipe(id) {
-            switchTab('recipes');
-            const r = recipes.find(x=>x.id===id || x.products[0].name===id);
-            if(r) {
-                document.getElementById('search').value = r.products[0].name;
-                render();
-                selectRecipe(r.id);
-            }
-        }
-
-        function pinCurrent() {
-            if(selectedId && !pinnedItems.includes(selectedId)) {
-                pinnedItems.push(selectedId); renderPins();
-            }
-        }
-        function removePin(id) { pinnedItems=pinnedItems.filter(x=>x!==id); renderPins(); }
-        
-        function renderPins() {
-            const el = document.getElementById('pin-container');
-            if(!pinnedItems.length) { el.innerHTML="<center>No pins</center>"; return; }
-            el.innerHTML = pinnedItems.map(id=>{
-                const r = recipes.find(x=>x.id===id);
-                if(!r) return "";
-                let ing = "";
-                if(r.reactants) r.reactants.forEach(x=>ing+=`<div>- ${x.amount}u ${x.name}</div>`);
-                else ing="No recipe";
-                return `<div class="pin-card"><div class="pin-close" onclick="removePin('${id}')">X</div>
-                <div style="font-weight:bold; border-bottom:1px solid #aaa;" onclick="selectRecipe('${id}')">${r.products[0].name}</div>
-                <div style="font-size:10px;">${ing}</div></div>`;
-            }).join('');
-        }
-
-        function linkify(txt) {
-            Object.keys(chemicalAliases).forEach(k => {
-                const regex = new RegExp(`\\b${k}\\b`, 'g');
-                const target = recipes.find(x=>x.products[0].name === chemicalAliases[k]);
-                if(target) txt = txt.replace(regex, `<span class="chem-link" onclick="goToRecipe('${target.id}')">${k}</span>`);
-            });
-            return txt;
-        }
-
-        async function init() {
-            try {
-                const res = await fetch('chem_db.json');
-                if(!res.ok) throw new Error("Run python update_data.py first!");
-                recipes = await res.json();
-                render();
-                
-                const gRes = await fetch('guides.json');
-                if(gRes.ok) { guides = await gRes.json(); renderGuides(); }
-            } catch(e) { document.getElementById('app').innerHTML = e.message; }
-        }
-
-        function renderGuides() {
-            const el = document.getElementById('guidebook');
-            el.innerHTML = guides.map(c => `
-                <div style="margin-bottom:20px;">
-                    <div style="font-weight:bold; border-bottom:2px solid #000; margin-bottom:5px;">${c.category}</div>
-                    ${c.guides.map(g=>`<div class="guide-entry"><div class="guide-title">${linkify(g.title)}</div>${g.content.map(l=>`<div>${linkify(l)}</div>`).join('')}</div>`).join('')}
-                </div>
-            `).join('');
-        }
-
-        function render() {
-            const q = document.getElementById('search').value.toLowerCase();
-            const el = document.getElementById('app');
-            const hits = recipes.filter(x => x.products[0].name.toLowerCase().includes(q));
-            
-            if(!hits.length) { el.innerHTML="No matches."; return; }
-            el.innerHTML = hits.map(x => {
-                const p = x.products[0];
-                const sel = selectedId===x.id ? 'selected' : '';
-                return `<div id="card-${x.id}" class="card win-out ${sel}" onclick="selectRecipe('${x.id}')">
-                    <div class="card-inner">
-                        <div class="card-header"><span>${p.name}</span></div>
-                        <div style="font-size:11px; color:#444;">${p.desc.substring(0,50)}...</div>
-                    </div>
-                </div>`;
-            }).join('');
-        }
-
-        init();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

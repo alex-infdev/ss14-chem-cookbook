@@ -8,7 +8,7 @@ REPO_NAME = "space-station-14"
 BRANCH = "master"
 
 STATIC_DB_FILE = "chem_recipes.json"
-OUTPUT_FILE = "chem_db.json"         
+OUTPUT_FILE = "chem_db.json"
 
 TARGET_PATHS = [
     "Resources/Prototypes/Reagents",
@@ -47,7 +47,7 @@ def clean_name(text, loc_db):
     return text.title()
 
 def load_static_db():
-    """Extracts descriptions from the nested reagent_database key."""
+    """Reads chem_recipes.json and converts it to a Dictionary for fast ID lookup."""
     if not os.path.exists(STATIC_DB_FILE):
         print(f"Warning: {STATIC_DB_FILE} not found.")
         return {}
@@ -55,11 +55,18 @@ def load_static_db():
     with open(STATIC_DB_FILE, 'r', encoding='utf-8') as f:
         data = json.load(f)
         
+    raw_list = []
     if isinstance(data, dict) and 'reagent_database' in data:
-        return data['reagent_database']
-    elif isinstance(data, dict):
-        return data
-    return {}
+        raw_list = data['reagent_database']
+    elif isinstance(data, list):
+        raw_list = data
+        
+    lookup = {}
+    for item in raw_list:
+        if 'id' in item:
+            lookup[item['id']] = item
+            
+    return lookup
 
 def main():
     print("Step 1: Loading Localization...")
@@ -72,7 +79,7 @@ def main():
     
     print("Step 2: Loading Static Recipes...")
     static_db = load_static_db()
-    print(f"Loaded {len(static_db)} static entries.")
+    print(f"Loaded {len(static_db)} static entries for lookup.")
 
     print("Step 3: Fetching Game Data...")
     target_files = [i["path"] for i in tree if i["type"] == "blob" and (i["path"].endswith(".yml") or i["path"].endswith(".yaml")) and any(i["path"].startswith(p) for p in TARGET_PATHS)]
@@ -97,11 +104,6 @@ def main():
                 name = clean_name(entry.get("name", r_id), loc_db)
                 
                 static_entry = static_db.get(r_id, {})
-                if not static_entry:
-                    for k, v in static_db.items():
-                        if v.get('name') == name:
-                            static_entry = v
-                            break
                 
                 final_desc = static_entry.get("desc", clean_name(entry.get("desc", ""), loc_db))
                 
@@ -171,7 +173,6 @@ def main():
         for p_id, p_amount in entry.get("products", {}).items():
             default_meta = {"name": p_id, "color": "#FFF", "desc": "", "tags": [], "overdose": None, "meta_stats": []}
             meta = reagents_db.get(p_id, default_meta)
-            
             products.append({
                 "id": p_id,
                 "name": meta["name"],

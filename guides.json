@@ -5,22 +5,22 @@
       {
         "title": "Bic - Brute - 15u OD - DO NOT MIX PUN/LAC/BRU",
         "content": [
-          "**Dispenser Ingredients:** 15u Oxygen, Sugar; 60u Carbon",
-          " ",
-          "**Jug Preparation:**",
+          "Dispenser Ingredients: 15u Oxygen, Sugar; 60u Carbon",
+          "---",
+          "Jug Preparation:",
           "1. Dispense 200u Carbon. Transfer 50u into two separate jugs (leaving 100u in source).",
           "2. Mix 50u Oxygen and Sugar into the 50u Carbon jug.",
           "3. Add 150u Inapetaline.",
           "4. Split result: 50u into the 50u Carbon jug; 100u into the 100u Carbon jug.",
-          "**Output:** 100u Bicaridine (use in ChemMaster for Bru) and 200u Bicaridine (split 100/100 for Pun and Lac)."
+          "Output: 100u Bicaridine (use in ChemMaster for Bru) and 200u Bicaridine (split 100/100 for Pun and Lac)."
         ]
       },
       {
         "title": "Derma - Burns(except caustic) - 10u OD",
         "content": [
-          "**Dispenser Ingredients:** 15u Silicon, Carbon; 30u Oxygen, Phosphorus",
-          " ",
-          "**Jug Preparation:**",
+          "Dispenser Ingredients: 15u Silicon, Carbon; 30u Oxygen, Phosphorus",
+          "---",
+          "Jug Preparation:",
           "1. Dispense 200u Carbon -> Transfer 100u into a new jug.",
           "2. Dispense 200u Silicon -> Transfer 100u into the two 100u Carbon jugs.",
           "3. Dispense 200u Kelotane -> Transfer 50u into three separate jugs.",
@@ -31,41 +31,41 @@
       {
         "title": "Pha - Genetic - Causes radiation",
         "content": [
-          "**Warning:** Causes vomiting. Administer first or last.",
-          "**Recipe:** 5u Silicon, Potassium, Nitrogen; 25u Radium; 10u Phosphorus, Chlorine; 30u Ethanol."
+          "Warning: Causes vomiting. Administer first or last.",
+          "Recipe: 5u Silicon, Potassium, Nitrogen; 25u Radium; 10u Phosphorus, Chlorine; 30u Ethanol."
         ]
       },
       {
         "title": "Dylo - Poison - DO NOT MIX INAP - 20u OD",
         "content": [
-          "**Recipe:** 30u Silicon, Potassium, Nitrogen."
+          "Recipe: 30u Silicon, Potassium, Nitrogen."
         ]
       },
       {
         "title": "Tri - Brute/Burns/Poison 50DMG - SAFE",
         "content": [
-          "**Part A:** 15u Oxygen, Carbon, Sugar.",
-          "**Part B:** 15u Silicon, Potassium, Nitrogen."
+          "Part A: 15u Oxygen, Carbon, Sugar.",
+          "Part B: 15u Silicon, Potassium, Nitrogen."
         ]
       },
       {
         "title": "Ari - Radiation - Causes minor brute damage",
         "content": [
-          "**Part A:** 5u Silicon, Potassium, Nitrogen.",
-          "**Part B:** 15u Radium, 30u Hydrogen."
+          "Part A: 5u Silicon, Potassium, Nitrogen.",
+          "Part B: 15u Radium, 30u Hydrogen."
         ]
       },
       {
         "title": "Dex P - Airloss - 25u OD",
         "content": [
-          "**Recipe:** 25u Iron, Carbon, Dexalin (Oxygen + Plasma)."
+          "Recipe: 25u Iron, Carbon, Dexalin (Oxygen + Plasma)."
         ]
       },
       {
         "title": "Sal - 20% Blood Level/5u - SAFE",
         "content": [
-          "**Recipe:** 20u Sodium, Chlorine (Heat).",
-          "**Instruction:** Fill the remainder of the jug with Water."
+          "Recipe: 20u Sodium, Chlorine (Heat).",
+          "Instruction: Fill the remainder of the jug with Water."
         ]
       }
     ]
@@ -76,20 +76,20 @@
       {
         "title": "EZ Nutrient",
         "content": [
-          "**Recipe:** 15u Nitrogen, Phosphorus, Potassium."
+          "Recipe: 15u Nitrogen, Phosphorus, Potassium."
         ]
       },
       {
         "title": "Robust Harvest",
         "content": [
-          "**Main Mix:** EZ Nutrient, Sulfuric Acid.",
-          "**Sulfuric Acid:** 30u Oxygen, 15u Hydrogen, Sulfur."
+          "Main Mix: EZ Nutrient, Sulfuric Acid.",
+          "Sulfuric Acid: 30u Oxygen, 15u Hydrogen, Sulfur."
         ]
       },
       {
         "title": "Unstable Mutagen",
         "content": [
-          "**Recipe:** 30u Radium, Phosphorus, Chlorine."
+          "Recipe: 30u Radium, Phosphorus, Chlorine."
         ]
       }
     ]
@@ -100,8 +100,8 @@
       {
         "title": "Space Cleaner",
         "content": [
-          "**Recipe:** 50u Ammonia, Water.",
-          "**Ammonia:** 30u Hydrogen, 10u Nitrogen."
+          "Recipe: 50u Ammonia, Water.",
+          "Ammonia: 30u Hydrogen, 10u Nitrogen."
         ]
       }
     ]
@@ -112,24 +112,24 @@
       {
         "title": "Pun - Piercing - 11u OD - DO NOT MIX LAC/BRU/BICA",
         "content": [
-          "**Main Mix:** 50u Bicaridine, Hydroxide (Heat).",
-          "**Hydroxide:** Oxygen, Hydrogen (Heat).",
-          "**Bicaridine:** 15u Oxygen, Sugar, 60u Carbon."
+          "Main Mix: 50u Bicaridine, Hydroxide (Heat).",
+          "Hydroxide: Oxygen, Hydrogen (Heat).",
+          "Bicaridine: 15u Oxygen, Sugar, 60u Carbon."
         ]
       },
       {
         "title": "Lac - Slash - 12u OD - DO NOT MIX PUN/BRU/BICA",
         "content": [
-          "**Main Mix:** 50u Bicaridine, Benzene (Heat).",
-          "**Benzene:** Hydrogen, Carbon (Heat).",
-          "**Bicaridine:** 15u Oxygen, Sugar, 60u Carbon."
+          "Main Mix: 50u Bicaridine, Benzene (Heat).",
+          "Benzene: Hydrogen, Carbon (Heat).",
+          "Bicaridine: 15u Oxygen, Sugar, 60u Carbon."
         ]
       },
       {
         "title": "Bru - Blunt - 10.5u OD - DO NOT MIX PUN/LAC/BICA",
         "content": [
-          "**Main Mix:** 25u Bicaridine, Lithium, Sugar.",
-          "**Note:** No heat needed."
+          "Main Mix: 25u Bicaridine, Lithium, Sugar.",
+          "Note: No heat needed."
         ]
       }
     ]
@@ -140,23 +140,23 @@
       {
         "title": "Lepo - Cold/Bad temperature - SAFE",
         "content": [
-          "**Fersilicon:** 50u Iron, Silicon (Heat).",
-          "**Leporazine:** 45u Copper, 45u Fersilicon, 1u Plasma."
+          "Fersilicon: 50u Iron, Silicon (Heat).",
+          "Leporazine: 45u Copper, 45u Fersilicon, 1u Plasma."
         ]
       },
       {
         "title": "Pyr - Heat - 20u OD",
         "content": [
-          "**Dermaline:** 15u Silicon, Carbon; 30u Oxygen, Phosphorus.",
-          "**Pyroxadone:** 25u Leporazine, 25u Dermaline, 25u Carbon (Heat)."
+          "Dermaline: 15u Silicon, Carbon; 30u Oxygen, Phosphorus.",
+          "Pyroxadone: 25u Leporazine, 25u Dermaline, 25u Carbon (Heat)."
         ]
       },
       {
         "title": "Ins - Shock - 12u OD (Least Important)",
         "content": [
-          "**Kelotane:** 50u Carbon, Silicon.",
-          "**Benzene:** 50u Carbon, Hydrogen (Heat).",
-          "**Insulin:** Leporazine (50u Iron/Silicon heated -> 45u Copper + 1u Plasma), Kelotane, Silicon (Heat)."
+          "Kelotane: 50u Carbon, Silicon.",
+          "Benzene: 50u Carbon, Hydrogen (Heat).",
+          "Insulin: Leporazine (50u Iron/Silicon heated -> 45u Copper + 1u Plasma), Kelotane, Silicon (Heat)."
         ]
       }
     ]
@@ -167,11 +167,11 @@
       {
         "title": "Dip - Poison - SAFE",
         "content": [
-          "**Ammonia:** 75u Hydrogen, 25u Nitrogen.",
-          "**Diethylamine:** 50u Ethanol, 50u Ammonia.",
-          "**Oil:** Welding Fuel, Carbon, Hydrogen.",
-          "**Table Salt:** 50u Chlorine, 50u Sodium (Heat).",
-          "**Diphenhydramine:** Diethylamine, Oil, Table Salt, Carbon, Ethanol (Heat)."
+          "Ammonia: 75u Hydrogen, 25u Nitrogen.",
+          "Diethylamine: 50u Ethanol, 50u Ammonia.",
+          "Oil: Welding Fuel, Carbon, Hydrogen.",
+          "Table Salt: 50u Chlorine, 50u Sodium (Heat).",
+          "Diphenhydramine: Diethylamine, Oil, Table Salt, Carbon, Ethanol (Heat)."
         ]
       }
     ]
@@ -182,15 +182,15 @@
       {
         "title": "Sig - Caustic - 16u OD",
         "content": [
-          "**Step 1 (Bases):**",
+          "Step 1 (Bases):",
           "- Table Salt: 50u Chlorine, Sodium.",
           "- Ammonia: 75u Hydrogen, Nitrogen.",
-          "**Step 2 (Intermediates):**",
+          "Step 2 (Intermediates):",
           "- Sodium Carbonate: 25u Ammonia, Table Salt, Oxygen, Carbon.",
           "- Hydroxide: Oxygen, Hydrogen (Heat).",
           "- Sodium Hydroxide: Sodium, Hydroxide.",
           "- Kelotane: 50u Silicon, Carbon.",
-          "**Final Mix (Sigynate):**",
+          "Final Mix (Sigynate):",
           "- 20u Sodium Carbonate, Sodium Hydroxide, Kelotane, Water, Sugar (Heat)."
         ]
       }
@@ -202,43 +202,43 @@
       {
         "title": "Ocu - 5u Blindness - SAFE",
         "content": [
-          "**Hydroxide:** 50u Hydrogen, Oxygen.",
-          "**Table Salt:** 50u Chlorine, Sodium.",
-          "**Oculine:** 1 part Hydroxide, 1 part Table Salt, 2 parts Blood."
+          "Hydroxide: 50u Hydrogen, Oxygen.",
+          "Table Salt: 50u Chlorine, Sodium.",
+          "Oculine: 1 part Hydroxide, 1 part Table Salt, 2 parts Blood."
         ]
       },
       {
         "title": "Epi - Critical - 20u OD",
         "content": [
-          "**Oil:** 30u Welding Fuel, Carbon, Hydrogen.",
-          "**Acetone:** 30u Oil, Welding Fuel, Oxygen.",
-          "**Benzene:** 50u Carbon, Hydrogen (Heat).",
-          "**Hydroxide:** 50u Oxygen, Hydrogen (Heat).",
-          "**Phenol:** 50u Hydroxide, Benzene.",
-          "**Epinephrine:** 25u Phenol, Acetone, Chlorine, Hydroxide."
+          "Oil: 30u Welding Fuel, Carbon, Hydrogen.",
+          "Acetone: 30u Oil, Welding Fuel, Oxygen.",
+          "Benzene: 50u Carbon, Hydrogen (Heat).",
+          "Hydroxide: 50u Oxygen, Hydrogen (Heat).",
+          "Phenol: 50u Hydroxide, Benzene.",
+          "Epinephrine: 25u Phenol, Acetone, Chlorine, Hydroxide."
         ]
       },
       {
         "title": "Charcoal - Chem removal(Good and bad)",
         "content": [
-          "**Oil:** 25u Welding Fuel, Carbon, Hydrogen.",
-          "**Ash:** Oil (Heat).",
-          "**Charcoal:** 50u Ash, Carbon."
+          "Oil: 25u Welding Fuel, Carbon, Hydrogen.",
+          "Ash: Oil (Heat).",
+          "Charcoal: 50u Ash, Carbon."
         ]
       },
       {
         "title": "Eth - Poison/drunkness - SAFE",
         "content": [
-          "**Recipe:** 25u Oxygen, Dylovene, Carbon."
+          "Recipe: 25u Oxygen, Dylovene, Carbon."
         ]
       },
       {
         "title": "Regenerative Mesh",
         "content": [
-          "**Machine:** Microwave (10 seconds).",
-          "**Ingredients:** 1 Ointment, Cloth, Aloe, 20u Dermaline, 20u Sigynate.",
-          " ",
-          "**Component Recipes:**",
+          "Machine: Microwave (10 seconds).",
+          "Ingredients: 1 Ointment, Cloth, Aloe, 20u Dermaline, 20u Sigynate.",
+          "---",
+          "Component Recipes:",
           "- Kelotane: 50u Silicon, Carbon.",
           "- Dermaline: 50u Kelotane, 25u Oxygen, Phosphorus.",
           "- Table Salt: 50u Chlorine, Sodium.",
@@ -252,10 +252,10 @@
       {
         "title": "Medicated Sutures",
         "content": [
-          "**Machine:** Microwave (10 seconds).",
-          "**Ingredients:** 1 Bruise Pack, Cloth, Poppy, 20u Tranexamic Acid, 20u Cryptobiolin.",
-          " ",
-          "**Component Recipes:**",
+          "Machine: Microwave (10 seconds).",
+          "Ingredients: 1 Bruise Pack, Cloth, Poppy, 20u Tranexamic Acid, 20u Cryptobiolin.",
+          "---",
+          "Component Recipes:",
           "- Inapetaline: 25u Oxygen, Carbon, Sugar.",
           "- Sulfuric Acid: 25u Hydrogen, Sulfur, 50u Oxygen.",
           "- Tranexamic Acid: 25u Inapetaline, Sulfuric Acid, Sugar.",
@@ -265,13 +265,13 @@
       {
         "title": "Amb & Amb+ - Zombie cure&vaccine",
         "content": [
-          "**Ambuzol (10u) - Basic Cure:**",
+          "Ambuzol (10u) - Basic Cure:",
           "- Mix 25u Dylovene (15u Silicon/Carbon + 30u Oxygen/Phosphorus), Ammonia, and 50u Zombie Blood.",
-          " ",
-          "**Ambuzol+ (5u) - Cure & Vaccine:**",
+          "---",
+          "Ambuzol+ (5u) - Cure & Vaccine:",
           "- Mix Ambuzol + Omnizine.",
-          " ",
-          "**Omnizine Source:**",
+          "---",
+          "Omnizine Source:",
           "- Grind Ambrosia Deus (yields 3u Omnizine).",
           "- Mutate Ambrosia Vulgaris -> Ambrosia Deus."
         ]
@@ -284,57 +284,57 @@
       {
         "title": "Cryo - All but genetic - Cryopod(-60C)",
         "content": [
-          "**Dexalin:** Oxygen + Plasma.",
-          "**Cryoxadone:** 25u Water, Oxygen, Dexalin.",
-          "**Effect (50u Beaker):** 400 Brute, 400 Toxin, 600 Burn, 600 Airloss."
+          "Dexalin: Oxygen + Plasma.",
+          "Cryoxadone: 25u Water, Oxygen, Dexalin.",
+          "Effect (50u Beaker): 400 Brute, 400 Toxin, 600 Burn, 600 Airloss."
         ]
       },
       {
         "title": "Dox - Genetic - Cryopod(-60C)",
         "content": [
-          "**Dexalin:** Oxygen + Plasma.",
-          "**Cryoxadone:** 25u Water, Oxygen, Dexalin.",
-          "**Unstable Mutagen:** Radium, Phosphorus, Chlorine.",
-          "**Clonexadone (Dox):** 50u Cryoxadone, Unstable Mutagen.",
-          "**Effect (50u Beaker):** 200 Genetic damage healing."
+          "Dexalin: Oxygen + Plasma.",
+          "Cryoxadone: 25u Water, Oxygen, Dexalin.",
+          "Unstable Mutagen: Radium, Phosphorus, Chlorine.",
+          "Clonexadone (Dox): 50u Cryoxadone, Unstable Mutagen.",
+          "Effect (50u Beaker): 200 Genetic damage healing."
         ]
       },
       {
         "title": "Dox+Cryo - Everything - Cryopod(-60C)",
         "content": [
-          "**Tip:** Cryopods inject 1u from the beaker per second.",
-          "**Strategy:** Create a 50/50 mix of Dox and Cryoxadone for balanced healing."
+          "Tip: Cryopods inject 1u from the beaker per second.",
+          "Strategy: Create a 50/50 mix of Dox and Cryoxadone for balanced healing."
         ]
       },
       {
         "title": "Nec - dead burns/brute/poison - Cryopod(-60C)",
         "content": [
-          "**Dexalin:** Oxygen + Plasma.",
-          "**Cryoxadone:** Water, Oxygen, Dexalin.",
-          "**Necrazone:** 3 parts Blood, 2 parts Cryoxadone, 1 part Omnizine.",
-          "**Effect (50u Beaker):** 400 Brute, 500 Burns, 200 Poison.",
-          "**Omnizine Source:** Grind Ambrosia Deus (mutate from Ambrosia Vulgaris)."
+          "Dexalin: Oxygen + Plasma.",
+          "Cryoxadone: Water, Oxygen, Dexalin.",
+          "Necrazone: 3 parts Blood, 2 parts Cryoxadone, 1 part Omnizine.",
+          "Effect (50u Beaker): 400 Brute, 500 Burns, 200 Poison.",
+          "Omnizine Source: Grind Ambrosia Deus (mutate from Ambrosia Vulgaris)."
         ]
       },
       {
         "title": "Alox - dead heat/shock/caustic - Cryopod(-60C)",
         "content": [
-          "**Base Ingredients:**",
+          "Base Ingredients:",
           "- Dexalin (Oxygen + Plasma), Cryoxadone (Water, Oxygen, Dexalin).",
           "- Table Salt (Chlorine, Sodium), Ammonia (Hydrogen, Nitrogen).",
           "- Sodium Carbonate (Ammonia, Salt, Oxygen, Carbon).",
           "- Hydroxide (Oxygen, Hydrogen - Heat), Sodium Hydroxide (Sodium, Hydroxide).",
           "- Kelotane (Silicon, Carbon).",
           "- Sigynate (Sodium Carbonate, Sodium Hydroxide, Kelotane, Water, Sugar - Heat).",
-          " ",
-          "**Aldenzyne (Alox):** 40u Aloe, 40u Sigynate, 20u Cryoxadone.",
-          "**Effect (50u Beaker):** 300 Shock/Heat, 100 Caustic."
+          "---",
+          "Aldenzyne (Alox): 40u Aloe, 40u Sigynate, 20u Cryoxadone.",
+          "Effect (50u Beaker): 300 Shock/Heat, 100 Caustic."
         ]
       },
       {
         "title": "Opp - Antirot - Cryopod(-123C)",
         "content": [
-          "**Ingredients:**",
+          "Ingredients:",
           "- Sidenafil (Sid): Aloe, Stelibinin (from Galaxythistle).",
           "- Cryoxadone: Oxygen, Dexalin, Water.",
           "- Unstable Mutagen: Chlorine, Phosphorus, Radium.",
@@ -342,9 +342,9 @@
           "- Oil: Welding Fuel, Carbon, Hydrogen.",
           "- Acetone: Oil, Welding Fuel, Oxygen.",
           "- Cognizine: Carpotoxin (ground Space Carp), Sid, Acetone.",
-          " ",
-          "**Opp:** 25u Cognizine, Dox, 50u Plasma (Heat).",
-          "**Effect (50u Beaker):** Reverses 2000s of rot timer (rot starts past 600s)."
+          "---",
+          "Opp: 25u Cognizine, Dox, 50u Plasma (Heat).",
+          "Effect (50u Beaker): Reverses 2000s of rot timer (rot starts past 600s)."
         ]
       }
     ]
@@ -355,22 +355,22 @@
       {
         "title": "Metal Foam",
         "content": [
-          "**Beaker 1:** 2 Aluminum - 1 Lithium - 1 Hydrogen",
-          "**Beaker 2:** 2 Oxygen - 1 Sulfur - 1 Hydrogen - 1 Hydrogen - 1 Potassium - 1 Fluorine",
-          "**Instruction:** Mix to Activate."
+          "Beaker 1: 2 Aluminum - 1 Lithium - 1 Hydrogen",
+          "Beaker 2: 2 Oxygen - 1 Sulfur - 1 Hydrogen - 1 Hydrogen - 1 Potassium - 1 Fluorine",
+          "Instruction: Mix to Activate."
         ]
       },
       {
         "title": "Desoxyephedrine (Meth)",
         "content": [
-          "**Recipes:**",
+          "Recipes:",
           "- Oil: 10u Welding Fuel, Carbon, Hydrogen.",
           "- Ammonia: 15u Hydrogen, 5u Nitrogen.",
           "- Diethylamine: Ammonia, 20u Ethanol.",
           "- Ephedrine: 25u Oil, Diethylamine, Hydrogen, Sugar.",
           "- Desoxyephedrine: 25u Ephedrine, Carbon, Iodine, Phosphorus (Heat).",
-          " ",
-          "**Pill Making:**",
+          "---",
+          "Pill Making:",
           "- Dylovene: 30u Nitrogen, Potassium, Silicon.",
           "- Mix: 90u Dylovene + 90u Desoxyephedrine.",
           "- Output: Pill Canister (9 Pills @ 20u)."
@@ -379,11 +379,11 @@
       {
         "title": "Space Cleaner Foam",
         "content": [
-          "**Beaker 1:** 90u Water, 10u Space Cleaner.",
-          "**Beaker 2:** 90u Fluorosurfactant, 10u Space Cleaner.",
-          "**Instruction:** Mix to Activate.",
-          " ",
-          "**Ingredients:**",
+          "Beaker 1: 90u Water, 10u Space Cleaner.",
+          "Beaker 2: 90u Fluorosurfactant, 10u Space Cleaner.",
+          "Instruction: Mix to Activate.",
+          "---",
+          "Ingredients:",
           "- Space Cleaner: 50u Ammonia (30u Hydrogen, 10u Nitrogen), Water.",
           "- Sulfuric Acid: 2 Oxygen, 1 Hydrogen, 1 Sulfur.",
           "- Fluorosurfactant: 20u Carbon, Fluorine, 10u Sulfuric Acid."
@@ -392,23 +392,23 @@
       {
         "title": "Trico Grenade (Healing Grenade)",
         "content": [
-          "**Beaker 1:** 50u Tricordrazine, Fluorosurfactant.",
-          "**Beaker 2:** 50u Water, Tricordrazine.",
-          "**Instruction:** Mix to Activate."
+          "Beaker 1: 50u Tricordrazine, Fluorosurfactant.",
+          "Beaker 2: 50u Water, Tricordrazine.",
+          "Instruction: Mix to Activate."
         ]
       },
       {
         "title": "TDD - ALL but genetic - Safe (Homemade Omnizine)",
         "content": [
-          "**Recipe:**",
+          "Recipe:",
           "- Dylovene: 25u Silicon, Potassium, Nitrogen.",
           "- Inapetaline: 25u Oxygen, Carbon, Sugar.",
           "- Tricordrazine: 75u Dylovene, Inapetaline.",
           "- TDD: 2x Cream, 1x Lime, Orange, Tomato Juice, Tricordrazine.",
-          "**Method:** Stir (use a spoon on the jug; Booze-o-mats have spoons).",
-          "**Effect (15u injection):** Heals 30 Brute, Burn, Toxin, and Airloss.",
-          " ",
-          "**Scavenging Tip:**",
+          "Method: Stir (use a spoon on the jug; Booze-o-mats have spoons).",
+          "Effect (15u injection): Heals 30 Brute, Burn, Toxin, and Airloss.",
+          "---",
+          "Scavenging Tip:",
           "Maintenance tunnel Booze-o-mats are great sources. Screwdriver the panel open and cut the access wire to access 250u Cream and 150u of all three juices (enough for 750u TDD). Drink dispensers also contain Cream."
         ]
       }
