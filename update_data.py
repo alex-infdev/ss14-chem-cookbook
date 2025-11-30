@@ -3,11 +3,12 @@ import yaml
 import json
 from bs4 import BeautifulSoup
 import re
+import os
 
 REPO_OWNER = "space-wizards"
 REPO_NAME = "space-station-14"
 BRANCH = "master"
-WIKI_URL = "https://wiki.spacestation14.com/wiki/Reagents"
+WIKI_FILE = "wiki_data.htm" 
 
 TARGET_PATHS = [
     "Resources/Prototypes/Reagents",
@@ -32,15 +33,17 @@ def fetch_raw_content(path):
     r = requests.get(url)
     return r.text if r.status_code == 200 else None
 
-def scrape_wiki():
-    print("Scraping Wiki for additional lore...")
+def scrape_local_wiki():
+    print(f"Reading local wiki file: {WIKI_FILE}...")
+    if not os.path.exists(WIKI_FILE):
+        print("Warning: Wiki file not found. Skipping wiki data.")
+        return {}
+
     try:
-        r = requests.get(WIKI_URL)
-        if r.status_code != 200: return {}
+        with open(WIKI_FILE, 'r', encoding='utf-8') as f:
+            soup = BeautifulSoup(f.read(), 'html.parser')
         
-        soup = BeautifulSoup(r.text, 'html.parser')
         wiki_db = {}
-        
         for table in soup.find_all('table'):
             rows = table.find_all('tr')
             for row in rows:
@@ -48,16 +51,14 @@ def scrape_wiki():
                 if len(cols) >= 3:
                     name = cols[0].get_text().strip()
                     name = re.sub(r'\s+', ' ', name)
-                    
                     texts = [c.get_text().strip() for c in cols[1:]]
                     longest_text = max(texts, key=len) if texts else ""
-                    
                     wiki_db[name.lower()] = longest_text
         
-        print(f"Scraped info for {len(wiki_db)} reagents.")
+        print(f"Parsed info for {len(wiki_db)} reagents.")
         return wiki_db
     except Exception as e:
-        print(f"Wiki scrape failed: {e}")
+        print(f"Wiki parse failed: {e}")
         return {}
 
 def parse_fluent(text):
@@ -83,7 +84,8 @@ def main():
         txt = fetch_raw_content(path)
         if txt: loc_db.update(parse_fluent(txt))
     
-    wiki_db = scrape_wiki()
+    wiki_db = scrape_local_wiki()
+
     target_files = [i["path"] for i in tree if i["type"] == "blob" and (i["path"].endswith(".yml") or i["path"].endswith(".yaml")) and any(i["path"].startswith(p) for p in TARGET_PATHS)]
 
     reagents_db = {}
@@ -104,7 +106,6 @@ def main():
             if entry.get("type") == "reagent" and "id" in entry:
                 r_id = entry["id"]
                 name = clean_name(entry.get("name", r_id), loc_db)
-                
                 wiki_info = wiki_db.get(name.lower(), "")
                 
                 metabolisms = entry.get("metabolisms", {})
@@ -125,7 +126,6 @@ def main():
 
                         rate = meta_data.get("metabolismRate", 0.5)
                         effects_list = []
-                        
                         effects = meta_data.get("effects", [])
                         if effects:
                             for effect in effects:
@@ -143,21 +143,15 @@ def main():
                                         if "condition" in cond:
                                             effects_list.append(f"Condition: {cond['condition']}")
                                 
-                                if effect.get("id") == "SatiateThirst":
-                                    effects_list.append(f"Hydration: {effect.get('factor', 0)}")
-                                if effect.get("id") == "SatiateHunger":
-                                    effects_list.append(f"Nutrition: {effect.get('factor', 0)}")
+                                if effect.get("id") == "SatiateThirst": effects_list.append(f"Hydration: {effect.get('factor', 0)}")
+                                if effect.get("id") == "SatiateHunger": effects_list.append(f"Nutrition: {effect.get('factor', 0)}")
                                 if effect.get("id") == "MovespeedModifier":
                                     walk = effect.get("walkSpeedModifier", 1)
                                     sprint = effect.get("sprintSpeedModifier", 1)
                                     effects_list.append(f"Speed: x{walk}/{sprint}")
 
                         if effects_list:
-                            meta_stats.append({
-                                "rate": rate,
-                                "type": meta_type,
-                                "effects": effects_list
-                            })
+                            meta_stats.append({ "rate": rate, "type": meta_type, "effects": effects_list })
 
                 reagents_db[r_id] = {
                     "name": name,

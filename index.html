@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SS14 Chem</title>
     <link rel="icon" type="image/png" href="content/webicon.png">
     <style>
@@ -10,97 +10,132 @@
             --desktop: #008080;
             --surface: #c0c0c0;
             --text: #000000;
+            --light-highlight: #FFFFFF;
+            --dark-shadow: #808080;
+            --bg-input: #FFFFFF;
+            --bg-card: #c0c0c0;
             --heat: #d32f2f;
             --cold: #1976d2;
-            --heal: #006400;
             --link: #0000FF;
-            --dark-shadow: #808080;
-            --light-highlight: #FFFFFF;
         }
 
-        ::-webkit-scrollbar { width: 16px; height: 16px; background: #dfdfdf; }
-        ::-webkit-scrollbar-track { background-color: #e0e0e0; background-image: linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff); background-size: 2px 2px; }
-        ::-webkit-scrollbar-thumb { background-color: var(--surface); border: 1px solid #fff; border-right-color: #000; border-bottom-color: #000; box-shadow: 1px 1px 0 #808080, inset 1px 1px 0 #fff; }
-        ::-webkit-scrollbar-button { height: 16px; width: 16px; background-color: var(--surface); border: 1px solid #fff; border-right-color: #000; border-bottom-color: #000; box-shadow: 1px 1px 0 #808080, inset 1px 1px 0 #fff; display: block; }
-        ::-webkit-scrollbar-corner { background: var(--surface); }
+        :root.dark {
+            --desktop: #000000;
+            --surface: #333333;
+            --text: #00ff00;
+            --light-highlight: #555555;
+            --dark-shadow: #000000;
+            --bg-input: #111111;
+            --bg-card: #222222;
+            --heat: #ff5555;
+            --cold: #55ffff;
+            --link: #00ff00;
+        }
+
+        * { box-sizing: border-box; }
 
         body {
             background-color: var(--desktop);
             font-family: 'Tahoma', 'Verdana', sans-serif;
             color: var(--text);
-            margin: 0; padding: 20px; font-size: 14px;
-            overflow: hidden; height: 100vh;
-            display: flex; flex-direction: column; box-sizing: border-box;
+            margin: 0; padding: 10px; font-size: 14px;
+            height: 100vh; display: flex; flex-direction: column;
+            overflow: hidden;
         }
 
-        .win-out { background: var(--surface); border-top: 2px solid var(--light-highlight); border-left: 2px solid var(--light-highlight); border-right: 2px solid #000; border-bottom: 2px solid #000; box-shadow: 1px 1px 0px var(--dark-shadow) inset, -1px -1px 0px #dfdfdf inset; }
-        .win-in { background: #fff; border-top: 2px solid #000; border-left: 2px solid #000; border-right: 2px solid var(--light-highlight); border-bottom: 2px solid var(--light-highlight); box-shadow: 1px 1px 0px #dfdfdf inset, -1px -1px 0px var(--dark-shadow) inset; }
+        .win-out {
+            background: var(--surface);
+            border-top: 2px solid var(--light-highlight); 
+            border-left: 2px solid var(--light-highlight);
+            border-right: 2px solid #000; border-bottom: 2px solid #000;
+            box-shadow: 1px 1px 0px var(--dark-shadow) inset, -1px -1px 0px #dfdfdf inset;
+        }
+        .win-in {
+            background: var(--bg-input);
+            border-top: 2px solid #000; border-left: 2px solid #000;
+            border-right: 2px solid var(--light-highlight); 
+            border-bottom: 2px solid var(--light-highlight);
+            box-shadow: 1px 1px 0px #dfdfdf inset, -1px -1px 0px var(--dark-shadow) inset;
+        }
 
         .main-window { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; height: 100%; position: relative; z-index: 10; }
         .title-bar { background: linear-gradient(90deg, #000080, #1084d0); padding: 4px 8px; color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
         .window-content { flex: 1; display: flex; flex-direction: column; padding: 10px; overflow: hidden; }
 
-        .tab-bar { display: flex; padding: 4px 4px 0 4px; gap: 2px; border-bottom: 2px solid #fff; flex-shrink: 0; }
-        .tab-btn { padding: 6px 12px; background: var(--surface); border-top: 2px solid #fff; border-left: 2px solid #fff; border-right: 2px solid #000; border-bottom: none; border-radius: 4px 4px 0 0; cursor: pointer; font-family: 'Tahoma'; font-weight: bold; margin-bottom: -2px; z-index: 1; }
+        .tab-bar { display: flex; padding: 4px 4px 0 4px; gap: 2px; flex-shrink: 0; }
+        .tab-btn { padding: 6px 12px; background: var(--surface); border: 2px solid var(--light-highlight); border-right-color:#000; border-bottom:none; border-radius: 4px 4px 0 0; cursor: pointer; font-weight: bold; margin-bottom: -2px; z-index: 1; color: var(--text); }
         .tab-btn.active { border-bottom: 2px solid var(--surface); z-index: 10; padding-bottom: 8px; margin-top: -2px; }
+
+        ::-webkit-scrollbar { width: 16px; height: 16px; background: var(--surface); }
+        ::-webkit-scrollbar-thumb { background-color: var(--surface); border: 2px solid var(--light-highlight); border-right-color: #000; border-bottom-color: #000; }
+        ::-webkit-scrollbar-track { background: var(--dark-shadow); }
 
         .split-container { display: flex; flex: 1; gap: 10px; overflow: hidden; margin-top: 10px; min-height: 0; }
         .list-pane { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-height: 0; }
-        .details-sidebar { width: 350px; display: flex; flex-direction: column; border: 2px solid var(--surface); min-height: 0; }
         
-        .scroll-area { 
-            overflow-y: auto; flex: 1; padding-right: 5px; 
-            padding-bottom: 80px;
+        .details-sidebar { 
+            width: 350px; display: flex; flex-direction: column; 
+            border: 2px solid var(--surface); min-height: 0; 
+            transition: transform 0.3s ease;
         }
 
+        .scroll-area { overflow-y: auto; flex: 1; padding-right: 5px; padding-bottom: 40px; }
         #app { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; padding: 5px; }
 
-        .card { cursor: pointer; border: 1px dotted transparent; }
-        .card:hover { border-color: #808080; }
-        .card.selected { background-color: #000080; color: white; border: 1px dotted #fff; }
-        .card.selected .card-header { border-bottom-color: white; }
+        .card { cursor: pointer; border: 1px dotted transparent; background: var(--bg-card); }
+        .card:hover { border-color: var(--dark-shadow); }
+        .card.selected { background-color: #000080; color: white; }
         .card.selected .section-label, .card.selected .arrow-column { color: white; }
-        .card.selected .meta-tag { background: #000080; border-color: white; }
-        .card.selected .recipe-desc { background: #333; color: #fff; border-color: #999; }
-
-        .card-inner { padding: 8px; display: flex; flex-direction: column; }
-        .card-header { font-weight: bold; font-size: 13px; margin-bottom: 6px; display: flex; justify-content: space-between; border-bottom: 1px dotted var(--dark-shadow); padding-bottom: 4px; }
         
-        .sidebar-header { font-weight: bold; margin-bottom: 5px; padding: 2px; background: navy; color: white; text-align: center; flex-shrink: 0; }
-        .prop-tabs { display: flex; margin-bottom: 2px; padding-left: 2px; flex-shrink: 0; }
-        .prop-tab { padding: 3px 8px; margin-right: 2px; background: var(--surface); border: 1px solid #fff; border-bottom: none; border-right-color: #000; border-radius: 3px 3px 0 0; cursor: pointer; font-size: 11px; }
-        .prop-tab.active { height: 14px; border-bottom: 1px solid var(--surface); z-index: 5; position: relative; top: 1px;}
-        .prop-content { border: 1px solid #808080; border-right-color: #fff; border-bottom-color: #fff; background: var(--surface); padding: 10px; flex: 1; overflow-y: auto; box-shadow: 1px 1px 0 #000; }
+        .card-inner { padding: 8px; }
+        .card-header { font-weight: bold; margin-bottom: 6px; display: flex; justify-content: space-between; border-bottom: 1px dotted var(--dark-shadow); padding-bottom: 4px; }
+        
+        input#search { width: 100%; padding: 8px; background: var(--bg-input); color: var(--text); border: none; outline: none; }
+        select { background: var(--bg-input); color: var(--text); }
+
+        .meta-tag { background: #eee; color: #000; border: 1px solid #000; padding: 0 4px; font-size: 10px; margin-left: 5px; }
+        .reagent-item { display: flex; align-items: center; margin-bottom: 2px; text-transform: capitalize; }
+        .beaker-dot { width: 8px; height: 8px; border: 1px solid #000; margin-right: 6px; display: inline-block; background: #fff; }
+        
+        .sidebar-header { background: navy; color: white; padding: 4px; font-weight: bold; text-align: center; }
+        .prop-tabs { display: flex; margin-bottom: 4px; }
+        .prop-tab { flex: 1; text-align: center; padding: 4px; cursor: pointer; border: 1px solid var(--dark-shadow); background: var(--surface); color: var(--text); }
+        .prop-tab.active { background: var(--light-highlight); color: #000; font-weight: bold; border-bottom: none; }
+        .prop-content { background: var(--bg-input); padding: 10px; flex: 1; overflow-y: auto; color: var(--text); }
+        
         .prop-pane { display: none; }
         .prop-pane.active { display: block; }
         
-        .prop-row { display: flex; margin-bottom: 6px; font-size: 12px; }
-        .prop-label { width: 80px; color: #444; }
-        .prop-val { flex: 1; font-weight: bold; word-break: break-word; }
+        .footer-bar { margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .player-btn { width: 30px; background: var(--surface); border: 2px solid var(--light-highlight); border-right-color: #000; border-bottom-color: #000; cursor: pointer; color: var(--text); }
+
+        @media (max-width: 768px) {
+            body { padding: 5px; }
+            .main-window { border: none; box-shadow: none; background: transparent; }
+            .split-container { position: relative; }
+            
+            .details-sidebar {
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                z-index: 9999; background: var(--surface);
+                transform: translateY(100%); 
+                transition: transform 0.3s ease;
+                border: none; padding: 10px;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+            }
+            .details-sidebar.open { transform: translateY(0); }
+            
+            .mobile-close-btn { display: block !important; margin-bottom: 10px; padding: 10px; background: #d32f2f; color: white; text-align: center; font-weight: bold; cursor: pointer; border: 2px solid #fff; }
+            
+            #app { grid-template-columns: 1fr; }
+        }
         
-        .meta-tag { background: #e0e0e0; border: 1px solid var(--dark-shadow); padding: 0 4px; font-size: 10px; margin-left: 5px; }
-        .recipe-desc { font-style: italic; font-size: 11px; color: #444; margin-bottom: 6px; padding: 3px; background: #efefef; border: 1px dotted #999; }
-        .reagent-list { list-style: none; padding: 0; margin: 0; font-size: 12px; }
-        .reagent-item { display: flex; align-items: center; margin-bottom: 2px; text-transform: capitalize; }
-        .beaker-dot { width: 8px; height: 8px; border: 1px solid #000; margin-right: 6px; display: inline-block; background: #fff; }
-        .column { flex: 1; }
-        .arrow-column { flex: 0 0 15px; text-align: center; color: var(--dark-shadow); font-weight: bold; }
-        .condition-badge { font-size: 10px; border: 1px solid var(--dark-shadow); background: #fff; text-align: center; margin-top: 2px; color: #000; }
-        .name-text { text-transform: capitalize; }
-
-        #guidebook { padding: 20px; font-family: 'Courier New', monospace; background: #fff; height: 100%; border: none; }
-        .guide-entry { background: #ffffe0; border: 1px solid #000; padding: 10px; margin-bottom: 15px; box-shadow: 2px 2px 0px #aaa; }
-        .guide-title { font-weight: bold; text-decoration: underline; cursor: pointer; color: blue; }
-        .chem-link { color: blue; text-decoration: underline; cursor: pointer; font-weight: bold; }
-
-        input#search { width: 100%; padding: 6px; font-family: 'Tahoma'; font-size: 14px; outline: none; margin-bottom: 10px; }
+        .mobile-close-btn { display: none; }
         .view-content { display: none; flex: 1; flex-direction: column; overflow: hidden; }
         .view-content.active { display: flex; }
-
+        .chem-link { color: var(--link); text-decoration: underline; cursor: pointer; }
+        
         .clown-fall { position: fixed; width: 150px; z-index: 9999; pointer-events: none; top: -200px; animation: fall 4s linear forwards; }
         @keyframes fall { 0% { top: -200px; transform: rotate(0deg); } 100% { top: 120vh; transform: rotate(360deg); } }
-        .player-btn { width: 30px; height: 25px; background: var(--surface); border: 1px solid #000; border-top-color: #fff; border-left-color: #fff; cursor: pointer; font-weight: bold; font-size: 10px; padding: 0; }
-        .player-btn:active { border: 1px solid #fff; border-top-color: #000; border-left-color: #000; }
     </style>
 </head>
 <body>
@@ -108,7 +143,7 @@
     <div class="main-window win-out">
         <div class="title-bar">
             <span>SS14 Chemistry Database</span>
-            <div onclick="spawnClown()" style="background:#c0c0c0; color:black; width:16px; height:16px; text-align:center; line-height:14px; border:1px solid #fff; border-bottom-color:#000; border-right-color:#000; font-size:12px; cursor:pointer;" title="Do not click">X</div>
+            <div onclick="spawnClown()" style="background:#c0c0c0; color:black; width:16px; height:16px; text-align:center; line-height:14px; border:1px solid #fff; border-bottom-color:#000; border-right-color:#000; font-size:12px; cursor:pointer;">X</div>
         </div>
 
         <div class="window-content">
@@ -124,26 +159,21 @@
                     
                     <div class="split-container">
                         <div class="list-pane win-in">
-                            <div class="scroll-area" id="app">
-                                Loading...
-                            </div>
+                            <div class="scroll-area" id="app">Loading...</div>
                         </div>
 
-                        <div class="details-sidebar win-out">
+                        <div id="prop-sidebar" class="details-sidebar win-out">
+                            <div class="mobile-close-btn" onclick="closeMobileSidebar()">CLOSE DETAILS</div>
                             <div class="sidebar-header">Properties</div>
-                            <div class="prop-body" style="padding: 5px; flex: 1; display: flex; flex-direction: column; overflow: hidden;">
-                                <div class="prop-tabs">
-                                    <div class="prop-tab active" onclick="switchPropTab('general')">General</div>
-                                    <div class="prop-tab" onclick="switchPropTab('reaction')">Mix</div>
-                                    <div class="prop-tab" onclick="switchPropTab('medical')">Med</div>
-                                </div>
-                                <div class="prop-content" id="sidebar-content">
-                                    <div id="tab-general" class="prop-pane active" style="text-align: center; padding-top: 50px; color: #666;">
-                                        Select a chemical<br>to view details.
-                                    </div>
-                                    <div id="tab-reaction" class="prop-pane"></div>
-                                    <div id="tab-medical" class="prop-pane"></div>
-                                </div>
+                            <div class="prop-tabs">
+                                <div class="prop-tab active" onclick="switchPropTab('general')">General</div>
+                                <div class="prop-tab" onclick="switchPropTab('reaction')">Mix</div>
+                                <div class="prop-tab" onclick="switchPropTab('medical')">Med</div>
+                            </div>
+                            <div class="prop-content" id="sidebar-content">
+                                <div id="tab-general" class="prop-pane active" style="text-align: center; padding-top: 50px;">Select a chemical.</div>
+                                <div id="tab-reaction" class="prop-pane"></div>
+                                <div id="tab-medical" class="prop-pane"></div>
                             </div>
                         </div>
                     </div>
@@ -155,57 +185,63 @@
                             <option value="all">All Categories</option>
                         </select>
                     </div>
-                    <div id="guidebook" class="win-in scroll-area">
+                    <div id="guidebook" class="win-in scroll-area" style="background: white; color: black; padding: 10px;">
                         Loading...
                     </div>
                 </div>
-
             </div>
             
-            <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="footer-bar">
                 <div class="win-out" style="padding: 2px; display: flex; gap: 2px;">
                     <button class="player-btn" onclick="playMusic()">|&gt;</button>
                     <button class="player-btn" onclick="stopMusic()">[]</button>
-                    <span id="track-name" style="background:#000; color:#0f0; font-family:monospace; padding:2px 5px; width: 150px; overflow:hidden; white-space:nowrap;">READY</span>
+                    <span id="track-name" style="background:#000; color:#0f0; font-family:monospace; padding:2px 5px;">READY</span>
                 </div>
-                <div style="font-size: 11px; color: #444;">v2.6 - honk</div>
+                <div>
+                    <button class="player-btn" style="width: auto; padding: 0 5px;" onclick="toggleTheme()">Dark Mode</button>
+                    <span style="font-size: 11px;">v3.0</span>
+                </div>
             </div>
         </div>
     </div>
 
     <audio id="bgm" loop>
         <source src="content/music.mp3" type="audio/mpeg">
+        <source src="content/music.ogg" type="audio/ogg">
     </audio>
 
     <script>
         let recipes = [];
         let guides = [];
         let selectedId = null;
-        
         const audio = document.getElementById('bgm');
         const screen = document.getElementById('track-name');
 
         const chemicalAliases = {
-            "Bic": "Bicaridine", "Derma": "Dermaline", "Dylo": "Dylovene", "Tri": "Tricordrazine", 
-            "Inap": "Inaprovaline", "Dex P": "Dexalin Plus", "Dex": "Dexalin", "Pha": "Phalanximine", 
-            "Ari": "Arithrazine", "Sal": "Saline", "Pun": "Puncturase", "Lac": "Lacerinol", 
-            "Bru": "Bruizine", "Lepo": "Leporazine", "Pyr": "Pyrotium", "Ins": "Insuzine", 
-            "Fersi": "Fersilicite", "Dip": "Diphenhydramine", "Sig": "Sigynate", "Ocu": "Oculine", 
-            "Epi": "Epinephrine", "Eth": "Ethylredoxrazine", "Nec": "Necrosol", "Alox": "Aloxadone", 
-            "Opp": "Opporozidone", "Sid": "Siderlac", "Cryo": "Cryoxadone", "Dox": "Clonexadone", 
-            "Kelo": "Kelotane", "Trico": "Tricordrazine"
+            "Bic": "Bicaridine", "Derma": "Dermaline", "Dylo": "Dylovene",
+            "Tri": "Tricordrazine", "Inap": "Inaprovaline", "Dex P": "Dexalin Plus",
+            "Dex": "Dexalin", "Pha": "Phalanximine", "Ari": "Arithrazine",
+            "Sal": "Saline", "Pun": "Puncturase", "Lac": "Lacerinol",
+            "Bru": "Bruizine", "Lepo": "Leporazine", "Pyr": "Pyrotium",
+            "Ins": "Insuzine", "Fersi": "Fersilicite", "Dip": "Diphenhydramine",
+            "Sig": "Sigynate", "Ocu": "Oculine", "Epi": "Epinephrine",
+            "Eth": "Ethylredoxrazine", "Nec": "Necrosol", "Alox": "Aloxadone",
+            "Opp": "Opporozidone", "Sid": "Siderlac", "Cryo": "Cryoxadone",
+            "Dox": "Clonexadone", "Kelo": "Kelotane", "Trico": "Tricordrazine"
         };
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
 
         function spawnClown() {
             const honk = new Audio('content/sound_items_bikehorn.ogg');
             honk.volume = 0.5;
-            honk.play().catch(e => console.log(e));
+            honk.play().catch(e => {});
             const img = document.createElement('img');
             img.src = 'content/clown.webp';
             img.className = 'clown-fall';
-            const maxX = window.innerWidth - 150;
-            const randomX = Math.floor(Math.random() * maxX);
-            img.style.left = randomX + 'px';
+            img.style.left = Math.floor(Math.random() * (window.innerWidth - 150)) + 'px';
             document.body.appendChild(img);
             setTimeout(() => { img.remove(); }, 4000);
         }
@@ -233,11 +269,17 @@
             document.getElementById('tab-' + tabName).classList.add('active');
         }
 
+        function closeMobileSidebar() {
+            document.getElementById('prop-sidebar').classList.remove('open');
+        }
+
         function selectRecipe(chemId) {
             selectedId = chemId;
             document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
             const card = document.getElementById('card-' + chemId);
             if(card) card.classList.add('selected');
+
+            document.getElementById('prop-sidebar').classList.add('open');
 
             const recipe = recipes.find(r => r.products.some(p => p.id === chemId));
             if (!recipe) return;
@@ -245,14 +287,12 @@
 
             let genHtml = `
                 <div class="prop-row"><div class="prop-label">Name:</div><div class="prop-val">${product.name}</div></div>
-                <div class="prop-row"><div class="prop-label">ID:</div><div class="prop-val" style="font-weight:normal; font-family:monospace;">${product.id}</div></div>
+                <div class="prop-row"><div class="prop-label">ID:</div><div class="prop-val" style="font-family:monospace;">${product.id}</div></div>
                 <div class="prop-row"><div class="prop-label">Color:</div><div class="prop-val"><div style="display:inline-block; width:12px; height:12px; background:${product.color}; border:1px solid #000;"></div> ${product.color}</div></div>
                 <hr>
                 <div style="font-style:italic; padding:5px;">${product.desc || "No description."}</div>
             `;
-            if (product.wiki) {
-                genHtml += `<hr><div style="font-size:11px; color:navy; padding:5px;"><b>Wiki Notes:</b><br>${product.wiki}</div>`;
-            }
+            if (product.wiki) genHtml += `<hr><div style="font-size:11px; padding:5px;"><b>Wiki Info:</b><br>${product.wiki}</div>`;
             document.getElementById('tab-general').innerHTML = genHtml;
 
             let reactHtml = `<div style="margin-bottom:5px;"><b>Ingredients:</b></div><ul style="padding-left:20px; margin:0;">`;
@@ -261,9 +301,9 @@
             });
             reactHtml += `</ul>`;
             if(recipe.conditions.minTemp || recipe.conditions.maxTemp) {
-                reactHtml += `<hr><div style="margin-bottom:5px;"><b>Temperature:</b></div>`;
-                if(recipe.conditions.minTemp) reactHtml += `<div>Min: <span style="color:${getComputedStyle(document.documentElement).getPropertyValue('--heat')}">${Math.round(recipe.conditions.minTemp)}K</span></div>`;
-                if(recipe.conditions.maxTemp) reactHtml += `<div>Max: <span style="color:${getComputedStyle(document.documentElement).getPropertyValue('--cold')}">${Math.round(recipe.conditions.maxTemp)}K</span></div>`;
+                reactHtml += `<hr><div style="margin-bottom:5px;"><b>Temp:</b></div>`;
+                if(recipe.conditions.minTemp) reactHtml += `<div>Min: <span style="color:var(--heat)">${Math.round(recipe.conditions.minTemp)}K</span></div>`;
+                if(recipe.conditions.maxTemp) reactHtml += `<div>Max: <span style="color:var(--cold)">${Math.round(recipe.conditions.maxTemp)}K</span></div>`;
             }
             document.getElementById('tab-reaction').innerHTML = reactHtml;
 
@@ -279,19 +319,8 @@
                         </ul>
                     </div>`;
                 });
-            } else {
-                if (product.damage && product.damage.length > 0) {
-                    medHtml += `<div><b>Causes Damage:</b></div><ul style="padding-left:20px;">`;
-                    product.damage.forEach(d => medHtml += `<li style="color:red">${d}</li>`);
-                    medHtml += `</ul>`;
-                }
-                if (product.heals && product.heals.length > 0) {
-                    medHtml += `<div><b>Heals:</b></div><ul style="padding-left:20px;">`;
-                    product.heals.forEach(h => medHtml += `<li style="color:green">${h}</li>`);
-                    medHtml += `</ul>`;
-                }
             }
-            if (!medHtml) medHtml = "No significant medical effects.";
+            if (!medHtml) medHtml = "No significant effects.";
             document.getElementById('tab-medical').innerHTML = medHtml;
         }
 
@@ -339,11 +368,11 @@
             const filtered = (filterVal === 'all') ? guides : guides.filter(cat => cat.category === filterVal);
             container.innerHTML = filtered.map(cat => `
                 <div class="guide-category">
-                    <div class="guide-cat-title">${cat.category}</div>
+                    <div style="font-weight:bold; border-bottom:2px solid #000; margin-bottom:5px;">${cat.category}</div>
                     ${cat.guides.map(g => `
-                        <div class="guide-entry">
-                            <div class="guide-title">${linkify(g.title)}</div>
-                            ${g.content.map(step => `<div class="guide-step">${linkify(step)}</div>`).join('')}
+                        <div style="background:#ffffe0; border:1px solid #000; padding:10px; margin-bottom:10px; box-shadow:2px 2px 0 #aaa; color:black;">
+                            <div style="font-weight:bold; text-decoration:underline; cursor:pointer; color:blue;">${linkify(g.title)}</div>
+                            ${g.content.map(step => `<div style="margin-bottom:2px; padding-left:10px;">${linkify(step)}</div>`).join('')}
                         </div>
                     `).join('')}
                 </div>
@@ -366,8 +395,8 @@
                 const isSelected = (selectedId === mainP.id) ? 'selected' : '';
                 let conditionsHtml = '';
                 if (r.conditions.minTemp) conditionsHtml += `<div class="condition-badge">Min ${Math.round(r.conditions.minTemp)}K</div>`;
-                if (r.conditions.maxTemp) conditionsHtml += `<div class="condition-badge">Max ${Math.round(r.conditions.maxTemp)}K</div>`;
                 let tagsHtml = mainP.tags.slice(0,2).map(t => `<span class="meta-tag">${t}</span>`).join('');
+                
                 return `
                 <div id="card-${mainP.id}" class="card win-out ${isSelected}" onclick="selectRecipe('${mainP.id}')">
                     <div class="card-inner">
@@ -375,28 +404,14 @@
                             <span class="name-text">${mainP.name}</span>
                             <div>${tagsHtml}</div>
                         </div>
-                        <div class="card-body">
-                            <div class="column">
-                                <ul class="reagent-list">
-                                    ${r.reactants.map(i => `
-                                        <li class="reagent-item">
-                                            <div class="beaker-dot" style="background-color: ${i.color}"></div>
-                                            ${i.amount}u ${i.name}
-                                        </li>
-                                    `).join('')}
-                                </ul>
-                            </div>
-                            <div class="arrow-column">&#8594; ${conditionsHtml}</div>
-                            <div class="column">
-                                <ul class="reagent-list">
-                                    ${r.products.map(p => `
-                                        <li class="reagent-item">
-                                            <div class="beaker-dot" style="background-color: ${p.color}"></div>
-                                            ${p.amount}u ${p.name}
-                                        </li>
-                                    `).join('')}
-                                </ul>
-                            </div>
+                        <div style="display:flex; justify-content:space-between; font-size:12px;">
+                            <ul style="padding:0; margin:0; list-style:none;">
+                                ${r.reactants.map(i => `<li><div class="beaker-dot" style="background:${i.color}"></div>${i.amount}u ${i.name}</li>`).join('')}
+                            </ul>
+                            <div style="text-align:center; color:var(--dark-shadow);">➔<br>${conditionsHtml}</div>
+                            <ul style="padding:0; margin:0; list-style:none;">
+                                ${r.products.map(p => `<li><div class="beaker-dot" style="background:${p.color}"></div>${p.amount}u ${p.name}</li>`).join('')}
+                            </ul>
                         </div>
                     </div>
                 </div>`;
