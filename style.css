@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'W95FA';
+    src: url('content/w95fa.woff') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --win-bg: #b4b4b4; 
     --win-text: #000000;
@@ -25,7 +32,7 @@
 
     --text-muted: #555555;
 
-    --font-stack: 'MS Sans Serif', 'Segoe UI', Tahoma, sans-serif;
+    --font-stack: 'W95FA', 'MS Sans Serif', 'Segoe UI', Tahoma, sans-serif;
 }
 
 [data-theme="dark"] {
