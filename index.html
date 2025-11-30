@@ -39,7 +39,7 @@
             box-shadow: 1px 1px 0px #dfdfdf inset, -1px -1px 0px #dfdfdf inset;
         }
 
-        .main-window { max-width: 1000px; margin: 0 auto; padding: 2px; position: relative; z-index: 1; }
+        .main-window { max-width: 1000px; margin: 0 auto; padding: 2px; position: relative; z-index: 10; margin-bottom: 20px; }
         .title-bar {
             background: linear-gradient(90deg, #000080, #1084d0);
             padding: 4px 8px; color: white; font-weight: bold;
@@ -87,7 +87,7 @@
         .view-content { display: none; }
         .view-content.active { display: block; }
 
-        #app { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px; }
+        #app { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 15px; padding: 15px; position: relative; z-index: 20;}
 
         #guidebook { padding: 20px; font-family: 'Courier New', monospace; background: #fff; height: 600px; overflow-y: scroll; border: 2px solid #808080; border-right-color: #fff; border-bottom-color: #fff; }
         .guide-category { margin-bottom: 30px; }
@@ -96,17 +96,10 @@
         .guide-title { font-weight: bold; margin-bottom: 10px; font-size: 16px; text-decoration: underline; }
         .guide-step { margin-bottom: 4px; padding-left: 10px; }
 
-        .chem-link {
-            color: var(--link);
-            text-decoration: underline;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .chem-link:hover {
-            background-color: #ADD8E6;
-        }
+        .chem-link { color: var(--link); text-decoration: underline; cursor: pointer; font-weight: bold; }
+        .chem-link:hover { background-color: #ADD8E6; }
 
-        .card { display: flex; flex-direction: column; padding: 2px; }
+        .card { display: flex; flex-direction: column; padding: 2px; position: relative; z-index: 5; }
         .card-inner { padding: 10px; display: flex; flex-direction: column; height: 100%; box-sizing: border-box; }
         .card-header { font-weight: bold; font-size: 14px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px dotted #808080; padding-bottom: 5px; }
         .meta-tag { background: #e0e0e0; border: 1px solid #808080; padding: 0 4px; font-size: 11px; margin-left: 5px; }
@@ -125,16 +118,93 @@
         .condition-badge { font-size: 10px; border: 1px solid #808080; background: #fff; text-align: center; margin-top: 2px; }
         .name-text { text-transform: capitalize; }
 
-        .clown-img {
-            position: fixed;
-            width: 150px;
-            height: auto;
-            z-index: 9999;
-            pointer-events: none;
+        .clown-img { position: fixed; width: 150px; height: auto; z-index: 9999; pointer-events: none; }
+
+        .desktop-icons {
+            display: flex; flex-wrap: wrap; gap: 30px; padding: 40px; justify-content: center;
         }
+        .desktop-icon {
+            width: 80px; text-align: center; cursor: pointer; color: white; text-shadow: 1px 1px 0 #000;
+        }
+        .icon-img {
+            width: 48px; height: 48px; background: #c0c0c0; border: 2px solid #fff; 
+            border-right-color: #000; border-bottom-color: #000; margin: 0 auto 5px auto;
+            display: flex; align-items: center; justify-content: center; font-size: 24px; color: #000;
+        }
+        .desktop-icon:hover .icon-img { background: #000080; color: #fff; border-color: #000080; opacity: 0.8; }
+        .icon-label { background: #008080; padding: 2px; }
+        .desktop-icon:hover .icon-label { background: #000080; border: 1px dotted #fff; }
+
+        .schematic-btn {
+            margin-top: 10px; width: 100%; padding: 4px; font-weight: bold; cursor: pointer;
+            background: var(--surface); border: 1px solid #000; border-top-color: #fff; border-left-color: #fff;
+        }
+        .schematic-btn:active { border: 1px solid #fff; border-top-color: #000; border-left-color: #000; }
+
+        .tree-window {
+            position: fixed; top: 10%; left: 50%; transform: translateX(-50%);
+            width: 600px; max-height: 80vh; z-index: 9000; display: none;
+        }
+        .tree-body { overflow-y: auto; max-height: 60vh; padding: 20px; background: #fff; }
+        
+        .tree ul { padding-top: 20px; position: relative; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; }
+        .tree li { float: left; text-align: center; list-style-type: none; position: relative; padding: 20px 5px 0 5px; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; }
+        .tree li::before, .tree li::after{ content: ''; position: absolute; top: 0; right: 50%; border-top: 1px solid #ccc; width: 50%; height: 20px; }
+        .tree li::after{ right: auto; left: 50%; border-left: 1px solid #ccc; }
+        .tree li:only-child::after, .tree li:only-child::before { display: none; }
+        .tree li:only-child{ padding-top: 0; }
+        .tree li:first-child::before, .tree li:last-child::after{ border: 0 none; }
+        .tree li:last-child::before{ border-right: 1px solid #ccc; border-radius: 0 5px 0 0; -webkit-border-radius: 0 5px 0 0; -moz-border-radius: 0 5px 0 0; }
+        .tree li:first-child::after{ border-radius: 5px 0 0 0; -webkit-border-radius: 5px 0 0 0; -moz-border-radius: 5px 0 0 0; }
+        .tree ul ul::before{ content: ''; position: absolute; top: 0; left: 50%; border-left: 1px solid #ccc; width: 0; height: 20px; }
+        .tree-node-box { 
+            border: 1px solid #000; padding: 5px 10px; text-decoration: none; color: #666; 
+            font-family: arial, verdana, tahoma; font-size: 11px; display: inline-block; 
+            border-radius: 0; background: #efefef; 
+            box-shadow: 2px 2px 0 #999;
+        }
+        .tree-node-box.base { background: #e0ffe0; border-color: #006400; color: #006400; font-weight: bold; }
+        .tree-node-box.compound { background: #fff0e0; border-color: #8b4500; color: #8b4500; }
     </style>
 </head>
 <body>
+
+    <div id="desktop-layer" class="desktop-icons">
+        <div class="desktop-icon" onclick="filterByTag('Medicine')">
+            <div class="icon-img">💊</div>
+            <div class="icon-label">Medicine</div>
+        </div>
+        <div class="desktop-icon" onclick="filterByTag('Toxin')">
+            <div class="icon-img">☠️</div>
+            <div class="icon-label">Toxins</div>
+        </div>
+        <div class="desktop-icon" onclick="filterByTag('Narcotic')">
+            <div class="icon-img">💉</div>
+            <div class="icon-label">Narcotics</div>
+        </div>
+        <div class="desktop-icon" onclick="filterByTag('Botany')">
+            <div class="icon-img">🌱</div>
+            <div class="icon-label">Botany</div>
+        </div>
+        <div class="desktop-icon" onclick="goToRecipe('Space Cleaner')">
+            <div class="icon-img">🧼</div>
+            <div class="icon-label">Janitorial</div>
+        </div>
+        <div class="desktop-icon" onclick="switchTab('guides')">
+            <div class="icon-img">📖</div>
+            <div class="icon-label">Guidebook</div>
+        </div>
+    </div>
+
+    <div id="schematic-window" class="tree-window main-window win-out">
+        <div class="title-bar">
+            <span>Recipe Schematic</span>
+            <div onclick="closeSchematic()" style="background:#c0c0c0; color:black; width:16px; height:16px; text-align:center; line-height:14px; border:1px solid #fff; border-bottom-color:#000; border-right-color:#000; font-size:12px; cursor:pointer;">X</div>
+        </div>
+        <div class="tree-body win-in">
+            <div class="tree" id="tree-container"></div>
+        </div>
+    </div>
 
     <div class="main-window win-out">
         <div class="title-bar">
@@ -163,7 +233,7 @@
 
             <div id="recipe-view" class="view-content active">
                 <div style="margin-bottom: 20px;">
-                    <label for="search" style="display:block; margin-bottom:4px;">Filter chemicals:</label>
+                    <label for="search" style="display:block; margin-bottom:4px;">Filter Chemicals:</label>
                     <input type="text" id="search" class="win-in" placeholder="Type to search..." onkeyup="render()" autofocus>
                 </div>
                 <div id="app" style="text-align: center; font-style: italic;">Loading database...</div>
@@ -171,9 +241,9 @@
 
             <div id="guide-view" class="view-content">
                 <div style="margin-bottom: 10px;">
-                    <label for="guide-filter" style="display:block; margin-bottom:4px;">Select category:</label>
+                    <label for="guide-filter" style="display:block; margin-bottom:4px;">Select Category:</label>
                     <select id="guide-filter" class="win-in" onchange="renderGuides()">
-                        <option value="all">View all categories</option>
+                        <option value="all">View All Categories</option>
                     </select>
                 </div>
                 <div id="guidebook" class="win-in">
@@ -183,7 +253,7 @@
 
         </div>
         
-        <div class="win-in" style="margin: 15px; padding: 4px; font-size: 11px; color: #666;">v2.2 - Honk Edition (credit for the <a href="https://docs.google.com/spreadsheets/d/1ZGJHUXplasA6p3NY3gSVUlpMFSgD66i-OSYH8hpXtsg/edit?usp=sharing" target="_blank" style="color: #666;">guidebook text</a>)</div>
+        <div class="win-in" style="margin: 15px; padding: 4px; font-size: 11px; color: #666;">v2.3 - honk honk (credit for the <a href="https://docs.google.com/spreadsheets/d/1ZGJHUXplasA6p3NY3gSVUlpMFSgD66i-OSYH8hpXtsg/edit?usp=sharing" target="_blank" style="color: #666;">guidebook text</a>)</div>
     </div>
 
     <script>
@@ -193,56 +263,29 @@
         const screen = document.getElementById('track-name');
 
         const chemicalAliases = {
-            "Bic": "Bicaridine",
-            "Derma": "Dermaline",
-            "Dylo": "Dylovene",
-            "Tri": "Tricordrazine",
-            "Inap": "Inaprovaline",
-            "Dex P": "Dexalin Plus",
-            "Dex": "Dexalin",
-            "Pha": "Phalanximine",
-            "Ari": "Arithrazine",
-            "Sal": "Saline",
-            "Pun": "Puncturase",
-            "Lac": "Lacerinol",
-            "Bru": "Bruizine",
-            "Lepo": "Leporazine",
-            "Pyr": "Pyrotium",
-            "Ins": "Insuzine",
-            "Fersi": "Fersilicite",
-            "Dip": "Diphenhydramine",
-            "Sig": "Sigynate",
-            "Ocu": "Oculine",
-            "Epi": "Epinephrine",
-            "Eth": "Ethylredoxrazine",
-            "Nec": "Necrosol",
-            "Alox": "Aloxadone",
-            "Opp": "Opporozidone",
-            "Sid": "Siderlac",
-            "Cryo": "Cryoxadone",
-            "Dox": "Clonexadone",
-            "Kelo": "Kelotane",
-            "Trico": "Tricordrazine"
+            "Bic": "Bicaridine", "Derma": "Dermaline", "Dylo": "Dylovene",
+            "Tri": "Tricordrazine", "Inap": "Inaprovaline", "Dex P": "Dexalin Plus",
+            "Dex": "Dexalin", "Pha": "Phalanximine", "Ari": "Arithrazine",
+            "Sal": "Saline", "Pun": "Puncturase", "Lac": "Lacerinol",
+            "Bru": "Bruizine", "Lepo": "Leporazine", "Pyr": "Pyrotium",
+            "Ins": "Insuzine", "Fersi": "Fersilicite", "Dip": "Diphenhydramine",
+            "Sig": "Sigynate", "Ocu": "Oculine", "Epi": "Epinephrine",
+            "Eth": "Ethylredoxrazine", "Nec": "Necrosol", "Alox": "Aloxadone",
+            "Opp": "Opporozidone", "Sid": "Siderlac", "Cryo": "Cryoxadone",
+            "Dox": "Clonexadone", "Kelo": "Kelotane", "Trico": "Tricordrazine"
         };
 
         function spawnClown() {
             const honk = new Audio('content/sound_items_bikehorn.ogg');
             honk.volume = 0.5;
             honk.play().catch(e => console.log(e));
-
             const img = document.createElement('img');
             img.src = 'content/clown.webp';
             img.className = 'clown-img';
-
             const maxWidth = window.innerWidth - 150;
             const maxHeight = window.innerHeight - 150;
-
-            const randomX = Math.floor(Math.random() * maxWidth);
-            const randomY = Math.floor(Math.random() * maxHeight);
-
-            img.style.left = randomX + 'px';
-            img.style.top = randomY + 'px';
-
+            img.style.left = Math.floor(Math.random() * maxWidth) + 'px';
+            img.style.top = Math.floor(Math.random() * maxHeight) + 'px';
             document.body.appendChild(img);
         }
 
@@ -253,13 +296,14 @@
         function switchTab(tab) {
             document.querySelectorAll('.view-content').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-            
             if (tab === 'recipes') {
                 document.getElementById('recipe-view').classList.add('active');
                 document.querySelector('button[onclick="switchTab(\'recipes\')"]').classList.add('active');
+                document.getElementById('desktop-layer').style.display = 'flex';
             } else {
                 document.getElementById('guide-view').classList.add('active');
                 document.querySelector('button[onclick="switchTab(\'guides\')"]').classList.add('active');
+                document.getElementById('desktop-layer').style.display = 'none';
             }
         }
 
@@ -271,18 +315,31 @@
             searchBox.focus();
         }
 
+        function filterByTag(tag) {
+            switchTab('recipes');
+            document.getElementById('desktop-layer').style.display = 'none';
+            const container = document.getElementById('app');
+            container.innerHTML = '';
+            
+            const filtered = recipes.filter(r => 
+                r.products && r.products[0] && r.products[0].tags.includes(tag)
+            );
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div style="grid-column: 1/-1; text-align:center;">No chemicals found with tag: ${tag}</div>`;
+                return;
+            }
+            renderList(filtered);
+        }
+
         function linkify(text) {
             const keys = Object.keys(chemicalAliases).sort((a, b) => b.length - a.length);
-            
             let linkedText = text;
-
             keys.forEach(alias => {
                 const fullName = chemicalAliases[alias];
                 const regex = new RegExp(`\\b${alias}\\b`, 'g');
-                
                 linkedText = linkedText.replace(regex, `<span class="chem-link" onclick="goToRecipe('${fullName}')">${alias}</span>`);
             });
-
             recipes.slice(0, 50).forEach(r => {
                 if(r.products && r.products[0]) {
                     const name = r.products[0].name;
@@ -294,30 +351,52 @@
                     }
                 }
             });
-
             return linkedText;
+        }
+
+        function getRecipeTreeHtml(chemId, depth = 0) {
+            if (depth > 5) return `<li><div class="tree-node-box">...</div></li>`;
+            
+            const recipe = recipes.find(r => r.products.some(p => p.id === chemId));
+            
+            if (!recipe) {
+                const chemMeta = recipes.find(r => r.reactants.some(re => re.id === chemId));
+                let name = chemId;
+                if (chemMeta) {
+                    const reactant = chemMeta.reactants.find(re => re.id === chemId);
+                    if (reactant) name = reactant.name;
+                }
+                return `<li><div class="tree-node-box base">${name}</div></li>`;
+            }
+
+            const product = recipe.products[0];
+            let html = `<li><div class="tree-node-box compound">${product.name}</div><ul>`;
+            
+            recipe.reactants.forEach(re => {
+                html += getRecipeTreeHtml(re.id, depth + 1);
+            });
+            
+            html += `</ul></li>`;
+            return html;
+        }
+
+        function showSchematic(chemId) {
+            const treeHtml = `<ul>${getRecipeTreeHtml(chemId)}</ul>`;
+            document.getElementById('tree-container').innerHTML = treeHtml;
+            document.getElementById('schematic-window').style.display = 'block';
+        }
+
+        function closeSchematic() {
+            document.getElementById('schematic-window').style.display = 'none';
         }
 
         async function init() {
             try {
                 const rRes = await fetch('chem_data.json?t=' + Date.now());
-                if (rRes.ok) {
-                    recipes = await rRes.json();
-                    render();
-                }
-
+                if (rRes.ok) { recipes = await rRes.json(); render(); }
                 const gRes = await fetch('guides.json?t=' + Date.now());
-                if (gRes.ok) {
-                    guides = await gRes.json();
-                    initGuideFilter();
-                    renderGuides();
-                } else {
-                    document.getElementById('guidebook').innerHTML = "No guides.json found.";
-                }
-
-            } catch (e) {
-                document.getElementById('app').innerHTML = "Error loading data.";
-            }
+                if (gRes.ok) { guides = await gRes.json(); initGuideFilter(); renderGuides(); }
+            } catch (e) { document.getElementById('app').innerHTML = "Error loading data."; }
         }
 
         function initGuideFilter() {
@@ -333,16 +412,8 @@
         function renderGuides() {
             const filterVal = document.getElementById('guide-filter').value;
             const container = document.getElementById('guidebook');
-
-            const filteredGuides = (filterVal === 'all') 
-                ? guides 
-                : guides.filter(cat => cat.category === filterVal);
-
-            if (filteredGuides.length === 0) {
-                container.innerHTML = "No guides in this category.";
-                return;
-            }
-
+            const filteredGuides = (filterVal === 'all') ? guides : guides.filter(cat => cat.category === filterVal);
+            if (filteredGuides.length === 0) { container.innerHTML = "No guides in this category."; return; }
             container.innerHTML = filteredGuides.map(cat => `
                 <div class="guide-category">
                     <div class="guide-cat-title">${cat.category}</div>
@@ -357,40 +428,49 @@
         }
 
         function render() {
-            const query = document.getElementById('search').value.toLowerCase();
+            const searchVal = document.getElementById('search').value.toLowerCase();
             const container = document.getElementById('app');
+            const desktop = document.getElementById('desktop-layer');
+
+            if (searchVal === '') {
+                desktop.style.display = 'flex';
+                container.innerHTML = ''; 
+                return;
+            } else {
+                desktop.style.display = 'none';
+            }
             
             const filtered = recipes.filter(r => 
                 r.products && r.products.length > 0 && 
-                (r.id.toLowerCase().includes(query) || r.products.some(p => p.name && p.name.toLowerCase().includes(query)))
+                (r.id.toLowerCase().includes(searchVal) || r.products.some(p => p.name && p.name.toLowerCase().includes(searchVal)))
             );
 
             if (filtered.length === 0) {
                 container.innerHTML = `<div style="grid-column: 1/-1; text-align:center;">No matching records found.</div>`;
                 return;
             }
+            renderList(filtered);
+        }
 
-            container.innerHTML = filtered.map(r => {
+        function renderList(list) {
+            const container = document.getElementById('app');
+            container.innerHTML = list.map(r => {
                 const mainP = r.products[0];
                 let conditionsHtml = '';
                 if (r.conditions.minTemp) conditionsHtml += `<div class="condition-badge">Min: ${Math.round(r.conditions.minTemp)}K</div>`;
                 if (r.conditions.maxTemp) conditionsHtml += `<div class="condition-badge">Max: ${Math.round(r.conditions.maxTemp)}K</div>`;
-
                 let tagsHtml = mainP.tags.map(t => `<span class="meta-tag">${t}</span>`).join('');
                 let overdoseHtml = mainP.overdose ? `<span class="overdose-warning">OD: ${mainP.overdose}u</span>` : '';
-
                 let damageHtml = '';
                 if (mainP.damage && mainP.damage.length > 0) {
                     damageHtml = `<div class="effect-section"><span class="dmg-label">HARM:</span> ` + 
                         mainP.damage.map(d => `<span class="effect-badge">${d}</span>`).join(' ') + `</div>`;
                 }
-
                 let healHtml = '';
                 if (mainP.heals && mainP.heals.length > 0) {
                     healHtml = `<div class="effect-section"><span class="heal-label">HEAL:</span> ` + 
                         mainP.heals.map(h => `<span class="effect-badge">${h}</span>`).join(' ') + `</div>`;
                 }
-
                 let descHtml = mainP.desc ? `<div class="recipe-desc">${mainP.desc}</div>` : '';
 
                 return `
@@ -428,6 +508,7 @@
                                 </ul>
                             </div>
                         </div>
+                        <button class="schematic-btn" onclick="showSchematic('${mainP.id}')">VIEW SCHEMATIC</button>
                     </div>
                 </div>`;
             }).join('');
