@@ -1,18 +1,20 @@
 import requests
 import yaml
 import json
-import re
+import os
 
 REPO_OWNER = "space-wizards"
 REPO_NAME = "space-station-14"
 BRANCH = "master"
+
+STATIC_DB_FILE = "chem_recipes.json"
+OUTPUT_FILE = "chem_db.json"         
 
 TARGET_PATHS = [
     "Resources/Prototypes/Reagents",
     "Resources/Prototypes/Recipes/Reactions"
 ]
 LOCALE_PATH = "Resources/Locale/en-US/reagents"
-OUTPUT_FILE = "chem_data.json"
 
 def custom_tag_constructor(loader, tag_suffix, node):
     if isinstance(node, yaml.ScalarNode): return loader.construct_scalar(node)
@@ -44,22 +46,42 @@ def clean_name(text, loc_db):
         text = text.replace("reagent-name-", "").replace("reagent-desc-", "").replace("-", " ")
     return text.title()
 
-def main():
-    tree = fetch_file_list()
+def load_static_db():
+    """Extracts descriptions from the nested reagent_database key."""
+    if not os.path.exists(STATIC_DB_FILE):
+        print(f"Warning: {STATIC_DB_FILE} not found.")
+        return {}
     
+    with open(STATIC_DB_FILE, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        
+    if isinstance(data, dict) and 'reagent_database' in data:
+        return data['reagent_database']
+    elif isinstance(data, dict):
+        return data
+    return {}
+
+def main():
+    print("Step 1: Loading Localization...")
+    tree = fetch_file_list()
     loc_files = [i["path"] for i in tree if i["path"].startswith(LOCALE_PATH) and i["path"].endswith(".ftl")]
     loc_db = {}
     for path in loc_files:
         txt = fetch_raw_content(path)
         if txt: loc_db.update(parse_fluent(txt))
-            
+    
+    print("Step 2: Loading Static Recipes...")
+    static_db = load_static_db()
+    print(f"Loaded {len(static_db)} static entries.")
+
+    print("Step 3: Fetching Game Data...")
     target_files = [i["path"] for i in tree if i["type"] == "blob" and (i["path"].endswith(".yml") or i["path"].endswith(".yaml")) and any(i["path"].startswith(p) for p in TARGET_PATHS)]
 
     reagents_db = {}
     recipes = []
 
     for i, file_path in enumerate(target_files):
-        print(f"[{i+1}/{len(target_files)}] {file_path}")
+        if i % 10 == 0: print(f"Processing batch {i}...")
         raw_yaml = fetch_raw_content(file_path)
         if not raw_yaml: continue
         try: data = yaml.safe_load(raw_yaml)
@@ -72,6 +94,16 @@ def main():
             
             if entry.get("type") == "reagent" and "id" in entry:
                 r_id = entry["id"]
+                name = clean_name(entry.get("name", r_id), loc_db)
+                
+                static_entry = static_db.get(r_id, {})
+                if not static_entry:
+                    for k, v in static_db.items():
+                        if v.get('name') == name:
+                            static_entry = v
+                            break
+                
+                final_desc = static_entry.get("desc", clean_name(entry.get("desc", ""), loc_db))
                 
                 metabolisms = entry.get("metabolisms", {})
                 overdose_val = None
@@ -96,7 +128,6 @@ def main():
                         if effects:
                             for effect in effects:
                                 if not isinstance(effect, dict): continue
-                                
                                 if "damage" in effect:
                                     all_damage = {**effect["damage"].get("types", {}), **effect["damage"].get("groups", {})}
                                     for d_name, d_amount in all_damage.items():
@@ -110,24 +141,13 @@ def main():
                                     for cond in effect["conditions"]:
                                         if isinstance(cond, dict) and "condition" in cond:
                                             effects_list.append(f"Condition: {cond['condition']}")
-                                
-                                if effect.get("id") == "SatiateThirst": effects_list.append(f"Hydration: {effect.get('factor', 0)}")
-                                if effect.get("id") == "SatiateHunger": effects_list.append(f"Nutrition: {effect.get('factor', 0)}")
-                                if effect.get("id") == "MovespeedModifier":
-                                    walk = effect.get("walkSpeedModifier", 1)
-                                    sprint = effect.get("sprintSpeedModifier", 1)
-                                    effects_list.append(f"Speed: x{walk}/{sprint}")
 
                         if effects_list:
-                            meta_stats.append({
-                                "rate": rate,
-                                "type": meta_type,
-                                "effects": effects_list
-                            })
+                            meta_stats.append({ "rate": rate, "type": meta_type, "effects": effects_list })
 
                 reagents_db[r_id] = {
-                    "name": clean_name(entry.get("name", r_id), loc_db),
-                    "desc": clean_name(entry.get("desc", ""), loc_db),
+                    "name": name,
+                    "desc": final_desc,
                     "color": entry.get("color", "#CCCCCC"),
                     "overdose": overdose_val,
                     "tags": list(set(tags)),
@@ -137,8 +157,9 @@ def main():
             elif entry.get("type") == "reaction" and "id" in entry:
                 recipes.append(entry)
 
+    print("Step 4: Merging & Linking...")
     final_recipes = []
-
+    
     for entry in recipes:
         ingredients = []
         for r_id, r_data in entry.get("reactants", {}).items():
@@ -150,6 +171,7 @@ def main():
         for p_id, p_amount in entry.get("products", {}).items():
             default_meta = {"name": p_id, "color": "#FFF", "desc": "", "tags": [], "overdose": None, "meta_stats": []}
             meta = reagents_db.get(p_id, default_meta)
+            
             products.append({
                 "id": p_id,
                 "name": meta["name"],
@@ -174,6 +196,8 @@ def main():
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(final_recipes, f, indent=2)
+    
+    print(f"Done! Saved {len(final_recipes)} recipes to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
