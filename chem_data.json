@@ -31,8 +31,8 @@
         "desc": "A silvery-grey metal which forms iron oxides (rust) with contact with air. Commonly alloyed with other elements to create alloys such as steel.",
         "overdose": null,
         "tags": [
-          "Medicine",
-          "Toxin"
+          "Toxin",
+          "Medicine"
         ],
         "damage": [
           "Poison"
@@ -290,8 +290,8 @@
         "desc": "A soft, malleable, and ductile metal with very high thermal and electrical conductivity.",
         "overdose": null,
         "tags": [
-          "Medicine",
-          "Toxin"
+          "Toxin",
+          "Medicine"
         ],
         "damage": [
           "Poison"
@@ -545,13 +545,13 @@
         "desc": "A highly effective fertilizer with a limited potency-boosting effect on plants. Use it cautiously, as excessive application can reduce plant yield. It has a particularly beneficial effect on dionas.",
         "overdose": null,
         "tags": [
-          "Medicine",
-          "Toxin"
+          "Toxin",
+          "Medicine"
         ],
         "damage": [
-          "Asphyxiation",
           "Heat",
-          "Poison"
+          "Poison",
+          "Asphyxiation"
         ],
         "heals": [
           "Poison",
@@ -722,9 +722,9 @@
           "Caustic"
         ],
         "heals": [
-          "Burn",
           "Bloodloss",
-          "Brute"
+          "Brute",
+          "Burn"
         ]
       }
     ],
@@ -1550,9 +1550,9 @@
         "desc": "A more effective ephedrine, with more active downsides. Requires less doses to cure narcolepsy.",
         "overdose": null,
         "tags": [
-          "Medicine",
+          "Toxin",
           "Narcotic",
-          "Toxin"
+          "Medicine"
         ],
         "damage": [
           "Poison",
@@ -1598,15 +1598,15 @@
         "desc": "A chemical cocktail developed by Donk Co. that allows agents to recover from stuns faster, move more quickly, and grants a small heal when you're more dead than alive. Due to the complex nature of the chemical, it is much harder for the body to purge naturally.",
         "overdose": null,
         "tags": [
-          "Medicine",
-          "Narcotic"
+          "Narcotic",
+          "Medicine"
         ],
         "damage": [
           "Poison"
         ],
         "heals": [
-          "Burn",
-          "Brute"
+          "Brute",
+          "Burn"
         ]
       }
     ],
@@ -1653,8 +1653,8 @@
         "desc": "A caffeinated adrenaline stimulator chemical that makes you faster and harder to knock down. Also helps combat narcolepsy at dosages over thirty, at the cost of severe nerval stress.",
         "overdose": null,
         "tags": [
-          "Medicine",
-          "Narcotic"
+          "Narcotic",
+          "Medicine"
         ],
         "damage": [
           "Poison",
@@ -2102,8 +2102,8 @@
         "desc": "A white, odorless, water-soluble salt that yields an strong alkaline solution in water. Causes burns and vomiting when ingested.",
         "overdose": null,
         "tags": [
-          "Medicine",
-          "Toxin"
+          "Toxin",
+          "Medicine"
         ],
         "damage": [
           "Heat"
@@ -2415,9 +2415,9 @@
           "Caustic"
         ],
         "heals": [
-          "Burn",
           "Bloodloss",
-          "Brute"
+          "Brute",
+          "Burn"
         ]
       }
     ],
@@ -3742,10 +3742,10 @@
         "tags": [],
         "damage": [],
         "heals": [
-          "Burn",
           "Toxin",
-          "Airloss",
-          "Brute"
+          "Brute",
+          "Burn",
+          "Airloss"
         ]
       }
     ],
@@ -9786,8 +9786,8 @@
           "Medicine"
         ],
         "damage": [
-          "Asphyxiation",
-          "Poison"
+          "Poison",
+          "Asphyxiation"
         ],
         "heals": []
       }
@@ -9834,9 +9834,9 @@
         "damage": [],
         "heals": [
           "Toxin",
-          "Burn",
           "Brute",
-          "Airloss"
+          "Airloss",
+          "Burn"
         ]
       }
     ],
@@ -9925,14 +9925,14 @@
           "Medicine"
         ],
         "damage": [
-          "Asphyxiation",
-          "Poison"
+          "Poison",
+          "Asphyxiation"
         ],
         "heals": [
+          "Poison",
           "Asphyxiation",
           "Brute",
-          "Burn",
-          "Poison"
+          "Burn"
         ]
       }
     ],
@@ -9977,13 +9977,13 @@
         ],
         "damage": [
           "Asphyxiation",
-          "Cold",
-          "Brute"
+          "Brute",
+          "Cold"
         ],
         "heals": [
           "Shock",
-          "Cold",
-          "Heat"
+          "Heat",
+          "Cold"
         ]
       }
     ],
@@ -10025,8 +10025,8 @@
           "Cold"
         ],
         "heals": [
-          "Asphyxiation",
-          "Bloodloss"
+          "Bloodloss",
+          "Asphyxiation"
         ]
       }
     ],
@@ -10074,8 +10074,8 @@
           "Cold"
         ],
         "heals": [
-          "Asphyxiation",
-          "Bloodloss"
+          "Bloodloss",
+          "Asphyxiation"
         ]
       }
     ],
@@ -10289,8 +10289,8 @@
         "damage": [],
         "heals": [
           "Shock",
-          "Cold",
-          "Heat"
+          "Heat",
+          "Cold"
         ]
       }
     ],
@@ -10379,8 +10379,8 @@
           "Medicine"
         ],
         "damage": [
-          "Radiation",
-          "Caustic"
+          "Caustic",
+          "Radiation"
         ],
         "heals": [
           "Cellular"
@@ -11148,8 +11148,8 @@
           "Medicine"
         ],
         "damage": [
-          "Cold",
-          "Heat"
+          "Heat",
+          "Cold"
         ],
         "heals": [
           "Slash"
@@ -11576,8 +11576,8 @@
           "Medicine"
         ],
         "damage": [
-          "Piercing",
-          "Slash"
+          "Slash",
+          "Piercing"
         ],
         "heals": [
           "Heat"
@@ -11716,8 +11716,8 @@
         "damage": [],
         "heals": [
           "Poison",
-          "Burn",
-          "Brute"
+          "Brute",
+          "Burn"
         ]
       }
     ],
@@ -11763,9 +11763,9 @@
         "damage": [],
         "heals": [
           "Shock",
+          "Heat",
           "Caustic",
-          "Cold",
-          "Heat"
+          "Cold"
         ]
       }
     ],
@@ -12043,8 +12043,8 @@
         ],
         "damage": [
           "Poison",
-          "Caustic",
-          "Heat"
+          "Heat",
+          "Caustic"
         ],
         "heals": []
       }
@@ -12130,8 +12130,8 @@
         ],
         "damage": [
           "Poison",
-          "Caustic",
-          "Heat"
+          "Heat",
+          "Caustic"
         ],
         "heals": []
       }
@@ -12371,9 +12371,9 @@
         "heals": [
           "Shock",
           "Heat",
+          "Blunt",
           "Poison",
-          "Cold",
-          "Blunt"
+          "Cold"
         ]
       }
     ],
