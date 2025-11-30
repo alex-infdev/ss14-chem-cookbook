@@ -9,7 +9,7 @@ An interactive database and guidebook for the Space Station 14 chemistry system.
 - **Automated data:** A Python script fetches the latest recipes, reagents, and localization files directly from the official [Space Station 14 repository](https://github.com/space-wizards/space-station-14).
 - **Smart linking:** Automatically links chemical abbreviations (for example "Bic", "Dylo") in guides to their database entries.
 - **Detailed metadata:** Displays all the possible metadata for the chemicals.
-- **Guidebook:** Separate tab containing the community-standard guide.
+- **Guidebook:** Separate tab containing the community-standard guide with some formatting improvements.
 - **Lobby music:** Built-in web player for the classic station music.
 
 ## Credits & attribution
