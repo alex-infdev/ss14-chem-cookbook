@@ -88,6 +88,9 @@
         .card-inner { padding: 6px; }
         .card-header { font-weight: bold; font-size: 12px; margin-bottom: 4px; display: flex; justify-content: space-between; border-bottom: 1px dotted var(--dark-shadow); padding-bottom: 2px; }
         
+        input#search { width: 100%; padding: 8px; background: var(--bg-input); color: var(--text); border: none; outline: none; margin-bottom: 5px; }
+        select { background: var(--bg-input); color: var(--text); }
+
         .sidebar-header { background: navy; color: white; padding: 4px; font-weight: bold; text-align: center; flex-shrink: 0; display: flex; justify-content: space-between; align-items: center; }
         .prop-tabs { display: flex; margin-bottom: 4px; }
         .prop-tab { flex: 1; text-align: center; padding: 4px; cursor: pointer; border: 1px solid var(--dark-shadow); background: var(--surface); color: var(--text); }
@@ -111,6 +114,16 @@
         .footer-bar { margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
         .player-btn { width: 30px; background: var(--surface); border: 2px solid var(--light-highlight); border-right-color: #000; border-bottom-color: #000; cursor: pointer; color: var(--text); }
 
+        #guidebook { padding: 20px; font-family: 'Courier New', monospace; background: #fff; height: 100%; border: none; }
+        .guide-entry { 
+            background: #ffffe0; 
+            border: 1px solid #000; 
+            padding: 10px; margin-bottom: 15px; 
+            box-shadow: 2px 2px 0px #aaa;
+            color: #000; 
+        }
+        .guide-title { font-weight: bold; text-decoration: underline; cursor: pointer; color: blue; }
+        
         @media (max-width: 900px) {
             .pins-pane { display: none; } 
             .split-container { position: relative; }
@@ -129,10 +142,6 @@
         
         .clown-fall { position: fixed; width: 150px; z-index: 9999; pointer-events: none; top: -200px; animation: fall 4s linear forwards; }
         @keyframes fall { 0% { top: -200px; transform: rotate(0deg); } 100% { top: 120vh; transform: rotate(360deg); } }
-        
-        input#search { width: 100%; padding: 8px; background: var(--bg-input); color: var(--text); border: none; outline: none; margin-bottom: 5px; }
-        select { background: var(--bg-input); color: var(--text); }
-        #guidebook { padding: 20px; font-family: 'Courier New', monospace; background: #fff; height: 100%; border: none; }
     </style>
 </head>
 <body>
@@ -194,9 +203,7 @@
                             <option value="all">All Categories</option>
                         </select>
                     </div>
-                    <div id="guidebook" class="win-in scroll-area" style="background: white; color: black; padding: 10px;">
-                        Loading...
-                    </div>
+                    <div id="guidebook" class="win-in scroll-area">Loading...</div>
                 </div>
             </div>
             
@@ -208,7 +215,7 @@
                 </div>
                 <div>
                     <button class="player-btn" style="width: auto; padding: 0 5px;" onclick="toggleTheme()">Theme</button>
-                    <span style="font-size: 11px;">v4.1 - h0nk</span>
+                    <span style="font-size: 11px;">v5.0 - absolute honk</span>
                 </div>
             </div>
         </div>
@@ -226,7 +233,6 @@
         let selectedId = null;
         const audio = document.getElementById('bgm');
         const screen = document.getElementById('track-name');
-
         const chemicalAliases = {
             "Bic": "Bicaridine", "Derma": "Dermaline", "Dylo": "Dylovene",
             "Tri": "Tricordrazine", "Inap": "Inaprovaline", "Dex P": "Dexalin Plus",
@@ -288,9 +294,11 @@
             document.getElementById('prop-sidebar').classList.add('open');
 
             let item = recipes.find(r => r.id === chemId);
+            if (!item) item = recipes.find(r => r.products && r.products.some(p => p.id === chemId));
+            
             if (!item) return;
 
-            const name = item.name || item.id;
+            const name = item.name || (item.products ? item.products[0].name : item.id) || item.id;
             const desc = item.desc || "No description.";
             const color = item.color || "#CCCCCC";
             const id = item.id;
@@ -313,7 +321,7 @@
                 reactHtml = `<div style="margin-bottom:5px;"><b>Ingredients:</b></div><ul style="padding-left:20px; margin:0;">`;
                 reactants.forEach(r => {
                     let rName = r.name || r.id;
-                    const exists = recipes.some(rec => rec.id === r.id || rec.name === rName);
+                    const exists = recipes.some(rec => rec.id === r.id || (rec.products && rec.products[0].name === rName));
                     let display = exists ? `<span class="chem-link" onclick="goToRecipe('${rName}')">${rName}</span>` : rName;
                     reactHtml += `<li>${r.amount}u ${display}</li>`;
                 });
@@ -465,17 +473,20 @@
         function render() {
             const query = document.getElementById('search').value.toLowerCase();
             const container = document.getElementById('app');
-            const filtered = recipes.filter(r => 
-                (r.name && r.name.toLowerCase().includes(query)) || 
-                (r.id && r.id.toLowerCase().includes(query))
-            );
+            
+            const filtered = recipes.filter(r => {
+                const nameMatch = (r.name || r.id || '').toLowerCase().includes(query);
+                const productMatch = r.products && r.products.some(p => (p.name || p.id).toLowerCase().includes(query));
+                return nameMatch || productMatch;
+            });
             
             if (filtered.length === 0) {
                 container.innerHTML = `<div style="text-align:center; padding:20px;">No matches found.</div>`;
                 return;
             }
+            
             container.innerHTML = filtered.map(r => {
-                const name = r.name || r.id;
+                const name = r.name || (r.products ? r.products[0].name : r.id) || r.id;
                 const isSelected = (selectedId === r.id) ? 'selected' : '';
                 
                 let mixHtml = '';
