@@ -92,20 +92,21 @@ def main():
                         effects_list = []
                         
                         effects = meta_data.get("effects", [])
-                        for effect in effects:
-                            if "damage" in effect:
-                                all_damage = {**effect["damage"].get("types", {}), **effect["damage"].get("groups", {})}
-                                for d_name, d_amount in all_damage.items():
-                                    try:
-                                        amt = float(d_amount)
-                                        sign = "+" if amt > 0 else ""
-                                        effects_list.append(f"{d_name}: {sign}{amt}")
-                                    except: pass
-
-                            if "conditions" in effect:
-                                for cond in effect["conditions"]:
-                                    if "condition" in cond:
-                                        effects_list.append(f"Condition: {cond['condition']}")
+                        if effects:
+                            for effect in effects:
+                                if "damage" in effect:
+                                    all_damage = {**effect["damage"].get("types", {}), **effect["damage"].get("groups", {})}
+                                    for d_name, d_amount in all_damage.items():
+                                        try:
+                                            amt = float(d_amount)
+                                            sign = "+" if amt > 0 else ""
+                                            effects_list.append(f"{d_name}: {sign}{amt}")
+                                        except: pass
+                                
+                                if "conditions" in effect and effect["conditions"]:
+                                    for cond in effect["conditions"]:
+                                        if "condition" in cond:
+                                            effects_list.append(f"Condition: {cond['condition']}")
 
                         if effects_list:
                             meta_stats.append({
