@@ -143,7 +143,7 @@
         <div class="window-content">
             <div class="tab-bar">
                 <button class="tab-btn active" onclick="switchTab('recipes')">Database</button>
-                <button class="tab-btn" onclick="switchTab('guides')">Guidebook</button>
+                <button class="tab-btn" onclick="switchTab('guides')">Chemist Shift Guidebook</button>
             </div>
 
             <div class="win-in" style="flex: 1; display: flex; flex-direction: column; padding: 10px; overflow: hidden;">
@@ -205,7 +205,7 @@
                 </div>
                 <div>
                     <button class="player-btn" style="width: auto; padding: 0 5px;" onclick="toggleTheme()">Theme</button>
-                    <span style="font-size: 11px;">v4.0</span>
+                    <span style="font-size: 11px;">v4.0 - honk</span>
                 </div>
             </div>
         </div>
@@ -216,11 +216,12 @@
         <source src="content/music.ogg" type="audio/ogg">
     </audio>
 
-    <script>
+<script>
         let recipes = [];
         let guides = [];
         let pinnedItems = [];
         let selectedId = null;
+        
         const audio = document.getElementById('bgm');
         const screen = document.getElementById('track-name');
 
@@ -236,6 +237,52 @@
             "Opp": "Opporozidone", "Sid": "Siderlac", "Cryo": "Cryoxadone",
             "Dox": "Clonexadone", "Kelo": "Kelotane", "Trico": "Tricordrazine"
         };
+
+        async function init() {
+            const app = document.getElementById('app');
+            
+            try {
+                app.innerHTML = "Fetching chem_recipes.json...";
+                const rRes = await fetch('chem_recipes.json');
+                
+                if (!rRes.ok) {
+                    throw new Error(`Recipe File Error: ${rRes.status} ${rRes.statusText} (Check filename casing!)`);
+                }
+                
+                try {
+                    recipes = await rRes.json();
+                } catch (e) {
+                    throw new Error(`Recipe JSON Syntax Error: Your chem_recipes.json file has a typo (comma/quote).`);
+                }
+
+                app.innerHTML = "Fetching guides.json...";
+                const gRes = await fetch('guides.json');
+                
+                if (!gRes.ok) {
+                    console.warn("guides.json not found, skipping.");
+                } else {
+                    try {
+                        guides = await gRes.json();
+                    } catch (e) {
+                        console.warn("guides.json syntax error.");
+                    }
+                }
+
+                render();
+                initGuideFilter();
+                renderGuides();
+
+            } catch (e) {
+                console.error(e);
+                app.innerHTML = `
+                    <div style="background:red; color:white; padding:20px; font-weight:bold;">
+                        CRITICAL ERROR:<br>${e.message}<br><br>
+                        1. If running locally, you MUST use a server<br>
+                        2. Check Console (F12) for details.
+                    </div>`;
+            }
+        }
+
 
         function toggleTheme() { document.documentElement.classList.toggle('dark'); }
 
@@ -316,6 +363,15 @@
                     reactHtml += `<li>${r.amount}u ${display}</li>`;
                 });
                 reactHtml += `</ul>`;
+                
+                if(item.conditions || (item.recipes && item.recipes[0].conditions)) {
+                    let conds = item.conditions || item.recipes[0].conditions;
+                    if (conds.minTemp || conds.maxTemp) {
+                        reactHtml += `<hr><div style="margin-bottom:5px;"><b>Conditions:</b></div>`;
+                        if(conds.minTemp) reactHtml += `<div>Min Temp: <span style="color:var(--heat)">${Math.round(conds.minTemp)}K</span></div>`;
+                        if(conds.maxTemp) reactHtml += `<div>Max Temp: <span style="color:var(--cold)">${Math.round(conds.maxTemp)}K</span></div>`;
+                    }
+                }
             } else {
                 reactHtml = "<div style='color:#666; font-style:italic;'>No known recipe.</div>";
             }
@@ -403,17 +459,10 @@
             return linkedText;
         }
 
-        async function init() {
-            try {
-                const rRes = await fetch('chem_recipes.json?t=' + Date.now());
-                if (rRes.ok) { recipes = await rRes.json(); render(); }
-                const gRes = await fetch('guides.json?t=' + Date.now());
-                if (gRes.ok) { guides = await gRes.json(); initGuideFilter(); renderGuides(); }
-            } catch (e) { console.error(e); document.getElementById('app').innerHTML = "Error loading chem_recipes.json. Make sure file exists."; }
-        }
-
         function initGuideFilter() {
             const select = document.getElementById('guide-filter');
+            if(!select || !guides.length) return;
+            select.innerHTML = '<option value="all">All Categories</option>';
             guides.forEach(cat => {
                 const opt = document.createElement('option');
                 opt.value = cat.category;
