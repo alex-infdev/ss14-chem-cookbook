@@ -38,10 +38,9 @@ def parse_fluent(text):
     return translations
 
 def clean_name(text, loc_db):
-    if text in loc_db: 
-        return loc_db[text]
+    if text in loc_db: text = loc_db[text]
     if text.startswith("reagent-name-") or text.startswith("reagent-desc-"):
-        text = text.replace("reagent-name-", "").replace("reagent-desc-", "")
+        text = text.replace("reagent-name-", "").replace("reagent-desc-", "").replace("-", " ")
     return text.title()
 
 def main():
@@ -76,8 +75,7 @@ def main():
                 metabolisms = entry.get("metabolisms", {})
                 overdose_val = None
                 tags = []
-                damage_list = []
-                heal_list = []
+                meta_stats = []
 
                 if metabolisms:
                     for meta_type, meta_data in metabolisms.items():
@@ -90,20 +88,32 @@ def main():
                         if meta_type == "Medicine": tags.append("Medicine")
                         if meta_type == "Narcotic": tags.append("Narcotic")
 
+                        rate = meta_data.get("metabolismRate", 0.5)
+                        effects_list = []
+                        
                         effects = meta_data.get("effects", [])
-                        for effect in effects:
-                            if "damage" in effect:
-                                all_damage = {**effect["damage"].get("types", {}), **effect["damage"].get("groups", {})}
+                        if effects:
+                            for effect in effects:
+                                if "damage" in effect:
+                                    all_damage = {**effect["damage"].get("types", {}), **effect["damage"].get("groups", {})}
+                                    for d_name, d_amount in all_damage.items():
+                                        try:
+                                            amt = float(d_amount)
+                                            sign = "+" if amt > 0 else ""
+                                            effects_list.append(f"{d_name}: {sign}{amt}")
+                                        except: pass
                                 
-                                for d_name, d_amount in all_damage.items():
-                                    try:
-                                        amount = float(d_amount)
-                                        if amount < 0:
-                                            heal_list.append(d_name)
-                                        elif amount > 0:
-                                            damage_list.append(d_name)
-                                    except:
-                                        pass
+                                if "conditions" in effect and effect["conditions"]:
+                                    for cond in effect["conditions"]:
+                                        if "condition" in cond:
+                                            effects_list.append(f"Condition: {cond['condition']}")
+
+                        if effects_list:
+                            meta_stats.append({
+                                "rate": rate,
+                                "type": meta_type,
+                                "effects": effects_list
+                            })
 
                 reagents_db[r_id] = {
                     "name": clean_name(entry.get("name", r_id), loc_db),
@@ -111,8 +121,7 @@ def main():
                     "color": entry.get("color", "#CCCCCC"),
                     "overdose": overdose_val,
                     "tags": list(set(tags)),
-                    "damage": list(set(damage_list)),
-                    "heals": list(set(heal_list))
+                    "meta_stats": meta_stats
                 }
 
             elif entry.get("type") == "reaction" and "id" in entry:
@@ -129,7 +138,7 @@ def main():
 
         products = []
         for p_id, p_amount in entry.get("products", {}).items():
-            default_meta = {"name": p_id, "color": "#FFF", "desc": "", "tags": [], "overdose": None, "damage": [], "heals": []}
+            default_meta = {"name": p_id, "color": "#FFF", "desc": "", "tags": [], "overdose": None, "meta_stats": []}
             meta = reagents_db.get(p_id, default_meta)
             products.append({
                 "id": p_id,
@@ -139,8 +148,7 @@ def main():
                 "desc": meta["desc"],
                 "overdose": meta["overdose"],
                 "tags": meta["tags"],
-                "damage": meta["damage"],
-                "heals": meta["heals"]
+                "stats": meta["meta_stats"]
             })
 
         final_recipes.append({
