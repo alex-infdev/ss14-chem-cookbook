@@ -58,7 +58,7 @@
             box-shadow: 1px 1px 0px #dfdfdf inset, -1px -1px 0px var(--dark-shadow) inset;
         }
 
-        .main-window { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; height: 100%; position: relative; z-index: 10; }
+        .main-window { width: 100%; max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; height: 100%; position: relative; z-index: 10; }
         .title-bar { background: linear-gradient(90deg, #000080, #1084d0); padding: 4px 8px; color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
         .window-content { flex: 1; display: flex; flex-direction: column; padding: 10px; overflow: hidden; }
 
@@ -71,68 +71,62 @@
         ::-webkit-scrollbar-track { background: var(--dark-shadow); }
 
         .split-container { display: flex; flex: 1; gap: 10px; overflow: hidden; margin-top: 10px; min-height: 0; }
-        .list-pane { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-height: 0; }
         
-        .details-sidebar { 
-            width: 350px; display: flex; flex-direction: column; 
-            border: 2px solid var(--surface); min-height: 0; 
-            transition: transform 0.3s ease;
-        }
+        .list-pane { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-height: 0; }
+        .props-pane { width: 320px; display: flex; flex-direction: column; border: 2px solid var(--surface); min-height: 0; transition: transform 0.3s ease; }
+        .pins-pane { width: 280px; display: flex; flex-direction: column; border: 2px solid var(--surface); min-height: 0; }
 
-        .scroll-area { overflow-y: auto; flex: 1; padding-right: 5px; padding-bottom: 40px; }
-        #app { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; padding: 5px; }
+        .scroll-area { overflow-y: auto; flex: 1; padding-right: 5px; padding-bottom: 80px; }
+        #app { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; padding: 5px; }
 
         .card { cursor: pointer; border: 1px dotted transparent; background: var(--bg-card); }
         .card:hover { border-color: var(--dark-shadow); }
         .card.selected { background-color: #000080; color: white; }
         .card.selected .section-label, .card.selected .arrow-column { color: white; }
-        
-        .card-inner { padding: 8px; }
-        .card-header { font-weight: bold; margin-bottom: 6px; display: flex; justify-content: space-between; border-bottom: 1px dotted var(--dark-shadow); padding-bottom: 4px; }
+        .card-inner { padding: 6px; }
+        .card-header { font-weight: bold; font-size: 12px; margin-bottom: 4px; display: flex; justify-content: space-between; border-bottom: 1px dotted var(--dark-shadow); padding-bottom: 2px; }
         
         input#search { width: 100%; padding: 8px; background: var(--bg-input); color: var(--text); border: none; outline: none; }
         select { background: var(--bg-input); color: var(--text); }
 
-        .meta-tag { background: #eee; color: #000; border: 1px solid #000; padding: 0 4px; font-size: 10px; margin-left: 5px; }
-        .reagent-item { display: flex; align-items: center; margin-bottom: 2px; text-transform: capitalize; }
-        .beaker-dot { width: 8px; height: 8px; border: 1px solid #000; margin-right: 6px; display: inline-block; background: #fff; }
-        
-        .sidebar-header { background: navy; color: white; padding: 4px; font-weight: bold; text-align: center; }
+        .sidebar-header { background: navy; color: white; padding: 4px; font-weight: bold; text-align: center; flex-shrink: 0; display: flex; justify-content: space-between; align-items: center; }
         .prop-tabs { display: flex; margin-bottom: 4px; }
         .prop-tab { flex: 1; text-align: center; padding: 4px; cursor: pointer; border: 1px solid var(--dark-shadow); background: var(--surface); color: var(--text); }
         .prop-tab.active { background: var(--light-highlight); color: #000; font-weight: bold; border-bottom: none; }
         .prop-content { background: var(--bg-input); padding: 10px; flex: 1; overflow-y: auto; color: var(--text); }
-        
         .prop-pane { display: none; }
         .prop-pane.active { display: block; }
+        
+        .prop-row { display: flex; margin-bottom: 6px; font-size: 12px; }
+        .prop-label { width: 70px; color: #444; flex-shrink: 0; }
+        .prop-val { flex: 1; font-weight: bold; word-break: break-word; }
+
+        .pin-card { background: #ffffe0; border: 1px solid #000; margin-bottom: 8px; padding: 5px; box-shadow: 2px 2px 0 #808080; font-size: 11px; position: relative; color: #000; }
+        .pin-close { position: absolute; top: 2px; right: 2px; cursor: pointer; color: red; font-weight: bold; border: 1px solid red; width: 14px; height: 14px; text-align: center; line-height: 12px; background: #fff; }
+
+        .meta-tag { background: #eee; color: #000; border: 1px solid #000; padding: 0 4px; font-size: 10px; margin-left: 5px; }
+        .reagent-list { list-style: none; padding: 0; margin: 0; font-size: 11px; }
+        .reagent-item { display: flex; align-items: center; margin-bottom: 2px; text-transform: capitalize; }
+        .beaker-dot { width: 8px; height: 8px; border: 1px solid #000; margin-right: 6px; display: inline-block; background: #fff; }
         
         .footer-bar { margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
         .player-btn { width: 30px; background: var(--surface); border: 2px solid var(--light-highlight); border-right-color: #000; border-bottom-color: #000; cursor: pointer; color: var(--text); }
 
-        @media (max-width: 768px) {
-            body { padding: 5px; }
-            .main-window { border: none; box-shadow: none; background: transparent; }
+        @media (max-width: 900px) {
+            .pins-pane { display: none; } 
             .split-container { position: relative; }
-            
-            .details-sidebar {
+            .props-pane {
                 position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-                z-index: 9999; background: var(--surface);
-                transform: translateY(100%); 
-                transition: transform 0.3s ease;
-                border: none; padding: 10px;
-                box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+                z-index: 9999; transform: translateY(100%); transition: transform 0.3s ease;
             }
-            .details-sidebar.open { transform: translateY(0); }
-            
+            .props-pane.open { transform: translateY(0); }
             .mobile-close-btn { display: block !important; margin-bottom: 10px; padding: 10px; background: #d32f2f; color: white; text-align: center; font-weight: bold; cursor: pointer; border: 2px solid #fff; }
-            
-            #app { grid-template-columns: 1fr; }
         }
         
         .mobile-close-btn { display: none; }
         .view-content { display: none; flex: 1; flex-direction: column; overflow: hidden; }
         .view-content.active { display: flex; }
-        .chem-link { color: var(--link); text-decoration: underline; cursor: pointer; }
+        .chem-link { color: var(--link); text-decoration: underline; cursor: pointer; font-weight: bold; }
         
         .clown-fall { position: fixed; width: 150px; z-index: 9999; pointer-events: none; top: -200px; animation: fall 4s linear forwards; }
         @keyframes fall { 0% { top: -200px; transform: rotate(0deg); } 100% { top: 120vh; transform: rotate(360deg); } }
@@ -149,7 +143,7 @@
         <div class="window-content">
             <div class="tab-bar">
                 <button class="tab-btn active" onclick="switchTab('recipes')">Database</button>
-                <button class="tab-btn" onclick="switchTab('guides')">Chemist Shift Guidebook</button>
+                <button class="tab-btn" onclick="switchTab('guides')">Guidebook</button>
             </div>
 
             <div class="win-in" style="flex: 1; display: flex; flex-direction: column; padding: 10px; overflow: hidden;">
@@ -162,18 +156,30 @@
                             <div class="scroll-area" id="app">Loading...</div>
                         </div>
 
-                        <div id="prop-sidebar" class="details-sidebar win-out">
+                        <div id="prop-sidebar" class="props-pane win-out">
                             <div class="mobile-close-btn" onclick="closeMobileSidebar()">CLOSE DETAILS</div>
-                            <div class="sidebar-header">Properties</div>
-                            <div class="prop-tabs">
-                                <div class="prop-tab active" onclick="switchPropTab('general')">General</div>
-                                <div class="prop-tab" onclick="switchPropTab('reaction')">Mix</div>
-                                <div class="prop-tab" onclick="switchPropTab('medical')">Med</div>
+                            <div class="sidebar-header">
+                                <span>Properties</span>
+                                <button id="pin-btn" class="player-btn" style="width: auto; padding: 0 5px;" onclick="pinCurrent()" disabled>PIN</button>
                             </div>
-                            <div class="prop-content" id="sidebar-content">
-                                <div id="tab-general" class="prop-pane active" style="text-align: center; padding-top: 50px;">Select a chemical.</div>
-                                <div id="tab-reaction" class="prop-pane"></div>
-                                <div id="tab-medical" class="prop-pane"></div>
+                            <div style="padding: 5px; flex: 1; display: flex; flex-direction: column; overflow: hidden;">
+                                <div class="prop-tabs">
+                                    <div class="prop-tab active" onclick="switchPropTab('general')">General</div>
+                                    <div class="prop-tab" onclick="switchPropTab('recipe')">Recipe</div>
+                                    <div class="prop-tab" onclick="switchPropTab('effects')">Effects</div>
+                                </div>
+                                <div class="prop-content" id="sidebar-content">
+                                    <div id="tab-general" class="prop-pane active" style="text-align: center; padding-top: 50px; color: #666;">Select a chemical.</div>
+                                    <div id="tab-recipe" class="prop-pane"></div>
+                                    <div id="tab-effects" class="prop-pane"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pins-pane win-out">
+                            <div class="sidebar-header" style="justify-content: center;">Pinned Items</div>
+                            <div id="pin-container" class="win-in scroll-area" style="background: #ccc; padding: 10px;">
+                                <div style="color: #666; text-align: center; margin-top: 20px;">No pinned items.</div>
                             </div>
                         </div>
                     </div>
@@ -198,8 +204,8 @@
                     <span id="track-name" style="background:#000; color:#0f0; font-family:monospace; padding:2px 5px;">READY</span>
                 </div>
                 <div>
-                    <button class="player-btn" style="width: auto; padding: 0 5px;" onclick="toggleTheme()">Dark Mode</button>
-                    <span style="font-size: 11px;">v3.0</span>
+                    <button class="player-btn" style="width: auto; padding: 0 5px;" onclick="toggleTheme()">Theme</button>
+                    <span style="font-size: 11px;">v4.0</span>
                 </div>
             </div>
         </div>
@@ -213,6 +219,7 @@
     <script>
         let recipes = [];
         let guides = [];
+        let pinnedItems = [];
         let selectedId = null;
         const audio = document.getElementById('bgm');
         const screen = document.getElementById('track-name');
@@ -230,9 +237,7 @@
             "Dox": "Clonexadone", "Kelo": "Kelotane", "Trico": "Tricordrazine"
         };
 
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-        }
+        function toggleTheme() { document.documentElement.classList.toggle('dark'); }
 
         function spawnClown() {
             const honk = new Audio('content/sound_items_bikehorn.ogg');
@@ -264,72 +269,127 @@
         function switchPropTab(tabName) {
             document.querySelectorAll('.prop-tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.prop-pane').forEach(p => p.classList.remove('active'));
-            const tabs = ['general', 'reaction', 'medical'];
+            const tabs = ['general', 'recipe', 'effects'];
             document.querySelectorAll('.prop-tab')[tabs.indexOf(tabName)].classList.add('active');
             document.getElementById('tab-' + tabName).classList.add('active');
         }
 
-        function closeMobileSidebar() {
-            document.getElementById('prop-sidebar').classList.remove('open');
-        }
+        function closeMobileSidebar() { document.getElementById('prop-sidebar').classList.remove('open'); }
 
         function selectRecipe(chemId) {
             selectedId = chemId;
+            document.getElementById('pin-btn').disabled = false;
             document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
             const card = document.getElementById('card-' + chemId);
             if(card) card.classList.add('selected');
-
             document.getElementById('prop-sidebar').classList.add('open');
 
-            const recipe = recipes.find(r => r.products.some(p => p.id === chemId));
-            if (!recipe) return;
-            const product = recipe.products[0];
+            let item = recipes.find(r => r.id === chemId);
+            if (!item) item = recipes.find(r => r.products && r.products.some(p => p.id === chemId));
+            
+            if (!item) return;
+
+            const name = item.name || (item.products ? item.products[0].name : item.id);
+            const desc = item.desc || "No description.";
+            const color = item.color || "#CCCCCC";
+            const id = item.id;
 
             let genHtml = `
-                <div class="prop-row"><div class="prop-label">Name:</div><div class="prop-val">${product.name}</div></div>
-                <div class="prop-row"><div class="prop-label">ID:</div><div class="prop-val" style="font-family:monospace;">${product.id}</div></div>
-                <div class="prop-row"><div class="prop-label">Color:</div><div class="prop-val"><div style="display:inline-block; width:12px; height:12px; background:${product.color}; border:1px solid #000;"></div> ${product.color}</div></div>
+                <div class="prop-row"><div class="prop-label">Name:</div><div class="prop-val">${name}</div></div>
+                <div class="prop-row"><div class="prop-label">ID:</div><div class="prop-val" style="font-family:monospace;">${id}</div></div>
+                <div class="prop-row"><div class="prop-label">Color:</div><div class="prop-val"><div style="display:inline-block; width:12px; height:12px; background:${color}; border:1px solid #000;"></div> ${color}</div></div>
                 <hr>
-                <div style="font-style:italic; padding:5px;">${product.desc || "No description."}</div>
+                <div style="font-style:italic; padding:5px;">${desc}</div>
             `;
-            if (product.wiki) genHtml += `<hr><div style="font-size:11px; padding:5px;"><b>Wiki Info:</b><br>${product.wiki}</div>`;
             document.getElementById('tab-general').innerHTML = genHtml;
 
-            let reactHtml = `<div style="margin-bottom:5px;"><b>Ingredients:</b></div><ul style="padding-left:20px; margin:0;">`;
-            recipe.reactants.forEach(r => {
-                reactHtml += `<li>${r.amount}u ${r.name}</li>`;
-            });
-            reactHtml += `</ul>`;
-            if(recipe.conditions.minTemp || recipe.conditions.maxTemp) {
-                reactHtml += `<hr><div style="margin-bottom:5px;"><b>Temp:</b></div>`;
-                if(recipe.conditions.minTemp) reactHtml += `<div>Min: <span style="color:var(--heat)">${Math.round(recipe.conditions.minTemp)}K</span></div>`;
-                if(recipe.conditions.maxTemp) reactHtml += `<div>Max: <span style="color:var(--cold)">${Math.round(recipe.conditions.maxTemp)}K</span></div>`;
-            }
-            document.getElementById('tab-reaction').innerHTML = reactHtml;
+            let reactHtml = '';
+            let reactants = item.reactants;
+            if(!reactants && item.recipes && item.recipes.length > 0) reactants = item.recipes[0].reactants; 
 
-            let medHtml = ``;
-            if (product.overdose) medHtml += `<div class="prop-row"><div class="prop-label" style="color:red; font-weight:bold;">Overdose:</div><div class="prop-val">${product.overdose}u</div></div><hr>`;
-            
-            if (product.stats && product.stats.length > 0) {
-                product.stats.forEach(stat => {
-                    medHtml += `<div style="margin-bottom:8px;">
-                        <b>${stat.type} (${stat.rate}u/sec):</b>
-                        <ul style="padding-left:20px; margin-top:2px;">
-                            ${stat.effects.map(e => `<li>${e}</li>`).join('')}
-                        </ul>
-                    </div>`;
+            if (reactants && reactants.length > 0) {
+                reactHtml = `<div style="margin-bottom:5px;"><b>Ingredients:</b></div><ul style="padding-left:20px; margin:0;">`;
+                reactants.forEach(r => {
+                    let rName = r.name || r.id;
+                    const exists = recipes.some(rec => rec.id === r.id || rec.name === rName);
+                    let display = exists ? `<span class="chem-link" onclick="goToRecipe('${rName}')">${rName}</span>` : rName;
+                    reactHtml += `<li>${r.amount}u ${display}</li>`;
                 });
+                reactHtml += `</ul>`;
+            } else {
+                reactHtml = "<div style='color:#666; font-style:italic;'>No known recipe.</div>";
             }
-            if (!medHtml) medHtml = "No significant effects.";
-            document.getElementById('tab-medical').innerHTML = medHtml;
+            document.getElementById('tab-recipe').innerHTML = reactHtml;
+
+            let effHtml = '';
+            if (item.overdose) effHtml += `<div class="prop-row"><div class="prop-label" style="color:red; font-weight:bold;">Overdose:</div><div class="prop-val">${item.overdose}u</div></div><hr>`;
+            
+            let effects = item.effects || item.meta_stats; 
+            
+            if (effects && effects.length > 0) {
+                effHtml += `<div><b>Effects:</b></div><ul style="padding-left:20px;">`;
+                effects.forEach(e => {
+                    if (typeof e === 'string') {
+                        effHtml += `<li>${e}</li>`;
+                    } else if (e.effects) {
+                        e.effects.forEach(sub => effHtml += `<li>${sub}</li>`);
+                    }
+                });
+                effHtml += `</ul>`;
+            } else {
+                if(!item.overdose) effHtml = "<div style='color:#666; font-style:italic;'>No known effects.</div>";
+            }
+            document.getElementById('tab-effects').innerHTML = effHtml;
+        }
+
+        function pinCurrent() {
+            if(!selectedId) return;
+            if(pinnedItems.includes(selectedId)) return;
+            pinnedItems.push(selectedId);
+            renderPins();
+        }
+
+        function removePin(id) {
+            pinnedItems = pinnedItems.filter(p => p !== id);
+            renderPins();
+        }
+
+        function renderPins() {
+            const container = document.getElementById('pin-container');
+            if(pinnedItems.length === 0) {
+                container.innerHTML = `<div style="color: #666; text-align: center; margin-top: 20px;">No pinned items.</div>`;
+                return;
+            }
+            container.innerHTML = pinnedItems.map(id => {
+                let item = recipes.find(r => r.id === id);
+                if (!item) return '';
+                const name = item.name || item.id;
+                
+                let ingredients = '';
+                let reactants = item.reactants;
+                if(!reactants && item.recipes && item.recipes.length > 0) reactants = item.recipes[0].reactants; 
+                
+                if (reactants) {
+                    reactants.forEach(r => ingredients += `<div>- ${r.amount}u ${r.name || r.id}</div>`);
+                } else {
+                    ingredients = "<div>No recipe</div>";
+                }
+                
+                return `
+                <div class="pin-card">
+                    <div class="pin-close" onclick="removePin('${id}')">X</div>
+                    <div style="font-weight:bold; border-bottom:1px solid #aaa; margin-bottom:4px; cursor:pointer;" onclick="selectRecipe('${id}')">${name}</div>
+                    <div style="font-size:10px;">${ingredients}</div>
+                </div>`;
+            }).join('');
         }
 
         function goToRecipe(chemName) {
             switchTab('recipes');
             document.getElementById('search').value = chemName;
             render();
-            const exactMatch = recipes.find(r => r.products[0].name.toLowerCase() === chemName.toLowerCase());
-            if (exactMatch) selectRecipe(exactMatch.products[0].id);
+            const match = recipes.find(r => (r.name || r.id).toLowerCase() === chemName.toLowerCase());
+            if (match) selectRecipe(match.id);
         }
 
         function linkify(text) {
@@ -345,11 +405,11 @@
 
         async function init() {
             try {
-                const rRes = await fetch('chem_data.json?t=' + Date.now());
+                const rRes = await fetch('chem_recipes.json?t=' + Date.now());
                 if (rRes.ok) { recipes = await rRes.json(); render(); }
                 const gRes = await fetch('guides.json?t=' + Date.now());
                 if (gRes.ok) { guides = await gRes.json(); initGuideFilter(); renderGuides(); }
-            } catch (e) { document.getElementById('app').innerHTML = "Error loading data."; }
+            } catch (e) { console.error(e); document.getElementById('app').innerHTML = "Error loading chem_recipes.json. Make sure file exists."; }
         }
 
         function initGuideFilter() {
@@ -370,8 +430,8 @@
                 <div class="guide-category">
                     <div style="font-weight:bold; border-bottom:2px solid #000; margin-bottom:5px;">${cat.category}</div>
                     ${cat.guides.map(g => `
-                        <div style="background:#ffffe0; border:1px solid #000; padding:10px; margin-bottom:10px; box-shadow:2px 2px 0 #aaa; color:black;">
-                            <div style="font-weight:bold; text-decoration:underline; cursor:pointer; color:blue;">${linkify(g.title)}</div>
+                        <div class="guide-entry" style="color:black;">
+                            <div class="guide-title">${linkify(g.title)}</div>
                             ${g.content.map(step => `<div style="margin-bottom:2px; padding-left:10px;">${linkify(step)}</div>`).join('')}
                         </div>
                     `).join('')}
@@ -383,36 +443,33 @@
             const query = document.getElementById('search').value.toLowerCase();
             const container = document.getElementById('app');
             const filtered = recipes.filter(r => 
-                r.products && r.products.length > 0 && 
-                (r.id.toLowerCase().includes(query) || r.products.some(p => p.name && p.name.toLowerCase().includes(query)))
+                (r.name && r.name.toLowerCase().includes(query)) || 
+                (r.id && r.id.toLowerCase().includes(query))
             );
+            
             if (filtered.length === 0) {
                 container.innerHTML = `<div style="text-align:center; padding:20px;">No matches found.</div>`;
                 return;
             }
             container.innerHTML = filtered.map(r => {
-                const mainP = r.products[0];
-                const isSelected = (selectedId === mainP.id) ? 'selected' : '';
-                let conditionsHtml = '';
-                if (r.conditions.minTemp) conditionsHtml += `<div class="condition-badge">Min ${Math.round(r.conditions.minTemp)}K</div>`;
-                let tagsHtml = mainP.tags.slice(0,2).map(t => `<span class="meta-tag">${t}</span>`).join('');
+                const name = r.name || r.id;
+                const isSelected = (selectedId === r.id) ? 'selected' : '';
                 
+                let mixHtml = '';
+                let reactants = r.reactants;
+                if(!reactants && r.recipes && r.recipes.length > 0) reactants = r.recipes[0].reactants;
+                if(reactants) {
+                    mixHtml = `<ul class="reagent-list">${reactants.slice(0,3).map(i => `<li><div class="beaker-dot" style="background:white;"></div>${i.amount}u ${i.name||i.id}</li>`).join('')}</ul>`;
+                }
+
                 return `
-                <div id="card-${mainP.id}" class="card win-out ${isSelected}" onclick="selectRecipe('${mainP.id}')">
+                <div id="card-${r.id}" class="card win-out ${isSelected}" onclick="selectRecipe('${r.id}')">
                     <div class="card-inner">
                         <div class="card-header">
-                            <span class="name-text">${mainP.name}</span>
-                            <div>${tagsHtml}</div>
+                            <span class="name-text">${name}</span>
                         </div>
-                        <div style="display:flex; justify-content:space-between; font-size:12px;">
-                            <ul style="padding:0; margin:0; list-style:none;">
-                                ${r.reactants.map(i => `<li><div class="beaker-dot" style="background:${i.color}"></div>${i.amount}u ${i.name}</li>`).join('')}
-                            </ul>
-                            <div style="text-align:center; color:var(--dark-shadow);">➔<br>${conditionsHtml}</div>
-                            <ul style="padding:0; margin:0; list-style:none;">
-                                ${r.products.map(p => `<li><div class="beaker-dot" style="background:${p.color}"></div>${p.amount}u ${p.name}</li>`).join('')}
-                            </ul>
-                        </div>
+                        <div style="font-size:11px; color:#444;" class="recipe-desc">${r.desc ? r.desc.substring(0, 50) + '...' : ''}</div>
+                        ${mixHtml}
                     </div>
                 </div>`;
             }).join('');
