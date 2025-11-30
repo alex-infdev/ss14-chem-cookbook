@@ -910,12 +910,12 @@ const guidesData = [
   }
 ];
 
-let chemicalMap = {}; 
+let chemicalMap = {};
 let allChemicals = [];
 let pinnedItems = JSON.parse(localStorage.getItem('ss14_chem_pins')) || [];
 
 function initData() {
-    if(chemRecipesData.reagent_database) {
+    if (chemRecipesData.reagent_database) {
         chemRecipesData.reagent_database.forEach(category => {
             category.reagents.forEach(chem => {
                 chem.category = category.category;
@@ -927,27 +927,30 @@ function initData() {
 }
 
 function getContrastColor(color) {
-    if(!color) return 'black';
-    if(color.toLowerCase() === 'white') return 'black';
-    if(color.toLowerCase() === 'black') return 'white';
-    if(color.toLowerCase() === 'transparent') return 'black';
+    if (!color) return 'black';
+    if (color.toLowerCase() === 'white') return 'black';
+    if (color.toLowerCase() === 'black') return 'white';
+    if (color.toLowerCase() === 'transparent') return 'black';
 
-    if(color.startsWith('#')) {
+    if (color.startsWith('#')) {
         let hex = color.replace("#", "");
         if (hex.length === 3) hex = hex.split('').map(char => char + char).join('');
-        
-        var r = parseInt(hex.substr(0,2),16);
-        var g = parseInt(hex.substr(2,2),16);
-        var b = parseInt(hex.substr(4,2),16);
-        
-        if(isNaN(r) || isNaN(g) || isNaN(b)) return 'black';
-        var yiq = ((r*299)+(g*587)+(b*114))/1000;
+
+        var r = parseInt(hex.substr(0, 2), 16);
+        var g = parseInt(hex.substr(2, 2), 16);
+        var b = parseInt(hex.substr(4, 2), 16);
+
+        if (isNaN(r) || isNaN(g) || isNaN(b)) return 'black';
+        var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
         return (yiq >= 128) ? 'black' : 'white';
     }
     return 'black';
 }
 
 window.selectItem = function(id) {
+    const tooltip = document.getElementById('global-tooltip');
+    if (tooltip) tooltip.classList.remove('visible');
+
     const chem = chemicalMap[id];
     if (!chem) return;
 
@@ -957,7 +960,7 @@ window.selectItem = function(id) {
     const tagsHtml = chem.tags.length ? chem.tags.map(t => `[${t}]`).join(' ') : 'None';
     const colorStyle = chem.color ? `background:${chem.color}; border:1px solid #000;` : 'background:transparent; border:1px dashed #999;';
     const colorBox = `<span style="${colorStyle} display:inline-block; width:12px; height:12px; vertical-align:middle;"></span>`;
-    
+
     const headerBg = chem.color || '#808080';
     const headerTextColor = getContrastColor(headerBg);
     const isPinned = pinnedItems.includes(chem.id);
@@ -965,15 +968,15 @@ window.selectItem = function(id) {
     const pinBtnHtml = `<button class="win-btn small-btn" style="float:right; margin-top:-2px;" onclick="window.togglePin('${chem.id}', event)">${isPinned ? 'Unpin' : 'Pin'}</button>`;
 
     let recipeHtml = '<div class="text-muted" style="font-style:italic;">No known recipes.</div>';
-    if(chem.recipes.length > 0) {
-        recipeHtml = chem.recipes.map(r => 
+    if (chem.recipes.length > 0) {
+        recipeHtml = chem.recipes.map(r =>
             `<div class="info-box">${parseFullRecipe(r)}</div>`
         ).join('');
     }
 
     let effectsHtml = '<div class="text-muted" style="font-style:italic;">No significant effects.</div>';
-    if(chem.effects.length > 0) {
-        effectsHtml = chem.effects.map(e => 
+    if (chem.effects.length > 0) {
+        effectsHtml = chem.effects.map(e =>
             `<div class="info-box">${e}</div>`
         ).join('');
     }
@@ -1015,7 +1018,7 @@ window.selectItem = function(id) {
 };
 
 window.togglePin = function(id, event) {
-    if(event) event.stopPropagation();
+    if (event) event.stopPropagation();
     if (pinnedItems.includes(id)) {
         pinnedItems = pinnedItems.filter(i => i !== id);
     } else {
@@ -1023,15 +1026,15 @@ window.togglePin = function(id, event) {
     }
     localStorage.setItem('ss14_chem_pins', JSON.stringify(pinnedItems));
     renderPins();
-    
+
     const currentActive = document.querySelector('#info .chem-name');
-    if(currentActive && currentActive.textContent === id) {
+    if (currentActive && currentActive.textContent === id) {
         window.selectItem(id);
     }
-    
-    if(document.getElementById('tab-db').classList.contains('active')) {
+
+    if (document.getElementById('tab-db').classList.contains('active')) {
         renderGrid(
-            document.getElementById('category-filter').value, 
+            document.getElementById('category-filter').value,
             document.getElementById('search-input').value
         );
     }
@@ -1067,7 +1070,7 @@ function renderGrid(categoryFilter, searchQuery = '') {
         const isPinned = pinnedItems.includes(chem.id);
         const headerBg = chem.color || '#e0e0e0';
         const textColor = getContrastColor(headerBg);
-        
+
         let recipeDisplay = '<span class="text-muted" style="font-style:italic;">No Recipe</span>';
         if (chem.recipes.length > 0) recipeDisplay = parseShortRecipe(chem.recipes[0]);
 
@@ -1124,7 +1127,7 @@ function renderPins() {
         const chem = chemicalMap[id];
         if (!chem) return;
         let recipeShort = '<span class="text-muted">No recipe</span>';
-        if(chem.recipes.length > 0) recipeShort = parseShortRecipe(chem.recipes[0]);
+        if (chem.recipes.length > 0) recipeShort = parseShortRecipe(chem.recipes[0]);
 
         pinnedContainer.insertAdjacentHTML('beforeend', `
             <div class="pinned-item">
@@ -1149,7 +1152,7 @@ function parseShortRecipe(recipeString) {
         let amount = match[2];
         let chemObj = chemicalMap[name];
         let colorStyle = chemObj && chemObj.color ? `background:${chemObj.color}; border:1px solid #000;` : 'background:transparent; border:1px dashed #666;';
-        
+
         output += `<span class="guide-link" onclick="window.selectItem('${name}'); event.stopPropagation();" title="${name}">
             <span style="${colorStyle} display:inline-block; width:10px; height:10px;"></span>
             ${name.substring(0,3)} ${amount}
@@ -1189,22 +1192,22 @@ function parseFullRecipe(recipeString) {
         let amount = match[2];
         let chemObj = chemicalMap[name];
         let colorStyle = chemObj && chemObj.color ? `background:${chemObj.color}; border:1px solid #000;` : 'background:transparent; border:1px dashed #666;';
-        
+
         let tooltipContent = "No recipe";
-        if(chemObj && chemObj.recipes && chemObj.recipes.length > 0) {
+        if (chemObj && chemObj.recipes && chemObj.recipes.length > 0) {
             tooltipContent = `<strong>${name}</strong><br/>` + parseRecipeToVisuals(chemObj.recipes[0]);
         } else {
             tooltipContent = `<strong>${name}</strong><br/>Base Chemical`;
         }
-        
+
         output += `<span class="guide-link" data-chem-id="${name}" onclick="window.selectItem('${name}'); event.stopPropagation();">
             <span style="${colorStyle} display:inline-block; width:12px; height:12px; vertical-align:middle;"></span>
             ${name} [${amount}]
         </span> `;
     }
-    
+
     if (parts[0].includes('Heat')) output += ' <span style="color:red; font-weight:bold;">+ Heat</span>';
-    if(parts[1]) output += ` ➜ ${parts[1].trim()}`;
+    if (parts[1]) output += ` ➜ ${parts[1].trim()}`;
 
     return output || recipeString;
 }
@@ -1213,14 +1216,22 @@ function linkifyTitle(title) {
     const firstWord = title.split(/[\s-]/)[0];
     let targetId = null;
     const candidates = allChemicals.filter(c => c.id.toLowerCase().startsWith(firstWord.toLowerCase()));
-    const overrides = { "Bic": "Bicaridine", "Tri": "Tricordrazine", "Dylo": "Dylovene", "Amb": "Ambuzol" };
+    const overrides = {
+        "Bic": "Bicaridine",
+        "Tri": "Tricordrazine",
+        "Dylo": "Dylovene",
+        "Amb": "Ambuzol"
+    };
     if (overrides[firstWord]) targetId = overrides[firstWord];
     else if (candidates.length > 0) targetId = candidates[0].id;
 
     if (targetId) return title.replace(firstWord, `<span class="guide-link" onclick="window.selectItem('${targetId}'); event.stopPropagation();">${firstWord}</span>`);
     return title;
 }
-function linkifyText(text) { return text; }
+
+function linkifyText(text) {
+    return text;
+}
 
 function populateFilters(mode) {
     const select = document.getElementById('category-filter');
@@ -1240,12 +1251,12 @@ function setupGlobalTooltip() {
     const tooltip = document.getElementById('global-tooltip');
     document.addEventListener('mouseover', (e) => {
         const target = e.target.closest('[data-chem-id]');
-        if(target) {
+        if (target) {
             const chemId = target.getAttribute('data-chem-id');
             const chemObj = chemicalMap[chemId];
-            if(chemObj) {
+            if (chemObj) {
                 let content = `<strong>${chemId}</strong><br/>`;
-                if(chemObj.recipes && chemObj.recipes.length > 0) {
+                if (chemObj.recipes && chemObj.recipes.length > 0) {
                     content += parseRecipeToVisuals(chemObj.recipes[0]);
                 } else {
                     content += "Base Chemical";
@@ -1256,14 +1267,14 @@ function setupGlobalTooltip() {
         }
     });
     document.addEventListener('mousemove', (e) => {
-        if(tooltip.classList.contains('visible')) {
+        if (tooltip.classList.contains('visible')) {
             tooltip.style.top = (e.clientY + 15) + 'px';
             tooltip.style.left = (e.clientX + 15) + 'px';
         }
     });
     document.addEventListener('mouseout', (e) => {
         const target = e.target.closest('[data-chem-id]');
-        if(target) tooltip.classList.remove('visible');
+        if (target) tooltip.classList.remove('visible');
     });
 }
 
@@ -1286,24 +1297,24 @@ function setupEventListeners() {
             document.querySelectorAll('.detail-view').forEach(v => v.classList.remove('active'));
             btn.classList.add('active');
             const t = document.getElementById(btn.dataset.target);
-            if(t) t.classList.add('active');
+            if (t) t.classList.add('active');
         });
     });
     document.getElementById('category-filter').addEventListener('change', (e) => {
         const isDb = document.getElementById('tab-db').classList.contains('active');
         const q = document.getElementById('search-input').value;
-        if(isDb) renderGrid(e.target.value, q);
+        if (isDb) renderGrid(e.target.value, q);
         else renderGuidebook(e.target.value, q);
     });
     document.getElementById('search-input').addEventListener('input', (e) => {
         const isDb = document.getElementById('tab-db').classList.contains('active');
         const cat = document.getElementById('category-filter').value;
-        if(isDb) renderGrid(cat, e.target.value);
+        if (isDb) renderGrid(cat, e.target.value);
         else renderGuidebook(cat, e.target.value);
     });
     document.getElementById('theme-toggle').addEventListener('click', () => {
         const body = document.body;
-        if(body.getAttribute('data-theme') === 'dark') body.removeAttribute('data-theme');
+        if (body.getAttribute('data-theme') === 'dark') body.removeAttribute('data-theme');
         else body.setAttribute('data-theme', 'dark');
     });
     document.getElementById('fake-exit').addEventListener('click', () => {
