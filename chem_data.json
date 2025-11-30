@@ -16,6 +16,7 @@
         "amount": 11,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -34,6 +35,7 @@
         "amount": 0.5,
         "color": "#434b4d",
         "desc": "A Silvery-Grey Metal Which Forms Iron Oxides (Rust) With Contact With Air. Commonly Alloyed With Other Elements To Create Alloys Such As Steel.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine",
@@ -55,6 +57,7 @@
         "amount": 2,
         "color": "white",
         "desc": "Tasty Spacey Sugar!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -65,6 +68,7 @@
         "amount": 3,
         "color": "#66ff33",
         "desc": "You Have Genuinely No Idea What This Is.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -92,6 +96,7 @@
         "amount": 4,
         "color": "#FFFFE5",
         "desc": "Found In Certain Meals, Good For Bodily Health.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -128,6 +133,7 @@
         "amount": 14,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -146,6 +152,7 @@
         "amount": 3,
         "color": "#a7b3d6",
         "desc": "A Silvery-White Alkali Metal. Highly Reactive In Its Pure Form.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -156,6 +163,7 @@
         "amount": 1.5,
         "color": "#a2ff00",
         "desc": "A Yellow-Green Gas Which Is Toxic To Humans.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -176,6 +184,7 @@
         "amount": 5.5,
         "color": "#66ff33",
         "desc": "You Have Genuinely No Idea What This Is.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -203,6 +212,7 @@
         "amount": 6,
         "color": "#FFFFE5",
         "desc": "Found In Certain Meals, Good For Bodily Health.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -239,6 +249,7 @@
         "amount": 4,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -257,6 +268,7 @@
         "amount": 1,
         "color": "#a1e1ff",
         "desc": "A Colorless, Odorless Unreactive Gas. Highly Stable.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -295,6 +307,7 @@
         "amount": 9,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -313,6 +326,7 @@
         "amount": 1,
         "color": "white",
         "desc": "Tasty Spacey Sugar!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -341,6 +355,7 @@
         "amount": 11,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -359,6 +374,7 @@
         "amount": 0.5,
         "color": "#b05b3c",
         "desc": "A Soft, Malleable, And Ductile Metal With Very High Thermal And Electrical Conductivity.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine",
@@ -380,6 +396,7 @@
         "amount": 2,
         "color": "white",
         "desc": "Tasty Spacey Sugar!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -390,6 +407,7 @@
         "amount": 3,
         "color": "#66ff33",
         "desc": "You Have Genuinely No Idea What This Is.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -417,6 +435,7 @@
         "amount": 4,
         "color": "#FFFFE5",
         "desc": "Found In Certain Meals, Good For Bodily Health.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -453,6 +472,7 @@
         "amount": 17,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -471,6 +491,7 @@
         "amount": 4.5,
         "color": "#a1e1ff",
         "desc": "A Colorless, Odorless Unreactive Gas. Highly Stable.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -491,6 +512,7 @@
         "amount": 2.5,
         "color": "#a2ff00",
         "desc": "A Yellow-Green Gas Which Is Toxic To Humans.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -511,6 +533,7 @@
         "amount": 6,
         "color": "#FFFFE5",
         "desc": "Found In Certain Meals, Good For Bodily Health.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -547,6 +570,7 @@
         "amount": 2,
         "color": "#8a9a5b",
         "desc": "A Fungal Growth, Often Found In Dark, Humid Places Or On Expired Bread. Will Cause You To Develop A Disease If Ingested.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -567,6 +591,7 @@
         "amount": 1,
         "color": "#FFFFE5",
         "desc": "Found In Certain Meals, Good For Bodily Health.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -585,6 +610,7 @@
         "amount": 1,
         "color": "#cf3600",
         "desc": "An Unsurprisingly Toxic Chemical. Available At An Emagged Chem Dispenser.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -635,6 +661,7 @@
         "amount": 3,
         "color": "#664330",
         "desc": "Give Your Plants Some Of Those Ez Nutrients! Dionas Find This Delicious.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -669,6 +696,7 @@
         "amount": 1,
         "color": "#3e901c",
         "desc": "A Highly Effective Fertilizer With A Limited Potency-Boosting Effect On Plants. Use It Cautiously, As Excessive Application Can Reduce Plant Yield. It Has A Particularly Beneficial Effect On Dionas.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine",
@@ -726,6 +754,7 @@
         "amount": 1,
         "color": "#3CB371",
         "desc": "A Modified Version Of Diethylamine That Can Restore Seeds On Plants At The Cost Of Potency.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -760,6 +789,7 @@
         "amount": 1,
         "color": "#5b406c",
         "desc": "A Cocktail Of Mutagenic Compounds That Gives Nutrients, Harms And Affects Plant Life'S Genome.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -804,6 +834,7 @@
         "amount": 5,
         "color": "#49002E",
         "desc": "A Harmful Toxic Mixture To Kill Plantlife. Very Effective Against Kudzu.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -851,6 +882,7 @@
         "amount": 4,
         "color": "#77b58e",
         "desc": "An Effective Fertilizer, It Gives Your Plants Some Nutrients.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -899,6 +931,7 @@
         "amount": 2,
         "color": "white",
         "desc": "Tasty Spacey Sugar!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -909,6 +942,7 @@
         "amount": 1,
         "color": "#22282b",
         "desc": "A Black, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -943,6 +977,7 @@
         "amount": 2,
         "color": "#a1000b",
         "desc": "A Very Potent Fertilizer, Treats Plants With Nutrients, Eliminates Pests, And Sometimes It Can Even Speed Up Growth.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -987,6 +1022,7 @@
         "amount": 2,
         "color": "#E7EA91",
         "desc": "An Aromatic Ring Of Carbon With A Hydroxyl Group. A Useful Precursor To Some Medicines, But Has No Healing Properties On Its Own.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -1038,6 +1074,7 @@
         "amount": 2,
         "color": "#AF14B7",
         "desc": "A Slick, Slightly Carcinogenic Liquid. Has A Multitude Of Mundane Uses In Everyday Life.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -1072,6 +1109,7 @@
         "amount": 2,
         "color": "#215263",
         "desc": "Makes Foam Such As That'S Required In Metal Foam Grenades.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -1112,6 +1150,7 @@
         "amount": 3,
         "color": "#a1000b",
         "desc": "An Extremely Corrosive Chemical Substance. Severely Burns Anyone Who Comes Directly Into Contact With It.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -1162,6 +1201,7 @@
         "amount": 3,
         "color": "#BF8C00",
         "desc": "A Corrosive Chemical. Keep Away From Your Face.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -1218,6 +1258,7 @@
         "amount": 4,
         "color": "#5050ff",
         "desc": "A Highly Corrosive Chemical, Capable Of Leaving Quite A Mark On Your Skin.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -1453,6 +1494,7 @@
         "amount": 2,
         "color": "#cfd1d0",
         "desc": "Commonly Known As Salt, Sodium Chloride Is Often Used To Season Food Or Kill Borers Instantly.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -1481,6 +1523,7 @@
         "amount": 1,
         "color": "#a2ff00",
         "desc": "A Yellow-Green Gas Which Is Toxic To Humans.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -1501,6 +1544,7 @@
         "amount": 1,
         "color": "#a7b3d6",
         "desc": "A Silvery-White Alkali Metal. Highly Reactive In Its Pure Form.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -1541,6 +1585,7 @@
         "amount": 3,
         "color": "#757245",
         "desc": "A Mixture That Becomes Extremely Hot When Ignited.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -1592,6 +1637,7 @@
         "amount": 3,
         "color": "#00ff5f",
         "desc": "Causes Mutations When Injected Into Living People Or Plants. High Doses May Be Lethal, Especially In Humans.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -1642,6 +1688,7 @@
         "amount": 3,
         "color": "#b67823",
         "desc": "Used By Chefs To Cook.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -1682,6 +1729,7 @@
         "amount": 5,
         "color": "#9e6b38",
         "desc": "A Perfluoronated Sulfonic Acid That Forms A Foam When Mixed With Water.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -1728,10 +1776,11 @@
         "amount": 4,
         "color": "#FAFAFA",
         "desc": "A More Effective Ephedrine, With More Active Downsides. Requires Less Doses To Cure Narcolepsy.",
+        "wiki": "",
         "overdose": null,
         "tags": [
-          "Medicine",
           "Narcotic",
+          "Medicine",
           "Toxin"
         ],
         "stats": [
@@ -1782,10 +1831,11 @@
         "amount": 2,
         "color": "#9A040E",
         "desc": "A Chemical Cocktail Developed By Donk Co. That Allows Agents To Recover From Stuns Faster, Move More Quickly, And Grants A Small Heal When You'Re More Dead Than Alive. Due To The Complex Nature Of The Chemical, It Is Much Harder For The Body To Purge Naturally.",
+        "wiki": "",
         "overdose": null,
         "tags": [
-          "Medicine",
-          "Narcotic"
+          "Narcotic",
+          "Medicine"
         ],
         "stats": [
           {
@@ -1847,10 +1897,11 @@
         "amount": 4,
         "color": "#D2FFFA",
         "desc": "A Caffeinated Adrenaline Stimulator Chemical That Makes You Faster And Harder To Knock Down. Also Helps Combat Narcolepsy At Dosages Over Thirty, At The Cost Of Severe Nerval Stress.",
+        "wiki": "",
         "overdose": null,
         "tags": [
-          "Medicine",
-          "Narcotic"
+          "Narcotic",
+          "Medicine"
         ],
         "stats": [
           {
@@ -1899,6 +1950,7 @@
         "amount": 2,
         "color": "#000000",
         "desc": "A Thick Chemical That Coats The Vocal Cords, Making The User Unable To Speak During Metabolization.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Narcotic"
@@ -1941,6 +1993,7 @@
         "amount": 1,
         "color": "#000067",
         "desc": "A Sedative And Hypnotic Chemical. Commonly Used To Put Other People To Sleep, Whether They Want To Or Not.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -1991,6 +2044,7 @@
         "amount": 3,
         "color": "#AAAAAA",
         "desc": "A Psychiatric Chemical Which Prevents The Patient From Directly Harming Anyone.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -2027,6 +2081,7 @@
         "amount": 1,
         "color": "#22282b",
         "desc": "A Black, Porous Solid",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -2071,6 +2126,7 @@
         "amount": 2,
         "color": "#96a8b5",
         "desc": "A Smooth Chemical That Blocks The Optical Receptors, Rendering The User Blind During Metabolization.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Narcotic"
@@ -2107,6 +2163,7 @@
         "amount": 2,
         "color": "#d5d5e4",
         "desc": "A Mildly Unstable Medicine Derived From Desoxyephedrine, Primarily Used To Combat Narcolepsy.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -2149,6 +2206,7 @@
         "amount": 3,
         "color": "#b0abaa",
         "desc": "A More Stable Medicine Than Ethyloxyephedrine. Useful For Keeping Someone Awake.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -2197,6 +2255,7 @@
         "amount": 4,
         "color": "white",
         "desc": "A White, Odorless, Water-Soluble Salt That Yields An Alkaline Solution In Water.  Also Known As Soda Ash.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2231,6 +2290,7 @@
         "amount": 1,
         "color": "#E7EA91",
         "desc": "An Aromatic, Slightly Carcinogenic, Ring Of Carbon, Forming A Base For Many Organic Compounds.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -2275,6 +2335,7 @@
         "amount": 2,
         "color": "white",
         "desc": "A Strong Alkaline Chemical, Forming A Base For Many Organic Compounds.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2309,6 +2370,7 @@
         "amount": 2,
         "color": "white",
         "desc": "A White, Odorless, Water-Soluble Salt That Yields An Strong Alkaline Solution In Water. Causes Burns And Vomiting When Ingested.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine",
@@ -2354,6 +2416,7 @@
         "amount": 2,
         "color": "#434b4d",
         "desc": "An Intermetallic Compound With Unusual Magnetic Properties At Low Temperatures.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2394,6 +2457,7 @@
         "amount": 4,
         "color": "#F0F0F0",
         "desc": "A Super-Absorbent Polymer With Assorted Industrial Uses.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -2430,6 +2494,7 @@
         "amount": 1,
         "color": "#128e80",
         "desc": "A Highly Effective Sedative And Hypnotic, Developed By The Syndicate For Stealth Operations. One-Way Ticket To Honk-Shoo Town.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Narcotic"
@@ -2466,6 +2531,7 @@
         "amount": 1,
         "color": "#FDD023",
         "desc": "A Highly Dangerous Metallic Mixture Which Can Interfere With Most Movement Through An Electrifying Current.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -2502,6 +2568,7 @@
         "amount": 2,
         "color": "#827394",
         "desc": "Mixture Of Glue And Artifexium. It Can Restore Durability Of Nodes In Artifact On Touch.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2536,6 +2603,7 @@
         "amount": 2,
         "color": "#e5420b",
         "desc": "A Translucent, Orange, Alkaline Solution Used In Traditional Soap Production.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -2586,6 +2654,7 @@
         "amount": 5,
         "color": "#a1000b",
         "desc": "Heavy Duty Cleaner That Can Clean Tiles Better Than Space Cleaner. Extremely Toxic When Ingested.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -2625,6 +2694,7 @@
         "amount": 1,
         "color": "#77b58e",
         "desc": "An Effective Fertilizer, It Gives Your Plants Some Nutrients.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -2679,6 +2749,7 @@
         "amount": 2,
         "color": "#c8ff69",
         "desc": "This Is Able To Clean Almost All Surfaces Of Almost Anything That May Dirty Them. The Janitor Is Likely To Appreciate Refills.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2719,6 +2790,7 @@
         "amount": 5,
         "color": "#77b58e",
         "desc": "Space Lube Is A High Performance Lubricant Intended For Maintenance Of Extremely Complex Mechanical Equipment (And Certainly Not Used To Make People Slip).",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2753,6 +2825,7 @@
         "amount": 3,
         "color": "#365000",
         "desc": "A Drink For The Daring, Can Be Deadly If Incorrectly Prepared!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2793,6 +2866,7 @@
         "amount": 3,
         "color": "#FFFDD0",
         "desc": "You Might Want To Get That Checked Out At Med.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2827,6 +2901,7 @@
         "amount": 3,
         "color": "#00664d",
         "desc": "A Drink Made From Your Allies, Not As Sweet As When Made From Your Enemies.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2867,6 +2942,7 @@
         "amount": 5,
         "color": "#124da7",
         "desc": "Official Drink Of The Gun Club!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2907,6 +2983,7 @@
         "amount": 3,
         "color": "#665700",
         "desc": "A Nice, Strangely Named Drink.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2947,6 +3024,7 @@
         "amount": 4,
         "color": "#ff7d63",
         "desc": "Ultimate Refreshment.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -2981,6 +3059,7 @@
         "amount": 2,
         "color": "#d8cc5d",
         "desc": "Now Watch This Drive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3015,6 +3094,7 @@
         "amount": 10,
         "color": "#666300",
         "desc": "Nuclear Proliferation Never Tasted So Good.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3055,6 +3135,7 @@
         "amount": 3,
         "color": "#664300",
         "desc": "Coffee, Irish Cream, And Cognac. You Will Get Bombed.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3089,6 +3170,7 @@
         "amount": 4,
         "color": "#dede73",
         "desc": "A Tider'S Preferred Drink.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3135,6 +3217,7 @@
         "amount": 5,
         "color": "#47687b",
         "desc": "Aloha! Does That Mean Hello Or Goodbye?",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3175,6 +3258,7 @@
         "amount": 3,
         "color": "#B5A642",
         "desc": "Not Even Ratvar'S Four Generals Could Withstand This! Qevax Jryy!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3233,6 +3317,7 @@
         "amount": 6,
         "color": "#FF7F3B",
         "desc": "Tropical Cocktail.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3273,6 +3358,7 @@
         "amount": 3,
         "color": "#ff66cc",
         "desc": "A Cassis Milkshake, Made From Cream, Fruit Juice, And Vermouth Wine.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3313,6 +3399,7 @@
         "amount": 3,
         "color": "#ffff91",
         "desc": "A Drink From Clown Heaven.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3353,6 +3440,7 @@
         "amount": 2,
         "color": "#664300",
         "desc": "Deny Drinking This And Prepare For The Law.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3387,6 +3475,7 @@
         "amount": 3,
         "color": "#360000",
         "desc": "For The Lactose-Intolerant. Still As Classy As A White Russian.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3427,6 +3516,7 @@
         "amount": 6,
         "color": "#df6a50",
         "desc": "A Strange Yet Pleasurable Mixture Made Of Vodka, Tomato, And Lime Juice.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3473,6 +3563,7 @@
         "amount": 5,
         "color": "#99ff00",
         "desc": "Ewww...",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3507,6 +3598,7 @@
         "amount": 3,
         "color": "#664300",
         "desc": "It'S Just As Effective As Dutch-Courage!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3547,6 +3639,7 @@
         "amount": 3,
         "color": "#d68829",
         "desc": "The Orange-Flavoured Cousin Of The Manhattan And Martini.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3581,6 +3674,7 @@
         "amount": 2,
         "color": "#664300",
         "desc": "A Nice, Strong And Tasty Beverage While You Are Reading.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3615,6 +3709,7 @@
         "amount": 3,
         "color": "#cccbc8",
         "desc": "Rum With Coconut For That Tropical Feel.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3655,6 +3750,7 @@
         "amount": 3,
         "color": "#f73030",
         "desc": "Even In The Worst Situations, Nothing Beats A Fresh Cosmopolitan.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3695,6 +3791,7 @@
         "amount": 3,
         "color": "#FFEABF",
         "desc": "Sweet, Syrupy Version Of Coconut Cream With Added Sugar.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3729,6 +3826,7 @@
         "amount": 2,
         "color": "#0a0a33",
         "desc": "A Stygian Drink, Harkening Back To The Abyssopelagic. Dark And Cold, It Serves As A Reminder That The Most Ancient Emotion Is Fear, And The Strongest Type Of Fear Is That Of The Unknown.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3763,6 +3861,7 @@
         "amount": 3,
         "color": "#3E1B00",
         "desc": "Rum, Mixed With Cola. Viva La Revolucion.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3797,6 +3896,7 @@
         "amount": 2,
         "color": "#cf7f17",
         "desc": "You Can Almost Hear The Thunder.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3843,6 +3943,7 @@
         "amount": 4,
         "color": "#a70000",
         "desc": "Ahhhh!!!!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3883,6 +3984,7 @@
         "amount": 3,
         "color": "#ff0033",
         "desc": "Creepy Time!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -3935,6 +4037,7 @@
         "amount": 6,
         "color": "#FF8CFF",
         "desc": "A Gulp A Day Keeps The Medibot Away. That'S Probably For The Best.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -3980,6 +4083,7 @@
         "amount": 2,
         "color": "#2E6671",
         "desc": "Only For The Experienced. You Think You See Sand Floating In The Glass.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4020,6 +4124,7 @@
         "amount": 10,
         "color": "#e6d6bc",
         "desc": "Not Enough Egg.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4060,6 +4165,7 @@
         "amount": 6,
         "color": "#3097cf",
         "desc": "Fun Shark Fact: Selachians Make Up 20% Of Space Station 16\u2019S Engineering Staff!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4112,6 +4218,7 @@
         "amount": 6,
         "color": "#67bc50",
         "desc": "The Surprise Is, It'S Green!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4140,6 +4247,7 @@
         "amount": 6,
         "color": "#cccccc",
         "desc": "A Light, Flammable Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4150,6 +4258,7 @@
         "amount": 2,
         "color": "#22282b",
         "desc": "A Black, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4160,6 +4269,7 @@
         "amount": 1,
         "color": "#c4f5ff",
         "desc": "An Oxidizing, Colorless Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -4217,6 +4327,7 @@
         "amount": 3,
         "color": "#deb928",
         "desc": "A Highly Processed Liquid Substance Barely-Passing Intergalatic Health Standards For A Soft Drink.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -4279,6 +4390,7 @@
         "amount": 5,
         "color": "#9cc8b4",
         "desc": "Whoah, This Stuff Looks Volatile!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4319,6 +4431,7 @@
         "amount": 3,
         "color": "#664300",
         "desc": "Refreshingly Lemony, Deliciously Dry.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4353,6 +4466,7 @@
         "amount": 3,
         "color": "#004166",
         "desc": "An All Time Classic, Mild Cocktail.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4387,6 +4501,7 @@
         "amount": 10,
         "color": "#FFFF91",
         "desc": "100 Proof Cinnamon Schnapps, Made For Alcoholic Teen Girls On Spring Break.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4427,6 +4542,7 @@
         "amount": 4,
         "color": "#e3e77b",
         "desc": "Watered-Down Rum, Pirate Approved!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4461,6 +4577,7 @@
         "amount": 2,
         "color": "#6eaa0c",
         "desc": "You Just Don'T Get It Maaaan.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4501,6 +4618,7 @@
         "amount": 3,
         "color": "#664e00",
         "desc": "Either Someone'S Failure At Cocktail Making Or Attempt In Alchohol Production. In Any Case, Do You Really Want To Drink That?",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4535,6 +4653,7 @@
         "amount": 2,
         "color": "#664300",
         "desc": "Smells Like The Holidays!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4575,6 +4694,7 @@
         "amount": 3,
         "color": "#fffbd6",
         "desc": "It Was Either This Or The Microwave, And Nobody Wants Ice Cream Soup!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4609,6 +4729,7 @@
         "amount": 5,
         "color": "#664300",
         "desc": "A Beer Which Is So Cold The Air Around It Freezes.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4643,6 +4764,7 @@
         "amount": 10,
         "color": "#664300",
         "desc": "A Beer Which Is So Cold The Air Around It Freezes.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4677,6 +4799,7 @@
         "amount": 3,
         "color": "#102838",
         "desc": "Coffee And Ice, Refreshing And Cool.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4711,6 +4834,7 @@
         "amount": 3,
         "color": "#5B821B",
         "desc": "Cold Green Tea.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4745,6 +4869,7 @@
         "amount": 3,
         "color": "#6C3916",
         "desc": "No Relation To A Certain Rap Artist/Actor.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4779,6 +4904,7 @@
         "amount": 2,
         "color": "#71672e99",
         "desc": "Like A Bool In A Ireland Shop.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4813,6 +4939,7 @@
         "amount": 2,
         "color": "#2E6671",
         "desc": "What'S Black And White And Red All Over?",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4847,6 +4974,7 @@
         "amount": 2,
         "color": "#664300",
         "desc": "Coffee Served With Irish Cream. Regular Cream Just Isn'T The Same!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4881,6 +5009,7 @@
         "amount": 3,
         "color": "#664300",
         "desc": "Whiskey-Imbued Cream. What Else Could You Expect From The Irish.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4927,6 +5056,7 @@
         "amount": 4,
         "color": "#f53b3b",
         "desc": "Excessively Red.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -4973,6 +5103,7 @@
         "amount": 6,
         "color": "#f27c3d",
         "desc": "Despite The Name, It\u2019S Not Exceptionally Popular Among Voxes.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5007,6 +5138,7 @@
         "amount": 2,
         "color": "#360606",
         "desc": "A High-Class Cuba Libre, For The Discerning Alcoholic.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5047,6 +5179,7 @@
         "amount": 3,
         "color": "#CCCC99",
         "desc": "The Soda Should Be Orange! No, It Should Be Lemon-Lime!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5087,6 +5220,7 @@
         "amount": 3,
         "color": "#FFFF00",
         "desc": "Drink Using Lemon Juice, Water, And A Sweetener Such As Cane Sugar Or Honey.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5127,6 +5261,7 @@
         "amount": 3,
         "color": "#878F00",
         "desc": "Tangy Lime And Lemon Soda.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5173,6 +5308,7 @@
         "amount": 6,
         "color": "#664300",
         "desc": "The Liquor Cabinet, Brought Together In A Delicious Mix. Intended For Middle-Aged Alcoholic Women Only.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5207,6 +5343,7 @@
         "amount": 3,
         "color": "#664300",
         "desc": "The Detective'S Undercover Drink Of Choice. He Never Could Stomach Gin...",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5241,6 +5378,7 @@
         "amount": 10,
         "color": "#664300",
         "desc": "A Scientist'S Drink Of Choice, For Pondering Ways To Blow Up The Ship.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5275,6 +5413,7 @@
         "amount": 3,
         "color": "#664300",
         "desc": "Beer And Ale, Brought Together In A Delicious Mix. Intended For Stout Dwarves Only.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5309,6 +5448,7 @@
         "amount": 3,
         "color": "#8CFF8C",
         "desc": "On The Rocks With Salt On The Rim. Arriba~!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5343,6 +5483,7 @@
         "amount": 3,
         "color": "#664300",
         "desc": "Vermouth With Gin. Not Quite How 007 Enjoyed It, But Still Delicious.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5377,6 +5518,7 @@
         "amount": 2,
         "color": "#664300",
         "desc": "A Viking'S Drink, Though A Cheap One.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5423,6 +5565,7 @@
         "amount": 4,
         "color": "#3ea99888",
         "desc": "If It'S Good Enough For Spesscuba, It'S Good Enough For You.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5469,6 +5612,7 @@
         "amount": 4,
         "color": "#d6b929",
         "desc": "You\u2019Ve Got To Wonder How The Monkeys Feel About This Drink.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5509,6 +5653,7 @@
         "amount": 3,
         "color": "#d1d7d155",
         "desc": "Artisanal Homemade Liquor. What Could Go Wrong?",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5543,6 +5688,7 @@
         "amount": 5,
         "color": "#100800",
         "desc": "Cola, Cola Never Changes.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -5581,6 +5727,7 @@
         "amount": 2,
         "color": "#422912",
         "desc": "A Rapid-Acting Emetic. Useful For Stopping Unmetabolized Poisons, Or Mass-Vomiting Sessions.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -5593,6 +5740,7 @@
         "amount": 2,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -5611,6 +5759,7 @@
         "amount": 2,
         "color": "white",
         "desc": "Tasty Spacey Sugar!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5621,6 +5770,7 @@
         "amount": 1,
         "color": "#8fa191",
         "desc": "A Grey Metallic Chemical Element In The Actinide Series, Weakly Radioactive.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -5665,6 +5815,7 @@
         "amount": 10,
         "color": "#585840",
         "desc": "Tequila With Silver In It, A Favorite Of Alcoholic Women In The Club Scene.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5711,6 +5862,7 @@
         "amount": 6,
         "color": "#e6cb47",
         "desc": "A Cure For What Ails You.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5757,6 +5909,7 @@
         "amount": 6,
         "color": "#e8dba4",
         "desc": "For Getting Lost In The Rain.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5797,6 +5950,7 @@
         "amount": 3,
         "color": "#B3B599",
         "desc": "Poor Warriors' Drink From A Forgotten Era.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5831,6 +5985,7 @@
         "amount": 2,
         "color": "#edff2b",
         "desc": "A Simple But Staple Classic, Straight Out Of Space-Germany.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5865,6 +6020,7 @@
         "amount": 2,
         "color": "#bc5550",
         "desc": "The True Viking'S Drink! Even Though It Has A Strange Red Color.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5899,6 +6055,7 @@
         "amount": 2,
         "color": "#485000",
         "desc": "The Secret Of The Sanctuary Of The Librarian...",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5933,6 +6090,7 @@
         "amount": 3,
         "color": "#4f361f",
         "desc": "Root Beer, But Now With Ice Cream On Top. It Truly Is The Magnum Opus Of Canadian Summertime Drinks.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -5967,6 +6125,7 @@
         "amount": 3,
         "color": "#262019",
         "desc": "Solid Proof That There Is Something Known As Too Sweet.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6007,6 +6166,7 @@
         "amount": 4,
         "color": "#f0d74a",
         "desc": "A Popular Drink Amongst Those Adhering To An All Synthetic Diet.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6041,6 +6201,7 @@
         "amount": 2,
         "color": "#004166",
         "desc": "A Spicy Vodka! Might Be A Little Hot For The Little Guys!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6075,6 +6236,7 @@
         "amount": 3,
         "color": "#A68310",
         "desc": "Vodka, Mixed With Plain Ol' Orange Juice. The Result Is Surprisingly Delicious.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6109,6 +6271,7 @@
         "amount": 3,
         "color": "#af2221",
         "desc": "A Favorite Amongst Younger Members Of The Crew.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6149,6 +6312,7 @@
         "amount": 3,
         "color": "#878787",
         "desc": "A Drink From Mime Heaven.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6183,6 +6347,7 @@
         "amount": 2,
         "color": "#FFFFFF",
         "desc": "A Cold Refreshment.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6217,6 +6382,7 @@
         "amount": 6,
         "color": "#619494",
         "desc": "A Container Of Club Soda. Why Not Make A Scotch And Soda?",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6251,6 +6417,7 @@
         "amount": 2,
         "color": "#664300",
         "desc": "A Coffee Drink Made With Espresso And Steamed Soy Milk.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6285,6 +6452,7 @@
         "amount": 3,
         "color": "#9F3400",
         "desc": "A Sweet, Orange Flavored Soft Drink.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6325,6 +6493,7 @@
         "amount": 3,
         "color": "#00A86B",
         "desc": "'Comprised Of: White Soda, Blue Cura\u00e7ao, Melon Liquor.'",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6359,6 +6528,7 @@
         "amount": 2,
         "color": "#e3e77b",
         "desc": "Somebody Set Us Up The Bomb!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6393,6 +6563,7 @@
         "amount": 6,
         "color": "#8a5a3a",
         "desc": "A Drink Made By Boiling Leaves Of The Tea Tree, Camellia Sinensis.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6427,6 +6598,7 @@
         "amount": 3,
         "color": "#FFE48C",
         "desc": "Tequila And Orange Juice. Much Like A Screwdriver, Only Mexican.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6461,6 +6633,7 @@
         "amount": 10,
         "color": "#666340",
         "desc": "\"Made For A Woman, Strong Enough For A Man.\"",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6495,6 +6668,7 @@
         "amount": 2,
         "color": "#1c8c40",
         "desc": "Perfect For Pirates Who\u2019Ve Been Selected As The Designated Driver. Yarr!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6535,6 +6709,7 @@
         "amount": 5,
         "color": "#665c00",
         "desc": "This Thing Is On Fire! Call The Damn Shuttle!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6581,6 +6756,7 @@
         "amount": 6,
         "color": "#b51b1b",
         "desc": "Popular In Mexico And Transylvania.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6615,6 +6791,7 @@
         "amount": 3,
         "color": "#004666",
         "desc": "Vodka Instead Of Gin. Not Quite How 007 Enjoyed It, But Still Delicious.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6649,6 +6826,7 @@
         "amount": 3,
         "color": "#c4c27655",
         "desc": "Because Heart Failure And Liver Failure Go Hand In Hand.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6683,6 +6861,7 @@
         "amount": 3,
         "color": "#0064C8",
         "desc": "For When A Gin And Tonic Isn'T Russian Enough.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6717,6 +6896,7 @@
         "amount": 3,
         "color": "#3E1B00",
         "desc": "Whiskey, Mixed With Cola. Surprisingly Refreshing.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6757,6 +6937,7 @@
         "amount": 3,
         "color": "#d49dca",
         "desc": "If You Want To Be Awake, This Will Do It... Also Sweet.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6791,6 +6972,7 @@
         "amount": 2,
         "color": "#A68340",
         "desc": "That'S Just, Like, Your Opinion, Man...",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6825,6 +7007,7 @@
         "amount": 3,
         "color": "#533600",
         "desc": "For The More Refined Griffon.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6859,6 +7042,7 @@
         "amount": 3,
         "color": "#4d6600",
         "desc": "The Perfect Drink Before An Expedition.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6893,6 +7077,7 @@
         "amount": 6,
         "color": "#664300",
         "desc": "Hot Noodles.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6927,6 +7112,7 @@
         "amount": 2,
         "color": "#e7c69f",
         "desc": "A Sickening Mixture Of Milk And Cola.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -6973,6 +7159,7 @@
         "amount": 6,
         "color": "#75b1f0",
         "desc": "The Edgerunner Legend. Remembered By A Drink, Forgotten By A Drunk.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7007,6 +7194,7 @@
         "amount": 2,
         "color": "#d1d1d155",
         "desc": "Clear Distilled Alcoholic Beverage That Originates From Poland And Russia.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7035,6 +7223,7 @@
         "amount": 2,
         "color": "#cccccc",
         "desc": "A Light, Flammable Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7045,6 +7234,7 @@
         "amount": 1,
         "color": "#c4f5ff",
         "desc": "An Oxidizing, Colorless Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -7096,6 +7286,7 @@
         "amount": 3,
         "color": "#e5d27e",
         "desc": "A Sickening Mixture Of Milk And Beer. Makes You Feel Like You'Re Made Of Wood.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7142,6 +7333,7 @@
         "amount": 4,
         "color": "#6c2828",
         "desc": "A Sweet, Carbonated Soft Drink.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7188,6 +7380,7 @@
         "amount": 4,
         "color": "#E6EE9C",
         "desc": "The S\u00e3o Paulo Special, Straight From Old Brazil.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7228,6 +7421,7 @@
         "amount": 6,
         "color": "#DAC865",
         "desc": "A Classic Rum Cocktail Which Remains Popular Even In The Cold Reaches Of Space.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7262,6 +7456,7 @@
         "amount": 3,
         "color": "#57A87D",
         "desc": "\"Pour One Jigger Absinthe Into A Champagne Glass. Add Iced Champagne Until It Attains The Proper Opalescent Milkiness. Drink Three To Five Of These Slowly.\" - Ernest Hemingway",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7308,6 +7503,7 @@
         "amount": 6,
         "color": "#900296",
         "desc": "A More Refined Take On The Mimosa. Just The Thing Marie Antoinette Might'Ve Sipped On Before The Revolution.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7342,6 +7538,7 @@
         "amount": 2,
         "color": "#170a0c",
         "desc": "To Wake You Up And Wind You Down. Garnished With Coffee Beans And Icy-Cold.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7376,6 +7573,7 @@
         "amount": 2,
         "color": "#6FBE44",
         "desc": "An Affront To God And Man. Do Not Drink It.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -7418,6 +7616,7 @@
         "amount": 3,
         "color": "#939393",
         "desc": "It Has An Orange Tang So Sour You Just Can'T Describe It.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7452,6 +7651,7 @@
         "amount": 3,
         "color": "#FFCA48",
         "desc": "Perfect For A Lively Brunch Out With The Girls.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7492,6 +7692,7 @@
         "amount": 6,
         "color": "#CECBAD",
         "desc": "A Surpsingly Strong And Refreshing Mixed Drink, Served In An Iconic Copper Mug.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7526,6 +7727,7 @@
         "amount": 6,
         "color": "#DCE2DE",
         "desc": "A Strong Cocktail Mixed Into A Murky Blend. A Secret Favorite Of Tortured Authors.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7572,6 +7774,7 @@
         "amount": 6,
         "color": "#8B7941",
         "desc": "What'S The Secret Ingredient? Eggs. It'S Eggs.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7612,6 +7815,7 @@
         "amount": 4,
         "color": "#d17844",
         "desc": "It Gets In Your Head. Your He-Eyeh-Ead.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -7658,6 +7862,7 @@
         "amount": 4,
         "color": "#331303",
         "desc": "You Didn'T Think It Was Possible For A Liquid To Be So Utterly Revolting. Are You Sure About This...?",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -8048,6 +8253,7 @@
         "amount": 3,
         "color": "red",
         "desc": "Made From Pureed Tomatoes And Flavored With Spices.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8088,6 +8294,7 @@
         "amount": 15,
         "color": "#f9f5e5",
         "desc": "Creamy Sauce, Made From Oil, Egg, And Some (Edible) Acid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8128,6 +8335,7 @@
         "amount": 15,
         "color": "#f9f5e5",
         "desc": "Creamy Sauce, Made From Oil, Egg, And Some (Edible) Acid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8162,6 +8370,7 @@
         "amount": 2,
         "color": "#ffdb58",
         "desc": "Basic Yellow Mustard, Made From The Seeds Of The Mustard Plant.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8196,6 +8405,7 @@
         "amount": 2,
         "color": "#fba399",
         "desc": "So-Called Russian Dressing, Popular Among Space Americans.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8236,6 +8446,7 @@
         "amount": 3,
         "color": "darkred",
         "desc": "Hand Wipes Not Included.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8276,6 +8487,7 @@
         "amount": 3,
         "color": "red",
         "desc": "Burns So Good.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8316,6 +8528,7 @@
         "amount": 3,
         "color": "skyblue",
         "desc": "Leaves The Tongue Numb In Its Passage.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8350,6 +8563,7 @@
         "amount": 2,
         "color": "tan",
         "desc": "Often Used To Flavor Food.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8384,6 +8598,7 @@
         "amount": 3,
         "color": "saddlebrown",
         "desc": "A Salty Soy-Based Flavoring.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8424,6 +8639,7 @@
         "amount": 3,
         "color": "#efdaae",
         "desc": "A Basic Salad Dressing Made With Oil, Vinegar And Seasoning.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8452,6 +8668,7 @@
         "amount": 5,
         "color": "white",
         "desc": "Tasty Spacey Sugar!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8462,6 +8679,7 @@
         "amount": 5,
         "color": "#c6c8cc",
         "desc": "A Soft, Shiny Grey Metal. Even More Reactive Than Lithium.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8490,6 +8708,7 @@
         "amount": 6,
         "color": "#d8d8b0",
         "desc": "No Matter How It Was Obtained, Its Application Is Important.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8500,6 +8719,7 @@
         "amount": 3,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -8518,6 +8738,7 @@
         "amount": 1,
         "color": "#FFFFE5",
         "desc": "Found In Certain Meals, Good For Bodily Health.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -8554,6 +8775,7 @@
         "amount": 2,
         "color": "#fff385",
         "desc": "A Yellow, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -8574,6 +8796,7 @@
         "amount": 1,
         "color": "#22282b",
         "desc": "A Black, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8584,6 +8807,7 @@
         "amount": 1,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -8620,6 +8844,7 @@
         "amount": 2,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -8638,6 +8863,7 @@
         "amount": 2,
         "color": "#22282b",
         "desc": "A Black, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8648,6 +8874,7 @@
         "amount": 1,
         "color": "white",
         "desc": "Tasty Spacey Sugar!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8676,6 +8903,7 @@
         "amount": 5,
         "color": "#22282b",
         "desc": "A Black, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8686,6 +8914,7 @@
         "amount": 10,
         "color": "#cccccc",
         "desc": "A Light, Flammable Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8696,6 +8925,7 @@
         "amount": 1,
         "color": "#c4f5ff",
         "desc": "An Oxidizing, Colorless Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -8741,6 +8971,7 @@
         "amount": 2,
         "color": "#22282b",
         "desc": "A Black, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8751,6 +8982,7 @@
         "amount": 4,
         "color": "#cccccc",
         "desc": "A Light, Flammable Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8761,6 +8993,7 @@
         "amount": 3,
         "color": "#f5da9a",
         "desc": "A Reactive Metal Used In Pyrotechnics And Weapons.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8771,6 +9004,7 @@
         "amount": 1,
         "color": "#c4f5ff",
         "desc": "An Oxidizing, Colorless Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -8816,6 +9050,7 @@
         "amount": 2,
         "color": "#22282b",
         "desc": "A Black, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8826,6 +9061,7 @@
         "amount": 4,
         "color": "#cccccc",
         "desc": "A Light, Flammable Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8836,6 +9072,7 @@
         "amount": 3,
         "color": "#f5da9a",
         "desc": "A Reactive Metal Used In Pyrotechnics And Weapons.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8846,6 +9083,7 @@
         "amount": 1,
         "color": "#c4f5ff",
         "desc": "An Oxidizing, Colorless Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -8891,6 +9129,7 @@
         "amount": 1,
         "color": "#22282b",
         "desc": "A Black, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8901,6 +9140,7 @@
         "amount": 1,
         "color": "#75b1f0",
         "desc": "A Colorless Liquid That Humans Need In Order To Survive.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -8919,6 +9159,7 @@
         "amount": 2,
         "color": "#a1e1ff",
         "desc": "A Colorless, Odorless Unreactive Gas. Highly Stable.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -8957,6 +9198,7 @@
         "amount": 1,
         "color": "#DFD7AF",
         "desc": "The Fatty, Still Liquid Part Of Milk. Why Don'T You Mix This With Sum Scotch, Eh?",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -8991,6 +9233,7 @@
         "amount": 3,
         "color": "#800000",
         "desc": "A Mystical Chemical, Usually Outsourced From The Clown Planet, That Covers Everything It Touches In Carpet. Somehow Filters Out Carpotoxin From The Blood Stream.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9045,6 +9288,7 @@
         "amount": 3,
         "color": "#FFD35D",
         "desc": "Liquid Bees. Oh God It'S Liquid Bees No-",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9125,6 +9369,7 @@
         "amount": 2,
         "color": "#ffffff",
         "desc": "Space Glue Is A High Performance Glue Intended For Maintenance Of Extremely Complex Mechanical Equipment (And Certainly Not Used To Make People Stick To The Floor).",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Narcotic"
@@ -9161,6 +9406,7 @@
         "amount": 1,
         "color": "#FDD023",
         "desc": "A Synthetic Battery Acid. It Looks... Electrifying.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9226,6 +9472,7 @@
         "amount": 5,
         "color": "#bed8e6",
         "desc": "Frozen Water.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -9284,6 +9531,7 @@
         "amount": 5,
         "color": "#b3f1ff",
         "desc": "A Mysterious Compound That Slows The Vibration Of Atoms And Molecules... Somehow. In Layman'S Terms, It Makes Things Cold... Really Cold. Can Cause Long-Lasting Movement Issues If Ingested.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9329,6 +9577,7 @@
         "amount": 3,
         "color": "#22282b",
         "desc": "A Black, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -9339,6 +9588,7 @@
         "amount": 2,
         "color": "white",
         "desc": "Tasty Spacey Sugar!",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -9373,6 +9623,7 @@
         "amount": 2,
         "color": "#FF4DD2",
         "desc": "Some Say That This Is The Best Medicine, But Recent Studies Have Proven That To Be Untrue.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -9542,6 +9793,7 @@
         "amount": 2,
         "color": "#ed9715",
         "desc": "Tastes Like Dog Food. Clearly An Acquired Taste.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9598,6 +9850,7 @@
         "amount": 2,
         "color": "#d8bed8",
         "desc": "A Type Of Carcinogenic Enzyme Known To Break Down Proteins Found Within The Vocal Cords Of Most Animals. Mixing Is Not Recommended.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9654,6 +9907,7 @@
         "amount": 2,
         "color": "#b87333",
         "desc": "A Type Of Carcinogenic Enzyme Known To Break Down Proteins Found Within The Vocal Cords Of Most Animals. Mixing Is Not Recommended.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9698,6 +9952,7 @@
         "amount": 2,
         "color": "#e3fffb",
         "desc": "A Strange, Non-Newtonian Chemical. It Is Produced When Two Conflicting Brute Medications Are Combined. When Force Is Applied To It, It Temporarily Hardens Creating Millions Of Tiny, Sharp Edges. Very Painful.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9736,6 +9991,7 @@
         "amount": 1,
         "color": "#22282b",
         "desc": "A Black, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -9746,6 +10002,7 @@
         "amount": 2,
         "color": "#c4f5ff",
         "desc": "An Oxidizing, Colorless Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9791,6 +10048,7 @@
         "amount": 2,
         "color": "#a1e1ff",
         "desc": "A Colorless, Odorless Unreactive Gas. Highly Stable.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9811,6 +10069,7 @@
         "amount": 1,
         "color": "#c4f5ff",
         "desc": "An Oxidizing, Colorless Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -9868,6 +10127,7 @@
         "amount": 3,
         "color": "#3a1d8a",
         "desc": "A Broad-Spectrum Anti-Toxin, Which Treats Toxin Damage In Organisms. Overdosing Will Cause Vomiting, Dizzyness And Pain.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -9919,6 +10179,7 @@
         "amount": 3,
         "color": "#2d5708",
         "desc": "Neutralises The Effects Of Alcohol In The Blood Stream. Though It Is Commonly Needed, It Is Rarely Requested.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -9969,6 +10230,7 @@
         "amount": 3,
         "color": "#081a80",
         "desc": "Causes Confusion And Dizziness.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10005,6 +10267,7 @@
         "amount": 2,
         "color": "#bd5902",
         "desc": "A Mildly Unstable Medication Used For The Most Extreme Case Of Radiation Poisoning. Exerts Minor Stress On The Body.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10050,6 +10313,7 @@
         "amount": 2,
         "color": "#ffaa00",
         "desc": "An Analgesic Which Is Highly Effective At Treating Brute Damage. It'S Useful For Stabilizing People Who Have Been Severely Beaten, As Well As Treating Less Life-Threatening Injuries.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10101,6 +10365,7 @@
         "amount": 3,
         "color": "#0091ff",
         "desc": "Required For The Proper Function Of Cryogenics. Heals All Standard Types Of Damage, But Only Works In Temperatures Under 213K. It Can Treat And Rejuvenate Plants When Applied In Small Doses.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10148,6 +10413,7 @@
         "amount": 2,
         "color": "#32cd32",
         "desc": "A Cryogenics Chemical. Heals Cellular Damage Caused By Dangerous Gasses And Chemicals.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10204,6 +10470,7 @@
         "amount": 4,
         "color": "#d2fffa",
         "desc": "An Effective Stabilizing Chemical Used To Keep A Critical Person From Dying To Asphyxiation While Patching Up Minor Damage During Crit. Flushes Heartbreaker Toxin Out The Blood Stream At The Cost Of More Epinephrine, But May Add Histamine. Helps Reduce Stun Time. Commonly Found In The Form Of Emergency Medipens.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10259,6 +10526,7 @@
         "amount": 3,
         "color": "#215263",
         "desc": "An Advanced Chemical That Is More Effective At Treating Burn Damage Than Kelotane.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10308,6 +10576,7 @@
         "amount": 3,
         "color": "#0041a8",
         "desc": "Used For Treating Minor Oxygen Deprivation And Bloodloss. A Required Reagent For Dexalin Plus.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10361,6 +10630,7 @@
         "amount": 3,
         "color": "#4da0bd",
         "desc": "Used In Treatment Of Extreme Cases Of Oxygen Deprivation And Bloodloss. Flushes Heartbreaker Toxin Out Of The Blood Stream.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10408,6 +10678,7 @@
         "amount": 2,
         "color": "#4cb580",
         "desc": "A Weak Treatment For Radiation Damage. A Precursor To Arithrazine And Phalanximine. Can Cause Vomiting.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10459,6 +10730,7 @@
         "amount": 3,
         "color": "#731024",
         "desc": "Inaprovaline Is A Synaptic Stimulant And Cardiostimulant, Commonly Used To Treat Asphyxiation Damage Caused During Critical States And Reduce Bleeding. Used In Many Advanced Medicines.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10509,6 +10781,7 @@
         "amount": 2,
         "color": "#422912",
         "desc": "A Rapid-Acting Emetic. Useful For Stopping Unmetabolized Poisons, Or Mass-Vomiting Sessions.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10551,6 +10824,7 @@
         "amount": 3,
         "color": "#ba7d7d",
         "desc": "A Blood-Clotting Medicine Used To Prevent Profuse Bleeding. Causes Heavier Bleeding On Overdose. Commonly Found In Small Doses Within Emergency Medipens.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10595,6 +10869,7 @@
         "amount": 2,
         "color": "#bf3d19",
         "desc": "Treats Burn Damage. Overdosing Greatly Reduces The Body'S Ability To Retain Water.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10647,6 +10922,7 @@
         "amount": 2,
         "color": "#ff7db5",
         "desc": "A Chemical Used To Stabilize Body Temperature And Rapidly Cure Cold Damage. Great For Unprotected Eva Travel, But Prevents The Use Of Cryogenic Tubes.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10697,6 +10973,7 @@
         "amount": 3,
         "color": "#c8ff75",
         "desc": "An Advanced Chemical Used In The Treatment Of Cancer. Causes Moderate Radiation Poisoning, Acid Burns, And Vomiting On Organics. Can Potentially Remove The Death Gene On Plants.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10751,6 +11028,7 @@
         "amount": 4,
         "color": "#86caf7",
         "desc": "A Highly Engineered Substance Able To Halt The Progression Of A Zombie Infection.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10787,6 +11065,7 @@
         "amount": 10,
         "color": "#1274b5",
         "desc": "Further Engineered With Omnizine, Inoculates The Living Against The Infection.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10829,6 +11108,7 @@
         "amount": 3,
         "color": "#d49a2f",
         "desc": "A Toxic Chemical That Halves The Duration Of Stuns And Knockdowns.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -10873,6 +11153,7 @@
         "amount": 2,
         "color": "#00e5ff",
         "desc": "A Wide-Spectrum Stimulant, Originally Derived From Cordrazine. Treats Minor Damage Of All Basic Health Types As Long As The User Is Not Heavily Wounded. Best Used As An Additive To Other Chemicals.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -10921,6 +11202,7 @@
         "amount": 2,
         "color": "#5f959c",
         "desc": "A Hallucinogenic Compound Derived From Mindbreaker Toxin. It Blocks Neurological Signals To The Respiratory System, Causing Asphyxiation. Dexalin Plus And Epinephrine Will Filter It Out, However.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -10971,6 +11253,7 @@
         "amount": 1,
         "color": "#215263",
         "desc": "A Narcotic That Impedes One'S Ability By Slowing Down The Higher Brain Cell Functions.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Narcotic"
@@ -11021,6 +11304,7 @@
         "amount": 2,
         "color": "#6b0007",
         "desc": "A Fast-Acting Chemical Used To Asphyxiate People Rapidly.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -11071,6 +11355,7 @@
         "amount": 3,
         "color": "#2690b5",
         "desc": "A Chemical That Accelerates Metabolism, Causing The User To Hunger Faster.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11113,6 +11398,7 @@
         "amount": 3,
         "color": "#A0A0A0",
         "desc": "Efficiently Restores Brain Damage.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11155,6 +11441,7 @@
         "amount": 3,
         "color": "#77b58e",
         "desc": "A Potent Hallucinogenic Compound That Is Formerly Known As Lsd.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -11197,6 +11484,7 @@
         "amount": 3,
         "color": "#63806e",
         "desc": "An Illegal Compound Which Induces A Number Of Effects Such As Loss Of Balance And Visual Artefacts.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Narcotic"
@@ -11233,6 +11521,7 @@
         "amount": 2,
         "color": "#520e30",
         "desc": "A Complicated Anti-Toxin Solution That Quickly Flushes Out Toxin While Causing Minor Stress On The Body. Reacts With Histamine, Duplicating Itself While Flushing It Out. Overdose Causes Extreme Pain.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11284,6 +11573,7 @@
         "amount": 4,
         "color": "#404040",
         "desc": "A Simple Saline Compound Used To Treat The Eyes Via Ingestion.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11320,6 +11610,7 @@
         "amount": 2,
         "color": "#f4dab8",
         "desc": "A Powerful Anti-Caustic Medicine Derived From Plants.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11370,6 +11661,7 @@
         "amount": 1,
         "color": "#b50ee8",
         "desc": "A Mysterious Chemical Which Is Able To Make Any Non-Sentient Creature Sentient.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11424,6 +11716,7 @@
         "amount": 4,
         "color": "#e0a5b9",
         "desc": "A Thick Pink Syrup Useful For Neutralizing Acids And Soothing Trauma Caused By Acids. Tastes Sweet!",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11469,6 +11762,7 @@
         "amount": 5,
         "color": "#0064C8",
         "desc": "A Mixture Of Salt And Water. Commonly Used To Treat Dehydration Or Low Fluid Presence In Blood.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -11503,6 +11797,7 @@
         "amount": 2,
         "color": "#283332",
         "desc": "A Fairly Unreactive Chemical That Boosts Collagen Sythesis To Incredible Levels, Healing Slash Trauma.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11549,6 +11844,7 @@
         "amount": 2,
         "color": "#b9bf93",
         "desc": "A Fizzy Chemical That Helps Rebuild Trauma Caused By Piercing Damage, Leaving A Slight Amount Of Tissue Damage Behind.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11601,6 +11897,7 @@
         "amount": 2,
         "color": "#ff3636",
         "desc": "Originally Developed As A Cough Medicine, It Turns Out This Chemical Is Wildly Effective At Treating Blunt Force Trauma.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11646,6 +11943,7 @@
         "amount": 1,
         "color": "#e3fffb",
         "desc": "A Strange, Non-Newtonian Chemical. It Is Produced When Two Conflicting Brute Medications Are Combined. When Force Is Applied To It, It Temporarily Hardens Creating Millions Of Tiny, Sharp Edges. Very Painful.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -11690,6 +11988,7 @@
         "amount": 1,
         "color": "#e3fffb",
         "desc": "A Strange, Non-Newtonian Chemical. It Is Produced When Two Conflicting Brute Medications Are Combined. When Force Is Applied To It, It Temporarily Hardens Creating Millions Of Tiny, Sharp Edges. Very Painful.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -11734,6 +12033,7 @@
         "amount": 1,
         "color": "#e3fffb",
         "desc": "A Strange, Non-Newtonian Chemical. It Is Produced When Two Conflicting Brute Medications Are Combined. When Force Is Applied To It, It Temporarily Hardens Creating Millions Of Tiny, Sharp Edges. Very Painful.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -11778,6 +12078,7 @@
         "amount": 1,
         "color": "#e3fffb",
         "desc": "A Strange, Non-Newtonian Chemical. It Is Produced When Two Conflicting Brute Medications Are Combined. When Force Is Applied To It, It Temporarily Hardens Creating Millions Of Tiny, Sharp Edges. Very Painful.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -11822,6 +12123,7 @@
         "amount": 1,
         "color": "#e3fffb",
         "desc": "A Strange, Non-Newtonian Chemical. It Is Produced When Two Conflicting Brute Medications Are Combined. When Force Is Applied To It, It Temporarily Hardens Creating Millions Of Tiny, Sharp Edges. Very Painful.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -11866,6 +12168,7 @@
         "amount": 1,
         "color": "#e3fffb",
         "desc": "A Strange, Non-Newtonian Chemical. It Is Produced When Two Conflicting Brute Medications Are Combined. When Force Is Applied To It, It Temporarily Hardens Creating Millions Of Tiny, Sharp Edges. Very Painful.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -11928,6 +12231,7 @@
         "amount": 3,
         "color": "#64ffe6",
         "desc": "Rapidly Purges The Body Of Histamine, Reduces Jitteriness, Causes Drowsiness, And Treats Poison Damage. Often Included In Sleep Medication.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -11978,6 +12282,7 @@
         "amount": 3,
         "color": "#aa4308",
         "desc": "Efficiently Heals Burns From The Hottest Of Fires. Causes Massive Internal Bleeding When Overdosed.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -12030,6 +12335,7 @@
         "amount": 3,
         "color": "#8147ff",
         "desc": "Rapidly Repairs Dead Tissue Caused By Electrocution, But Cools You Slightly. Completely Freezes The Patient When Overdosed.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -12081,6 +12387,7 @@
         "amount": 3,
         "color": "#b5e36d",
         "desc": "A Difficult To Synthesize Cryogenic Drug Used To Regenerate Rotting Tissue And Brain Matter.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -12123,6 +12430,7 @@
         "amount": 2,
         "color": "#86a5bd",
         "desc": "A Necrotic Substance That Seems To Be Able To Heal Frozen Corpses. It Can Treat And Rejuvenate Plants When Applied In Small Doses.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -12175,6 +12483,7 @@
         "amount": 4,
         "color": "#89f77f",
         "desc": "A Cryogenics Chemical. Used To Treat Severe Burns And Frostbite Via Regeneration Of The Affected Tissue. Works Regardless Of The Patient Being Alive Or Dead.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -12228,6 +12537,7 @@
         "amount": 4,
         "color": "#07E79E",
         "desc": "Suppresses Anxiety And Other Various Forms Of Mental Distress. Overdose Causes Hallucinations And Minor Toxin Damage.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -12278,6 +12588,7 @@
         "amount": 3,
         "color": "#F0FFF0",
         "desc": "A Powerful Toxin That Will Destroy Fat Cells, Massively Reducing Body Weight In A Short Time. Deadly To Those Without Nutriment In Their Body.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -12334,6 +12645,7 @@
         "amount": 4,
         "color": "#EE35FF",
         "desc": "Fills You With Ecstatic Numbness And Causes Minor Brain Damage. Highly Addictive. If Overdosed Causes Sudden Mood Swings.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Narcotic"
@@ -12370,6 +12682,7 @@
         "amount": 2,
         "color": "#baa15d",
         "desc": "Will Reduce The Damaging Effects Of Radiation By 90%. Prophylactic Use Only.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -12432,6 +12745,7 @@
         "amount": 5,
         "color": "#27870a",
         "desc": "Removes Most Stimulating And Hallucinogenic Drugs. Reduces Druggy Effects And Jitteriness. Causes Drowsiness.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Medicine"
@@ -12474,6 +12788,7 @@
         "amount": 3,
         "color": "#FA00AF",
         "desc": "It'S Just A Little Flammable.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -12526,6 +12841,7 @@
         "amount": 3,
         "color": "#D4872A",
         "desc": "Catches You On Fire And Makes You Ignite.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -12571,6 +12887,7 @@
         "amount": 4,
         "color": "#FFC8C8",
         "desc": "You Really, Really Don'T Want To Get This Shit Anywhere Near You.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -12611,6 +12928,7 @@
         "amount": 1,
         "color": "white",
         "desc": "A Light Grey Powdery Residue",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -12639,6 +12957,7 @@
         "amount": 5,
         "color": "#b05b3c",
         "desc": "A Simple Alcohol, Makes You Drunk If Consumed, Flammable.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -12659,6 +12978,7 @@
         "amount": 3,
         "color": "#cccccc",
         "desc": "A Light, Flammable Gas.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -12669,6 +12989,7 @@
         "amount": 2,
         "color": "#fff385",
         "desc": "A Yellow, Crystalline Solid.",
+        "wiki": "",
         "overdose": null,
         "tags": [
           "Toxin"
@@ -12707,6 +13028,7 @@
         "amount": 0.5,
         "color": "#FFFFE5",
         "desc": "Found In Certain Meals, Good For Bodily Health.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
@@ -12743,6 +13065,7 @@
         "amount": 0.5,
         "color": "white",
         "desc": "Cooked Chicken Embryo, Delicious.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -12771,6 +13094,7 @@
         "amount": 0.5,
         "color": "#fb7125",
         "desc": "Delicious Syrup Made From Tree Sap, Somehow Stickier Than Glue.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -12799,6 +13123,7 @@
         "amount": 1,
         "color": "#7E4043",
         "desc": "A Premium Alcoholic Beverage Made From Distilled Grape Juice.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": []
@@ -12827,6 +13152,7 @@
         "amount": 1,
         "color": "#91C3F7",
         "desc": "The Cleanest And Purest Of Waters Straight From The Hands Of God, Is Known To Magically Heal Wounds.",
+        "wiki": "",
         "overdose": null,
         "tags": [],
         "stats": [
