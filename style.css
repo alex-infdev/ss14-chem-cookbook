@@ -54,7 +54,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 4px;
-    font-size: 11px;
+    font-size: 13px;
     overflow: hidden;
     user-select: none;
     -webkit-font-smoothing: none;
@@ -81,8 +81,8 @@ body {
     border-left: 2px solid var(--win-highlight);
     border-right: 2px solid var(--win-dark-shadow);
     border-bottom: 2px solid var(--win-dark-shadow);
-    padding: 3px 10px;
-    font-size: 11px;
+    padding: 5px 12px;
+    font-size: 13px;
     cursor: pointer;
     outline: none;
     font-family: var(--font-stack);
@@ -121,7 +121,7 @@ body {
 }
 
 aside {
-    width: 280px;
+    width: 320px;
     display: flex;
     flex-direction: column;
     border-top: 2px solid var(--win-highlight);
@@ -155,7 +155,7 @@ aside {
 }
 
 h2 {
-    font-size: 11px;
+    font-size: 13px;
     margin: 0;
     font-weight: bold;
 }
@@ -247,7 +247,7 @@ h2 {
 .filter-bar select,
 .filter-bar input {
     font-family: var(--font-stack);
-    font-size: 11px;
+    font-size: 13px;
     padding: 2px;
     border-top: 2px solid var(--win-shadow);
     border-left: 2px solid var(--win-shadow);
@@ -295,7 +295,7 @@ h2 {
 
 .chem-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fill, 220px);
     justify-content: center;
     gap: 6px;
 }
@@ -307,7 +307,7 @@ h2 {
     border-right: 2px solid var(--win-dark-shadow);
     border-bottom: 2px solid var(--win-dark-shadow);
     cursor: pointer;
-    height: 100px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -448,6 +448,23 @@ h2 {
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 11px;
+    }
+    .win-btn {
+        padding: 3px 10px;
+        font-size: 11px;
+    }
+    h2 {
+        font-size: 11px;
+    }
+    .filter-bar select,
+    .filter-bar input {
+        font-size: 11px;
+    }
+    .chem-card {
+        height: 100px;
+    }
     .app-container {
         flex-direction: column;
     }
