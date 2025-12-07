@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -32,124 +33,477 @@
             --link: #00ff00;
         }
 
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             background-color: var(--desktop);
             font-family: 'Tahoma', 'Verdana', sans-serif;
             color: var(--text);
-            margin: 0; padding: 10px; font-size: 14px;
-            height: 100vh; display: flex; flex-direction: column;
+            margin: 0;
+            padding: 10px;
+            font-size: 14px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
             overflow: hidden;
         }
 
         .win-out {
             background: var(--surface);
-            border-top: 2px solid var(--light-highlight); 
+            border-top: 2px solid var(--light-highlight);
             border-left: 2px solid var(--light-highlight);
-            border-right: 2px solid #000; border-bottom: 2px solid #000;
+            border-right: 2px solid #000;
+            border-bottom: 2px solid #000;
             box-shadow: 1px 1px 0px var(--dark-shadow) inset, -1px -1px 0px #dfdfdf inset;
         }
+
         .win-in {
             background: var(--bg-input);
-            border-top: 2px solid #000; border-left: 2px solid #000;
-            border-right: 2px solid var(--light-highlight); 
+            border-top: 2px solid #000;
+            border-left: 2px solid #000;
+            border-right: 2px solid var(--light-highlight);
             border-bottom: 2px solid var(--light-highlight);
             box-shadow: 1px 1px 0px #dfdfdf inset, -1px -1px 0px var(--dark-shadow) inset;
         }
 
-        .main-window { width: 100%; max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; height: 100%; position: relative; z-index: 10; }
-        .title-bar { background: linear-gradient(90deg, #000080, #1084d0); padding: 4px 8px; color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
-        .window-content { flex: 1; display: flex; flex-direction: column; padding: 10px; overflow: hidden; }
+        .main-window {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+        }
 
-        .tab-bar { display: flex; padding: 4px 4px 0 4px; gap: 2px; flex-shrink: 0; }
-        .tab-btn { padding: 6px 12px; background: var(--surface); border-top: 2px solid #fff; border-left: 2px solid #fff; border-right: 2px solid #000; border-bottom: none; border-radius: 4px 4px 0 0; cursor: pointer; font-weight: bold; margin-bottom: -2px; z-index: 1; color: var(--text); }
-        .tab-btn.active { border-bottom: 2px solid var(--surface); z-index: 10; padding-bottom: 8px; margin-top: -2px; }
+        .title-bar {
+            background: linear-gradient(90deg, #000080, #1084d0);
+            padding: 4px 8px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
 
-        ::-webkit-scrollbar { width: 16px; height: 16px; background: var(--surface); }
-        ::-webkit-scrollbar-thumb { background-color: var(--surface); border: 2px solid var(--light-highlight); border-right-color: #000; border-bottom-color: #000; }
-        ::-webkit-scrollbar-track { background: var(--dark-shadow); }
+        .window-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            overflow: hidden;
+        }
 
-        .split-container { display: flex; flex: 1; gap: 10px; overflow: hidden; margin-top: 10px; min-height: 0; }
-        
-        .list-pane { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-height: 0; }
-        .props-pane { width: 320px; display: flex; flex-direction: column; border: 2px solid var(--surface); min-height: 0; transition: transform 0.3s ease; }
-        .pins-pane { width: 280px; display: flex; flex-direction: column; border: 2px solid var(--surface); min-height: 0; }
+        .tab-bar {
+            display: flex;
+            padding: 4px 4px 0 4px;
+            gap: 2px;
+            flex-shrink: 0;
+        }
 
-        .scroll-area { overflow-y: auto; flex: 1; padding-right: 5px; padding-bottom: 80px; }
-        #app { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; padding: 5px; }
+        .tab-btn {
+            padding: 6px 12px;
+            background: var(--surface);
+            border-top: 2px solid #fff;
+            border-left: 2px solid #fff;
+            border-right: 2px solid #000;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: -2px;
+            z-index: 1;
+            color: var(--text);
+        }
 
-        .card { cursor: pointer; border: 1px dotted transparent; background: var(--bg-card); }
-        .card:hover { border-color: var(--dark-shadow); }
-        .card.selected { background-color: #000080; color: white; border: 1px dotted #fff; }
-        .card.selected .section-label, .card.selected .arrow-column { color: white; }
-        .card.selected .meta-tag { background: #000080; border-color: white; }
-        
-        .card-inner { padding: 6px; }
-        .card-header { font-weight: bold; font-size: 12px; margin-bottom: 4px; display: flex; justify-content: space-between; border-bottom: 1px dotted var(--dark-shadow); padding-bottom: 2px; }
-        
-        input#search { width: 100%; padding: 8px; background: var(--bg-input); color: var(--text); border: none; outline: none; margin-bottom: 5px; }
-        select { background: var(--bg-input); color: var(--text); }
+        .tab-btn.active {
+            border-bottom: 2px solid var(--surface);
+            z-index: 10;
+            padding-bottom: 8px;
+            margin-top: -2px;
+        }
 
-        .sidebar-header { background: navy; color: white; padding: 4px; font-weight: bold; text-align: center; flex-shrink: 0; display: flex; justify-content: space-between; align-items: center; }
-        .prop-tabs { display: flex; margin-bottom: 4px; }
-        .prop-tab { flex: 1; text-align: center; padding: 4px; cursor: pointer; border: 1px solid var(--dark-shadow); background: var(--surface); color: var(--text); }
-        .prop-tab.active { background: var(--light-highlight); color: #000; font-weight: bold; border-bottom: none; }
-        .prop-content { background: var(--bg-input); padding: 10px; flex: 1; overflow-y: auto; color: var(--text); }
-        .prop-pane { display: none; }
-        .prop-pane.active { display: block; }
-        
-        .prop-row { display: flex; margin-bottom: 6px; font-size: 12px; }
-        .prop-label { width: 70px; color: #444; flex-shrink: 0; }
-        .prop-val { flex: 1; font-weight: bold; word-break: break-word; }
+        ::-webkit-scrollbar {
+            width: 16px;
+            height: 16px;
+            background: var(--surface);
+        }
 
-        .pin-card { background: #ffffe0; border: 1px solid #000; margin-bottom: 8px; padding: 5px; box-shadow: 2px 2px 0 #808080; font-size: 11px; position: relative; color: #000; }
-        .pin-close { position: absolute; top: 2px; right: 2px; cursor: pointer; color: red; font-weight: bold; border: 1px solid red; width: 14px; height: 14px; text-align: center; line-height: 12px; background: #fff; }
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--surface);
+            border: 2px solid var(--light-highlight);
+            border-right-color: #000;
+            border-bottom-color: #000;
+        }
 
-        .meta-tag { background: #eee; color: #000; border: 1px solid #000; padding: 0 4px; font-size: 10px; margin-left: 5px; }
-        .reagent-list { list-style: none; padding: 0; margin: 0; font-size: 11px; }
-        .reagent-item { display: flex; align-items: center; margin-bottom: 2px; text-transform: capitalize; }
-        .beaker-dot { width: 8px; height: 8px; border: 1px solid #000; margin-right: 6px; display: inline-block; background: #fff; }
-        
-        .footer-bar { margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
-        .player-btn { width: 30px; background: var(--surface); border: 2px solid var(--light-highlight); border-right-color: #000; border-bottom-color: #000; cursor: pointer; color: var(--text); }
+        ::-webkit-scrollbar-track {
+            background: var(--dark-shadow);
+        }
 
-        #guidebook { padding: 20px; font-family: 'Courier New', monospace; background: #fff; height: 100%; border: none; }
-        .guide-entry { 
-            background: #ffffe0; 
-            border: 1px solid #000; 
-            padding: 10px; margin-bottom: 15px; 
+        .split-container {
+            display: flex;
+            flex: 1;
+            gap: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+            min-height: 0;
+        }
+
+        .list-pane {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            min-height: 0;
+        }
+
+        .props-pane {
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid var(--surface);
+            min-height: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .pins-pane {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid var(--surface);
+            min-height: 0;
+        }
+
+        .scroll-area {
+            overflow-y: auto;
+            flex: 1;
+            padding-right: 5px;
+            padding-bottom: 80px;
+        }
+
+        #app {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 8px;
+            padding: 5px;
+        }
+
+        .card {
+            cursor: pointer;
+            border: 1px dotted transparent;
+            background: var(--bg-card);
+        }
+
+        .card:hover {
+            border-color: var(--dark-shadow);
+        }
+
+        .card.selected {
+            background-color: #000080;
+            color: white;
+            border: 1px dotted #fff;
+        }
+
+        .card.selected .section-label,
+        .card.selected .arrow-column {
+            color: white;
+        }
+
+        .card.selected .meta-tag {
+            background: #000080;
+            border-color: white;
+        }
+
+        .card-inner {
+            padding: 6px;
+        }
+
+        .card-header {
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dotted var(--dark-shadow);
+            padding-bottom: 2px;
+        }
+
+        input#search {
+            width: 100%;
+            padding: 8px;
+            background: var(--bg-input);
+            color: var(--text);
+            border: none;
+            outline: none;
+            margin-bottom: 5px;
+        }
+
+        select {
+            background: var(--bg-input);
+            color: var(--text);
+        }
+
+        .sidebar-header {
+            background: navy;
+            color: white;
+            padding: 4px;
+            font-weight: bold;
+            text-align: center;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .prop-tabs {
+            display: flex;
+            margin-bottom: 4px;
+        }
+
+        .prop-tab {
+            flex: 1;
+            text-align: center;
+            padding: 4px;
+            cursor: pointer;
+            border: 1px solid var(--dark-shadow);
+            background: var(--surface);
+            color: var(--text);
+        }
+
+        .prop-tab.active {
+            background: var(--light-highlight);
+            color: #000;
+            font-weight: bold;
+            border-bottom: none;
+        }
+
+        .prop-content {
+            background: var(--bg-input);
+            padding: 10px;
+            flex: 1;
+            overflow-y: auto;
+            color: var(--text);
+        }
+
+        .prop-pane {
+            display: none;
+        }
+
+        .prop-pane.active {
+            display: block;
+        }
+
+        .prop-row {
+            display: flex;
+            margin-bottom: 6px;
+            font-size: 12px;
+        }
+
+        .prop-label {
+            width: 70px;
+            color: #444;
+            flex-shrink: 0;
+        }
+
+        .prop-val {
+            flex: 1;
+            font-weight: bold;
+            word-break: break-word;
+        }
+
+        .pin-card {
+            background: #ffffe0;
+            border: 1px solid #000;
+            margin-bottom: 8px;
+            padding: 5px;
+            box-shadow: 2px 2px 0 #808080;
+            font-size: 11px;
+            position: relative;
+            color: #000;
+        }
+
+        .pin-close {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+            border: 1px solid red;
+            width: 14px;
+            height: 14px;
+            text-align: center;
+            line-height: 12px;
+            background: #fff;
+        }
+
+        .meta-tag {
+            background: #eee;
+            color: #000;
+            border: 1px solid #000;
+            padding: 0 4px;
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+        .reagent-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 11px;
+        }
+
+        .reagent-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px;
+            text-transform: capitalize;
+        }
+
+        .beaker-dot {
+            width: 8px;
+            height: 8px;
+            border: 1px solid #000;
+            margin-right: 6px;
+            display: inline-block;
+            background: #fff;
+        }
+
+        .footer-bar {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .player-btn {
+            width: 30px;
+            background: var(--surface);
+            border: 2px solid var(--light-highlight);
+            border-right-color: #000;
+            border-bottom-color: #000;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        #guidebook {
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            background: #fff;
+            height: 100%;
+            border: none;
+        }
+
+        .guide-entry {
+            background: #ffffe0;
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 15px;
             box-shadow: 2px 2px 0px #aaa;
-            color: #000; 
+            color: #000;
         }
-        .guide-title { font-weight: bold; text-decoration: underline; cursor: pointer; color: blue; }
-        
+
+        .guide-title {
+            font-weight: bold;
+            text-decoration: underline;
+            cursor: pointer;
+            color: blue;
+        }
+
         @media (max-width: 900px) {
-            .pins-pane { display: none; } 
-            .split-container { position: relative; }
-            .props-pane {
-                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-                z-index: 9999; transform: translateY(100%); transition: transform 0.3s ease;
+            .pins-pane {
+                display: none;
             }
-            .props-pane.open { transform: translateY(0); }
-            .mobile-close-btn { display: block !important; margin-bottom: 10px; padding: 10px; background: #d32f2f; color: white; text-align: center; font-weight: bold; cursor: pointer; border: 2px solid #fff; }
+
+            .split-container {
+                position: relative;
+            }
+
+            .props-pane {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 9999;
+                transform: translateY(100%);
+                transition: transform 0.3s ease;
+            }
+
+            .props-pane.open {
+                transform: translateY(0);
+            }
+
+            .mobile-close-btn {
+                display: block !important;
+                margin-bottom: 10px;
+                padding: 10px;
+                background: #d32f2f;
+                color: white;
+                text-align: center;
+                font-weight: bold;
+                cursor: pointer;
+                border: 2px solid #fff;
+            }
         }
-        
-        .mobile-close-btn { display: none; }
-        .view-content { display: none; flex: 1; flex-direction: column; overflow: hidden; }
-        .view-content.active { display: flex; }
-        .chem-link { color: var(--link); text-decoration: underline; cursor: pointer; font-weight: bold; }
-        
-        .clown-fall { position: fixed; width: 150px; z-index: 9999; pointer-events: none; top: -200px; animation: fall 4s linear forwards; }
-        @keyframes fall { 0% { top: -200px; transform: rotate(0deg); } 100% { top: 120vh; transform: rotate(360deg); } }
+
+        .mobile-close-btn {
+            display: none;
+        }
+
+        .view-content {
+            display: none;
+            flex: 1;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .view-content.active {
+            display: flex;
+        }
+
+        .chem-link {
+            color: var(--link);
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .clown-fall {
+            position: fixed;
+            width: 150px;
+            z-index: 9999;
+            pointer-events: none;
+            top: -200px;
+            animation: fall 4s linear forwards;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -200px;
+                transform: rotate(0deg);
+            }
+
+            100% {
+                top: 120vh;
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <div class="main-window win-out">
         <div class="title-bar">
             <span>SS14 Chemistry Database</span>
-            <div onclick="spawnClown()" style="background:#c0c0c0; color:black; width:16px; height:16px; text-align:center; line-height:14px; border:1px solid #fff; border-bottom-color:#000; border-right-color:#000; font-size:12px; cursor:pointer;">X</div>
+            <div onclick="spawnClown()"
+                style="background:#c0c0c0; color:black; width:16px; height:16px; text-align:center; line-height:14px; border:1px solid #fff; border-bottom-color:#000; border-right-color:#000; font-size:12px; cursor:pointer;">
+                X</div>
         </div>
 
         <div class="window-content">
@@ -158,11 +512,13 @@
                 <button class="tab-btn" onclick="switchTab('guides')">Chemist Shift Guidebook</button>
             </div>
 
-            <div class="win-in" style="flex: 1; display: flex; flex-direction: column; padding: 10px; overflow: hidden;">
-                
+            <div class="win-in"
+                style="flex: 1; display: flex; flex-direction: column; padding: 10px; overflow: hidden;">
+
                 <div id="recipe-view" class="view-content active">
-                    <input type="text" id="search" class="win-in" placeholder="Search chemicals..." onkeyup="render()" autofocus>
-                    
+                    <input type="text" id="search" class="win-in" placeholder="Search chemicals..." onkeyup="render()"
+                        autofocus>
+
                     <div class="split-container">
                         <div class="list-pane win-in">
                             <div class="scroll-area" id="app">Loading...</div>
@@ -172,16 +528,20 @@
                             <div class="mobile-close-btn" onclick="closeMobileSidebar()">CLOSE DETAILS</div>
                             <div class="sidebar-header">
                                 <span>Properties</span>
-                                <button id="pin-btn" class="player-btn" style="width: auto; padding: 0 5px;" onclick="pinCurrent()" disabled>PIN</button>
+                                <button id="pin-btn" class="player-btn" style="width: auto; padding: 0 5px;"
+                                    onclick="pinCurrent()" disabled>PIN</button>
                             </div>
-                            <div style="padding: 5px; flex: 1; display: flex; flex-direction: column; overflow: hidden;">
+                            <div
+                                style="padding: 5px; flex: 1; display: flex; flex-direction: column; overflow: hidden;">
                                 <div class="prop-tabs">
                                     <div class="prop-tab active" onclick="switchPropTab('general')">General</div>
                                     <div class="prop-tab" onclick="switchPropTab('recipe')">Recipe</div>
                                     <div class="prop-tab" onclick="switchPropTab('effects')">Effects</div>
                                 </div>
                                 <div class="prop-content" id="sidebar-content">
-                                    <div id="tab-general" class="prop-pane active" style="text-align: center; padding-top: 50px; color: #666;">Select a chemical.</div>
+                                    <div id="tab-general" class="prop-pane active"
+                                        style="text-align: center; padding-top: 50px; color: #666;">Select a chemical.
+                                    </div>
                                     <div id="tab-recipe" class="prop-pane"></div>
                                     <div id="tab-effects" class="prop-pane"></div>
                                 </div>
@@ -199,23 +559,28 @@
 
                 <div id="guide-view" class="view-content">
                     <div style="margin-bottom: 10px;">
-                        <select id="guide-filter" class="win-in" onchange="renderGuides()" style="width:100%; padding:4px;">
+                        <select id="guide-filter" class="win-in" onchange="renderGuides()"
+                            style="width:100%; padding:4px;">
                             <option value="all">All Categories</option>
                         </select>
                     </div>
                     <div id="guidebook" class="win-in scroll-area">Loading...</div>
                 </div>
             </div>
-            
+
             <div class="footer-bar">
                 <div class="win-out" style="padding: 2px; display: flex; gap: 2px;">
                     <button class="player-btn" onclick="playMusic()">|&gt;</button>
                     <button class="player-btn" onclick="stopMusic()">[]</button>
-                    <span id="track-name" style="background:#000; color:#0f0; font-family:monospace; padding:2px 5px; width: 150px; overflow:hidden; white-space:nowrap;">READY</span>
+                    <span id="track-name"
+                        style="background:#000; color:#0f0; font-family:monospace; padding:2px 5px; width: 150px; overflow:hidden; white-space:nowrap;">READY</span>
                 </div>
                 <div>
-                    <button class="player-btn" style="width: auto; padding: 0 5px;" onclick="toggleTheme()">Theme</button>
+                    <button class="player-btn" style="width: auto; padding: 0 5px;"
+                        onclick="toggleTheme()">Theme</button>
                     <span style="font-size: 11px;">v5.0 - absolute honk</span>
+                    <a href="https://github.com/alex-infdev/ss14-chem-cookbook" target="_blank"
+                        style="font-size: 11px; color: inherit; text-decoration: none; margin-left: 5px;">[Source]</a>
                 </div>
             </div>
         </div>
@@ -251,7 +616,7 @@
         function spawnClown() {
             const honk = new Audio('content/sound_items_bikehorn.ogg');
             honk.volume = 0.5;
-            honk.play().catch(e => {});
+            honk.play().catch(e => { });
             const img = document.createElement('img');
             img.src = 'content/clown.webp';
             img.className = 'clown-fall';
@@ -290,12 +655,12 @@
             document.getElementById('pin-btn').disabled = false;
             document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
             const card = document.getElementById('card-' + chemId);
-            if(card) card.classList.add('selected');
+            if (card) card.classList.add('selected');
             document.getElementById('prop-sidebar').classList.add('open');
 
             let item = recipes.find(r => r.id === chemId);
             if (!item) item = recipes.find(r => r.products && r.products.some(p => p.id === chemId));
-            
+
             if (!item) return;
 
             const name = item.name || (item.products ? item.products[0].name : item.id) || item.id;
@@ -310,12 +675,12 @@
                 <hr>
                 <div style="font-style:italic; padding:5px;">${desc}</div>
             `;
-            if(item.wiki) genHtml += `<hr><div style="font-size:11px; padding:5px;"><b>Wiki Info:</b><br>${item.wiki}</div>`;
+            if (item.wiki) genHtml += `<hr><div style="font-size:11px; padding:5px;"><b>Wiki Info:</b><br>${item.wiki}</div>`;
             document.getElementById('tab-general').innerHTML = genHtml;
 
             let reactHtml = '';
             let reactants = item.reactants;
-            if(!reactants && item.recipes && item.recipes.length > 0) reactants = item.recipes[0].reactants; 
+            if (!reactants && item.recipes && item.recipes.length > 0) reactants = item.recipes[0].reactants;
 
             if (reactants && reactants.length > 0) {
                 reactHtml = `<div style="margin-bottom:5px;"><b>Ingredients:</b></div><ul style="padding-left:20px; margin:0;">`;
@@ -326,12 +691,12 @@
                     reactHtml += `<li>${r.amount}u ${display}</li>`;
                 });
                 reactHtml += `</ul>`;
-                
+
                 let conds = item.conditions || (item.recipes ? item.recipes[0].conditions : null);
                 if (conds && (conds.minTemp || conds.maxTemp)) {
                     reactHtml += `<hr><div style="margin-bottom:5px;"><b>Conditions:</b></div>`;
-                    if(conds.minTemp) reactHtml += `<div>Min Temp: <span style="color:var(--heat)">${Math.round(conds.minTemp)}K</span></div>`;
-                    if(conds.maxTemp) reactHtml += `<div>Max Temp: <span style="color:var(--cold)">${Math.round(conds.maxTemp)}K</span></div>`;
+                    if (conds.minTemp) reactHtml += `<div>Min Temp: <span style="color:var(--heat)">${Math.round(conds.minTemp)}K</span></div>`;
+                    if (conds.maxTemp) reactHtml += `<div>Max Temp: <span style="color:var(--cold)">${Math.round(conds.maxTemp)}K</span></div>`;
                 }
             } else {
                 reactHtml = "<div style='color:#666; font-style:italic;'>No known recipe.</div>";
@@ -340,9 +705,9 @@
 
             let effHtml = '';
             if (item.overdose) effHtml += `<div class="prop-row"><div class="prop-label" style="color:red; font-weight:bold;">Overdose:</div><div class="prop-val">${item.overdose}u</div></div><hr>`;
-            
-            let effects = item.effects || item.stats || item.meta_stats; 
-            
+
+            let effects = item.effects || item.stats || item.meta_stats;
+
             if (effects && effects.length > 0) {
                 effHtml += `<div><b>Effects:</b></div><ul style="padding-left:20px;">`;
                 effects.forEach(e => {
@@ -354,14 +719,14 @@
                 });
                 effHtml += `</ul>`;
             } else {
-                if(!item.overdose) effHtml = "<div style='color:#666; font-style:italic;'>No known effects.</div>";
+                if (!item.overdose) effHtml = "<div style='color:#666; font-style:italic;'>No known effects.</div>";
             }
             document.getElementById('tab-effects').innerHTML = effHtml;
         }
 
         function pinCurrent() {
-            if(!selectedId) return;
-            if(pinnedItems.includes(selectedId)) return;
+            if (!selectedId) return;
+            if (pinnedItems.includes(selectedId)) return;
             pinnedItems.push(selectedId);
             renderPins();
         }
@@ -373,7 +738,7 @@
 
         function renderPins() {
             const container = document.getElementById('pin-container');
-            if(pinnedItems.length === 0) {
+            if (pinnedItems.length === 0) {
                 container.innerHTML = `<div style="color: #666; text-align: center; margin-top: 20px;">No pinned items.</div>`;
                 return;
             }
@@ -381,17 +746,17 @@
                 let item = recipes.find(r => r.id === id);
                 if (!item) return '';
                 const name = item.name || item.id;
-                
+
                 let ingredients = '';
                 let reactants = item.reactants;
-                if(!reactants && item.recipes && item.recipes.length > 0) reactants = item.recipes[0].reactants; 
-                
+                if (!reactants && item.recipes && item.recipes.length > 0) reactants = item.recipes[0].reactants;
+
                 if (reactants) {
                     reactants.forEach(r => ingredients += `<div>- ${r.amount}u ${r.name || r.id}</div>`);
                 } else {
                     ingredients = "<div>No recipe</div>";
                 }
-                
+
                 return `
                 <div class="pin-card">
                     <div class="pin-close" onclick="removePin('${id}')">X</div>
@@ -424,7 +789,7 @@
             try {
                 const rRes = await fetch('chem_recipes.json');
                 if (!rRes.ok) throw new Error("Could not load chem_recipes.json");
-                
+
                 let rawData = await rRes.json();
                 if (Array.isArray(rawData)) {
                     recipes = rawData;
@@ -435,15 +800,15 @@
 
                 const gRes = await fetch('guides.json');
                 if (gRes.ok) { guides = await gRes.json(); initGuideFilter(); renderGuides(); }
-            } catch (e) { 
-                console.error(e); 
-                document.getElementById('app').innerHTML = `<div style="text-align:center; padding:20px; color:red;">${e.message}<br>Check console for details.</div>`; 
+            } catch (e) {
+                console.error(e);
+                document.getElementById('app').innerHTML = `<div style="text-align:center; padding:20px; color:red;">${e.message}<br>Check console for details.</div>`;
             }
         }
 
         function initGuideFilter() {
             const select = document.getElementById('guide-filter');
-            if(!select || !guides.length) return;
+            if (!select || !guides.length) return;
             select.innerHTML = '<option value="all">All Categories</option>';
             guides.forEach(cat => {
                 const opt = document.createElement('option');
@@ -473,31 +838,31 @@
         function render() {
             const query = document.getElementById('search').value.toLowerCase();
             const container = document.getElementById('app');
-            
+
             const filtered = recipes.filter(r => {
                 const nameMatch = (r.name || r.id || '').toLowerCase().includes(query);
                 const productMatch = r.products && r.products.some(p => (p.name || p.id).toLowerCase().includes(query));
                 return nameMatch || productMatch;
             });
-            
+
             if (filtered.length === 0) {
                 container.innerHTML = `<div style="text-align:center; padding:20px;">No matches found.</div>`;
                 return;
             }
-            
+
             container.innerHTML = filtered.map(r => {
                 const name = r.name || (r.products ? r.products[0].name : r.id) || r.id;
                 const isSelected = (selectedId === r.id) ? 'selected' : '';
-                
+
                 let mixHtml = '';
                 let reactants = r.reactants;
-                if(!reactants && r.recipes && r.recipes.length > 0) reactants = r.recipes[0].reactants;
-                if(reactants) {
-                    mixHtml = `<ul class="reagent-list">${reactants.slice(0,3).map(i => `<li><div class="beaker-dot" style="background:white;"></div>${i.amount}u ${i.name||i.id}</li>`).join('')}</ul>`;
+                if (!reactants && r.recipes && r.recipes.length > 0) reactants = r.recipes[0].reactants;
+                if (reactants) {
+                    mixHtml = `<ul class="reagent-list">${reactants.slice(0, 3).map(i => `<li><div class="beaker-dot" style="background:white;"></div>${i.amount}u ${i.name || i.id}</li>`).join('')}</ul>`;
                 }
 
                 let tagsHtml = '';
-                if(r.tags) tagsHtml = r.tags.slice(0,2).map(t => `<span class="meta-tag">${t}</span>`).join('');
+                if (r.tags) tagsHtml = r.tags.slice(0, 2).map(t => `<span class="meta-tag">${t}</span>`).join('');
 
                 return `
                 <div id="card-${r.id}" class="card win-out ${isSelected}" onclick="selectRecipe('${r.id}')">
@@ -516,4 +881,5 @@
         init();
     </script>
 </body>
+
 </html>
